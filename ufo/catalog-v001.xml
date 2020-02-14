@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo" uri="doc/ufo/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-a" uri="doc/ufo-a/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-a/" uri="ufo-a.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-b" uri="doc/ufo-b/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions" uri="doc/ufo-b-dispositions/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions/" uri="ufo-b-dispositions.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-b-temporal" uri="doc/ufo-b-temporal/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-b-temporal/" uri="ufo-b-temporal.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-b/" uri="ufo-b.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-c" uri="doc/ufo-c/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-c/" uri="ufo-c.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-cs" uri="ufo-cs.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-ontouml" uri="doc/ufo-ontouml/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-ontouml/" uri="ufo-ontouml.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-powertypes" uri="doc/ufo-powertypes/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo-powertypes/" uri="ufo-powertypes.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1563949849740" name="http://onto.fel.cvut.cz/ontologies/ufo/" uri="ufo.rdf"/>
+    </group>
+</catalog>
