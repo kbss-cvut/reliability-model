@@ -1,0 +1,2347 @@
+Column22,System,subsystem,component,Function,FMEA No. ,"Failure
+modes
+and
+causes","Flight
+phase","Failure
+effect
+a) Local
+effect
+b)
+Higher-level
+effect
+c) Final
+effect (for
+aircraft)","Identification and corrective
+actions
+a) Provide indication to the
+flight crew;
+b) Other failures with same
+indication;
+c) Failure identification,
+isolation an+E1d corrective
+actions made by flight
+crew;
+d) Effect caused by
+possible improper actions;
+e) Fault isolation—maintenance
+personnel; f) Corrective actions—maintenance
+personnel;","Requirements
+for dispatch
+with failure
+a) Yes, the
+aircraft can be
+dispatched
+b) If ""yes"",
+what
+restrictions
+apply","Effect caused by
+cascaded/concurrent
+hazardous failures","Single
+component
+failure rate
+(1E-6/H)","Failure
+rate of
+failure
+mode
+(1E-6/H)","Exposure
+time (H)","Occurrence
+probability
+of failure
+mode","Hazard
+level",Remark
+1,electric power system ,AC power supply system 1 ,PVGC ,supply AC power ,24-20-01-01.01 ,"PVGC
+cannot
+supply",All ,"a) PVGC
+cannot
+supply AC","a) CAS: L GEN FAULT;
+b) Malfunctions of LGCU,
+LOPU, LGC, etc.","a) Yes;
+b) RVFG and
+PSF power",None. ,13.48,13.48,12,0.000162,IV,
+2,,,,,,"AC
+power.
+Failure
+cause:
+PVGC
+body
+failure.",,"power;
+b) Electric
+power
+system
+PSF
+replaces
+faulty
+PVGC to
+supply
+power;
+c) Aircraft
+power
+supply
+redundancy
+is
+decreased.","c) Try to reset PVGC via
+PVGC control switch, if
+warning information still
+exists, disconnect the
+PVGC;
+d) TBD;
+e) Disconnect PVGC and
+aircraft electric power
+network;
+f) Replace the PVGC.","supply is in
+normal
+condition, and
+electric power
+system
+interconnection
+and power
+supply are in
+normal
+condition",,,,,,,
+3,electric power system ,AC power supply system 1 ,APBE ,PVGC control and protection ,"24-20-
+02-01.
+01","Faulty
+control and
+protection
+of APBE
+for PVGC.
+Failure
+cause:",All ,"a) PVGC
+cannot
+supply AC
+power;
+b) Electric
+power
+system PSF","a) CAS: L GEN FAULT;
+b) Malfunctions of PVGC, LOPU,
+LGC, etc.
+c) Try to reset PVGC via PVGC
+control switch, if warning information
+still exists, disconnect the PVGC;
+d) TBD;","a) Yes;
+b) RVFG and
+PSF power
+supply is in
+normal
+condition, and
+electric power",None. ,22.77,22.77,4,0.0000911,IV,
+4,,,,,,"APBE
+circuit
+failure.",,"replaces
+faulty PVGC
+to supply
+power;
+c) Aircraft
+power supply
+redundancy
+is
+decreased.","e) Disconnect PVGC and aircraft
+electric power network, and cut off
+APBE power input;
+f) Replace APBE.","system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+5,electric power system ,AC power supply system 1 ,MEQC ,PVGC over-voltage protection ,"24-20-03
+-01.01","MEQC
+malfuncti
+on.
+Failure
+cause:",All ,"a) Open circuit
+occurs to PVGC
+excitation circuit
+due to MEQC
+failure, and","a) CAS: L GEN FAULT;
+b) Malfunctions of PVGC, APBE,
+LGC, etc.
+c) Try to reset PVGC via PVGC
+control switch, if warning","a) Yes;
+b) RVFG and
+PSF power
+supply is in
+normal",None. ,2.66,2.66,5,0.0000133,IV,
+6,,,,,,"MEQC
+circuit
+failure.",,"PVGC cannot
+supply AC
+power;
+b) Electric power
+system PSF
+replaces faulty
+PVGC to supply
+power;
+c) Aircraft power
+supply
+redundancy is
+decreased.","information still exists,
+disconnect the PVGC;
+d) TBD;
+e) Disconnect PVGC and aircraft
+electric power network, and cut
+off MEQC power input;
+f) Replace MEQC.","condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+7,electric power system ,AC power supply system 1 ,EQW ,PVGC and L AC Bus on/off control ,"24-20-04
+-01.01","EQW is
+closed due
+to failure.
+Failure
+cause:",All ,"a) PVGC and L
+AC Bus remain
+power-on
+condition;
+b) Unable to","a) Electric power system OMS
+information;
+b) None;
+c) None;
+d) TBD;","a) Yes;
+b) None;",None. ,4.62,2.31,12,0.0000277,"No
+effect
+on
+safety",
+8,,,,,,"EQW
+mechanical
+failure.",,"isolate PVGC and
+aircraft electric
+power network via
+disconnecting
+EQW when
+required;
+c) No effect.","e) None;
+f) Replace EQW;",,,,,,,,
+9,electric power system ,AC power supply system 1 ,EQW ,PVGC and L AC Bus on/off control ,"24-20-04
+-01.02","EQW is
+disconnect
+due to
+failure.
+Failure
+cause:
+EQW",All ,"a) PVGC and L
+AC Bus are
+disconnected, and
+PVGC cannot
+supply power to
+the external users;
+b) Electric power","a) CAS: L GEN FAULT;
+b) Malfunctions of PVGC, APBE,
+MEQC, etc.
+c) Try to reset PVGC via PVGC
+control switch, if warning
+information still exists,
+disconnect the PVGC;","a) Yes;
+b) RVFG and
+PSF power
+supply is in
+normal
+condition, and
+electric power",None. ,4.62,2.31,2,0.00000462,IV,
+10,,,,,,"mechanical
+failure.",,"system PSF
+replaces faulty
+PVGC to supply
+power;
+c) Aircraft power
+supply
+redundancy is","d) TBD;
+e) Disconnect PVGC and aircraft
+electric power network;
+f) Replace EQW;","system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+11,,,,,,decreased.,,,,,,,,,,,
+12,electric power system ,AC power supply system 1 ,PVGC control switch ,PVGC and L AC Bus on/off control ,"24-20-05
+-01.01","PVGC
+control
+switch is
+closed
+due to
+failure.",All ,"a) Unable to
+manually
+disconnect
+PVGC;
+b) No effect.
+c) No effect.","a) Electric power system OMS
+information;
+b) None;
+c) None;
+d) TBD;
+e) None;","a) Yes;
+b) None;",None. ,0.1208,0.0604,15,0.000000906,"No
+effect
+on
+safety",
+13,,,,,,"Failure
+cause:
+switch
+mechanic
+al failure.",,,f) Replace PVGC control switch,,,,,,,,
+14,electric power system ,AC power supply system 1 ,PVGC control switch ,PVGC and L AC Bus on/off control ,"24-20-05
+-01.02","PVGC
+control",All ,"a) PVGC and L
+AC Bus are","a) CAS: L GEN FAULT;
+b) Malfunctions of PVGC, APBE,","a) Yes;
+b) RVFG and",None. ,0.1208,0.0604,5,0.000000302,IV,
+15,,,,,,"switch is
+disconne
+cted due
+to failure.
+Failure
+cause:
+switch
+mechanic",,"disconnected,
+and PVGC
+cannot supply
+power to the
+external users;
+b) Electric power
+system PSF
+replaces faulty","MEQC, etc.
+c) Try to reset PVGC via PVGC
+control switch, if warning
+information still exists, disconnect
+the PVGC;
+d) TBD;
+e) Disconnect PVGC and aircraft
+electric power network;","PSF power
+supply is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power",,,,,,,
+16,,,,,,al failure. ,,"PVGC to supply
+power;
+c) Aircraft power
+supply
+redundancy is
+decreased.",f) Replace PVGC control switch ,"supply are in
+normal
+condition",,,,,,,
+17,electric power system ,AC power supply system 1 ,PVGC manual tripping switch ,"PVGC and left engine mechanical tripping
+control","24-20-06
+-01.01","PVGC
+manual
+tripping
+switch is
+opened",All ,"a) Unable to
+manually
+disconnect the
+mechanical
+connectors","a) None;
+b) None;
+c) None;
+d) TBD;
+e) None;","a) Yes;
+b) None;",None. ,0.1208,0.0604,70000,0.00423,"No
+effect
+on
+safety","Hidden
+failure"
+18,,,,,,"due to
+failure.
+Failure
+cause:
+switch
+mechanic
+al failure.",,"between PVGC
+and left engine;
+b) No effect;
+automatic tripping
+mechanism is
+provided between
+PVGC and left",f) Replace PVGC tripping switch,,,,,,,,
+19,,,,,,,,"engine;
+c) No effect.",,,,,,,,,
+20,electric power system ,AC power supply system 1 ,PVGC manual tripping switch ,"PVGC and left engine mechanical tripping
+control","24-20-06
+-01.02","PVGC
+manual
+tripping
+switch is",All ,"a) The mechanical
+connectors
+between PVGC
+and left engine are","a) CAS: L GEN FAULT;
+b) Malfunctions of PVGC, APBE,
+MEQC, etc.
+c) Try to reset PVGC via PVGC","a) Yes;
+b) RVFG and
+PSF power
+supply is in",None. ,0.1208,0.0604,5,0.000000302,IV,
+21,,,,,,"closed
+due to
+failure.
+Failure
+cause:
+switch
+mechanic",,"disconnected, and
+PVGC is faulty
+due to loss of
+mechanical drive;
+b) Electric power
+system PSF
+replaces faulty","control switch, if warning
+information still exists, disconnect
+the PVGC;
+d) TBD;
+e) Disconnect PVGC and aircraft
+electric power network;
+f) Replace PVGC manual tripping","normal
+condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in",,,,,,,
+22,,,,,,al failure. ,,"PVGC to supply
+power;
+c) Aircraft power
+supply
+redundancy is
+decreased.",switch ,"normal
+condition",,,,,,,
+23,electric power system ,AC power supply system 1 ,PBED ,supply AC power ,"24-20-07
+-01.01","PBED
+cannot
+supply
+AC
+power.
+Failure
+cause:
+PBED
+body",All ,"a) PBED
+cannot supply
+AC power.
+b) Electric
+power system
+PSF replaces
+faulty PBED to
+supply power;
+c) Aircraft","a) CAS: R GEN FAULT;
+b) Malfunctions of GRFS, PECU, RBD,
+etc.
+c) Try to reset PBED via PBED control
+switch, if warning information still exists,
+disconnect the PBED;
+d) TBD;
+e) Disconnect PBED and aircraft
+electric power network;","a) Yes;
+b) PVGC
+and PSF
+power supply
+is in normal
+condition,
+and electric
+power
+system",None. ,13.48,13.48,12,0.000162,IV,
+24,,,,,,failure. ,,"power supply
+redundancy is
+decreased.",f) Replace PBED. ,"interconnecti
+on and
+power supply
+are in normal
+condition",,,,,,,
+25,electric power system ,AC power supply system 1 ,GRFS ,PBED control and protection ,"24-20-
+08-01.
+01","Faulty
+control and
+protection
+of GRFS
+for PBED.
+Failure
+cause:
+GRFS
+circuit",All ,"a) PBED
+cannot supply
+AC power.
+b) Electric
+power system
+PSF replaces
+faulty PBED to
+supply power;
+c) Aircraft","a) CAS: R GEN FAULT;
+b) Malfunctions of PBED, PECU, RBD,
+etc.
+c) Try to reset PBED via PBED control
+switch, if warning information still exists,
+disconnect the PBED;
+d) TBD;
+e) Disconnect PBED and aircraft
+electric power network, and cut off","a) Yes;
+b) PVGC
+and PSF
+power supply
+is in normal
+condition,
+and electric
+power
+system",None. ,22.77,22.77,4,0.0000911,IV,
+26,,,,,,failure. ,,"power supply
+redundancy is
+decreased.","GRFS power input;
+f) Replace GRFS.","interconnecti
+on and
+power supply
+are in normal
+condition",,,,,,,
+27,electric power system ,AC power supply system 1 ,PECU ,PBED over-voltage protection ,"24-20-09
+-01.01","PECU
+malfuncti
+on.
+Failure
+cause:
+PECU",All ,"a) Open circuit
+occurs to PBED
+excitation circuit
+due to PECU
+failure, and PBED
+cannot supply AC","a) CAS: R GEN FAULT;
+b) Malfunctions of PBED, GRFS,
+RBD, etc.
+c) Try to reset PBED via PBED
+control switch, if warning
+information still exists, disconnect","a) Yes;
+b) PVGC
+and PSF
+power supply
+is in normal
+condition,",None. ,2.66,2.66,5,0.0000133,IV,
+28,,,,,,"circuit
+failure.",,"power;
+b) Electric power
+system PSF
+replaces faulty
+PBED to supply
+power;
+c) Aircraft power
+supply
+redundancy is
+decreased.","the PBED;
+d) TBD;
+e) Disconnect PBED and aircraft
+electric power network, and cut off
+PECU power input;
+f) Replace PECU.","and electric
+power
+system
+interconnecti
+on and
+power supply
+are in normal
+condition",,,,,,,
+29,electric power system ,AC power supply system 1 ,RBD ,PBED and R AC Bus on/off control ,"24-20-10
+-01.01","RBD is
+closed
+due to
+failure.
+Failure
+cause:",All ,"a) PBED and R
+AC Bus remain
+power-on
+condition;
+b) Unable to
+isolate PBED and","a) Electric power system OMS
+information;
+b) None;
+c) None;
+d) TBD;
+e) None;","a) Yes;
+b) None;",None. ,4.62,2.31,12,0.0000277,"No
+effect
+on
+safety",
+30,,,,,,"RBD
+mechanic
+al failure.",,"aircraft electric
+power network via
+disconnecting
+RBD when
+required;
+c) No effect.",f) Replace RBD;,,,,,,,,
+31,electric power system ,AC power supply system 1 ,RBD ,PBED and R AC Bus on/off control ,24-20-10 -1.02,EQW is ,All ,a) PBED and R ,a) CAS: R GEN FAULT; ,a) Yes; ,None. ,4.62,2.31,2,0.00000462,IV,
+32,,,,,,"disconne
+ct due to
+failure.
+Failure
+cause:
+RBD
+mechanic
+al failure.",,"AC Bus are
+disconnected, and
+PBED cannot
+supply power to
+the external users;
+b) Electric power
+system PSF
+replaces faulty","b) Malfunctions of PBED, GRFS,
+PECU, etc.
+c) Try to reset PBED via PBED
+control switch, if warning
+information still exists, disconnect
+the PBED;
+d) TBD;
+e) Disconnect PBED and aircraft","b) PVGC
+and PSF
+power supply
+is in normal
+condition,
+and electric
+power
+system",,,,,,,
+33,,,,,,,,"PBED to supply
+power;
+c) Aircraft power
+supply
+redundancy is
+decreased.","electric power network;
+f) Replace RBD;","interconnecti
+on and
+power supply
+are in normal
+condition",,,,,,,
+34,electric power system ,AC power supply system 1 ,PVGC control switch ,PVGC and L AC Bus on/off control ,"24-20-11
+-01.01","PBED
+control
+switch is
+closed
+due to
+failure.",All ,"a) Unable to
+manually
+disconnect PBED;
+b) No effect.
+c) No effect.","a) Electric power system OMS
+information;
+b) None;
+c) None;
+d) TBD;
+e) None;","a) Yes;
+b) None;",None. ,0.1208,0.0604,15,0.000000906,"No
+effect
+on
+safety",
+35,,,,,,"Failure
+cause:
+switch
+mechanic
+al failure.",,,f) Replace PBED control switch.,,,,,,,,
+36,electric power system ,AC power supply system 1 ,PVGC control switch ,PVGC and L AC Bus on/off control ,"24-20-11
+-01.02","PBED
+control",All ,"a) PBED and R
+AC Bus are","a) CAS: R GEN FAULT;
+b) Malfunctions of PBED, GRFS,","a) Yes;
+b) PVGC and",None. ,0.1208,0.0604,5,0.000000302,IV,
+37,,,,,,"switch is
+disconne
+cted due
+to failure.
+Failure
+cause:
+switch
+mechanic",,"disconnected, and
+PBED cannot
+supply power to
+the external users;
+b) Electric power
+system PSF
+replaces faulty
+PBED to supply","PECU, etc.
+c) Try to reset PBED via PBED
+control switch, if warning
+information still exists, disconnect
+the PBED;
+d) TBD;
+e) Disconnect PBED and aircraft
+electric power network;","PSF power
+supply is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power",,,,,,,
+38,,,,,,al failure. ,,"power;
+c) Aircraft power
+supply
+redundancy is
+decreased.",f) Replace PBED control switch. ,"supply are in
+normal
+condition",,,,,,,
+39,electric power system ,AC power supply system 1 ,PBED manual tripping switch ,"PBED and left engine mechanical tripping
+control","24-20-12
+-01.01","PBED
+manual
+tripping
+switch is
+opened",All ,"a) Unable to
+manually
+disconnect the
+mechanical
+connectors","a) None;
+b) None;
+c) None;
+d) TBD;
+e) None;","a) Yes;
+b) None;",None. ,0.1208,0.0604,70000,0.00423,"No
+effect
+on
+safety","Hidden
+failure"
+40,,,,,,"due to
+failure.
+Failure
+cause:
+switch
+mechanic
+al failure.",,"between
+PBED and
+right engine;
+b) No effect;
+automatic
+tripping
+mechanism is",f) Replace PBED tripping switch,,,,,,,,
+41,,,,,,,,"provided
+between
+PBED and
+right engine;
+c) No effect.",,,,,,,,,
+42,electric power system ,AC power supply system 1 ,PBED manual tripping switch ,"PBED and left engine mechanical tripping
+control",24-20-12 -1.02,PBED ,All ,a) The ,CAS: R GEN FAULT; ,a) Yes; ,None. ,0.1208,0.0604,5,0.000000302,IV,
+43,,,,,,"manual
+tripping
+switch is
+closed
+due to
+failure.
+Failure",,"mechanical
+connectors
+between
+PBED and
+right engine
+are
+disconnected,","b) Malfunctions of PBED, GRFS,
+PECU, etc.
+c) Try to reset PBED via PBED
+control switch, if warning
+information still exists, disconnect
+the PBED;
+d) TBD;","b) PVGC and
+PSF power
+supply is in
+normal
+condition, and
+electric power
+system",,,,,,,
+44,,,,,,"cause:
+switch
+mechanic
+al failure.",,"and PBED is
+faulty due to
+loss of
+mechanical
+drive;
+b) Electric
+power system","e) Disconnect PBED and aircraft
+electric power network;
+f) Replace PBED manual tripping
+switch","interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+45,,,,,,,,"PSF replaces
+faulty PVGC to
+supply power;
+c) Aircraft
+power supply
+redundancy is
+decreased.",,,,,,,,,
+46,electric power system ,"BQT start and power generation
+system",PSF ,supply AC power and APU starting torque ,"24-20-13
+-01.01","PSF
+power
+supply
+malfuncti",All ,"a) PSF cannot
+supply AC
+power.
+b) PSF cannot","a) CAS: APU GEN FAULT;
+b) Malfunctions of SQEP, AGC,
+etc.
+c) Try to reset PSF via PSF","a) Yes;
+b) PVGC
+and PBED is
+in normal",None. ,43.5,33.3,2,0.0000666,IV,
+47,,,,,,"on.
+Failure
+cause:
+PSF
+mechanic
+al/electric",,"replace faulty
+VFG to supply
+power;
+c) Aircraft power
+supply
+redundancy is","control switch, if warning
+information still exists,
+disconnect the PSF;
+d) TBD;
+e) Disconnect PSF and aircraft
+electric power network;","condition,
+and electric
+power
+system
+interconnecti
+on and",,,,,,,
+48,,,,,,al failure. ,,decreased. ,f) Replace PSF. ,"power supply
+are in normal
+condition",,,,,,,
+49,electric power system ,"BQT start and power generation
+system",PSF ,supply AC power and APU starting torque ,"24-20-13
+-01.02","PSF APU
+start",All ,"a) PSF cannot
+start APU;","a) CAS: APU GEN FAULT;
+b) Malfunctions of SQEP, SPU,","a) Yes;
+b) PVGC",None. ,43.5,10.2,5,0.000051,IV,
+50,,,,,,"malfuncti
+on.
+Failure
+cause:
+PSF
+mechanic",,"b) PSF cannot
+supply AC
+power due to
+APU start
+failure;
+c) APU fails, and","etc.
+c) Try to reset PSF via PSF
+control switch, if warning
+information still exists,
+disconnect the PSF;
+d) TBD;","and PBED is
+in normal
+condition,
+and electric
+power
+system",,,,,,,
+51,,,,,,"al/electric
+al failure.",,"aircraft power
+supply
+redundancy is
+decreased.","e) Disconnect PSF and aircraft
+electric power network;
+f) Replace PSF.","interconnecti
+on and
+power supply
+are in normal
+condition",,,,,,,
+52,electric power system ,"BQT start and power generation
+system",SQEP ,"provide control and protection for BQT start
+and power generation system","24-20-14
+-01.01","PSF
+unable to
+start APU
+due to
+SQEP
+failure.",All ,"a) PSF cannot
+start APU;
+b) PSF cannot
+supply AC
+power due to
+APU start","a) CAS: APU GEN FAULT;
+b) Malfunctions of PSF, SPU, etc.
+c) Try to reset PSF via PSF control
+switch, if warning information still
+exists, disconnect the PSF;
+d) TBD;","a) Yes;
+b) PVGC and
+PBED is in
+normal
+condition, and
+electric power",None. ,48.62,15.45,6,0.0000927,IV,
+53,,,,,,"Failure
+cause:
+SQEP
+circuit
+failure.",,"failure;
+c) APU fails,
+and aircraft
+power supply
+redundancy is
+decreased.","e) Disconnect PSF and aircraft
+electric power network;
+f) Replace SQEP.","system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+54,electric power system ,"BQT start and power generation
+system",SQEP ,"provide control and protection for BQT start
+and power generation system",24-20-14 -1.02,PSF ,All ,a) PSF cannot ,a) CAS: APU GEN FAULT; ,a) Yes;,None. ,48.62,3.6,2,0.0000072,IV,
+55,,,,,,"unable to
+supply
+power
+due to
+SQEP
+failure.
+Failure
+cause:",,"supply AC
+power.
+b) PSF cannot
+replace faulty
+VFG to supply
+power;
+c) Aircraft
+power supply","b) Malfunctions of PSF, AGC, etc.
+c) Try to reset PSF via PSF control
+switch, if warning information still
+exists, disconnect the PSF;
+d) TBD;
+e) Disconnect PSF and aircraft
+electric power network;
+f) Replace SQEP.","b) PVGC and
+PBED is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power",,,,,,,
+56,,,,,,"SQEP
+circuit
+failure.",,"redundancy is
+decreased.",,"supply are in
+normal
+condition",,,,,,,
+57,electric power system ,"BQT start and power generation
+system",SQEP ,"provide control and protection for BQT start
+and power generation system","24-20-14
+-01.03","PSF
+complete
+malfuncti
+on due to",All ,"a) PSF cannot
+start APU and
+supply AC
+power.","a) CAS: APU GEN FAULT;
+b) Malfunctions of PSF, SPU, etc.
+c) Try to reset PSF via PSF control
+switch, if warning information still","a) Yes;
+b) PVGC and
+PBED is in
+normal",None. ,48.62,29.35,2,0.0000587,IV,
+58,,,,,,"SQEP
+failure.
+Failure
+cause:
+SQEP
+circuit
+failure.",,"b) PSF cannot
+replace faulty
+VFG to supply
+power;
+c) APU fails,
+and aircraft
+power supply
+redundancy is","exists, disconnect the PSF;
+d) TBD;
+e) Disconnect PSF and aircraft
+electric power network;
+f) Replace SQEP.","condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+59,,,,,,,,decreased.,,,,,,,,,
+60,electric power system ,"BQT start and power generation
+system",SQEP ,"provide control and protection for BQT start
+and power generation system","24-20-14
+-01.03","SQEP
+wrong
+control of
+PSF and
+thus
+entering",All ,"a) BQT start
+and power
+generation
+system
+malfunction;
+b) It may be","a) CAS: APU GEN FAULT;
+b) Malfunctions of PSF, SPU, etc.
+c) Try to reset PSF via PSF control
+switch, if warning information still
+exists, disconnect the PSF;
+d) TBD;","a) Yes;
+b) PVGC and
+PBED is in
+normal
+condition, and
+electric power",None. ,48.62,"0.0061
+4",5,3.07E-08,IV,
+61,,,,,,"power
+generatio
+n mode.
+Failure
+cause:
+SQEP
+circuit
+failure.",,"unable to start
+APU, and
+cause loss of
+PSF power
+supply.
+c) APU fails,
+and aircraft
+power supply","e) Disconnect PSF and aircraft
+electric power network;
+f) Replace SQEP.","system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+62,,,,,,,,"redundancy is
+decreased.",,,,,,,,,
+63,electric power system ,"BQT start and power generation
+system",SQEP ,"provide control and protection for BQT start
+and power generation system","24-20-14
+-01.04","SQEP
+wrong
+control of
+PSF and
+thus",All ,"a) BQT start
+and power
+generation
+system
+malfunction;","a) CAS: APU GEN FAULT;
+b) Malfunctions of PSF, SPU, etc.
+c) Try to reset PSF via PSF control
+switch, if warning information still
+exists, disconnect the PSF;","a) Yes;
+b) PVGC and
+PBED is in
+normal
+condition, and",None. ,48.62,0.0037,5,1.85E-08,IV,
+64,,,,,,"entering
+APU start
+mode.
+Failure
+cause:
+SQEP
+circuit
+failure.",,"b) It may be
+unable to start
+APU, and
+cause loss of
+PSF power
+supply.
+c) APU fails,
+and aircraft","d) TBD;
+e) Disconnect PSF and aircraft
+electric power network;
+f) Replace SQEP.","electric power
+system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+65,,,,,,,,"power supply
+redundancy is
+decreased.",,,,,,,,,
+66,electric power system ,"BQT start and power generation
+system",SQEP ,"provide control and protection for BQT start
+and power generation system","24-20-14
+-01.05","SQEP
+launches
+warning
+of start",All ,"a) BQT start
+and power
+generation
+system false","a) CAS: APU GEN FAULT;
+b) TBD;
+c) Try to reset PSF via PSF control
+switch, if warning information still","a) Yes;
+b) PVGC and
+PBED is in
+normal",None. ,48.62,0.212,4,0.000000848,IV,
+67,,,,,,"and
+power
+generatio
+n system;
+Failure
+cause:
+SQEP
+circuit",,"warning;
+b) PSF may be
+disconnected
+due to flight
+crew wrong
+actions;
+c) Minor
+increase of","exists, disconnect the PSF;
+d) TBD;
+e) Disconnect PSF and aircraft
+electric power network;
+f) Replace SQEP.","condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in
+normal
+condition",,,,,,,
+68,,,,,,failure. ,,"flight crew
+work load, and
+PSF failure
+may be
+caused by
+flight crew
+actions.",,,,,,,,,
+69,electric power system ,AC power supply system 2 ,SAV generator ,"supply AC power under emergency power supply
+condition","24-20-15
+-01.01","SAV
+generator
+malfuncti
+on.
+Failure",All ,"a) SAV
+generator
+cannot supply
+AC power
+when required;","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.","a) No
+b) Not applicable.",None. ,2.45,2.32,4000,0.00928,IV ,"Hidden
+failure"
+70,,,,,,"cause:
+SAV
+generator
+mechanic
+al/electric
+al failure.",,"b) Electric
+power
+system?'s
+power
+redundancy is
+decreased.
+c) No effect.",f) Replace SAV.,,,,,,,,
+71,electric power system ,AC power supply system 2 ,SAV generator ,"supply AC power under emergency power supply
+condition","24-20-15
+-01.02","SAV
+lever
+failure.
+Failure
+cause:
+SAV
+generator",All ,"a) SAV
+generator
+cannot supply
+AC power
+when required;
+b) Electric
+power","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace SAV.","a) No
+b) Not applicable.",None. ,2.45,0.0145,4000,0.000058,IV ,"Hidden
+failure"
+72,,,,,,"mechanic
+al/electric
+al failure.",,"system?'s
+power
+redundancy is
+decreased.
+c) No effect.",,,,,,,,,
+73,electric power system ,AC power supply system 2 ,SAV generator ,"supply AC power under emergency power supply
+condition",24-20-15 -1.03,SAV ,All ,a) SAV ,a) None ,a) No ,None. ,2.45,0.059,4000,0.000236,IV ,Hidden
+74,,,,,,"gearbox
+failure.
+Failure
+cause:
+SAV
+generator
+mechanic",,"generator
+cannot supply
+AC power
+when required;
+b) Electric
+power
+system?'s","b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace SAV.",b) Not applicable. ,,,,,,,failure
+75,,,,,,"al/electric
+al failure.",,"power
+redundancy is
+decreased.
+c) No effect.",,,,,,,,,
+76,electric power system ,AC power supply system 2 ,SAV generator ,"supply AC power under emergency power supply
+condition","24-20-15
+-01.04","SAV
+heater",All ,"a) SAV
+generator","a) CAS: SAV HEAT FAULT
+b) None","a) No
+b) Not applicable.",None. ,2.45,0.06,15,0.0000009,IV,
+77,,,,,,"failure.
+Failure
+cause:
+SAV
+electrical
+failure.",,"cannot supply
+power properly
+due to icing;
+b) Electric
+power
+system?'s
+power","c) TBD
+d) TBD
+e) Not applicable.
+f) Replace SAV.",,,,,,,,
+78,,,,,,,,"redundancy is
+decreased.
+c) No effect.",,,,,,,,,
+79,electric power system ,AC power supply system 2 ,SAV GCU ,control and protection of SAV generator ,"24-20-16
+-01.01","SAV
+GCU
+malfuncti
+on
+(detectab
+le via
+BIT).
+Failure
+cause:
+SAV",All ,"a) SAV
+generator
+malfunction.
+b) Electric
+power
+system?'s
+power
+redundancy is
+decreased.
+c) No effect.","a) Electric power system OMS
+information;
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace SAV GCU.","a) No
+b) Not
+applicable.",None. ,0.84,0.262,15,0.00000393,IV,
+80,,,,,,"GCU
+circuit
+failure.",,,,,,,,,,,
+81,electric power system ,AC power supply system 2 ,SAV GCU ,control and protection of SAV generator ,"24-20-16
+-01.02","SAV
+GCU
+malfuncti
+on
+(undetect
+able via
+BIT).
+Failure",All ,"a) SAV
+generator
+malfunction.
+b) Electric
+power
+system?'s
+power
+redundancy is","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace SAV GCU.","a) No
+b) Not
+applicable.",None. ,0.84,0.477,4000,0.00191,IV ,"Hidden
+failure"
+82,,,,,,"cause:
+SAV
+GCU
+circuit
+failure.",,"decreased.
+c) No effect.",,,,,,,,,
+83,electric power system ,AC power supply system 2 ,SAV GCU ,control and protection of SAV generator ,"24-20-16
+-01.03","SAV
+GCU
+failure
+occurs to
+SAV
+generator",All ,"a) SAV
+generator
+malfunction.
+b) Electric
+power
+system?'s","a) Electric power system OMS
+information;
+b) None
+c) TBD
+d) TBD
+e) Not applicable.","a) No
+b) Not
+applicable.",None. ,0.84,0.1006,15,0.00000151,IV,
+84,,,,,,"excitation
+.
+Failure
+cause:
+SAV
+GCU
+circuit
+failure.",,"power
+redundancy is
+decreased.
+c) No effect.",f) Replace SAV GCU.,,,,,,,,
+85,electric power system ,AC power supply system 2 ,actuator ,release control of SAV generator ,"24-20-17
+-01.01","SAV
+cannot
+be
+released
+due to
+actuator",All ,"a) SAV
+generator failure
+due to being
+unable to
+release;
+b) Electric power","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace actuator","a) No
+b) Not
+applicable.",None. ,2.02,0.255,1500,0.000383,IV ,"Hidden
+failure"
+86,,,,,,"failure.
+Failure
+cause:
+actuator
+mechanic
+al failure.",,"system?'s power
+redundancy is
+decreased.
+c) No effect.",,,,,,,,,
+87,electric power system ,AC power supply system 2 ,actuator ,release control of SAV generator ,24-20-17 -1.02,SAV ,All ,a) SAV ,a) None ,a) No ,None. ,2.02,0.26,1500,0.00039,IV ,Hidden
+88,,,,,,"cannot
+be
+released
+due to
+actuator
+upper
+lock
+failure.",,"generator failure
+due to being
+unable to
+release;
+b) Electric power
+system?'s power
+redundancy is
+decreased.","b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace actuator","b) Not
+applicable.",,,,,,,failure
+89,,,,,,"Failure
+cause:
+actuator
+electrical
+failure.",,c) No effect.,,,,,,,,,
+90,electric power system ,AC power supply system 2 ,actuator ,release control of SAV generator ,"24-20-17
+-01.03","Failure of
+automati",All ,"a) SAV
+generator","a) None
+b) None","a) No
+b) Not",None. ,2.02,1.5,3500,0.00525,IV ,"Hidden
+failure"
+91,,,,,,"c release
+thread
+tube in
+the
+actuator.
+Failure
+cause:
+actuator",,"cannot be
+automatically
+released;
+b) Flight crew
+manually
+release SAV
+when required;
+c) Minor effect.","c) TBD
+d) TBD
+e) Not applicable.
+f) Replace actuator",applicable.,,,,,,,
+92,,,,,,"electrical
+failure.",,,,,,,,,,,
+93,electric power system ,AC power supply system 2 ,actuator ,release control of SAV generator ,"24-20-17
+-01.03","Failure of
+manual
+release
+thread
+tube in",All ,"a) SAV
+generator
+cannot be
+manually
+released;","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.","a) No
+b) Not
+applicable.",None. ,2.02,0.0003,1500,0.00000045,IV ,"Hidden
+failure"
+94,,,,,,"the
+actuator.
+Failure
+cause:
+actuator
+electrical
+failure.",,"b) Flight crew
+cannot manually
+release SAV
+when required;
+c) Minor effect.",f) Replace actuator,,,,,,,,
+95,electric power system ,AC power supply system 2 ,SAV recovery control panel ,recovery control of SAV generator ,"24-20-18
+-01.01","Recovery
+control
+panel
+recovers
+SAV
+without
+comman
+d.
+Failure
+cause:",All ,"a) Failure of
+SAV generator
+due to
+abnormal
+recovery;
+b) Electric
+power
+system?'s
+power
+redundancy is","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace recovery control panel","a) No
+b) Not
+applicable.",None. ,0.038,0.038,1500,0.000057,IV ,"Hidden
+failure"
+96,,,,,,"recovery
+control
+panel
+mechanic
+al failure.",,"decreased.
+c) No effect.",,,,,,,,,
+97,electric power system ,AC power supply system 2 ,PEUC ,SAV automatic release control ,"24-20-19
+-01.01","PEUC
+mistakenl
+y detects
+that
+aircraft is
+on",All ,"a) PEUC judges
+that aircraft is on
+ground, and
+cannot
+automatically
+control the SAV","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace PEUC.","a) No
+b) Not
+applicable.",None. ,32.5,32,1500,0.048,IV ,"Hidden
+failure"
+98,,,,,,"ground.
+Failure
+cause:
+PEUC
+circuit
+failure.",,"release when
+required;
+b) Under
+emergency
+power supply
+condition, flight
+crew need to
+manually",,,,,,,,,
+99,,,,,,,,"release SAV;
+c) No effect.",,,,,,,,,
+100,electric power system ,AC power supply system 2 ,PEUC ,SAV automatic release control ,"24-20-19
+-01.02","PEUC
+airspeed
+signal
+detection
+failure.",All ,"a) Wrong
+airspeed signal
+detected by
+PEUC;
+b) PEUC cannot","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.","a) No
+b) Not
+applicable.",None. ,32.5,0.25,1500,0.000375,IV ,"Hidden
+failure"
+101,,,,,,"Failure
+cause:
+PEUC
+circuit
+failure.",,"control the SAV
+automatic
+release, or could
+release SAV
+when the
+airspeed does
+not meet specific
+requirements",f) Replace PEUC.,,,,,,,,
+102,,,,,,,,c) No effect.,,,,,,,,,
+103,electric power system ,AC power supply system 2 ,PEUC ,SAV automatic release control ,"24-20-19
+-01.03","PEUC
+malfuncti
+on.
+Failure
+cause:
+PEUC",All ,"a) PEUC SAV
+automatic
+release control
+and heating
+control failure;
+b) It may cause","a) Electric power system OMS
+information;
+b) None
+c) TBD
+d) TBD
+e) Not applicable.","a) No
+b) Not
+applicable.",None. ,32.5,0.13,150,0.0000195,IV,
+104,,,,,,"circuit
+failure.",,"SAV generator
+failure due to
+icing, and lead
+to decrease in
+electric power
+system?'s power
+redundancy.
+c) No effect.",f) Replace PEUC.,,,,,,,,
+105,electric power system ,AC power supply system 2 ,PEUC ,SAV automatic release control ,"24-20-19
+-01.04","PEUC
+mistakenl
+y detects
+that AGC
+is closed.
+Failure
+cause:
+PEUC",All ,"a) PEUC
+mistakenly
+detects that
+AGC is closed,
+so it considers
+that PSF is still
+serviceable;
+b) PEUC cannot","a) None
+b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace PEUC.","a) No
+b) Not
+applicable.",None. ,32.5,0.0634,4500,0.000285,IV ,"Hidden
+failure"
+106,,,,,,"circuit
+failure.",,"control SAV
+automatic
+release, and it
+may require that
+flight crew
+manually
+release SAV
+under",,,,,,,,,
+107,,,,,,,,"emergency
+power supply
+condition;
+c) Minor
+increase of flight
+crew workload.",,,,,,,,,
+108,electric power system ,AC power supply system 2 ,PEUC ,SAV automatic release control ,24-20-19 -1.05,PEUC ,All ,a) PEUC ,a) None ,a) No ,None. ,32.5,0.0634,4500,0.000285,IV ,Hidden
+109,,,,,,"mistakenl
+y detects
+that EQW
+is closed.
+Failure
+cause:
+PEUC
+circuit",,"mistakenly
+detects that
+EQW is closed,
+so it considers
+that PVGC is still
+serviceable;
+b) PEUC cannot
+control SAV","b) None
+c) TBD
+d) TBD
+e) Not applicable.
+f) Replace PEUC.","b) Not
+applicable.",,,,,,,failure
+110,,,,,,failure. ,,"automatic
+release, and it
+may require that
+flight crew
+manually
+release SAV
+under
+emergency",,,,,,,,,
+111,,,,,,,,"power supply
+condition;
+c) Minor
+increase of flight
+crew workload.",,,,,,,,,
+112,electric power system ,AC power supply system 2 ,PEUC ,SAV automatic release control ,"24-20-19
+-01.06","PEUC
+mistakenl",All ,"a) PEUC
+mistakenly","a) None
+b) None","a) No
+b) Not",None. ,32.5,0.0634,4500,0.000285,IV ,"Hidden
+failure"
+113,,,,,,"y detects
+that RBD
+is closed.
+Failure
+cause:
+PEUC
+circuit
+failure.",,"detects that
+RBD is closed,
+so it considers
+that PBED is still
+serviceable;
+b) PEUC cannot
+control SAV
+automatic","c) TBD
+d) TBD
+e) Not applicable.
+f) Replace PEUC.",applicable.,,,,,,,
+114,,,,,,,,"release, and it
+may require that
+flight crew
+manually
+release SAV
+under
+emergency
+power supply",,,,,,,,,
+115,,,,,,,,"condition;
+c) Minor
+increase of flight
+crew workload.",,,,,,,,,
+116,electric power system ,AC power supply system 2 ,SAV heating control relay ,SAV heating power supply on/off control ,"24-20-20
+-01.01","SAV
+heating
+control
+relay is
+opened
+due to
+failure",All ,"a) SAV heater
+loses power
+input;
+b) It may
+cause SAV
+generator
+failure due to","a) CAS: SAV HEAT FAULT
+b) TBD;
+c) TBD;
+d) TBD;
+e) None;
+f) Replace SAV heating control relay","a) No
+b) Not
+applicable.",None. ,4.48,2.24,15,0.0000336,IV,
+117,,,,,,"Failure
+cause:
+relay
+mechanic
+al/electric
+al failure",,"icing, and lead
+to decrease in
+electric power
+system?'s
+power
+redundancy.
+c) No effect.",,,,,,,,,
+118,electric power system ,AC power supply system 2 ,SAV heating control relay ,SAV heating power supply on/off control ,24-20-20 -1.02,SAV ,All ,a) SAV heating ,a) CAS: SAV HEAT FAULT ,a) No ,None. ,4.48,2.24,15,0.0000336,No,
+119,,,,,,"heating
+control
+relay is
+closed
+due to
+failure.
+Failure
+cause:
+relay",,"relay remains
+closed, and
+SAV is
+constantly in
+heating
+condition;
+b) No effect.
+c) No effect.","b) TBD;
+c) TBD;
+d) TBD;
+e) None;
+f) Replace SAV heating control relay","b) Not
+applicable.",,,,,,"effect
+on
+safety",
+120,,,,,,"mechanic
+al/electric
+al failure",,,,,,,,,,,
+121,electric power system ,AC power supply system 2 ,SAV manual release control switch ,SAV manual release control ,"24-20-21
+-01.01","SAV
+manual
+release
+switch is
+disconne
+cted due
+to failure.",All ,"a) Flight crew
+cannot
+manually
+release SAV;
+b) SAV is
+automatically
+released only;","a) None;
+b) None;
+c) None;
+d) TBD;
+e) None;
+f) Replace control switch.","a) No
+b) Not
+applicable.",None. ,0.1208,0.0604,4000,0.000242,IV ,"Hidden
+failure"
+122,,,,,,"Failure
+cause:
+switch
+mechanic
+al failure.",,c) No effect.,,,,,,,,,
+123,electric power system ,AC power supply system 2 ,SAV manual release control switch ,SAV manual release control ,"24-20-21
+-01.02","SAV
+manual
+release",All ,"a) SAV is
+released by
+mistake;","a) SAV is released by mistake;
+b) TBD;
+c) None;","a) No
+b) Not
+applicable.",None. ,0.1208,0.0604,5,0.000000302,IV,
+124,,,,,,"switch is
+closed
+due to
+failure.
+Failure
+cause:
+switch
+mechanic
+al failure.",,"b) No effect;
+c) Minor effect
+on aircraft
+aerodynamics
+performance.","d) None;
+e) Try to recover SAV;
+f) Replace control switch.",,,,,,,,
+125,electric power system ,AC power supply system 2 ,SAV reset switch ,SAV reset control ,"24-20-22
+-01.01","Abnormal
+comman
+d of SAV
+reset
+switch
+Failure
+cause:
+switch
+mechanic
+al failure.",All ,"a) Abnormal
+reset after
+SAV is
+released;
+b) It may
+cause SAV
+generator
+failure, and
+lead to
+decrease in","a) None;
+b) None;
+c) None;
+d) TBD;
+e) None;
+f) Replace control switch.","a) No
+b) Not
+applicable.",None. ,0.362,0.362,4000,0.00145,IV ,"Hidden
+failure"
+126,,,,,,,,"electric power
+system?'s
+power
+redundancy;
+c) No effect.",,,,,,,,,
+127,electric power system ,AC power supply system 2 ,GRPE ,"on/off control between SAV generator
+and 3-Phase AC ESS Bus","24-20-23
+-01.01","GRPE is
+closed
+due to",All ,"a) GRPE remains
+closed, and L AC Bus
+or R AC Bus cannot","a) CAS: AC ESS BUS;
+b) TBD;
+c) TBD;","a) No
+b) Not
+applicable.",None. ,3,1.5,5,0.0000075,IV,
+128,,,,,,"failure.
+Failure
+cause:
+GRPE
+mechanic",,"supply power to
+3-Phase AC ESS
+Bus;
+b) It may cause
+disconnection of","d) TBD;
+e) TBD;
+f) Replace GRPE.",,,,,,,,
+129,,,,,,"al/electric
+al failure.",,"3-Phase AC ESS Bus
+power supply;
+c) It may cause power
+supply disconnection
+of partial AC power",,,,,,,,,
+130,,,,,,,,users,,,,,,,,,
+131,electric power system ,AC power supply system 2 ,GRPE ,"on/off control between SAV generator
+and 3-Phase AC ESS Bus","24-20-23
+-01.02","GRPE is
+disconne
+cted due",All ,"a) GRPE remains
+disconnected, and
+SAV generator cannot","a) None;
+b) None;
+c) None;","a) No;
+b) Not
+applicable.",None. ,3,1.5,3500,0.00525,IV ,"Hidden
+failure"
+132,,,,,,"to failure.
+Failure
+cause:
+GRPE
+mechanic",,"connect with 3-Phase
+AC ESS Bus;
+b) Under emergency
+power supply
+condition, SAV","d) TBD;
+e) TBD;
+f) Replace GRPE.",,,,,,,,
+133,,,,,,"al/electric
+al failure.",,"generator cannot
+supply power to
+3-Phase AC ESS
+Bus;
+c) Under emergency",,,,,,,,,
+134,,,,,,,,"power supply
+condition, power
+outage occurs to the
+3-Phase AC ESS Bus
+power supply",,,,,,,,,
+135,,,,,,,,equipment,,,,,,,,,
+136,electric power system ,AC power supply system 2 ,GRPE control relay ,GRPE on/off control ,"24-20-24
+-01.01","GRPE
+control
+relay is
+closed
+due to
+failure.
+Failure
+cause:
+relay
+mechanic",All ,"a) GRPE
+remains
+closed, and L
+AC Bus or R
+AC Bus cannot
+supply power
+to 3-Phase AC
+ESS Bus;
+b) It may
+cause","a) CAS: AC ESS BUS;
+b) TBD;
+c) TBD;
+d) TBD;
+e) TBD;
+f) Replace relay.","a) No;
+b) Not
+applicable.",None. ,0.711,0.356,5,0.00000178,IV,
+137,,,,,,"al/electric
+al failure",,"disconnection
+of 3-Phase AC
+ESS Bus
+power supply;
+c) It may
+cause power
+supply
+disconnection
+of partial AC
+power users",,,,,,,,,
+138,electric power system ,AC power supply system 2 ,GRPE control relay ,GRPE on/off control ,24-20-24 -1.02,GRPE ,All ,a) GRPE ,a) None ,a) No; ,None. ,0.711,0.356,4500,0.0016,IV ,Hidden
+139,,,,,,"control
+relay is
+disconne
+cted due
+to failure.
+Failure
+cause:
+relay
+mechanic
+al/electric
+al failure",,"remains
+disconnected,
+and SAV
+generator
+cannot
+connect with
+3-Phase AC
+ESS Bus;
+b) Under
+emergency
+power supply
+condition, SAV","b) None
+c) None
+d) TBD
+e) TBD;
+f) Replace relay.","b) Not
+applicable.",,,,,,,failure
+140,,,,,,,,"generator
+cannot supply
+power to
+3-Phase AC
+ESS Bus;
+c) Under
+emergency
+power supply
+condition,
+power outage
+occurs to the
+3-Phase AC",,,,,,,,,
+141,,,,,,,,"ESS Bus
+power supply
+equipment",,,,,,,,,
+142,electric power system ,AC power supply system 2 ,static inverter ,supply single phase AC power ,"24-20-25
+-01.01","Static
+inverter
+unable to
+supply
+AC
+power.
+Failure
+cause:
+static
+inverter",All ,"a) Static
+inverter unable
+to supply AC
+power;
+b) Under
+emergency
+power supply
+condition, prior
+to releasing
+SAV and","a) CAS: INVERTER FAULT;
+b) None;
+c) None;
+d) TBD;
+e) TBD;
+f) Replace static inverter.","a) No;
+b) Not
+applicable.",None. ,20.5,20.5,4,0.000082,IV,
+143,,,,,,"electrical
+failure.",,"before SAV
+becomes
+available, key
+single-phase
+AC bus power
+supply is
+disconnected;
+c) Under
+emergency
+power supply
+condition, the
+power",,,,,,,,,
+144,,,,,,,,"interruption
+duration of
+power users
+connected to
+the key
+single-phase
+AC bus
+exceeds the
+maximum
+allowable
+value",,,,,,,,,
+145,electric power system ,AC power supply system 1 ,TDPBE 1 ,PBED feeder line current detection ,"24-20-26
+-01.01","Current
+detection
+failure of
+current
+transform
+er.",All ,"a) Wrong PBED
+feeder line current
+is detected by
+GRFS;
+b) It may cause
+GRFS's electrical","a) CAS: R GEN FAULT;
+Malfunctions of TDPBE 2, etc.
+c) Try to reset PBED, if failure still
+exists, disconnect the PBED;
+d) TBD;
+e) TBD;","a) Yes;
+b) PVGC and
+PSF is in
+normal
+condition, and
+electric power",None. ,0.00247,"0.0024
+7",4,4.94E-09,IV,
+146,,,,,,"Failure
+cause:
+current
+transform
+er
+electrical
+failure.",,"protection to the
+PBED, PBED
+failure, or
+decrease in the
+electric power
+system's power
+redundancy;
+c) Under",f) Replace current transformer. ,"system
+interconnectio
+n and power
+supply are in
+normal
+condition.",,,,,,,
+147,,,,,,,,"emergency power
+supply condition,
+the power
+interruption
+duration of power
+users connected
+to the key
+single-phase AC",,,,,,,,,
+148,,,,,,,,"bus exceeds the
+maximum
+allowable value",,,,,,,,,
+149,electric power system ,AC power supply system 1 ,TDPBE 2 ,PBED feeder line current detection ,"24-20-27
+-01.01","Current
+detection
+failure of
+current
+transform
+er.
+Failure
+cause:
+current
+transform",All ,"a) Wrong
+PBED feeder
+line current is
+detected by
+GRFS;
+b) It may
+cause GRFS's
+electrical
+protection to
+the PBED,","a) CAS: R GEN FAULT;
+Malfunctions of TDPBE 1, etc.
+c) Try to reset PBED, if failure still
+exists, disconnect the PBED;
+d) TBD;
+e) TBD;
+f) Replace current transformer.","a) Yes;
+b) PVGC and
+PSF is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in",None. ,0.00247,"0.0024
+7",4,4.94E-09,IV,
+150,,,,,,"er
+electrical
+failure.",,"PBED failure,
+or decrease in
+the electric
+power
+system's
+power
+redundancy;
+c) Under
+emergency
+power supply
+condition, the
+power",,"normal
+condition.",,,,,,,
+151,,,,,,,,"interruption
+duration of
+power users
+connected to
+the key
+single-phase
+AC bus
+exceeds the
+maximum
+allowable
+value",,,,,,,,,
+152,electric power system ,AC power supply system 1 ,NDPBE 1 ,PVGC feeder line current detection ,"24-20-28
+-01.01","Current
+detection
+failure of
+current
+transform
+er.
+Failure
+cause:
+current
+transform",All ,"a) Wrong
+PVGC feeder
+line current is
+detected by
+APBE;
+b) It may
+cause APBE's
+electrical
+protection to
+the PVGC,","a) CAS: L GEN FAULT;
+b) Malfunctions of NDPBE 2, etc.
+c) Try to reset PVGC, if failure still
+exists, disconnect the PVGC;
+d) TBD;
+e) TBD;
+f) Replace current transformer.","a) Yes;
+b) PBED and
+PSF is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in",None. ,0.00247,"0.0024
+7",4,4.94E-09,IV,
+153,,,,,,"er
+electrical
+failure.",,"PVGC failure,
+or decrease in
+the electric
+power
+system's
+power
+redundancy;
+c) Under
+emergency
+power supply
+condition, the
+power",,"normal
+condition.",,,,,,,
+154,,,,,,,,"interruption
+duration of
+power users
+connected to
+the key
+single-phase
+AC bus
+exceeds the
+maximum
+allowable
+value",,,,,,,,,
+155,electric power system ,AC power supply system 1 ,NDPBE 2 ,PVGC feeder line current detection ,"24-20-29
+-01.01","Current
+detection
+failure of
+current
+transform
+er.
+Failure",All ,"a) Wrong PVGC
+feeder line
+current is
+detected by
+APBE;
+b) It may cause
+APBE's","a) CAS: L GEN FAULT;
+b) Malfunctions of NDPBE 1, etc.
+c) Try to reset PVGC, if failure still
+exists, disconnect the PVGC;
+d) TBD;
+e) TBD;
+f) Replace current transformer.","a) Yes;
+b) PBED and
+PSF is in
+normal
+condition, and
+electric power
+system",None. ,0.00247,"0.0024
+7",4,4.94E-09,IV,
+156,,,,,,"cause:
+current
+transform
+er
+electrical
+failure.",,"electrical
+protection to the
+PVGC, PVGC
+failure, or
+decrease in the
+electric power
+system's power
+redundancy;
+c) Under",,"interconnectio
+n and power
+supply are in
+normal
+condition.",,,,,,,
+157,,,,,,,,"emergency
+power supply
+condition, the
+power
+interruption
+duration of
+power users
+connected to the
+key",,,,,,,,,
+158,,,,,,,,"single-phase AC
+bus exceeds the
+maximum
+allowable value",,,,,,,,,
+159,electric power system ,AC power supply system 1 ,BDPBE 1 ,PSF feeder line current detection ,"24-20-30
+-01.01","Current
+detection
+failure of
+current
+transform
+er.
+Failure
+cause:
+current
+transform",All ,"a) Wrong PSF
+feeder line
+current is
+detected by
+SQEP;
+b) It may
+cause SQEP's
+electrical
+protection to
+the PSF, PSF","a) CAS: APU GEN FAULT;
+b) Malfunctions of BDPBE 2, etc.;
+c) Try to reset PSF, if failure still
+exists, disconnect the PSF;
+d) TBD;
+e) TBD;
+f) Replace current transformer.","a) Yes;
+b) PVGC and
+PBED is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in",None. ,0.00247,"0.0024
+7",4,4.94E-09,IV,
+160,,,,,,"er
+electrical
+failure.",,"failure, or
+decrease in
+the electric
+power
+system's
+power
+redundancy;
+c) Under
+emergency
+power supply
+condition, the
+power",,"normal
+condition",,,,,,,
+161,,,,,,,,"interruption
+duration of
+power users
+connected to
+the key
+single-phase
+AC bus
+exceeds the
+maximum
+allowable
+value",,,,,,,,,
+162,electric power system ,AC power supply system 1 ,BDPBE 2 ,PSF feeder line current detection ,"24-20-31
+-01.01","Current
+detection
+failure of
+current
+transform
+er.
+Failure
+cause:
+current
+transform",All ,"a) Wrong PSF
+feeder line
+current is
+detected by
+SQEP;
+b) It may
+cause SQEP's
+electrical
+protection to
+the PSF, PSF","a) CAS: APU GEN FAULT;
+b) Malfunctions of BDPBE 1, etc.;
+c) Try to reset PSF, if failure still
+exists, disconnect the PSF;
+d) TBD;
+e) TBD;
+f) Replace current transformer.","a) Yes;
+b) PVGC and
+PBED is in
+normal
+condition, and
+electric power
+system
+interconnectio
+n and power
+supply are in",None. ,0.00247,"0.0024
+7",4,4.94E-09,IV,
+163,,,,,,"er
+electrical
+failure.",,"failure, or
+decrease in
+the electric
+power
+system's
+power
+redundancy;
+c) Under
+emergency
+power supply
+condition, the
+power",,"normal
+condition",,,,,,,
+,,,,,,,,,,,,,,,,,

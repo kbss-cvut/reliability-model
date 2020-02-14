@@ -1,0 +1,31 @@
+System,subsystem,Components ,SubComponents
+electric power system,AC power supply system 1,APBE,
+electric power system,AC power supply system 1,BDPBE 1,
+electric power system,AC power supply system 1,BDPBE 2,
+electric power system,AC power supply system 1,EQW,
+electric power system,AC power supply system 1,GRFS,
+electric power system,AC power supply system 1,MEQC,
+electric power system,AC power supply system 1,NDPBE 1,
+electric power system,AC power supply system 1,NDPBE 2,
+electric power system,AC power supply system 1,PBED,
+electric power system,AC power supply system 1,PBED,PBED manual tripping switch
+electric power system,AC power supply system 1,PECU,
+electric power system,AC power supply system 1,PVGC,
+electric power system,AC power supply system 1,PVGC,PVGC control switch
+electric power system,AC power supply system 1,PVGC,PVGC manual tripping switch
+electric power system,AC power supply system 1,RBD,
+electric power system,AC power supply system 1,TDPBE 1,
+electric power system,AC power supply system 1,TDPBE 2,
+electric power system,AC power supply system 2,actuator,
+electric power system,AC power supply system 2,GRPE,
+electric power system,AC power supply system 2,GRPE,GRPE control relay
+electric power system,AC power supply system 2,PEUC,
+electric power system,AC power supply system 2,SAV,SAV GCU
+electric power system,AC power supply system 2,SAV,SAV generator
+electric power system,AC power supply system 2,SAV,SAV heating control relay
+electric power system,AC power supply system 2,SAV,SAV manual release control switch
+electric power system,AC power supply system 2,SAV,SAV recovery control panel
+electric power system,AC power supply system 2,SAV,SAV reset switch
+electric power system,AC power supply system 2,static inverter,
+electric power system,BQT start and power generation system,PSF,
+electric power system,BQT start and power generation system,SQEP,
