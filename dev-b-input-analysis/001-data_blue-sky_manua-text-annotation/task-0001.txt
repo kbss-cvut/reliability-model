@@ -1,0 +1,5 @@
+Task description
+	annotate text using key ontology concepts, i.e. component, function and failure modes
+	tools - GATE
+	Input - text from dev-a-input-documents\blue-sky\001-data\DA42-POH.pdf
+	output - DA42-POH.xml
