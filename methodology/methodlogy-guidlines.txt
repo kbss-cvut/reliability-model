@@ -1,0 +1,96 @@
+Ontology design methodology
+	
+	Domain Conceptual modeling
+		In this phase we model the domain of discourse and we focus on the basic conceptual categories entities, attributes, relations and their cardinalities.
+		Otputs:
+			owl ontology in ttl. The ontology should specify
+				- entities
+				- relations among entities
+				- relation and entity attributes, e.g. name and color
+				- cardinalities of relations	
+			conceptual diagram depicting the elements of the ontology
+				
+	Grounding conceptual model in literature
+		This activity maps the conceptual model to a document such as standard and white paper. 
+		Outputs:
+			ttl files which contain:
+				definition of those concepts in the documents
+				references of concepts in documents
+				examples models of the conceptual model
+				
+	UFO-ization of the conceptual model
+		Activity which transforms the domain conceptual model to UFO's conceptual framework. 
+		Output:
+			input: UFO, Domain Conceptual model, examples instance models
+			owl ontology in ttl
+			
+	Alignment Domain Conceptual Model with the Designed Ontology
+		This task involves the introducing the  new concepts in the already existing version of the developed ontology
+			input: a version of the designed ontology and existing examples for that model, an ufoized domain conceptual model and existing examples for that model, grounding of both ontologies in literature.
+			output: a new version of the ontology including relevant entities and relations aligned to the previous version of the ontology
+			
+			
+	
+	Technical requirements of the ontology and its elements
+		Ontology IRIs and versioning 
+			- Ontology IRIs start with http://onto.fel.cvut.cz/ontologies/[ontology-name]
+			- Ontology version IRI start with http://onto.fel.cvut.cz/ontologies/[ontology-name]/[version, e.g. 0.0.1]
+		
+		Ontology modules
+			An ontology may be composed of several ontology modules. Existing ontologies can be reused, e.g. UFO ontology. Ontology modules can have different IRIs than the ontology it used into. This is true for reused external modules as well as for internal modules used only in the designed ontology. 
+		
+		Terms which are defined in the ontology should the IRI of the main ontology as prefix. For example, STAMP ontology terms should use the IRI pattern:
+			http://onto.fel.cvut.cz/ontologies/stamp/[term name]-
+		Example:
+			Do not use the ontology IRI of internal modules as term IRI prefixes, e.g. do not use http://onto.fel.cvut.cz/ontologies/stamp-hazard-profile/inadequate-control-action, use insdead
+			http://onto.fel.cvut.cz/ontologies/stamp/inadequate-control-action
+			
+			
+	Ontology development versioning
+		Versioning tools:
+			- the ontology is shared via git
+			- owl2diff is used to compare ontology revisions
+			
+		Artifacts to be versioned
+			ontology development methodology guidelines (documents)
+			input documents
+				These files can be confidential!!! How we can work with such files in git???
+				standards, literature, datasets
+				UFO
+				other reused ontologies
+				
+			Domain Conceptual models artifacts:
+				ttl files
+					ttls containing plain domain conceptual models
+					ttls with literature Grounding of conceptual models - these are separate files which contain 
+					ttls with UFOized conceptual models
+				graphml files
+				png from the graphml files
+				
+			
+				
+			instance model examples
+				
+				
+			developed ontology modules
+			
+			
+	Testing, Verification, Validation
+		- artifact validation/check tools [TODO]
+			- concepts of the plain conceptual model should be grounded in literature with definition, references and examples.
+			- domain concepts should be mapped to UFO categories
+		
+	Other development tools
+		- input text document annotation tool [TODO]
+		- publish documentation for a new version of the ontology on push in the server [TODO]
+		- automated testing validation [TODO]
+		
+	Publishing the ontology
+		The ontology should be published on-line as:
+			Widoco documentation
+				widoco page for each ontology module
+				widoco poge for each example			
+			zip file containing the ontology modules and the examples
+			
+			public git repository
+			
