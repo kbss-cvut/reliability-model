@@ -1,0 +1,165 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/> .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/causes
+:causes rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/has-failure-mode
+:has-failure-mode rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/has-function
+:has-function rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/has-part
+:has-part rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/references
+:references rdf:type owl:ObjectProperty ;
+            rdfs:domain :fmea-observation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/exposure-time
+:exposure-time rdf:type owl:DatatypeProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-rate-of-failure-mode
+:failure-rate-of-failure-mode rdf:type owl:DatatypeProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/fmea-number
+:fmea-number rdf:type owl:DatatypeProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/occurrence-probability-of-failure-mode
+:occurrence-probability-of-failure-mode rdf:type owl:DatatypeProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/single-component-failure-rate
+:single-component-failure-rate rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/FC_Corrective_Action
+:FC_Corrective_Action rdf:type owl:Class ;
+                      rdfs:subClassOf :actions .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/FC_Identification_Action
+:FC_Identification_Action rdf:type owl:Class ;
+                          rdfs:subClassOf :actions .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/FC_Isolation_Action
+:FC_Isolation_Action rdf:type owl:Class ;
+                     rdfs:subClassOf :actions .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/Improper_Action
+:Improper_Action rdf:type owl:Class ;
+                 rdfs:subClassOf :actions .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/MP_Corrective_Action
+:MP_Corrective_Action rdf:type owl:Class ;
+                      rdfs:subClassOf :actions .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/MP_Fault_Isolation_Action
+:MP_Fault_Isolation_Action rdf:type owl:Class ;
+                           rdfs:subClassOf :actions .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/actions
+:actions rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/aircraft
+:aircraft rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/component
+:component rdf:type owl:Class ;
+           rdfs:subClassOf :structural-element .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect
+:failure-effect rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-mode
+:failure-mode rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-mode-cause
+:failure-mode-cause rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-mode-cluase
+:failure-mode-cluase rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/final-effect
+:final-effect rdf:type owl:Class ;
+              rdfs:subClassOf :failure-effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/fmea-observation
+:fmea-observation rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/function
+:function rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/higher-level-effect
+:higher-level-effect rdf:type owl:Class ;
+                     rdfs:subClassOf :failure-effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/local-effect
+:local-effect rdf:type owl:Class ;
+              rdfs:subClassOf :failure-effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element
+:structural-element rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/sub-component
+:sub-component rdf:type owl:Class ;
+               rdfs:subClassOf :structural-element .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/sub-system
+:sub-system rdf:type owl:Class ;
+            rdfs:subClassOf :structural-element .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/system
+:system rdf:type owl:Class ;
+        rdfs:subClassOf :structural-element .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

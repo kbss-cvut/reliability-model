@@ -1,0 +1,14 @@
+Create FMEA Avic domain conceptual model 
+	tools : yEd, protege
+	input : dev-a-input-documents\avic\001-data\avic-fmea-dataset-1-cleaned-01.csv
+	output
+		- diagrams
+			avic-fmea-domain-data-model.png
+			avic-fmea-domain-data-model.graphml
+			avic-fmea-data-model.graphml
+			avic-fmea-data-model.png
+		- avic-fmea-data-model.ttl - domain ontology in ttl
+		- avic-reference-data.rdf - dev-a-input-documents\avic\001-data\avic-fmea-dataset-1-cleaned-01.csv structured according to 
+		- queries - several sparql queries for avic-reference-data.rdf 
+		- data-analysis - diagrams presenting data, e.g. 
+	

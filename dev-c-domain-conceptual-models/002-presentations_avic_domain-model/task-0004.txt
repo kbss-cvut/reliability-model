@@ -1,0 +1,26 @@
+Create a conceptual model in yed
+	tools - yEd, 
+	input - dev-a-input-documents\avic\002-presentations\
+	output
+		README.txt
+		Diagrams
+			Aircraft configuration data.graphml
+			Aircraft configuration data.png
+			Failure analysis data.graphml
+			Failure analysis data.png
+			Quality competitiveness index in the manufacturing industry.graphml
+			Quality competitiveness index in the manufacturing industry.png
+			avic-application-ontology.xlsx
+			avic-application-ontology.graphml
+			avic-application-ontology.png
+			avic-ontology-model-draft.graphml
+			avic-ontology-model-draft.png
+			basic data of quality staff.graphml
+			basic data of quality staff.png
+			field-quality-information.graphml
+			field-quality-information.png
+			quality audit data-extracted-phrases-and-terms.txt
+			quality audit data-highlighted-phrases-and-terms.png
+			quality audit data.graphml
+			test-data.graphml
+			test-data.png

@@ -1,0 +1,26 @@
+text,term,start,end
+control and protection of SAV generator,SAV generator,26,39
+GRPE on/off control,GRPE,0,4
+on/off control between SAV generator and 3-Phase AC ESS Bus,SAV generator,23,36
+PBED and left engine mechanical tripping control,PBED,0,4
+PBED and R AC Bus on/off control,PBED,0,4
+PBED control and protection,PBED,0,4
+PBED feeder line current detection,PBED,0,4
+PBED over-voltage protection,PBED,0,4
+provide control and protection for BQT start and power generation system,BQT start and power generation system,35,72
+PSF feeder line current detection,PSF,0,3
+PVGC and L AC Bus on/off control,PVGC,0,4
+PVGC and left engine mechanical tripping control,PVGC,0,4
+PVGC control and protection,PVGC,0,4
+PVGC feeder line current detection,PVGC,0,4
+PVGC over-voltage protection,PVGC,0,4
+recovery control of SAV generator,SAV generator,20,33
+release control of SAV generator,SAV generator,19,32
+SAV automatic release control,SAV,0,3
+SAV heating power supply on/off control,SAV,0,3
+SAV manual release control,SAV,0,3
+SAV reset control,SAV,0,3
+supply AC power,-,-1,-1
+supply AC power and APU starting torque,-,-1,-1
+supply AC power under emergency power supply condition,-,-1,-1
+supply single phase AC power,-,-1,-1

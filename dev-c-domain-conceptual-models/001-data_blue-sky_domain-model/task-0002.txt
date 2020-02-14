@@ -1,0 +1,4 @@
+Create a conceptual model in yed
+	tools - yEd
+	input - dev-b-input-analysis\001-data_blue-sky_manua-text-annotation\DA42-POH.xml
+	outpu - DA42-POH.graphml

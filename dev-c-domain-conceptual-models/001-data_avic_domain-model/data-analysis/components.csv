@@ -1,0 +1,36 @@
+﻿component
+AC power supply system 1
+AC power supply system 2
+actuator
+APBE
+BDPBE 1
+BDPBE 2
+BQT start and power generation system
+electric power system
+EQW
+GRFS
+GRPE
+GRPE control relay
+MEQC
+NDPBE 1
+NDPBE 2
+PBED
+PBED manual tripping switch
+PECU
+PEUC
+PSF
+PVGC
+PVGC control switch
+PVGC manual tripping switch
+RBD
+SAV
+SAV GCU
+SAV generator
+SAV heating control relay
+SAV manual release control switch
+SAV recovery control panel
+SAV reset switch
+SQEP
+static inverter
+TDPBE 1
+TDPBE 2

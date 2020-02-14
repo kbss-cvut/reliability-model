@@ -1,0 +1,6 @@
+Create ontology from annotated concepts
+	tools - java
+	input - dev-b-input-analysis\001-data_blue-sky_manua-text-annotation\DA42-POH.xml
+	outpu 
+		- java transformation script that will extract the text annotations and create an ontology given the input xml file
+		- DA42-POH.ttl - the output of the java transformation script 

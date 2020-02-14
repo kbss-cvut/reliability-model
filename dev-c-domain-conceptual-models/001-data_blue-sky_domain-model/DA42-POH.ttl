@@ -1,0 +1,103 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rel:   <http://onto.fel.cvut.cz/ontology/reliability/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-0BDC21A962C6B3418257F4B9A89444D0>
+        a                rdfs:Class ;
+        rdfs:label       "dip-stick" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-14BE534CC343CBC3F0EAE6B81752DE9C>
+        a                rdfs:Class ;
+        rdfs:label       "separatecooler" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-F7D605B4EC470B326FAA0A6F06D9C33E>
+        a                rdfs:Class ;
+        rdfs:label       "lubrication" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-D7EA5F0974E198DD2658771754D754AD>
+        a                rdfs:Class ;
+        rdfs:label       "fire detection system" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/failure-mode-A74DFB4F975F653B6D87BD4A69D89953>
+        a                rdfs:Class ;
+        rdfs:label       "alert or the warning does not appear" ;
+        rdfs:subClassOf  rel:failure-mode .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-453E6229E076D41A3E7700CC01C0A9FC>
+        a                rdfs:Class ;
+        rdfs:label       "second oil circuit" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-E3D58A9BE333C0A731A2E3739471CD6C>
+        a                rdfs:Class ;
+        rdfs:label       "is cooled" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-A98A37EAC543C6E4F632DABF8ADD88FF>
+        a                rdfs:Class ;
+        rdfs:label       "be filled in" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-5119AAD54E5E9ABC864E8C0B26E4337C>
+        a                rdfs:Class ;
+        rdfs:label       "alert and the fire warningmessage for the LH and RH engine should appear" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-0E86063D1214C380A5C1A11E33EF36AD>
+        a                rdfs:Class ;
+        rdfs:label       "thetest button" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-A3D91411D60274297229E4218D07EF9B>
+        a                rdfs:Class ;
+        rdfs:label       "test the fire detectors" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-74A0847617AF3A7D376F89E43C35EE8C>
+        a                rdfs:Class ;
+        rdfs:label       "inspection glass" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-E5C501D3BC9F0678F638165539A7C848>
+        a                rdfs:Class ;
+        rdfs:label       "gearbox oil quantity can be checked" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-525155CE3AC1B65F7C47BD52F537AEC1>
+        a                rdfs:Class ;
+        rdfs:label       "lubricates the gearbox and serves the governor system and theregulation of the propeller" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-141D1883481CE72CCAF200910DCDBCD5>
+        a                rdfs:Class ;
+        rdfs:label       "closes the electric circuit" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-1C336E96F9573B5A02056F829991B9F7>
+        a                rdfs:Class ;
+        rdfs:label       "oil system" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-DF9330B41C12CC71A4D81C38348EAE60>
+        a                rdfs:Class ;
+        rdfs:label       "Lubrication System" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-AD7DDD1D515955D7E4CD1598AF705780>
+        a                rdfs:Class ;
+        rdfs:label       "inspection hole" ;
+        rdfs:subClassOf  rel:component .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-3805631E3D776029730B9C8E5F1FC2E1>
+        a                rdfs:Class ;
+        rdfs:label       "check the oil quantity" ;
+        rdfs:subClassOf  rel:function .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-64285A50B3EBED21E3459D969C03CE85>
+        a                rdfs:Class ;
+        rdfs:label       "overheat detector" ;
+        rdfs:subClassOf  rel:component .

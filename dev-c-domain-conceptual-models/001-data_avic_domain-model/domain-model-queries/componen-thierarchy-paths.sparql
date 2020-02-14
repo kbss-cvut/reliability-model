@@ -1,0 +1,30 @@
+#
+# Query to get the part-whole relations among the structural elements
+# This query returns each path shorter than 5 from root to leaf in a single row. 
+#
+
+
+PREFIX ufo: <http://onto.fel.cvut.cz/ontologies/ufo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX avicfmea: <http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/>
+
+
+SELECT ?pl ?c1l ?c2l ?c3l{
+  ?p a avicfmea:system.
+  ?p rdfs:label ?pl.
+  OPTIONAL{
+    ?p avicfmea:has-part ?c1.
+    ?c1 a avicfmea:structural-element.
+    ?c1 rdfs:label ?c1l.
+    OPTIONAL{
+      ?c1 avicfmea:has-part ?c2.
+      ?c2 a avicfmea:structural-element.
+      ?c2 rdfs:label ?c2l.
+      OPTIONAL{
+        ?c2 avicfmea:has-part ?c3.
+        ?c3 a avicfmea:structural-element.
+        ?c3 rdfs:label ?c3l.
+      }
+    }
+  }
+}ORDER BY ?pl ?cl

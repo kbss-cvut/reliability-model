@@ -1,0 +1,99 @@
+Conversion of data to ontology
+	Nor
+	tasks
+		Protege - How do you want to use protege in 1? Protege is manly used for manual ontology specification. There might be some plugins that allow to process non structured or structured data, however we are not familiar with them.
+			Determine the name and scope of ontology (RDF file)
+
+	
+		
+Reasoning
+	show reasoning over causes
+	
+	
+	
+	
+Our participation in the project
+
+	Create Common Domain Ontology
+		Description - contains general classes and properties which are used in all the source data and all the use-cases (application) scenarios.
+		
+		Purpose identification
+			- The ontology should contain common concepts and relationships which will allow to model/represent domain knowledge in application scenarios relevant in the context of management of Reliability and Quality of products/services. Application scenarios will include:
+				
+				Product documentation
+					design documentation
+				Feedback scenarios 
+					reporting of incidents
+					investigation
+					testing
+					auditing
+				Control scenarios
+					corrective actions
+					operational manuals
+					
+		
+		Knowledge acquisition
+			Study the domain focusing on the application scenarios defined in the Purpose Identification phase. 
+			
+			- Identify relevant concepts from 
+				- consultation with experts (of the application scenarios)-
+				- relevant literature 	
+					Failure Mode and Effect Analysis (FMEA)
+					Fault Tree Analysis (FTA)
+					Others?
+				- relevant datasources - requires data samples
+					Aircraft configuration data
+					basic data of quality staff
+					Failure analysis data - structured FMEA from AVIC
+					field-quality-information
+					quality audit data
+					Quality competitiveness index in the manufacturing industry
+					test-data
+									
+			Result
+				A list of relevant concepts definitions. Each concepts has a label and text definition, possibly with references where the terms were found.
+				List of examples using the concepts above. Each example has a full text description and specifies the terms it references. 
+		
+		
+		Conceptual modeling
+			Entity Relationship (ER) Conceptual Model
+				Extract concepts and properties
+				create entity-relationship diagram
+			
+			UFO-ization
+				map the ER model to UFO
+					identify concepts representing UFO categories objects, moments, relators, events, situations ...
+					identify types of the classes - kinds, roles, phase ...
+				
+				enrichment - introduction of new concepts based on UFO patterns
+					- e.g. Event, disposition, situation, pattern	
+					
+				Output
+					UFO model 
+						requirements
+							- UFO model is valid 
+							- contains equivalent version of the entities and relationships from the original ER model
+							
+							
+		Reasoning
+			Identify relevant feasible reasoning goals
+				causes
+			
+			
+				
+							
+		
+	Create knowledge management tool
+		A tool for manual modeling of knowledge according to the Domain Ontology or relevant parts of the domain ontology required for the . 
+	
+		Web based application
+			Layered architecture:
+				Client side - Web client, e.g. javascript framework React, 
+				Communication - rest/http
+				Server side 
+					- java-ee/Spring
+					- data access - Java Ontology Persistence API (JOPA), data schema is defined by the Domain Ontology
+					- persistence storage - triple store 
+				
+		
+		

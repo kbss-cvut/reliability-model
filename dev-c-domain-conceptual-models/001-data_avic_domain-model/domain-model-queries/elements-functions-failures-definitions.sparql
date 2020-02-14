@@ -1,0 +1,17 @@
+PREFIX ufo: <http://onto.fel.cvut.cz/ontologies/ufo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX avicfmea: <http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/>
+
+#
+# returns the definition of structural elements, functions and failure modes
+#
+
+SELECT ?e ?el ?t ?color{
+  ?e a ?t.
+  ?e rdfs:label ?el.
+}
+VALUES (?t ?color){
+  (avicfmea:structural-element "#9999cc")
+  (avicfmea:function "#99cc99")
+  (avicfmea:failure-mode "#cc7777")
+}

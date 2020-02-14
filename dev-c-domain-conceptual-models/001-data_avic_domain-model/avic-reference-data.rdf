@@ -1,0 +1,1416 @@
+<rdf:RDF
+    xmlns:avicdata="http://onto.fel.cvut.cz/data/avic-fmea/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:avicfmea="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_sqep-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sqep-wrong-control-of-psf-and-thus-entering-power-generatio-n-mode">
+        <avicfmea:failure-rate-of-failure-mode>3.07E-8</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_bqt-start-and-power-generation-system-malfunction">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-be-unable-to-start-apu%2C-and-cause-loss-of-psf-power-supply">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_apu-fails%2C-and-aircraft-power-supply-redundancy-is-decreased">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>APU fails, and aircraft power supply redundancy is decreased</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>It may be unable to start APU, and cause loss of PSF power supply</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>BQT start and power generation system malfunction</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SQEP wrong control of PSF and thus entering power generatio n mode</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sqep-wrong-control-of-psf-and-thus-entering-apu-start-mode">
+        <avicfmea:failure-rate-of-failure-mode>1.85E-8</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_bqt-start-and-power-generation-system-malfunction"/>
+        <rdfs:label>SQEP wrong control of PSF and thus entering APU start mode</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-unable-to-start-apu-due-to-sqep-failure">
+        <avicfmea:failure-rate-of-failure-mode>9.27E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-start-apu">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-supply-ac-power-due-to-apu-start-failure">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_apu-fails%2C-and-aircraft-power-supply-redundancy-is-decreased"/>
+                <rdfs:label>PSF cannot supply AC power due to APU start failure</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PSF cannot start APU</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PSF unable to start APU due to SQEP failure</rdfs:label>
+        <avicfmea:exposure-time>6.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-complete-malfunction-due-to-sqep-failure">
+        <avicfmea:failure-rate-of-failure-mode>5.87E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-start-apu-and-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-replace-faulty-vfg-to-supply-power">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_aircraft-power-supply-redundancy-is-decreased">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Aircraft power supply redundancy is decreased</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_apu-fails%2C-and-aircraft-power-supply-redundancy-is-decreased"/>
+                <rdfs:label>PSF cannot replace faulty VFG to supply power</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PSF cannot start APU and supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PSF complete malfunction due to SQEP failure</rdfs:label>
+        <avicfmea:exposure-time>2.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-unable-to-supply-power-due-to-sqep-failure">
+        <avicfmea:failure-rate-of-failure-mode>7.2E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-replace-faulty-vfg-to-supply-power"/>
+            <rdfs:label>PSF cannot supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PSF unable to supply power due to SQEP failure</rdfs:label>
+        <avicfmea:exposure-time>2.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sqep-launches-warning-of-start-and-power-generatio-n-system">
+        <avicfmea:failure-rate-of-failure-mode>8.48E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_bqt-start-and-power-generation-system-false-warning">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-may-be-disconnected-due-to-flight-crew-wrong-actions">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_minor-increase-of-flight-crew-work-load%2C-and-psf-failure-may-be-caused-by-flight-crew-actions">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Minor increase of flight crew work load, and PSF failure may be caused by flight crew actions</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>PSF may be disconnected due to flight crew wrong actions</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>BQT start and power generation system false warning</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SQEP launches warning of start and power generatio n system</rdfs:label>
+        <avicfmea:exposure-time>4.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>SQEP circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_pecu-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pecu-malfunction">
+        <avicfmea:failure-rate-of-failure-mode>1.33E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_open-circuit-occurs-to-pbed-excitation-circuit-due-to-pecu-failure%2C-and-pbed-cannot-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pbed-to-supply-power">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_aircraft-power-supply-redundancy-is-decreased"/>
+                <rdfs:label>Electric power system PSF replaces faulty PBED to supply power</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Open circuit occurs to PBED excitation circuit due to PECU failure, and PBED cannot supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PECU malfunction</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>PECU circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_eqw-mechanical-failure.-decreased">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_eqw-is-disconnect-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>4.62E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_pvgc-and-l-ac-bus-are-disconnected%2C-and-pvgc-cannot-supply-power-to-the-external-users">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pvgc-to-supply-power">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_aircraft-power-supply-redundancy-is-decreased"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_aircraft-power-supply-redundancy-is">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Aircraft power supply redundancy is</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>Electric power system PSF replaces faulty PVGC to supply power</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PVGC and L AC Bus are disconnected, and PVGC cannot supply power to the external users</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>EQW is disconnect due to failure</rdfs:label>
+        <avicfmea:exposure-time>2.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>EQW mechanical failure. decreased</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_sav-electrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-heater-failure">
+        <avicfmea:failure-rate-of-failure-mode>9.0E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-cannot-supply-power-properly-due-to-icing">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system%27s-power-redundancy-is-decreased">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                    <avicfmea:causes>
+                      <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_minor-effect-on-aircraft-aerodynamics-performance">
+                        <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                        <rdfs:label>Minor effect on aircraft aerodynamics performance</rdfs:label>
+                      </avicfmea:final-effect>
+                    </avicfmea:causes>
+                    <rdfs:label>No effect</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>Electric power system's power redundancy is decreased</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>SAV generator cannot supply power properly due to icing</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV heater failure</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>SAV electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_rbd-mechanical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_eqw-is-disconne-ct-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>4.62E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_pbed-and-r-ac-bus-are-disconnected%2C-and-pbed-cannot-supply-power-to-the-external-users">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pbed-to-supply-power"/>
+            <rdfs:label>PBED and R AC Bus are disconnected, and PBED cannot supply power to the external users</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>EQW is disconne ct due to failure</rdfs:label>
+        <avicfmea:exposure-time>2.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_rbd-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>2.77E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_pbed-and-r-ac-bus-remain-power-on-condition">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_unable-to-isolate-pbed-and-aircraft-electric-power-network-via-disconnecting-rbd-when-required">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>Unable to isolate PBED and aircraft electric power network via disconnecting RBD when required</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PBED and R AC Bus remain power-on condition</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>RBD is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>12.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>RBD mechanical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_eqw-mechanical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_eqw-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>2.77E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_pvgc-and-l-ac-bus-remain-power-on-condition">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_unable-to-isolate-pvgc-and-aircraft-electric-power-network-via-disconnecting-eqw-when-required">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>Unable to isolate PVGC and aircraft electric power network via disconnecting EQW when required</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PVGC and L AC Bus remain power-on condition</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>EQW is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>12.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>EQW mechanical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_grpe-mechanical%2Felectrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-is-disconnected-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>0.00525</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_grpe-remains-disconnected%2C-and-sav-generator-cannot-connect-with-3-phase-ac-ess-bus">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-sav-generator-cannot-supply-power-to-3-phase-ac-ess-bus">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-power-outage-occurs-to-the-3-phase-ac-ess-bus-power-supply-equipment">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Under emergency power supply condition, power outage occurs to the 3-Phase AC ESS Bus power supply equipment</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>Under emergency power supply condition, SAV generator cannot supply power to 3-Phase AC ESS Bus</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>GRPE remains disconnected, and SAV generator cannot connect with 3-Phase AC ESS Bus</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>GRPE is disconnected due to failure</rdfs:label>
+        <avicfmea:exposure-time>3500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>7.5E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_grpe-remains-closed%2C-and-l-ac-bus-or-r-ac-bus-cannot-supply-power-to-3-phase-ac-ess-bus">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-disconnection-of-3-phase-ac-ess-bus-power-supply">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-power-supply-disconnection-of-partial-ac-power-users">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>It may cause power supply disconnection of partial AC power users</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>It may cause disconnection of 3-Phase AC ESS Bus power supply</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>GRPE remains closed, and L AC Bus or R AC Bus cannot supply power to 3-Phase AC ESS Bus</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>GRPE is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>GRPE mechanical/electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_meqc-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_meqc-malfunction">
+        <avicfmea:failure-rate-of-failure-mode>1.33E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_open-circuit-occurs-to-pvgc-excitation-circuit-due-to-meqc-failure%2C-and-pvgc-cannot-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pvgc-to-supply-power"/>
+            <rdfs:label>Open circuit occurs to PVGC excitation circuit due to MEQC failure, and PVGC cannot supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>MEQC malfunction</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>MEQC circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_peuc-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-eqw-is-closed">
+        <avicfmea:failure-rate-of-failure-mode>2.85E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-mistakenly-detects-that-eqw-is-closed%2C-so-it-considers-that-pvgc-is-still-serviceable">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-cannot-control-sav-automatic-release%2C-and-it-may-require-that-flight-crew-manually-release-sav-under-emergency-power-supply-condition">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_minor-increase-of-flight-crew-workload">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Minor increase of flight crew workload</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>PEUC cannot control SAV automatic release, and it may require that flight crew manually release SAV under emergency power supply condition</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PEUC mistakenly detects that EQW is closed, so it considers that PVGC is still serviceable</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PEUC mistakenly detects that EQW is closed</rdfs:label>
+        <avicfmea:exposure-time>4500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-malfunction">
+        <avicfmea:failure-rate-of-failure-mode>1.95E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-sav-automatic-release-control-and-heating-control-failure">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-sav-generator-failure-due-to-icing%2C-and-lead-to-decrease-in-electric-power-system%27s-power-redundancy">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>It may cause SAV generator failure due to icing, and lead to decrease in electric power system's power redundancy</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PEUC SAV automatic release control and heating control failure</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PEUC malfunction</rdfs:label>
+        <avicfmea:exposure-time>150.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-aircraft-is-on-ground">
+        <avicfmea:failure-rate-of-failure-mode>0.048</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-judges-that-aircraft-is-on-ground%2C-and-cannot-automatically-control-the-sav-release-when-required">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-flight-crew-need-to-manually-release-sav">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>Under emergency power supply condition, flight crew need to manually release SAV</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>PEUC judges that aircraft is on ground, and cannot automatically control the SAV release when required</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PEUC mistakenly detects that aircraft is on ground</rdfs:label>
+        <avicfmea:exposure-time>1500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-rbd-is-closed">
+        <avicfmea:failure-rate-of-failure-mode>2.85E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-mistakenly-detects-that-rbd-is-closed%2C-so-it-considers-that-pbed-is-still-serviceable">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-cannot-control-sav-automatic-release%2C-and-it-may-require-that-flight-crew-manually-release-sav-under-emergency-power-supply-condition"/>
+            <rdfs:label>PEUC mistakenly detects that RBD is closed, so it considers that PBED is still serviceable</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PEUC mistakenly detects that RBD is closed</rdfs:label>
+        <avicfmea:exposure-time>4500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-airspeed-signal-detection-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.75E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_wrong-airspeed-signal-detected-by-peuc">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-cannot-control-the-sav-automatic-release%2C-or-could-release-sav-when-the-airspeed-does-not-meet-specific-requirements">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>PEUC cannot control the SAV automatic release, or could release SAV when the airspeed does not meet specific requirements</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Wrong airspeed signal detected by PEUC</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PEUC airspeed signal detection failure</rdfs:label>
+        <avicfmea:exposure-time>1500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-agc-is-closed">
+        <avicfmea:failure-rate-of-failure-mode>2.85E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-mistakenly-detects-that-agc-is-closed%2C-so-it-considers-that-psf-is-still-serviceable">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_peuc-cannot-control-sav-automatic-release%2C-and-it-may-require-that-flight-crew-manually-release-sav-under-emergency-power-supply-condition"/>
+            <rdfs:label>PEUC mistakenly detects that AGC is closed, so it considers that PSF is still serviceable</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PEUC mistakenly detects that AGC is closed</rdfs:label>
+        <avicfmea:exposure-time>4500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>PEUC circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_static-inverter-electrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_static-inverter-unable-to-supply-ac-power">
+        <avicfmea:failure-rate-of-failure-mode>8.2E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_static-inverter-unable-to-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-prior-to-releasing-sav-and-before-sav-becomes-available%2C-key-single-phase-ac-bus-power-supply-is-disconnected">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-the-power-interruption-duration-of-power-users-connected-to-the-key-single-phase-ac-bus-exceeds-the-maximum-allowable-value">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Under emergency power supply condition, the power interruption duration of power users connected to the key single-phase AC bus exceeds the maximum allowable value</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>Under emergency power supply condition, prior to releasing SAV and before SAV becomes available, key single-phase AC bus power supply is disconnected</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Static inverter unable to supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>Static inverter unable to supply AC power</rdfs:label>
+        <avicfmea:exposure-time>4.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>static inverter electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_pbed-body-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-cannot-supply-ac-power">
+        <avicfmea:failure-rate-of-failure-mode>1.62E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_pbed-cannot-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pbed-to-supply-power"/>
+            <rdfs:label>PBED cannot supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PBED cannot supply AC power</rdfs:label>
+        <avicfmea:exposure-time>12.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>PBED body failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_relay-mechanical%2Felectrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-heating-control-relay-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.36E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-heating-relay-remains-closed%2C-and-sav-is-constantly-in-heating-condition">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+            <rdfs:label>SAV heating relay remains closed, and SAV is constantly in heating condition</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV heating control relay is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-control-relay-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>1.78E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_grpe-remains-closed%2C-and-l-ac-bus-or-r-ac-bus-cannot-supply-power-to-3-phase-ac-ess-bus"/>
+        <rdfs:label>GRPE control relay is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-heating-control-relay-is-opened-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.36E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-heater-loses-power-input">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-sav-generator-failure-due-to-icing%2C-and-lead-to-decrease-in-electric-power-system%27s-power-redundancy"/>
+            <rdfs:label>SAV heater loses power input</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV heating control relay is opened due to failure</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-control-relay-is-disconnected-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>0.0016</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_grpe-remains-disconnected%2C-and-sav-generator-cannot-connect-with-3-phase-ac-ess-bus"/>
+        <rdfs:label>GRPE control relay is disconnected due to failure</rdfs:label>
+        <avicfmea:exposure-time>4500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>relay mechanical/electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_pvgc-body-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-cannot-supply-ac-power">
+        <avicfmea:failure-rate-of-failure-mode>1.62E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_pvgc-cannot-supply-ac-power">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pvgc-to-supply-power"/>
+            <rdfs:label>PVGC cannot supply AC power</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PVGC cannot supply AC power</rdfs:label>
+        <avicfmea:exposure-time>12.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>PVGC body failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_sav-gcu-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gcu-malfunction-%28detectable-via-bit%29">
+        <avicfmea:failure-rate-of-failure-mode>3.93E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-malfunction">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system%27s-power-redundancy-is-decreased"/>
+            <rdfs:label>SAV generator malfunction</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV GCU malfunction (detectable via BIT)</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gcu-malfunction-%28undetectable-via-bit%29">
+        <avicfmea:failure-rate-of-failure-mode>0.00191</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-malfunction"/>
+        <rdfs:label>SAV GCU malfunction (undetectable via BIT)</rdfs:label>
+        <avicfmea:exposure-time>4000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gcu-failure-occurs-to-sav-generator-excitation">
+        <avicfmea:failure-rate-of-failure-mode>1.51E-6</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-malfunction"/>
+        <rdfs:label>SAV GCU failure occurs to SAV generator excitation</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>SAV GCU circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_recovery-control-panel-mechanical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_recovery-control-panel-recovers-sav-without-comman-d">
+        <avicfmea:failure-rate-of-failure-mode>5.7E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_failure-of-sav-generator-due-to-abnormal-recovery">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system%27s-power-redundancy-is-decreased"/>
+            <rdfs:label>Failure of SAV generator due to abnormal recovery</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>Recovery control panel recovers SAV without comman d</rdfs:label>
+        <avicfmea:exposure-time>1500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>recovery control panel mechanical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_actuator-electrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-cannot-be-released-due-to-actuator-upper-lock-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.9E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-failure-due-to-being-unable-to-release">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system%27s-power-redundancy-is-decreased"/>
+            <rdfs:label>SAV generator failure due to being unable to release</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV cannot be released due to actuator upper lock failure</rdfs:label>
+        <avicfmea:exposure-time>1500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_failure-of-automati-c-release-thread-tube-in-the-actuator">
+        <avicfmea:failure-rate-of-failure-mode>0.00525</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-cannot-be-automatically-released">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_flight-crew-manually-release-sav-when-required">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_minor-effect">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Minor effect</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>Flight crew manually release SAV when required</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>SAV generator cannot be automatically released</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>Failure of automati c release thread tube in the actuator</rdfs:label>
+        <avicfmea:exposure-time>3500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_failure-of-manual-release-thread-tube-in-the-actuator">
+        <avicfmea:failure-rate-of-failure-mode>4.5E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-cannot-be-manually-released">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_flight-crew-cannot-manually-release-sav-when-required">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_minor-effect"/>
+                <rdfs:label>Flight crew cannot manually release SAV when required</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>SAV generator cannot be manually released</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>Failure of manual release thread tube in the actuator</rdfs:label>
+        <avicfmea:exposure-time>1500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>actuator electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_psf-mechanical%2Felectrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-power-supply-malfunction">
+        <avicfmea:failure-rate-of-failure-mode>6.66E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-supply-ac-power"/>
+        <rdfs:label>PSF power supply malfunction</rdfs:label>
+        <avicfmea:exposure-time>2.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-apu-start-malfunction">
+        <avicfmea:failure-rate-of-failure-mode>5.1E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_psf-cannot-start-apu"/>
+        <rdfs:label>PSF APU start malfunction</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>PSF mechanical/electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_sav-generator-mechanical%2Felectrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-lever-failure">
+        <avicfmea:failure-rate-of-failure-mode>5.8E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-cannot-supply-ac-power-when-required">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system%27s-power-redundancy-is-decreased"/>
+            <rdfs:label>SAV generator cannot supply AC power when required</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV lever failure</rdfs:label>
+        <avicfmea:exposure-time>4000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-generator-malfunction">
+        <avicfmea:failure-rate-of-failure-mode>0.00928</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-cannot-supply-ac-power-when-required"/>
+        <rdfs:label>SAV generator malfunction</rdfs:label>
+        <avicfmea:exposure-time>4000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gearbox-failure">
+        <avicfmea:failure-rate-of-failure-mode>2.36E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-cannot-supply-ac-power-when-required"/>
+        <rdfs:label>SAV gearbox failure</rdfs:label>
+        <avicfmea:exposure-time>4000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>SAV generator mechanical/electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_grfs-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_faulty-control-and-protection-of-grfs-for-pbed">
+        <avicfmea:failure-rate-of-failure-mode>9.11E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_pbed-cannot-supply-ac-power"/>
+        <rdfs:label>Faulty control and protection of GRFS for PBED</rdfs:label>
+        <avicfmea:exposure-time>4.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>GRFS circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_current-transformer-electrical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_current-detection-failure-of-current-transformer">
+        <avicfmea:failure-rate-of-failure-mode>4.94E-9</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_wrong-psf-feeder-line-current-is-detected-by-sqep">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-sqep%27s-electrical-protection-to-the-psf%2C-psf-failure%2C-or-decrease-in-the-electric-power-system%27s-power-redundancy">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-the-power-interruption-duration-of-power-users-connected-to-the-key-single-phase-ac-bus-exceeds-the-maximum-allowable-value"/>
+                <avicfmea:causes>
+                  <avicfmea:final-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-the-power">
+                    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                    <rdfs:label>Under emergency power supply condition, the power</rdfs:label>
+                  </avicfmea:final-effect>
+                </avicfmea:causes>
+                <rdfs:label>It may cause SQEP's electrical protection to the PSF, PSF failure, or decrease in the electric power system's power redundancy</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Wrong PSF feeder line current is detected by SQEP</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_wrong-pbed-feeder-line-current-is-detected-by-grfs">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-grfs%27s-electrical-protection-to-the-pbed%2C-pbed-failure%2C-or-decrease-in-the-electric-power-system%27s-power-redundancy">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-the-power-interruption-duration-of-power-users-connected-to-the-key-single-phase-ac-bus-exceeds-the-maximum-allowable-value"/>
+                <rdfs:label>It may cause GRFS's electrical protection to the PBED, PBED failure, or decrease in the electric power system's power redundancy</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Wrong PBED feeder line current is detected by GRFS</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_wrong-pvgc-feeder-line-current-is-detected-by-apbe">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-apbe%27s-electrical-protection-to-the-pvgc%2C-pvgc-failure%2C-or-decrease-in-the-electric-power-system%27s-power-redundancy">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_under-emergency-power-supply-condition%2C-the-power-interruption-duration-of-power-users-connected-to-the-key-single-phase-ac-bus-exceeds-the-maximum-allowable-value"/>
+                <rdfs:label>It may cause APBE's electrical protection to the PVGC, PVGC failure, or decrease in the electric power system's power redundancy</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Wrong PVGC feeder line current is detected by APBE</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>Current detection failure of current transformer</rdfs:label>
+        <avicfmea:exposure-time>4.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>current transformer electrical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_apbe-circuit-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_faulty-control-and-protection-of-apbe-for-pvgc">
+        <avicfmea:failure-rate-of-failure-mode>9.11E-5</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_pvgc-cannot-supply-ac-power"/>
+        <rdfs:label>Faulty control and protection of APBE for PVGC</rdfs:label>
+        <avicfmea:exposure-time>4.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>APBE circuit failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_switch-mechanical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-manual-release-switch-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.02E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-is-released-by-mistake">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+            <rdfs:label>SAV is released by mistake</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV manual release switch is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-control-switch-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>9.06E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_unable-to-manually-disconnect-pvgc">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+            <rdfs:label>Unable to manually disconnect PVGC</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PVGC control switch is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-control-switch-is-disconnected-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.02E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_pbed-and-r-ac-bus-are-disconnected%2C-and-pbed-cannot-supply-power-to-the-external-users"/>
+        <rdfs:label>PBED control switch is disconnected due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-manual-tripping-switch-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.02E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_the-mechanical-connectors-between-pbed-and-right-engine-are-disconnected%2C-and-pbed-is-faulty-due-to-loss-of-mechanical-drive">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pvgc-to-supply-power"/>
+            <rdfs:label>The mechanical connectors between PBED and right engine are disconnected, and PBED is faulty due to loss of mechanical drive</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PBED manual tripping switch is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-control-switch-is-disconnected-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.02E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_pvgc-and-l-ac-bus-are-disconnected%2C-and-pvgc-cannot-supply-power-to-the-external-users"/>
+        <rdfs:label>PVGC control switch is disconnected due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-manual-tripping-switch-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.02E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_the-mechanical-connectors-between-pvgc-and-left-engine-are-disconnected%2C-and-pvgc-is-faulty-due-to-loss-of-mechanical-drive">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_electric-power-system-psf-replaces-faulty-pvgc-to-supply-power"/>
+            <rdfs:label>The mechanical connectors between PVGC and left engine are disconnected, and PVGC is faulty due to loss of mechanical drive</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PVGC manual tripping switch is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>5.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_abnormal-comman-d-of-sav-reset-switch">
+        <avicfmea:failure-rate-of-failure-mode>0.00145</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_abnormal-reset-after-sav-is-released">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_it-may-cause-sav-generator-failure%2C-and-lead-to-decrease-in-electric-power-system%27s-power-redundancy">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>It may cause SAV generator failure, and lead to decrease in electric power system's power redundancy</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Abnormal reset after SAV is released</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>Abnormal comman d of SAV reset switch</rdfs:label>
+        <avicfmea:exposure-time>4000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-manual-release-switch-is-disconnected-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>2.42E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_flight-crew-cannot-manually-release-sav">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-is-automatically-released-only">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>SAV is automatically released only</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Flight crew cannot manually release SAV</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>SAV manual release switch is disconnected due to failure</rdfs:label>
+        <avicfmea:exposure-time>4000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>switch mechanical failure</rdfs:label>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-manual-tripping-switch-is-opened-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>0.00423</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_unable-to-manually-disconnect-the-mechanical-connectors-between-pvgc-and-left-engine">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect%3B-automatic-tripping-mechanism-is-provided-between-pvgc-and-left-engine">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>No effect; automatic tripping mechanism is provided between PVGC and left engine</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Unable to manually disconnect the mechanical connectors between PVGC and left engine</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PVGC manual tripping switch is opened due to failure</rdfs:label>
+        <avicfmea:exposure-time>70000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-manual-tripping-switch-is-opened-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>0.00423</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_unable-to-manually-disconnect-the-mechanical-connectors-between-pbed-and-right-engine">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes>
+              <avicfmea:higher-level-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect%3B-automatic-tripping-mechanism-is-provided-between-pbed-and-right-engine">
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+                <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+                <rdfs:label>No effect; automatic tripping mechanism is provided between PBED and right engine</rdfs:label>
+              </avicfmea:higher-level-effect>
+            </avicfmea:causes>
+            <rdfs:label>Unable to manually disconnect the mechanical connectors between PBED and right engine</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PBED manual tripping switch is opened due to failure</rdfs:label>
+        <avicfmea:exposure-time>70000.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-control-switch-is-closed-due-to-failure">
+        <avicfmea:failure-rate-of-failure-mode>9.06E-7</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes>
+          <avicfmea:local-effect rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/effect_unable-to-manually-disconnect-pbed">
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/failure-effect"/>
+            <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_no-effect"/>
+            <rdfs:label>Unable to manually disconnect PBED</rdfs:label>
+          </avicfmea:local-effect>
+        </avicfmea:causes>
+        <rdfs:label>PBED control switch is closed due to failure</rdfs:label>
+        <avicfmea:exposure-time>15.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:failure-mode-cause rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/cause_actuator-mechanical-failure">
+    <avicfmea:causes>
+      <avicfmea:failure-mode rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-cannot-be-released-due-to-actuator-failure">
+        <avicfmea:failure-rate-of-failure-mode>3.83E-4</avicfmea:failure-rate-of-failure-mode>
+        <avicfmea:causes rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/effect_sav-generator-failure-due-to-being-unable-to-release"/>
+        <rdfs:label>SAV cannot be released due to actuator failure</rdfs:label>
+        <avicfmea:exposure-time>1500.0</avicfmea:exposure-time>
+      </avicfmea:failure-mode>
+    </avicfmea:causes>
+    <rdfs:label>actuator mechanical failure</rdfs:label>
+  </avicfmea:failure-mode-cause>
+  <avicfmea:system rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_electric-power-system">
+    <avicfmea:has-part>
+      <avicfmea:sub-system rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_bqt-start-and-power-generation-system">
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sqep">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_provide-control-and-protection-for-bqt-start-and-power-generation-system">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sqep-wrong-control-of-psf-and-thus-entering-power-generatio-n-mode"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sqep-wrong-control-of-psf-and-thus-entering-apu-start-mode"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-unable-to-start-apu-due-to-sqep-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-complete-malfunction-due-to-sqep-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-unable-to-supply-power-due-to-sqep-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sqep-launches-warning-of-start-and-power-generatio-n-system"/>
+                <rdfs:label>provide control and protection for BQT start and power generation system</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>48.62</avicfmea:single-component-failure-rate>
+            <rdfs:label>SQEP</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_psf">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_supply-ac-power-and-apu-starting-torque">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-power-supply-malfunction"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_psf-apu-start-malfunction"/>
+                <rdfs:label>supply AC power and APU starting torque</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>43.5</avicfmea:single-component-failure-rate>
+            <rdfs:label>PSF</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+        <rdfs:label>BQT start and power generation system</rdfs:label>
+      </avicfmea:sub-system>
+    </avicfmea:has-part>
+    <avicfmea:has-part>
+      <avicfmea:sub-system rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_ac-power-supply-system-2">
+        <avicfmea:has-part>
+          <avicfmea:sub-component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav">
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav-gcu">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_control-and-protection-of-sav-generator">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gcu-malfunction-%28detectable-via-bit%29"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gcu-malfunction-%28undetectable-via-bit%29"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gcu-failure-occurs-to-sav-generator-excitation"/>
+                    <rdfs:label>control and protection of SAV generator</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.84</avicfmea:single-component-failure-rate>
+                <rdfs:label>SAV GCU</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav-heating-control-relay">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_sav-heating-power-supply-on%2Foff-control">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-heating-control-relay-is-closed-due-to-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-heating-control-relay-is-opened-due-to-failure"/>
+                    <rdfs:label>SAV heating power supply on/off control</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>4.48</avicfmea:single-component-failure-rate>
+                <rdfs:label>SAV heating control relay</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav-generator">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_supply-ac-power-under-emergency-power-supply-condition">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-heater-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-lever-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-generator-malfunction"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-gearbox-failure"/>
+                    <rdfs:label>supply AC power under emergency power supply condition</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>2.45</avicfmea:single-component-failure-rate>
+                <rdfs:label>SAV generator</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav-manual-release-control-switch">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_sav-manual-release-control">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-manual-release-switch-is-closed-due-to-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-manual-release-switch-is-disconnected-due-to-failure"/>
+                    <rdfs:label>SAV manual release control</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.1208</avicfmea:single-component-failure-rate>
+                <rdfs:label>SAV manual release control switch</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav-recovery-control-panel">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_recovery-control-of-sav-generator">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_recovery-control-panel-recovers-sav-without-comman-d"/>
+                    <rdfs:label>recovery control of SAV generator</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.038</avicfmea:single-component-failure-rate>
+                <rdfs:label>SAV recovery control panel</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_sav-reset-switch">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_sav-reset-control">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_abnormal-comman-d-of-sav-reset-switch"/>
+                    <rdfs:label>SAV reset control</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.362</avicfmea:single-component-failure-rate>
+                <rdfs:label>SAV reset switch</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <rdfs:label>SAV</rdfs:label>
+          </avicfmea:sub-component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_actuator">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_release-control-of-sav-generator">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-cannot-be-released-due-to-actuator-upper-lock-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_failure-of-automati-c-release-thread-tube-in-the-actuator"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_failure-of-manual-release-thread-tube-in-the-actuator"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_sav-cannot-be-released-due-to-actuator-failure"/>
+                <rdfs:label>release control of SAV generator</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>2.02</avicfmea:single-component-failure-rate>
+            <rdfs:label>actuator</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_grpe">
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_grpe-control-relay">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_grpe-on%2Foff-control">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-control-relay-is-closed-due-to-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-control-relay-is-disconnected-due-to-failure"/>
+                    <rdfs:label>GRPE on/off control</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.711</avicfmea:single-component-failure-rate>
+                <rdfs:label>GRPE control relay</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_on%2Foff-control-between-sav-generator-and-3-phase-ac-ess-bus">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-is-disconnected-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_grpe-is-closed-due-to-failure"/>
+                <rdfs:label>on/off control between SAV generator and 3-Phase AC ESS Bus</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>3.0</avicfmea:single-component-failure-rate>
+            <rdfs:label>GRPE</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_peuc">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_sav-automatic-release-control">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-eqw-is-closed"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-malfunction"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-aircraft-is-on-ground"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-rbd-is-closed"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-airspeed-signal-detection-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_peuc-mistakenly-detects-that-agc-is-closed"/>
+                <rdfs:label>SAV automatic release control</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>32.5</avicfmea:single-component-failure-rate>
+            <rdfs:label>PEUC</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_static-inverter">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_supply-single-phase-ac-power">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_static-inverter-unable-to-supply-ac-power"/>
+                <rdfs:label>supply single phase AC power</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>20.5</avicfmea:single-component-failure-rate>
+            <rdfs:label>static inverter</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+        <rdfs:label>AC power supply system 2</rdfs:label>
+      </avicfmea:sub-system>
+    </avicfmea:has-part>
+    <avicfmea:has-part>
+      <avicfmea:sub-system rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_ac-power-supply-system-1">
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_ndpbe-1">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-feeder-line-current-detection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_current-detection-failure-of-current-transformer"/>
+                <rdfs:label>PVGC feeder line current detection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>0.00247</avicfmea:single-component-failure-rate>
+            <rdfs:label>NDPBE 1</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_eqw">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-and-l-ac-bus-on%2Foff-control">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_eqw-is-closed-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-control-switch-is-disconnected-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_eqw-is-disconnect-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-control-switch-is-closed-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-control-switch-is-closed-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-control-switch-is-disconnected-due-to-failure"/>
+                <rdfs:label>PVGC and L AC Bus on/off control</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>4.62</avicfmea:single-component-failure-rate>
+            <rdfs:label>EQW</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_tdpbe-1">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pbed-feeder-line-current-detection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_current-detection-failure-of-current-transformer"/>
+                <rdfs:label>PBED feeder line current detection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>0.00247</avicfmea:single-component-failure-rate>
+            <rdfs:label>TDPBE 1</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_grfs">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pbed-control-and-protection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_faulty-control-and-protection-of-grfs-for-pbed"/>
+                <rdfs:label>PBED control and protection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>22.77</avicfmea:single-component-failure-rate>
+            <rdfs:label>GRFS</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_bdpbe-2">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_psf-feeder-line-current-detection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_current-detection-failure-of-current-transformer"/>
+                <rdfs:label>PSF feeder line current detection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>0.00247</avicfmea:single-component-failure-rate>
+            <rdfs:label>BDPBE 2</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_rbd">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pbed-and-r-ac-bus-on%2Foff-control">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_eqw-is-disconne-ct-due-to-failure"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_rbd-is-closed-due-to-failure"/>
+                <rdfs:label>PBED and R AC Bus on/off control</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>4.62</avicfmea:single-component-failure-rate>
+            <rdfs:label>RBD</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <rdfs:label>AC power supply system 1</rdfs:label>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_apbe">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-control-and-protection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_faulty-control-and-protection-of-apbe-for-pvgc"/>
+                <rdfs:label>PVGC control and protection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>22.77</avicfmea:single-component-failure-rate>
+            <rdfs:label>APBE</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_pvgc">
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_pvgc-manual-tripping-switch">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-and-left-engine-mechanical-tripping-control">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-manual-tripping-switch-is-opened-due-to-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-manual-tripping-switch-is-closed-due-to-failure"/>
+                    <rdfs:label>PVGC and left engine mechanical tripping control</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.1208</avicfmea:single-component-failure-rate>
+                <rdfs:label>PVGC manual tripping switch</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_pvgc-control-switch">
+                <avicfmea:has-function rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-and-l-ac-bus-on%2Foff-control"/>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.1208</avicfmea:single-component-failure-rate>
+                <rdfs:label>PVGC control switch</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_supply-ac-power">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-cannot-supply-ac-power"/>
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pvgc-cannot-supply-ac-power"/>
+                <rdfs:label>supply AC power</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>13.48</avicfmea:single-component-failure-rate>
+            <rdfs:label>PVGC</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_bdpbe-1">
+            <avicfmea:has-function rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/function_psf-feeder-line-current-detection"/>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>0.00247</avicfmea:single-component-failure-rate>
+            <rdfs:label>BDPBE 1</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_pecu">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pbed-over-voltage-protection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pecu-malfunction"/>
+                <rdfs:label>PBED over-voltage protection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>2.66</avicfmea:single-component-failure-rate>
+            <rdfs:label>PECU</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_meqc">
+            <avicfmea:has-function>
+              <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-over-voltage-protection">
+                <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_meqc-malfunction"/>
+                <rdfs:label>PVGC over-voltage protection</rdfs:label>
+              </avicfmea:function>
+            </avicfmea:has-function>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>2.66</avicfmea:single-component-failure-rate>
+            <rdfs:label>MEQC</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_ndpbe-2">
+            <avicfmea:has-function rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/function_pvgc-feeder-line-current-detection"/>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>0.00247</avicfmea:single-component-failure-rate>
+            <rdfs:label>NDPBE 2</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_pbed">
+            <avicfmea:has-part>
+              <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_pbed-manual-tripping-switch">
+                <avicfmea:has-function>
+                  <avicfmea:function rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/function_pbed-and-left-engine-mechanical-tripping-control">
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-manual-tripping-switch-is-opened-due-to-failure"/>
+                    <avicfmea:has-failure-mode rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/failuremode_pbed-manual-tripping-switch-is-closed-due-to-failure"/>
+                    <rdfs:label>PBED and left engine mechanical tripping control</rdfs:label>
+                  </avicfmea:function>
+                </avicfmea:has-function>
+                <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+                <avicfmea:single-component-failure-rate>0.1208</avicfmea:single-component-failure-rate>
+                <rdfs:label>PBED manual tripping switch</rdfs:label>
+              </avicfmea:component>
+            </avicfmea:has-part>
+            <avicfmea:has-function rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/function_supply-ac-power"/>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>13.48</avicfmea:single-component-failure-rate>
+            <rdfs:label>PBED</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+        <avicfmea:has-part>
+          <avicfmea:component rdf:about="http://onto.fel.cvut.cz/data/avic-fmea/structuralelement_tdpbe-2">
+            <avicfmea:has-function rdf:resource="http://onto.fel.cvut.cz/data/avic-fmea/function_pbed-feeder-line-current-detection"/>
+            <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+            <avicfmea:single-component-failure-rate>0.00247</avicfmea:single-component-failure-rate>
+            <rdfs:label>TDPBE 2</rdfs:label>
+          </avicfmea:component>
+        </avicfmea:has-part>
+      </avicfmea:sub-system>
+    </avicfmea:has-part>
+    <rdf:type rdf:resource="http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/structural-element"/>
+    <rdfs:label>electric power system</rdfs:label>
+  </avicfmea:system>
+</rdf:RDF>

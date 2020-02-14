@@ -1,0 +1,122 @@
+3) Quality audit data
+
+Key terms
+	Whether the organization stipulates competence requirements for personnel:
+		——Determine the qualifications for personnel involved in work that can affect quality performance under the organization’s control;
+		—— Ensure the personnel are competent with proper academic background, training and work experience;
+		—— Take measures to obtain necessary abilities, where applicable, and assess the effectiveness of these measures
+		—— Keep relevant records for use as evidence of competence;
+		——Regular review of necessary abilities?
+
+			Extracted terms:
+				organization
+				competence
+				requirements
+				personnel
+				qualifications
+				quality performance
+				control
+				proper 
+				academic background
+				training
+				work experience
+				measures
+				necessary abilities
+				applicable
+				assess
+				relevant records
+				evidence of competence
+				Regular review
+				necessary abilities
+
+	Whether the organization ensures that the external documents needed by its planning and operational quality management system are properly identified and controlled?
+
+		Extracted terms:
+			external documents
+			planning
+			operational quality management system
+			properly identified
+			controlled
+
+	In case of rejection (including rejection from complaints), whether the following steps are taken to evaluate the necessity of taking measures to eliminate the causes of rejection and prevent it from reoccurring or occurring on other occasions:
+	——Rejection review and analysis;
+	——Determine the root cause of rejection, including, where applicable, causes related to human factors
+	——Determine whether similar rejection has occurred or may occur.
+		Extracted terms:
+			rejection
+			rejection from complaints
+			steps are taken
+			necessity
+			measures
+			causes of rejection
+			prevent
+			reoccurring
+			occurring
+			on other occasions
+			Rejection review
+			analysis
+			root cause
+			rejection
+			causes
+			related to human factors
+			similar rejection
+	
+	
+	Reasons for deduction
+		1. There is a lack of training requirements in the qualifications specified in the job description;
+		2. The job description includes degree requirements, but has no subject requirements;
+		3. There is a lack of qualification requirements for technicians and operators engaging in nondestructive testing, welding, etc.
+		4. There is no requirement for regular review of the necessary abilities required by the job description. 
+			Extracted terms:
+				lack
+				training requirements
+				qualifications
+				specified
+				job description
+				degree requirements
+				subject requirements
+				qualification requirements
+				technicians
+				nondestructive testing
+				welding
+				requirement for regular review
+				necessary abilities required
+				job description
+				
+		
+		Distribution and control of external documents are poorly managed: there is no evidence that the old version drawings have been recovered or destroyed after merging of several organizations; delivery of drawings took more than half a month sometimes; the organizations responsible for distribution have delivered some wrong documents due to a lack of proofreading and review.
+			Extracted terms:	
+				Distribution
+				control
+				external documents
+				poorly managed
+				evidence
+				old version drawings
+				old
+				version
+				drawings
+				recovered
+				destroyed
+				merging of several organizations
+				delivery of drawings
+				took
+				organizations responsible for distribution
+				delivered some wrong
+				documents
+				lack of proofreading
+				review
+				cause analysis
+				presented
+				reject audit form
+				fails to find
+				root causes
+				one-pass milling
+				failure to consult relevant technical documents for specifications
+				whether the personnel has received necessary training or not
+				Corrective actions
+				feasible
+				specified in technical procedures
+				the requirement for multi-pass milling does not include the proper number of passes
+				the amount of feed per pass
+				discussed  in quality seminars
+				but not put into the technical procedures

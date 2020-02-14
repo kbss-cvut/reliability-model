@@ -1,0 +1,27 @@
+PREFIX ufo: <http://onto.fel.cvut.cz/ontologies/ufo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX avicfmea: <http://onto.fel.cvut.cz/ontologies/fmea/avic-fmea-data-model/>
+
+
+#
+# returns the part of edges between structural elements, the has-function between structural elements 
+# and functions and has-failure-mode edges between functions and failure modes.
+#
+
+SELECT ?p ?c ?t{
+  {
+    ?p a avicfmea:structural-element;
+      avicfmea:has-part ?c.
+    ?c a avicfmea:structural-element.
+    BIND(avicfmea:has-part as ?t)
+  }UNION{
+    ?p a avicfmea:structural-element;
+      avicfmea:has-function ?c.
+    ?c a avicfmea:function.
+    BIND(avicfmea:has-function as ?t)
+  }UNION{ 
+    ?p a avicfmea:function.
+    ?p avicfmea:has-failure-mode ?c.
+    BIND(avicfmea:has-failure-mode as ?t)
+  }
+}
