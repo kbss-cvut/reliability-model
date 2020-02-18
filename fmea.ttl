@@ -1,10 +1,12 @@
 @prefix : <http://onto.fel.cvut.cz/ontology/fmea/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rel: <http://onto.fel.cvut.cz/ontologies/reliability/> .
 @prefix ufo: <http://onto.fel.cvut.cz/ontologies/ufo/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix func: <http://onto.fe.cvut.cz/ontologies/functions/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
@@ -14,227 +16,144 @@
 @base <http://onto.fel.cvut.cz/ontology/fmea/> .
 
 <http://onto.fel.cvut.cz/ontology/fmea/> rdf:type owl:Ontology ;
-                                         
-                                         owl:imports <http://onto.fel.cvut.cz/ontologies/reliability> ,
-                                                     <http://onto.fel.cvut.cz/ontologies/ufo-powertypes> ,
-                                                     <http://onto.fel.cvut.cz/ontologies/functions/> .
-
+                                          owl:imports <http://onto.fel.cvut.cz/ontologies/reliability> ,
+                                                      <http://onto.fel.cvut.cz/ontologies/ufo-powertypes> ,
+                                                      <http://onto.fel.cvut.cz/ontologies/functions/> .
 
 #################################################################
-#
 #    Object Properties
-#
 #################################################################
-
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/prevents
-
 :prevents rdf:type owl:ObjectProperty ;
-          
-          rdfs:range <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode-cause> ;
-          
-          rdfs:domain :taking_action .
-
-
-
+          rdfs:domain :taking_action ;
+          rdfs:range rel:failure-mode-cause .
 
 
 #################################################################
-#
 #    Data properties
-#
 #################################################################
-
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/exposure-time
-
 :exposure-time rdf:type owl:DatatypeProperty ;
-               
-               rdfs:comment "Exposure time (H)"@en ;
-               
-               rdfs:domain <http://onto.fel.cvut.cz/ontologies/reliability/fmea-observation> ;
-               
-               rdfs:range xsd:double .
-
+               rdfs:domain rel:fmea-observation ;
+               rdfs:range xsd:double ;
+               rdfs:comment "Exposure time (H)"@en .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/failure-rate-of-failure-mode
-
 :failure-rate-of-failure-mode rdf:type owl:DatatypeProperty ;
-                              
-                              rdfs:comment "Failure rate of failure mode (1E-6/H)"@en ;
-                              
-                              rdfs:domain <http://onto.fel.cvut.cz/ontologies/reliability/fmea-observation> ;
-                              
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain rel:fmea-observation ;
                               rdfs:range xsd:double ;
-                              
-                              rdfs:subPropertyOf owl:topDataProperty .
-
+                              rdfs:comment "Failure rate of failure mode (1E-6/H)"@en .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/occurrence-probability-of-failure-mode
-
 :occurrence-probability-of-failure-mode rdf:type owl:DatatypeProperty ;
-                                        
-                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/reliability/fmea-observation> ;
-                                        
+                                        rdfs:domain rel:fmea-observation ;
                                         rdfs:range xsd:double .
 
 
-
 ###  http://onto.fel.cvut.cz/ontology/fmea/single-component-failure-rate
-
 :single-component-failure-rate rdf:type owl:DatatypeProperty ;
-                               
-                               rdfs:comment "Single structuralElement failure rate (1E-6/H)"@en ;
-                               
-                               rdfs:domain <http://onto.fel.cvut.cz/ontologies/reliability/fmea-observation> ;
-                               
-                               rdfs:range xsd:double .
-
-
-
+                               rdfs:domain rel:fmea-observation ;
+                               rdfs:range xsd:double ;
+                               rdfs:comment "Single structuralElement failure rate (1E-6/H)"@en .
 
 
 #################################################################
-#
 #    Classes
-#
 #################################################################
-
 
 ###  http://onto.fel.cvut.cz/data/reliability/example-1/higher-level-effect-type
-
-<http://onto.fel.cvut.cz/data/reliability/example-1/higher-level-effect-type> rdfs:label "higher level effect type" ;
-                                                                              
-                                                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                owl:onProperty <http://onto.fel.cvut.cz/ontologies/reliability/causes> ;
-                                                                                                owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/final-level-effect-type>
-                                                                                              ] .
-
+<http://onto.fel.cvut.cz/data/reliability/example-1/higher-level-effect-type> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty rel:causes ;
+                                                                                                owl:someValuesFrom rel:final-level-effect-type
+                                                                                              ] ;
+                                                                              rdfs:label "higher level effect type" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/failure
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure> owl:equivalentClass :failure_mode_manifistation .
-
+rel:failure owl:equivalentClass :failure_mode_manifistation .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/failure-mode
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty ufo:inheres-in ;
-                                                                                owl:someValuesFrom :component
-                                                                              ] ,
-                                                                              [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty ufo:is-manifested-by ;
-                                                                                owl:someValuesFrom :failure_mode_manifistation
-                                                                              ] ,
-                                                                              [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty <http://onto.fel.cvut.cz/ontologies/reliability/causes> ;
-                                                                                owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode-cause>
-                                                                              ] .
-
+rel:failure-mode rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty rel:causes ;
+                                   owl:someValuesFrom rel:failure-mode-cause
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ufo:inheres-in ;
+                                   owl:someValuesFrom :component
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ufo:is-manifested-by ;
+                                   owl:someValuesFrom :failure_mode_manifistation
+                                 ] .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/final-level-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/final-level-effect-type> rdfs:label "final level effect type" .
-
+rel:final-level-effect-type rdfs:label "final level effect type" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/fmea-observation
-
-<http://onto.fel.cvut.cz/ontologies/reliability/fmea-observation> rdf:type owl:Class ;
-                                                                  
-                                                                  rdfs:subClassOf ufo:situation ;
-                                                                  
-                                                                  rdfs:comment "This object correspond to the observation of a event pattern, a manifestaion of failure modes their causes and the effects that this manifestation has on the system on different levels."@en .
-
+rel:fmea-observation rdf:type owl:Class ;
+                     rdfs:subClassOf ufo:situation ;
+                     rdfs:comment "This object correspond to the observation of a event pattern, a manifestaion of failure modes their causes and the effects that this manifestation has on the system on different levels."@en .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/local-level-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/local-level-effect-type> rdfs:label "local level effect type" ;
-                                                                         
-                                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty <http://onto.fel.cvut.cz/ontologies/reliability/causes> ;
-                                                                                           owl:someValuesFrom <http://onto.fel.cvut.cz/data/reliability/example-1/higher-level-effect-type>
-                                                                                         ] .
-
+rel:local-level-effect-type rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty rel:causes ;
+                                              owl:someValuesFrom <http://onto.fel.cvut.cz/data/reliability/example-1/higher-level-effect-type>
+                                            ] ;
+                            rdfs:label "local level effect type" .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/compensating_provision
-
 :compensating_provision rdf:type owl:Class ;
-                        
-                        rdfs:label "compensating provision" ;
-                        
-                        rdfs:subClassOf ufo:event-type .
-
+                        rdfs:subClassOf ufo:event-type ;
+                        rdfs:label "compensating provision" .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/component
-
 :component rdf:type owl:Class ;
-           
-           rdfs:label "component" ;
-           
-           rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/system> ,
+           rdfs:subClassOf rel:system ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty <http://onto.fel.cvut.cz/ontologies/reliability/has-function> ;
-                             owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/function>
-                           ] .
-
+                             owl:onProperty rel:has-function ;
+                             owl:someValuesFrom rel:function
+                           ] ;
+           rdfs:label "component" .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/failure_mode_manifistation
-
 :failure_mode_manifistation rdf:type owl:Class ;
-                            
-                            rdfs:label "failure mode manifistation" ;
-                            
-                            rdfs:subClassOf <http://onto.fe.cvut.cz/ontologies/functions/manifestation-of-function> .
-
+                            rdfs:subClassOf func:manifestation-of-function ;
+                            rdfs:label "failure mode manifistation" .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/recommended_action
-
 :recommended_action rdf:type owl:Class ;
-                    
-                    rdfs:label "recommended action" ;
-                    
-                    rdfs:subClassOf :compensating_provision .
-
+                    rdfs:subClassOf :compensating_provision ;
+                    rdfs:label "recommended action" .
 
 
 ###  http://onto.fel.cvut.cz/ontology/fmea/taking_action
-
 :taking_action rdf:type owl:Class ;
-               
-               rdfs:label "taking action" ;
-               
                rdfs:subClassOf ufo:atomic-event ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :prevents ;
-                                 owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode-cause>
-                               ] .
-
-
-
+                                 owl:someValuesFrom rel:failure-mode-cause
+                               ] ;
+               rdfs:label "taking action" .
 
 
 #################################################################
-#
 #    Annotations
-#
 #################################################################
 
-
-<http://onto.fel.cvut.cz/ontologies/reliability/no-effect-type> rdfs:label "no effect type" .
-
+rel:no-effect-type rdfs:label "no effect type" .
 
 
-
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
-
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
