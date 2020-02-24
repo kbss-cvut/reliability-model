@@ -1,0 +1,1676 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#"
+     xml:base="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-71="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#examines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#examines">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCause -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCause">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCompensatingProvision -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCompensatingProvision">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasEngineLevelEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasEngineLevelEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFailureMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFailureMode">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasLocalEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasLocalEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isLocalEffectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isLocalEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isLocalEffectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isViolatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isViolatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_leader -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_leader">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#cause_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#cause_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#compensating_provision_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#compensating_provision_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_reference_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_reference_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#engine_level_effect_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#engine_level_effect_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_reference_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_reference_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_reference_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_reference_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#local_effect_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#local_effect_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#next_level_effect_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#next_level_effect_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#occurence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#occurence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#severity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#severity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFailureMode"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFunction"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#examines"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCause"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCompensatingProvision"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isViolatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasEngineLevelEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM1"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F1"/>
+        <component_name>Pressurized oil tube to torquemeter pump</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM17"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F8"/>
+        <component_name>2nd ball bearing auxiliary scavenge pump oil tube strainer</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM18"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM19"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F10"/>
+        <component_name>Auxiliary scavenge pump</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM20"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM21"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F11"/>
+        <component_name>2nd roller bearing scavenge pump</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM22"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM23"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F6"/>
+        <component_name>Electromagnetic metal chip signaller in RGB</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM2"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM3"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F2"/>
+        <component_name>Pressurized oil tube to torquemeter pump strainer</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM4"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM5"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM6"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM7"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM8"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F3"/>
+        <component_name>Torquemeter pump</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM10"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F4"/>
+        <component_name>Pressurized oil tube to torquemeter pressure transmitter</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM9"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F5"/>
+        <component_name>Torquemeter pressure transmitter</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM11"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM12"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F6"/>
+        <component_name>Electromagnetic metal chip signaller in AGB</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM13"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F7"/>
+        <component_name>Oil sump</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM14"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F8"/>
+        <component_name>GT scavenge pump oil tube</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#C9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM15"/>
+        <hasFailureMode rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM16"/>
+        <hasFunction rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F9"/>
+        <component_name>GT scavenge pump</component_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CP1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CP1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>No cause</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>Manufacturing defect</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>Material defect</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>Contamination</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>Overloads</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>LCF (Low-cycle fatigue)</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CS6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>HCF (High-cycle fatigue)</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CSX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CSX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <cause_description>xxx</cause_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>No effect</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possible fire in the PT (Power Turbine) section causing IFSD</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Increased engine vibrations</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possible oil fire in the PT (Power Turbine) bearing area causing IFSD (In-Flight Shut Down)</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Loss of power control due to loss of torque indication, possible overtorque</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Local engine fire</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possibility of PT overspeed causing IFSD</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possible loss of power control due to  oil pressure loss</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Engine fire</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possible failure of lubrication and torque measurement system due to loss of oil pressure</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possible seizure causing IFSD (In-Flight Shut Down)</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>Possible oil fire in the GGT (Gas Generator Turbine) bearing area causing IFSD (In-Flight Shut Down)</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELEX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELEX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <engine_level_effect_description>xxx</engine_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides oil supply to torquemeter pump</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>To suck out scavenged oil from the reduction gearbox and transfer it to the oil tank</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>To scavenge oil from 2nd roller bearing</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Protects scavenge/torquemeter pump against contamination</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides oil delivery to the torquemeter and for scavenging of the RGB (Reduction Gearbox)</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides oil supply to the torque transmitter</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides torquemeter oil pressure transmission</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides chips in oil detection</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides space for collection of drained oil from the GGT roller bearing compartment</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provide backup  protection of nozzles and oil pumps against contamination</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#F9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>Provides scavenging of the  GGT (Gas Generator Gearbox) roller bearing</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <failure_mode_description>No failure modes</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE1"/>
+        <failure_mode_description>Pressurized oil tube to torquemeter pump fracture</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE10"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE11"/>
+        <failure_mode_description>Pressurized oil tube to torquemeter pressure transmitter fracture</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE14"/>
+        <failure_mode_description>Electromagnetic metal chip signaller in AGB wiring, connector socket discontinuity</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE13"/>
+        <failure_mode_description>Electromagnetic metal chip signaller in AGB sealing leakage</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE10"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE11"/>
+        <failure_mode_description>Oil sump tube fracture</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE15"/>
+        <failure_mode_description>GT scavenge pump oil tube strainer clogging</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE5"/>
+        <failure_mode_description>GT scavenge pump drive gear spline wear, quillshaft</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE16"/>
+        <failure_mode_description>GT scavenge pump gear inner wear</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE15"/>
+        <failure_mode_description>2nd ball bearing auxiliary scavenge pump oil tube strainer clogging</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4"/>
+        <failure_mode_description>Auxiliary scavenge pump drive gear spline wear, quillshaft</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE16"/>
+        <failure_mode_description>Auxiliary scavenge pump inner wear</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE2"/>
+        <failure_mode_description>Pressurized oil tube to torquemeter pump strainer partial clogging of the strainer</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4"/>
+        <failure_mode_description>2nd roller bearing scavenge pump drive gear spline wear, quillshaft</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE16"/>
+        <failure_mode_description>2nd roller bearing scavenge pump gear inner wear</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE14"/>
+        <failure_mode_description>Electromagnetic metal chip signaller in RGB circuit, wire, socket disconnection</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE17"/>
+        <failure_mode_description>Electromagnetic metal chip signaller in RGB sealing leakage</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE3"/>
+        <failure_mode_description>Pressurized oil tube to torquemeter pump strainer complete clogging of the strainer</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE5"/>
+        <failure_mode_description>Torquemeter pump drive shaft failure</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE5"/>
+        <failure_mode_description>Torquemeter oil pump Drive gear fragmentation of the ring gear of teeth</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE5"/>
+        <failure_mode_description>Torquemeter pump ball bearings seizure</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE6"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE7"/>
+        <failure_mode_description>Torquemeter pump ball bearings initial seizure/pitting</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE8"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE9"/>
+        <failure_mode_description>Torquemeter pump gears inner wear</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FM9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <hasLocalEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE12"/>
+        <failure_mode_description>Torquemeter pressure transmitter failure</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <failure_mode_description>xxx</failure_mode_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <function_description>xxx</function_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <local_effect_description>No effect</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1"/>
+        <local_effect_description>Leakage of inlet oil</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE10"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE5"/>
+        <local_effect_description>Oil pressure leak</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE6"/>
+        <local_effect_description>Oil pressure leak in the proximity of hot parts</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE7"/>
+        <local_effect_description>Loss of torque indication</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE9"/>
+        <local_effect_description>Minor oil leakage</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE8"/>
+        <local_effect_description>Loss of detection function</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE12"/>
+        <local_effect_description>Clogging of strainers</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE13"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE14"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE15"/>
+        <local_effect_description>Reduced scavenging pumps efficiency</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE11"/>
+        <local_effect_description>Flyweight seizure</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1"/>
+        <local_effect_description>Reduced delivery to the scavenge/torquemeter pump</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1"/>
+        <local_effect_description>Stopped delivery to the scavenge/torquemeter pump</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE13"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE14"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE2"/>
+        <local_effect_description>Scavenge pump stopped</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE14"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE2"/>
+        <local_effect_description>Torquemeter pump stopped</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE0"/>
+        <local_effect_description>Scavenge oil pressure fluctuations</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE3"/>
+        <local_effect_description>Torquemeter oil pressure delivery fluctuations</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1"/>
+        <local_effect_description>Reduced efficiency of scavenging</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LE9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <hasNextLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE4"/>
+        <local_effect_description>Reduced pressure to torquemeter</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LEX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LEX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <local_effect_description>xxx</local_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE0"/>
+        <next_level_effect_description>No effect</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE1"/>
+        <next_level_effect_description>Leakage of oil through sealing during climb</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE5"/>
+        <next_level_effect_description>Loss of oil pressure due to oil leak</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE0"/>
+        <next_level_effect_description>No input signal to reverse valve</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE7"/>
+        <next_level_effect_description>Reduced oil pressure</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE10"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE8"/>
+        <next_level_effect_description>Internal leakage in compressor bearing due to drain oil</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE9"/>
+        <next_level_effect_description>Internal leakage in GGT bearing compartment due to drain oil</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE11"/>
+        <next_level_effect_description>Internal leakage in the RGB/PT bearing area</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2"/>
+        <next_level_effect_description>Torquemeter pump failure</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2"/>
+        <next_level_effect_description>Torquemeter inlet pressure fluctuations</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2"/>
+        <next_level_effect_description>Possible innacuracy of torquemeter measurement</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2"/>
+        <next_level_effect_description>Loss of tube oil delivery to the torque pressure transmitters</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE3"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE6"/>
+        <next_level_effect_description>Possible oil fire in proximity of hot parts</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE2"/>
+        <next_level_effect_description>Loss of power control due to loss of torque indication</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE0"/>
+        <next_level_effect_description>Loss of chips in oil indication</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLE9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <hasEngineLevelEffect rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#ELE4"/>
+        <next_level_effect_description>Stopped rotation of the countershaft  causing seizure of the RGB and possible interruption of the connection with the PT</next_level_effect_description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLEX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NLEX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <next_level_effect_description>xxx</next_level_effect_description>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

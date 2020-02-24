@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#"
+     xml:base="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-71="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#examines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#examines">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCause -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCause">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCompensatingProvision -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCompensatingProvision">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasEngineLevelEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasEngineLevelEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFailureMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFailureMode">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasLocalEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasLocalEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isLocalEffectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isLocalEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isLocalEffectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isViolatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isViolatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_leader -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_leader">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#cause_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#cause_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#compensating_provision_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#compensating_provision_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_reference_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#component_reference_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#engine_level_effect_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#engine_level_effect_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_reference_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#failure_mode_reference_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_reference_nr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#function_reference_nr">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#local_effect_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#local_effect_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#next_level_effect_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#next_level_effect_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#occurence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#occurence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#severity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#severity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCauseOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isCompensatingProvisionOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFailureMode"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasFunction"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isExaminedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isEngineLevelEffectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FMEA">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#examines"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCause"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Cause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasCompensatingProvision"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#CompensatingProvision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFailureModeOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#violates"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Function">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isFunctionOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isViolatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#FailureMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasNextLevelEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#NextLevelEffect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#Effect"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#hasEngineLevelEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#EngineLevelEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#isNextLevelEffectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71#LocalEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
