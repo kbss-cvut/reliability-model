@@ -1,0 +1,368 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rel:   <http://onto.fel.cvut.cz/ontology/reliability/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-69F209E5858A2B103E704463B9DB0014>
+        a                rdfs:Class ;
+        rdfs:label       "arelocated on the underside of the wing," ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-B1B5691C6C03B196C8D2221E4CB8097B>
+        a                rdfs:Class ;
+        rdfs:label       "alert and the fire warningmessage for the LH and RH engine should appear in the annunciation window" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-26A05C26621FD40B39B1C0753D84F646>
+        a                rdfs:Class ;
+        rdfs:label       "prevents flow of fuel to theoutside" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-F1B33C7A9FB23C6B7D2FA3340E7FDC60>
+        a                rdfs:Class ;
+        rdfs:label       "feeds them to the turbine of the turbo charger" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/failure-mode-206802E4A035EB717A8B01FFAE5F07FC>
+        a                rdfs:Class ;
+        rdfs:label       "in case of an auxiliary fuel transfer failure" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/failure-mode> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-B2129A5D2D88F0A88C7642B63D9746A6>
+        a                rdfs:Class ;
+        rdfs:label       "provided to check the oil quantit" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-36A98CE28019FEDF30C2AFAD6D57126B>
+        a                rdfs:Class ;
+        rdfs:label       "drain valves" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-7C8252B2856789DAAEB6196EAFC01D75>
+        a                rdfs:Class ;
+        rdfs:label       "its lowest point" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-470031775E095B0C040E0C7437EC0154>
+        a                rdfs:Class ;
+        rdfs:label       "total quantity of 94.6 lite" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-1BF0B338812A8D16E7603B9BE9B0A9F2>
+        a                rdfs:Class ;
+        rdfs:label       "flexible hose" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-121F22D4D2FF0861FB8713FEFBAC3E9A>
+        a                rdfs:Class ;
+        rdfs:label       "operates at 150 mbar" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/final-level-effect-type-A4F61D609DF71B2710097D169DD77783>
+        a                rdfs:Class ;
+        rdfs:label       "aural alert or the warning does not appear" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/final-level-effect-type> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-9AA76D8A9F8E25E87DBCAFC7AAF556FC>
+        a                rdfs:Class ;
+        rdfs:label       "filled" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-EE449088000F8A92BB28DC11C96644D5>
+        a                rdfs:Class ;
+        rdfs:label       "intercooler" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-BF030BF45E96260D02F19FB9845CEE16>
+        a                rdfs:Class ;
+        rdfs:label       "filler" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-C67C81CDBDDBBF03C82008CA0E5035FC>
+        a                rdfs:Class ;
+        rdfs:label       "aluminum chambers" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-636837044089DC3B2A71BF10B72232E5>
+        a                rdfs:Class ;
+        rdfs:label       "behind the compressor" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-4719AC30C8F7DCBAB31D3E5D01544789>
+        a                rdfs:Class ;
+        rdfs:label       "A manifold pressure sensor" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/failure-mode-activator-16DC3F6D1DCBA3D074C5BE22485D03B6>
+        a                rdfs:Class ;
+        rdfs:label       "the tank was overfille" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/failure-mode-activator> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-0E86063D1214C380A5C1A11E33EF36AD>
+        a                rdfs:Class ;
+        rdfs:label       "thetest button" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-5D04AFC3CA8DAD10E1D8CFC7BBCFE878>
+        a                rdfs:Class ;
+        rdfs:label       "relief pressure valv" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-DFFF75D1D67018D69F4409928687807E>
+        a                rdfs:Class ;
+        rdfs:label       "in the hot areaof each engine" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-2E3E82496B49B4D172326B1294CB8F59>
+        a                rdfs:Class ;
+        rdfs:label       "on the underside of the engine" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-27557234C54A29A2ADEF6CA4386F5D87>
+        a                rdfs:Class ;
+        rdfs:label       "inspection hole on the front side of the lower cowling" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-B89AA4A65E2EDDBA0CAAB66A37363D8C>
+        a                rdfs:Class ;
+        rdfs:label       "is fitted before the outlet" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-C8BA2056F08B0B26A4B8D9022DFDEB1B>
+        a                rdfs:Class ;
+        rdfs:label       "relief pressure valve" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-141286E1921F6F357468924323755796>
+        a                rdfs:Class ;
+        rdfs:label       "At the lowest point in each side of the fuel system" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-1ECFC3E7237C0CD97682F80F14C0AD71>
+        a                rdfs:Class ;
+        rdfs:label       "cooled by" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-E5C501D3BC9F0678F638165539A7C848>
+        a                rdfs:Class ;
+        rdfs:label       "gearbox oil quantity can be checked" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-5B0D8B2F4EBE6A3EB6836FD567E653B0>
+        a                rdfs:Class ;
+        rdfs:label       "fuel filter" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/failure-mode-activator-938C44C939208901CBC103D8214BA1D5>
+        a                rdfs:Class ;
+        rdfs:label       "increase of the engine compartment temperature above250 °C" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/failure-mode-activator> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-7FC4E7094EB9492B97292338D19C81A4>
+        a                rdfs:Class ;
+        rdfs:label       "prevents excessive manifoldpressures at low density altitudes" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-1353A7586D14470E7DB9A3DA9363C400>
+        a                rdfs:Class ;
+        rdfs:label       "theregulation of the propeller." ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-5B6B61E540F87255EA44DDD1260BCC11>
+        a                rdfs:Class ;
+        rdfs:label       "allows air to enter the tank" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-64285A50B3EBED21E3459D969C03CE85>
+        a                rdfs:Class ;
+        rdfs:label       "overheat detector" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-5F31D695D8B9D3A043040C5EC21D7A22>
+        a                rdfs:Class ;
+        rdfs:label       "are fitted in each nacelle behind the firewall" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-CD4E6F5DC4F4878325864D45C0F010C7>
+        a                rdfs:Class ;
+        rdfs:label       "cooled down" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-638ED57682E085BA46D71148D76F9DB7>
+        a                rdfs:Class ;
+        rdfs:label       "located next to the gear selector switc" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-71B170D32A4663975B7DF4ED1A1E2DB1>
+        a                rdfs:Class ;
+        rdfs:label       "allows the ECUto calculate the correct position of the waste gate valve." ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-E57AF3059492498463A106176FBC70EA>
+        a                rdfs:Class ;
+        rdfs:label       "is controlled by the ECU throughthe waste gate valve" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-2E7584444459204E593552345EBC67DC>
+        a                rdfs:Class ;
+        rdfs:label       "protects the tankagainst high pressur" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-DF9330B41C12CC71A4D81C38348EAE60>
+        a                rdfs:Class ;
+        rdfs:label       "Lubrication System" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-9DF2E429B3936313AF19C7C3FE23E33A>
+        a                rdfs:Class ;
+        rdfs:label       "outlet valve" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-24232943ADAD1C88DC310E5CFCA75AD6>
+        a                rdfs:Class ;
+        rdfs:label       "drain valve" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-74A0847617AF3A7D376F89E43C35EE8C>
+        a                rdfs:Class ;
+        rdfs:label       "inspection glass" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-64B39D24C0962D08DD4606B9E5173F1E>
+        a                rdfs:Class ;
+        rdfs:label       "coarse filter" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-1072CB8A658EC84F884B2E98A1A5ED6D>
+        a                rdfs:Class ;
+        rdfs:label       "oil can also be filled in ther" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-DE918F6EA2E9479ED9D81A8147DBAE3D>
+        a                rdfs:Class ;
+        rdfs:label       "bypass" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-FF8C47AAFF5B903ED62C5E38C231F923>
+        a                rdfs:Class ;
+        rdfs:label       "allows fuel and air to flowto the outside with higher internal pressur" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-3621102BED9A15297DE0ADC979D74260>
+        a                rdfs:Class ;
+        rdfs:label       "air is compressed" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-CA0478CDE37D5ADFA863D782088CD42B>
+        a                rdfs:Class ;
+        rdfs:label       "Gearbox and Propeller Governor System" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-F69908664CA1D57F7B6ADD2CC9FF7CED>
+        a                rdfs:Class ;
+        rdfs:label       "serves the governor syste" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-D04812023E37410DBB4D4D606B959D4A>
+        a                rdfs:Class ;
+        rdfs:label       "driven by the turbine" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-AF8DDA79E2CDFF194679A608D183BBDE>
+        a                rdfs:Class ;
+        rdfs:label       "remove water and sediment" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-7C5D3B7C4077B5BEB773A476F14641D5>
+        a                rdfs:Class ;
+        rdfs:label       "hose terminals" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-04B12362C3107C031BC19C7A9C5237B1>
+        a                rdfs:Class ;
+        rdfs:label       "lubricates the gearbox" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/disposition-2FC710BD8A5733D0C43D581D5732F95F>
+        a                rdfs:Class ;
+        rdfs:label       "an inspection hole in the uppercowling" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-1C1CAD2F03CD73B76D43F17CDD68438A>
+        a                rdfs:Class ;
+        rdfs:label       "closes the electric circuit and a warning messageappears" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-B1023A7713895E6F3EF0F96E66784514>
+        a                rdfs:Class ;
+        rdfs:label       "To test the fire detector" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-7E1097FA6DCECB2D647E926D284B3B5A>
+        a                rdfs:Class ;
+        rdfs:label       "The fire detection system" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-9E71939F6A1F0397701AC32055AE3517>
+        a                rdfs:Class ;
+        rdfs:label       "The capillary equalizes the air pressure during climb" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-0ABF4124CF945D4DAC960932DF21C5CF>
+        a                rdfs:Class ;
+        rdfs:label       "manifold" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-291E12B29522837946E7AEE41E15ECE8>
+        a                rdfs:Class ;
+        rdfs:label       "compressor" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-791903F628B33DE8B8E4A3FCA969BB41>
+        a                rdfs:Class ;
+        rdfs:label       "check valve" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-C241C2967BF9A8CB495CE49C8F4E5966>
+        a                rdfs:Class ;
+        rdfs:label       "two tank vents" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-14BE534CC343CBC3F0EAE6B81752DE9C>
+        a                rdfs:Class ;
+        rdfs:label       "separatecooler" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-0BDC21A962C6B3418257F4B9A89444D0>
+        a                rdfs:Class ;
+        rdfs:label       "dip-stick" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-5B58115C139DE2EA615A8EF364527564>
+        a                rdfs:Class ;
+        rdfs:label       "collects exhaust gases from the outletsof the cylinders" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-3E23ADC817BC83D52A8E8A3606320CA8>
+        a                rdfs:Class ;
+        rdfs:label       "exhaust system contains" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/function-15A9B2B56FBB1B6687DA06B9CA46D16E>
+        a                rdfs:Class ;
+        rdfs:label       "draining ofthe tan" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/function> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-8F822725EF97954A62B5AB41733DFBF7>
+        a                rdfs:Class ;
+        rdfs:label       "wet sump lubrication system" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/object-3AB5A6519149C8E9985A4EC59C4565F1>
+        a                rdfs:Class ;
+        rdfs:label       "TURBO-CHARGER SYSTEM" ;
+        rdfs:subClassOf  <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+
+<http://onto.fel.cvut/ontologies/bluesky/DA42-POH/component-4107C0A4DB3FA48DD9AAC2701B32B143>
+        a                rdfs:Class ;
+        rdfs:label       "tank" ;
+        rdfs:subClassOf  <http://onto.fe.cvut.cz/ontologies/riliability/component> .
