@@ -12,19 +12,6 @@
 # 
 # #################################################################
 # #
-# #    Object Properties
-# #
-# #################################################################
-# 
-# 
-# http://onto.fel.cvut.cz/ontologies/functions/has-failure-mode
-
-:has-failure-mode a owl:ObjectProperty .
-# 
-# 
-# 
-# #################################################################
-# #
 # #    Data properties
 # #
 # #################################################################
@@ -48,26 +35,30 @@
 # #################################################################
 # 
 # 
+# http://onto.fel.cvut.cz/ontologies/fmea/function
+
+<http://onto.fel.cvut.cz/ontologies/fmea/function> a owl:Class .
+# 
 # http://onto.fel.cvut.cz/ontologies/functions/active-function
 
 :active-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> ;
 	rdfs:comment "function which is activated and it is currenlty executing."@en .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/control-function
 
 :control-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/executable-function
 
 :executable-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/feedback-function
 
 :feedback-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/gain-of-function-execution
 
@@ -81,7 +72,7 @@
 # http://onto.fel.cvut.cz/ontologies/functions/inactive-function
 
 :inactive-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/loss-of-function-execution
 
@@ -91,32 +82,20 @@
 					- C was brought into a state where it cannot execute of F
 					- Sufficient requirements and conditions of other components and the environment for the execution of F are not met"""@en .
 # 
-# http://onto.fel.cvut.cz/ontologies/functions/manifestation-of-function
-
-:manifestation-of-function a owl:Class ;
-	rdfs:subClassOf ufo:event , _:genid1 .
-
-_:genid1 a owl:Restriction ;
-	owl:onProperty _:genid2 .
-
-_:genid2 owl:inverseOf ufo:is-manifested-by .
-
-_:genid1 owl:allValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/function> .
-# 
 # http://onto.fel.cvut.cz/ontologies/functions/nonexecutable-function
 
 :nonexecutable-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/protection-function
 
 :protection-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/sense-function
 
 :sense-function a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/function> .
 # 
 # http://onto.fel.cvut.cz/ontologies/functions/trun-off-function
 
@@ -127,81 +106,5 @@ _:genid1 owl:allValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/funct
 
 :turn-on-function a owl:Class ;
 	rdfs:subClassOf :control-function .
-# 
-# http://onto.fel.cvut.cz/ontologies/functions/worng-manifestation-of-function
-
-:worng-manifestation-of-function a owl:Class ;
-	rdfs:subClassOf :manifestation-of-function , <http://onto.fel.cvut.cz/ontologies/reliability/failure> .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/effect-type> a owl:Class ;
-	rdfs:subClassOf ufo:situation-type ;
-	rdfs:comment "Also called effect."@en .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/failure
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure> a owl:Class ;
-	rdfs:subClassOf ufo:event .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/failure-effect
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure-effect> a owl:Class ;
-	rdfs:subClassOf ufo:situation .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/failure-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure-effect-type> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/effect-type> , _:genid3 .
-
-_:genid3 a owl:Restriction ;
-	owl:onProperty _:genid4 .
-
-_:genid4 owl:inverseOf ufo:brings-about .
-
-_:genid3 owl:allValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/failure> .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/failure-mode
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/function> ;
-	rdfs:label "failure mode"@en .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/failure-mode-cause
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure-mode-cause> a owl:Class ;
-	rdfs:subClassOf ufo:situation , _:genid5 .
-
-_:genid5 a owl:Restriction ;
-	owl:onProperty ufo:activates ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> .
-
-<http://onto.fel.cvut.cz/ontologies/reliability/failure-mode-cause> rdfs:comment "failure mode activates a failure mode disposition"@en ;
-	rdfs:label "failure mode cause"@en .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/final-level-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/final-level-effect-type> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/effect-type> .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/function
-
-<http://onto.fel.cvut.cz/ontologies/reliability/function> a owl:Class ;
-	rdfs:subClassOf ufo:disposition .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/higher-level-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/higher-level-effect-type> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/effect-type> .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/local-level-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/local-level-effect-type> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/effect-type> .
-# 
-# http://onto.fel.cvut.cz/ontologies/reliability/no-effect-type
-
-<http://onto.fel.cvut.cz/ontologies/reliability/no-effect-type> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/reliability/effect-type> .
 # 
 # Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

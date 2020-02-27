@@ -18,8 +18,8 @@
 <http://onto.fel.cvut.cz/ontologies/fmea/has-component> rdf:type owl:AnnotationProperty .
 
 
-###  http://onto.fel.cvut.cz/ontologies/reliability/has-function
-<http://onto.fel.cvut.cz/ontologies/reliability/has-function> rdf:type owl:AnnotationProperty .
+###  http://onto.fel.cvut.cz/ontologies/fmea/has-function
+<http://onto.fel.cvut.cz/ontologies/fmea/has-function> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -37,13 +37,13 @@
 :bottle rdf:type owl:NamedIndividual ,
                  <http://onto.fel.cvut.cz/ontologies/fmea/component> ;
         <http://onto.fel.cvut.cz/ontologies/fmea/has-component> :water ;
-        <http://onto.fel.cvut.cz/ontologies/reliability/has-function> :hold-water .
+        <http://onto.fel.cvut.cz/ontologies/fmea/has-function> :hold-water .
 
 
 ###  http://onto.fel.cvut.cz/fmea/example-001/electronics
 :electronics rdf:type owl:NamedIndividual ,
                       <http://onto.fel.cvut.cz/ontologies/fmea/component> ;
-             <http://onto.fel.cvut.cz/ontologies/reliability/has-function> :electronics-work .
+             <http://onto.fel.cvut.cz/ontologies/fmea/has-function> :electronics-work .
 
 
 ###  http://onto.fel.cvut.cz/fmea/example-001/electronics-are-damaged
@@ -59,20 +59,20 @@
 
 ###  http://onto.fel.cvut.cz/fmea/example-001/electronics-work
 :electronics-work rdf:type owl:NamedIndividual ,
-                           <http://onto.fel.cvut.cz/ontologies/reliability/function> ;
-                  <http://onto.fel.cvut.cz/ontologies/functions/has-failure-mode> :electronics-are-damaged .
+                           <http://onto.fel.cvut.cz/ontologies/fmea/function> ;
+                  <http://onto.fel.cvut.cz/ontologies/fmea/has-failure-mode> :electronics-are-damaged .
 
 
 ###  http://onto.fel.cvut.cz/fmea/example-001/fail-to-hold-water
 :fail-to-hold-water rdf:type owl:NamedIndividual ,
-                             <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> ;
+                             <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
                     <http://onto.fel.cvut.cz/ontologies/fmea/has-local-level-effect> :leaking-water .
 
 
 ###  http://onto.fel.cvut.cz/fmea/example-001/hold-water
 :hold-water rdf:type owl:NamedIndividual ,
-                     <http://onto.fel.cvut.cz/ontologies/reliability/function> ;
-            <http://onto.fel.cvut.cz/ontologies/functions/has-failure-mode> :fail-to-hold-water .
+                     <http://onto.fel.cvut.cz/ontologies/fmea/function> ;
+            <http://onto.fel.cvut.cz/ontologies/fmea/has-failure-mode> :fail-to-hold-water .
 
 
 ###  http://onto.fel.cvut.cz/fmea/example-001/leaking-water
