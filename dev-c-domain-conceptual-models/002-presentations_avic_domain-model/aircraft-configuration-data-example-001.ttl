@@ -1,0 +1,189 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/> .
+@prefix acd: <http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-exmple-001> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-exmple-001> rdf:type owl:Ontology ;
+                                                                                  owl:imports <http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/ADCU
+:ADCU rdf:type owl:Class ;
+      rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/ASG
+:ASG rdf:type owl:Class ;
+     rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/BPCU
+:BPCU rdf:type owl:Class ;
+      rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/CBS-LRM
+:CBS-LRM rdf:type owl:Class ;
+         rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/GCU
+:GCU rdf:type owl:Class ;
+     rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/OPU
+:OPU rdf:type owl:Class ;
+     rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/RAT
+:RAT rdf:type owl:Class ;
+     rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/RAT-GCU
+:RAT-GCU rdf:type owl:Class ;
+         rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/SGCU
+:SGCU rdf:type owl:Class ;
+      rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/SPU
+:SPU rdf:type owl:Class ;
+     rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/VFG
+:VFG rdf:type owl:Class ;
+     rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/ata-24-09
+:ata-24-09 rdf:type owl:Class ;
+           rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/ata-24-10
+:ata-24-10 rdf:type owl:Class ;
+           rdfs:subClassOf acd:component .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/ata-24-20
+:ata-24-20 rdf:type owl:Class ;
+           rdfs:subClassOf acd:component .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/aircarft-configuration-data-001
+:aircarft-configuration-data-001 rdf:type owl:NamedIndividual .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/aircraft-1
+:aircraft-1 rdf:type owl:NamedIndividual ,
+                     acd:aircraft ;
+            acd:has-configuration-data :aircarft-configuration-data-001 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-01
+:item-01 rdf:type owl:NamedIndividual ,
+                  :CBS-LRM ,
+                  :ata-24-09 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 5 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-02
+:item-02 rdf:type owl:NamedIndividual ,
+                  :BPCU ,
+                  :ata-24-09 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 2 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-03
+:item-03 rdf:type owl:NamedIndividual ,
+                  :SPU ,
+                  :ata-24-10 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 1 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-04
+:item-04 rdf:type owl:NamedIndividual ,
+                  :VFG ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 2 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-05
+:item-05 rdf:type owl:NamedIndividual ,
+                  :GCU ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 2 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-06
+:item-06 rdf:type owl:NamedIndividual ,
+                  :OPU ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 2 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-07
+:item-07 rdf:type owl:NamedIndividual ,
+                  :ASG ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 1 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-08
+:item-08 rdf:type owl:NamedIndividual ,
+                  :SGCU ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 1 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-09
+:item-09 rdf:type owl:NamedIndividual ,
+                  :RAT ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 1 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-10
+:item-10 rdf:type owl:NamedIndividual ,
+                  :RAT-GCU ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 1 .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data-example-001/item-11
+:item-11 rdf:type owl:NamedIndividual ,
+                  :ADCU ,
+                  :ata-24-20 ;
+         acd:item-part-of :aircarft-configuration-data-001 ;
+         acd:quantity 1 .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
