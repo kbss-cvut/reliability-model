@@ -1,0 +1,229 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/test-data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/test-data> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/test-data> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/example
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/example> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/causes
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/causes> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_cause> ;
+                                                           rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test> ;
+                                                           rdfs:label "causes" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/conclusion_of_the_test_report
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/conclusion_of_the_test_report> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_conclusion> ;
+                                                                                  rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_report> ;
+                                                                                  rdfs:label "conclusion of the test report" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/has_cause
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/has_cause> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_condition> ;
+                                                              rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test> ;
+                                                              rdfs:label "has cause" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/has_symptom
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/has_symptom> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test> ;
+                                                                rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/fault_symptoms> ;
+                                                                rdfs:label "has symptom" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_item_type
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_item_type> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_type> ;
+                                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_report> ;
+                                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_type> ;
+                                                                       rdfs:label "has test item type" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_type
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_type> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report> ;
+                                                                  rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_type> ;
+                                                                  rdfs:label "has test type" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/next
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/next> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_cause> ;
+                                                         rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation> ;
+                                                         rdfs:label "next" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/product_name
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/product_name> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report> ;
+                                                                 rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/test-data/product> ;
+                                                                 rdfs:label "product name" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/number_of_faults
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/number_of_faults> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:label "number of faults" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report_no
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report_no> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report> ;
+                                                                   rdfs:label "test report no" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_time
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_time> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report> ;
+                                                              rdfs:label "test time" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/time_of_failure
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/time_of_failure> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:label "time of failure" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/working_time_of_faulty_part
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/working_time_of_faulty_part> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:label "working time of faulty part" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/corrective_action
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/corrective_action> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation> ;
+                                                                      rdfs:label "corrective action" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_cause
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_cause> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/causes> ;
+                                                                                    owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test>
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/next> ;
+                                                                                    owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation>
+                                                                                  ] ;
+                                                                  rdfs:label "failure cause" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/has_symptom> ;
+                                                                                              owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/fault_symptoms>
+                                                                                            ] ;
+                                                                            rdfs:label "failure during the test" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/fault_symptoms
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/fault_symptoms> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation> ;
+                                                                   rdfs:comment "fault symptoms visible during test" ;
+                                                                   rdfs:label "fault symptoms" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/high_pressure
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/high_pressure> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_condition> ;
+                                                                  rdfs:label "high pressure" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/high_temperature
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/high_temperature> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_condition> ;
+                                                                     rdfs:label "high temperature" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/product
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/product> rdf:type owl:Class ;
+                                                            rdfs:label "product" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation> rdf:type owl:Class ;
+                                                                   rdfs:label "recommendation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_conclusion
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_conclusion> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/conclusion_of_the_test_report> ;
+                                                                                      owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_report>
+                                                                                    ] ;
+                                                                    rdfs:comment """- test passed sucsussfully or not
+- desciption/ summary of the results of the test""" ;
+                                                                    rdfs:label "test conclusion" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_condition
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_condition> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/has_cause> ;
+                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/failure_during_the_test>
+                                                                                   ] ;
+                                                                   rdfs:label "test conditions" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_report
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_report> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report> ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_item_type> ;
+                                                                                       owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_type>
+                                                                                     ] ;
+                                                                     rdfs:label "test item report" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_type
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_item_type> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_type> ;
+                                                                   rdfs:label "test item type" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_report> rdf:type owl:Class ;
+                                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/has_test_type> ;
+                                                                                  owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/test_type>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/test-data/product_name> ;
+                                                                                  owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/test-data/product>
+                                                                                ] ;
+                                                                rdfs:label "test report" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test_type
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test_type> rdf:type owl:Class ;
+                                                              <http://onto.fel.cvut.cz/ontologies/avic/test-data/example> """qualification test (qyality, reliability)
+ design test (during the design test)""" ;
+                                                              rdfs:comment "documentation of the test, test report number identifies the report" ;
+                                                              rdfs:label "test type" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

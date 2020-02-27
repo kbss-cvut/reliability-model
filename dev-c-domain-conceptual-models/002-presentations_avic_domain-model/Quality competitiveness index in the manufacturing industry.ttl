@@ -1,0 +1,63 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has_quality_measure
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has_quality_measure> rdf:type owl:ObjectProperty ;
+                                                                                                                          rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product> ;
+                                                                                                                          rdfs:label "has quality measure" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/manifactures
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/manifactures> rdf:type owl:ObjectProperty ;
+                                                                                                                   rdfs:label "manifactures" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality_Measure
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality_Measure> rdf:type owl:Class ;
+                                                                                                                      rdfs:label "quality Measure" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/organization
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/organization> rdf:type owl:Class ;
+                                                                                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/manifactures> ;
+                                                                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product>
+                                                                                                                                   ] ;
+                                                                                                                   rdfs:label "organization" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product> rdf:type owl:Class ;
+                                                                                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has_quality_measure> ;
+                                                                                                                                owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality_Measure>
+                                                                                                                              ] ;
+                                                                                                              rdfs:label "Product" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/quality_competitiveness_index_in_the_manufacturing_industry
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/quality_competitiveness_index_in_the_manufacturing_industry> rdf:type owl:Class ;
+                                                                                                                                                                  rdfs:label "quality competitiveness index in the manufacturing industry" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/year
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/year> rdf:type owl:Class ;
+                                                                                                           rdfs:label "year" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
