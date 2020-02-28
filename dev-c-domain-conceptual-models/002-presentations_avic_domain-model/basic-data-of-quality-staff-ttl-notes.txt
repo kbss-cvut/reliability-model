@@ -1,0 +1,39 @@
+Basic data of quality staff
+
+	What does quality staff means? I can interpret it in two wasys:
+		- meaning 1 - staff that is concerned with the quality of the product
+		- meaning 2 - the quality of the staff it self, e.g. 
+		
+	I assume that the AVIC presentations refers to "meaning 1".
+
+	
+	The presentation slide is concerned to show a statistical report about the qualification of quality-staff. I split the schema into a generic schema and a profile schema which defines specific staff quality measures.
+	
+	Regarding measures. 
+		The conceptual schema has some problems. One such problem commonly used classes such as "senior engineer" can be also used measures, e.g. an employee is more valuable if it is a "senior engineer". This is not modeled in the draft domain ontology.
+	
+	Term normalization
+		Term disambiguation
+			personnel, staff, employees, engineers 
+				- I think these terms refer to the same concept. In the model I use the term "staff" in place of personnel.
+				- additionally I use staff instead of employees and engineer-staff instead of engineers
+		Adding terms not in the diagram
+			Introducing new terms by breaking the phrases into smaller ones, by generalization [list is not complete]
+				classes
+				- person
+				- senior-engineer
+				- engineer
+				- certified-employee
+				- employee
+				- certificate
+				- degree
+				- masters-degree
+			
+				object properties
+				- has certificate
+				- higher
+	
+
+				
+				
+	

@@ -1,0 +1,237 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bdoqs: <http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/constitutes
+bdoqs:constitutes rdf:type owl:ObjectProperty ;
+                  rdfs:domain bdoqs:staff ;
+                  rdfs:range bdoqs:organization .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-cretifiacte
+bdoqs:has-cretifiacte rdf:type owl:ObjectProperty ;
+                      rdfs:domain bdoqs:person ;
+                      rdfs:range bdoqs:certificate .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-degree
+bdoqs:has-degree rdf:type owl:ObjectProperty ;
+                 rdfs:domain bdoqs:person ;
+                 rdfs:range bdoqs:degree .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-employee-measure
+bdoqs:has-employee-measure rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf bdoqs:has-measure ;
+                           rdfs:domain bdoqs:employee ;
+                           rdfs:range bdoqs:employee-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure
+bdoqs:has-measure rdf:type owl:ObjectProperty ;
+                  rdfs:range bdoqs:staff-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-mesuer-part
+bdoqs:has-mesuer-part rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain bdoqs:staff-measure-set ;
+                      rdfs:range bdoqs:staff-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-person-member
+bdoqs:has-person-member rdf:type owl:ObjectProperty ;
+                        rdfs:domain bdoqs:staff ;
+                        rdfs:range bdoqs:employee .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-product-measure
+bdoqs:has-product-measure rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf bdoqs:has-measure ;
+                          rdfs:domain bdoqs:product ;
+                          rdfs:range bdoqs:product-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-staff-measure
+bdoqs:has-staff-measure rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf bdoqs:has-measure ;
+                        rdfs:domain bdoqs:staff ;
+                        rdfs:range bdoqs:staff-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-staff-member
+bdoqs:has-staff-member rdf:type owl:ObjectProperty ;
+                       rdfs:domain bdoqs:staff ;
+                       rdfs:range bdoqs:staff .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/higher-than-degree
+bdoqs:higher-than-degree rdf:type owl:ObjectProperty ;
+                         rdfs:domain bdoqs:degree ;
+                         rdfs:range bdoqs:degree .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/manifactures
+bdoqs:manifactures rdf:type owl:ObjectProperty ;
+                   rdfs:domain bdoqs:organization ;
+                   rdfs:range bdoqs:product .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain bdoqs:staff .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/actual-mtbf
+bdoqs:actual-mtbf rdf:type owl:Class ;
+                  rdfs:subClassOf bdoqs:product-quality-measure ;
+                  rdfs:label "actual MTBF" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/actual-to-expected-mtbf-ratio
+bdoqs:actual-to-expected-mtbf-ratio rdf:type owl:Class ;
+                                    rdfs:subClassOf bdoqs:product-quality-measure ;
+                                    rdfs:label "Ratio of actual MTBF to expected value for products" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/certificate
+bdoqs:certificate rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/certified-employee
+bdoqs:certified-employee rdf:type owl:Class ;
+                         rdfs:subClassOf bdoqs:employee .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/certified-quality-staff
+bdoqs:certified-quality-staff rdf:type owl:Class ;
+                              rdfs:subClassOf bdoqs:quality-staff .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/degree
+bdoqs:degree rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/employee
+bdoqs:employee rdf:type owl:Class ;
+               rdfs:subClassOf bdoqs:person .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/employee-measure
+bdoqs:employee-measure rdf:type owl:Class ;
+                       rdfs:subClassOf bdoqs:measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/employees-with-a-masters-degree-or-higher
+bdoqs:employees-with-a-masters-degree-or-higher rdf:type owl:Class ;
+                                                rdfs:subClassOf bdoqs:staff .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/engineer
+bdoqs:engineer rdf:type owl:Class ;
+               rdfs:subClassOf bdoqs:person .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/expected-mtbf
+bdoqs:expected-mtbf rdf:type owl:Class ;
+                    rdfs:subClassOf bdoqs:product-quality-measure ;
+                    rdfs:label "expected MTBF" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/masters-degree
+bdoqs:masters-degree rdf:type owl:Class ;
+                     rdfs:subClassOf bdoqs:degree .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/measure
+bdoqs:measure rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/measure-set
+bdoqs:measure-set rdf:type owl:Class ;
+                  rdfs:subClassOf bdoqs:measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/organization
+bdoqs:organization rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/person
+bdoqs:person rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/product
+bdoqs:product rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/product-measure
+bdoqs:product-measure rdf:type owl:Class ;
+                      rdfs:subClassOf bdoqs:measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/product-quality-measure
+bdoqs:product-quality-measure rdf:type owl:Class ;
+                              rdfs:subClassOf bdoqs:product-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/product-quality-measure-set
+bdoqs:product-quality-measure-set rdf:type owl:Class ;
+                                  rdfs:subClassOf bdoqs:measure-set ,
+                                                  bdoqs:product-quality-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/quality-staff
+bdoqs:quality-staff rdf:type owl:Class ;
+                    rdfs:subClassOf bdoqs:staff .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/quality-staff-measure
+bdoqs:quality-staff-measure rdf:type owl:Class ;
+                            rdfs:subClassOf bdoqs:staff-measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/quality-staff-measure-set
+bdoqs:quality-staff-measure-set rdf:type owl:Class ;
+                                rdfs:subClassOf bdoqs:staff-measure-set .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/senior-engieneer
+bdoqs:senior-engieneer rdf:type owl:Class ;
+                       rdfs:subClassOf bdoqs:engineer .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/senior-engineer-staff
+bdoqs:senior-engineer-staff rdf:type owl:Class ;
+                            rdfs:subClassOf bdoqs:staff .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/staff
+bdoqs:staff rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/staff-measure
+bdoqs:staff-measure rdf:type owl:Class ;
+                    rdfs:subClassOf bdoqs:measure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/staff-measure-set
+bdoqs:staff-measure-set rdf:type owl:Class ;
+                        rdfs:subClassOf bdoqs:measure-set ,
+                                        bdoqs:staff-measure .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
