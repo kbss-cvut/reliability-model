@@ -1,4 +1,4 @@
-@prefix : <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology#> .
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -12,228 +12,228 @@
 #    Object Properties
 #################################################################
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_acntion_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_acntion_is> rdf:type owl:ObjectProperty ;
-                                                                                          rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause> ;
-                                                                                          rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_action> ;
-                                                                                          rdfs:label "corrective acntion is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-acntion-is
+:corrective-acntion-is rdf:type owl:ObjectProperty ;
+                       rdfs:domain :failure-cause ;
+                       rdfs:range :corrective-action ;
+                       rdfs:label "corrective acntion is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause_is> rdf:type owl:ObjectProperty ;
-                                                                                     rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time> ;
-                                                                                     rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause> ;
-                                                                                     rdfs:label "failure cause is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause-is
+:failure-cause-is rdf:type owl:ObjectProperty ;
+                  rdfs:domain :working-time ;
+                  rdfs:range :failure-cause ;
+                  rdfs:label "failure cause is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location_is> rdf:type owl:ObjectProperty ;
-                                                                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time> ;
-                                                                                        rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location> ;
-                                                                                        rdfs:label "failure location is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-location-is
+:failure-location-is rdf:type owl:ObjectProperty ;
+                     rdfs:domain :working-time ;
+                     rdfs:range :failure-location ;
+                     rdfs:label "failure location is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode_is> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/fault_symptom> ;
-                                                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode> ;
-                                                                                    rdfs:label "failure mode is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-mode-is
+:failure-mode-is rdf:type owl:ObjectProperty ;
+                 rdfs:domain :fault-symptom ;
+                 rdfs:range :failure-mode ;
+                 rdfs:label "failure mode is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography_is> rdf:type owl:ObjectProperty ;
-                                                                                 rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                 rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography> ;
-                                                                                 rdfs:label "geography is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography-is
+:geography-is rdf:type owl:ObjectProperty ;
+              rdfs:domain :product-serial-number ;
+              rdfs:range :geography ;
+              rdfs:label "geography is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/installation_position_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/installation_position_is> rdf:type owl:ObjectProperty ;
-                                                                                             rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                             rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_position> ;
-                                                                                             rdfs:label "installation position is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/installation-position-is
+:installation-position-is rdf:type owl:ObjectProperty ;
+                          rdfs:domain :product-serial-number ;
+                          rdfs:range :product-position ;
+                          rdfs:label "installation position is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer_is> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer> ;
-                                                                                    rdfs:label "manufacturer is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer-is
+:manufacturer-is rdf:type owl:ObjectProperty ;
+                 rdfs:domain :product-serial-number ;
+                 rdfs:range :manufacturer ;
+                 rdfs:label "manufacturer is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/object_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/object_is> rdf:type owl:ObjectProperty ;
-                                                                              rdfs:label "object is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/object-is
+:object-is rdf:type owl:ObjectProperty ;
+           rdfs:label "object is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model_is> rdf:type owl:ObjectProperty ;
-                                                                                     rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                     rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model> ;
-                                                                                     rdfs:label "product model is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-model-is
+:product-model-is rdf:type owl:ObjectProperty ;
+                  rdfs:domain :product-serial-number ;
+                  rdfs:range :product-model ;
+                  rdfs:label "product model is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name_is> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name> ;
-                                                                                    rdfs:label "product name is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-name-is
+:product-name-is rdf:type owl:ObjectProperty ;
+                 rdfs:domain :product-serial-number ;
+                 rdfs:range :product-name ;
+                 rdfs:label "product name is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type_is> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type> ;
-                                                                                    rdfs:label "product type is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-type-is
+:product-type-is rdf:type owl:ObjectProperty ;
+                 rdfs:domain :product-serial-number ;
+                 rdfs:range :product-type ;
+                 rdfs:label "product type is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user_type_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user_type_is> rdf:type owl:ObjectProperty ;
-                                                                                 rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                 rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type> ;
-                                                                                 rdfs:label "user type is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user-type-is
+:user-type-is rdf:type owl:ObjectProperty ;
+              rdfs:domain :product-serial-number ;
+              rdfs:range :user-type ;
+              rdfs:label "user type is" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time_is
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time_is> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> ;
-                                                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time> ;
-                                                                                    rdfs:label "working time is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working-time-is
+:working-time-is rdf:type owl:ObjectProperty ;
+                 rdfs:domain :product-serial-number ;
+                 rdfs:range :working-time ;
+                 rdfs:label "working time is" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_action
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_action> rdf:type owl:Class ;
-                                                                                      rdfs:label "corrective action" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-action
+:corrective-action rdf:type owl:Class ;
+                   rdfs:label "corrective action" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_acntion_is> ;
-                                                                                                    owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective_action>
-                                                                                                  ] ;
-                                                                                  rdfs:label "failure cause" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause
+:failure-cause rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :corrective-acntion-is ;
+                                 owl:someValuesFrom :corrective-action
+                               ] ;
+               rdfs:label "failure cause" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location> rdf:type owl:Class ;
-                                                                                     rdfs:comment "it means which part of the product failed" ;
-                                                                                     rdfs:label "failure location" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-location
+:failure-location rdf:type owl:Class ;
+                  rdfs:comment "it means which part of the product failed" ;
+                  rdfs:label "failure location" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/object_is> ;
-                                                                                                   owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time>
-                                                                                                 ] ;
-                                                                                 rdfs:label "failure mode" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-mode
+:failure-mode rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :object-is ;
+                                owl:someValuesFrom :working-time
+                              ] ;
+              rdfs:label "failure mode" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/fault_symptom
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/fault_symptom> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode_is> ;
-                                                                                                    owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_mode>
-                                                                                                  ] ,
-                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/object_is> ;
-                                                                                                    owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time>
-                                                                                                  ] ;
-                                                                                  rdfs:label "fault symptom" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/fault-symptom
+:fault-symptom rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :failure-mode-is ;
+                                 owl:someValuesFrom :failure-mode
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :object-is ;
+                                 owl:someValuesFrom :working-time
+                               ] ;
+               rdfs:label "fault symptom" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography> rdf:type owl:Class .
+:geography rdf:type owl:Class .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer> rdf:type owl:Class ;
-                                                                                 rdfs:label "manufacturer" .
+:manufacturer rdf:type owl:Class ;
+              rdfs:label "manufacturer" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model> rdf:type owl:Class ;
-                                                                                  rdfs:label "product model" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-model
+:product-model rdf:type owl:Class ;
+               rdfs:label "product model" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name> rdf:type owl:Class ;
-                                                                                 rdfs:label "product name" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-name
+:product-name rdf:type owl:Class ;
+              rdfs:label "product name" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_position
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_position> rdf:type owl:Class ;
-                                                                                     rdfs:label "product position" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-position
+:product-position rdf:type owl:Class ;
+                  rdfs:label "product position" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_serial_number> rdf:type owl:Class ;
-                                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/installation_position_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_position>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_model>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_name>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user_type_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user_type>
-                                                                                                          ] ,
-                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time_is> ;
-                                                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time>
-                                                                                                          ] ;
-                                                                                          rdfs:label "product serial number" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-serial-number
+:product-serial-number rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :geography-is ;
+                                         owl:someValuesFrom :geography
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :installation-position-is ;
+                                         owl:someValuesFrom :product-position
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :manufacturer-is ;
+                                         owl:someValuesFrom :manufacturer
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :product-model-is ;
+                                         owl:someValuesFrom :product-model
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :product-name-is ;
+                                         owl:someValuesFrom :product-name
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :product-type-is ;
+                                         owl:someValuesFrom :product-type
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :user-type-is ;
+                                         owl:someValuesFrom :user-type
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :working-time-is ;
+                                         owl:someValuesFrom :working-time
+                                       ] ;
+                       rdfs:label "product serial number" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product_type> rdf:type owl:Class ;
-                                                                                 rdfs:label "product type" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-type
+:product-type rdf:type owl:Class ;
+              rdfs:label "product type" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user_type
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user_type> rdf:type owl:Class ;
-                                                                              rdfs:comment "operator type" ;
-                                                                              rdfs:label "user type" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user-type
+:user-type rdf:type owl:Class ;
+           rdfs:comment "operator type" ;
+           rdfs:label "user type" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time
-<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working_time> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause_is> ;
-                                                                                                   owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause>
-                                                                                                 ] ,
-                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location_is> ;
-                                                                                                   owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_location>
-                                                                                                 ] ,
-                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/object_is> ;
-                                                                                                   owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure_cause>
-                                                                                                 ] ;
-                                                                                 rdfs:label "working time" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working-time
+:working-time rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :failure-cause-is ;
+                                owl:someValuesFrom :failure-cause
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :failure-location-is ;
+                                owl:someValuesFrom :failure-location
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :object-is ;
+                                owl:someValuesFrom :failure-cause
+                              ] ;
+              rdfs:label "working time" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

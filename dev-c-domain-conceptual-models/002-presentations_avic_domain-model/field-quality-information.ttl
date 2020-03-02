@@ -1,0 +1,331 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/> .
+@prefix fqi: <http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/field-quality-information> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/activates
+fqi:activates rdf:type owl:ObjectProperty ;
+              rdfs:range fqi:failure-mode .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/causes
+fqi:causes rdf:type owl:ObjectProperty ;
+           owl:inverseOf fqi:has-cause ;
+           rdfs:domain fqi:event ;
+           rdfs:range fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-cause
+fqi:has-cause rdf:type owl:ObjectProperty ;
+              rdfs:domain fqi:event ;
+              rdfs:range fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-failure-mode
+fqi:has-failure-mode rdf:type owl:ObjectProperty ;
+                     rdfs:domain fqi:function ;
+                     rdfs:range fqi:failure-mode .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-function
+fqi:has-function rdf:type owl:ObjectProperty ;
+                 rdfs:domain fqi:object ;
+                 rdfs:range fqi:function .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-installation-position
+fqi:has-installation-position rdf:type owl:ObjectProperty ;
+                              rdfs:domain fqi:aircraft-part ;
+                              rdfs:range fqi:installation-position .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-location
+fqi:has-location rdf:type owl:ObjectProperty ;
+                 rdfs:domain fqi:failure-report ;
+                 rdfs:range fqi:locality .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-mechanism
+fqi:has-mechanism rdf:type owl:ObjectProperty ;
+                  rdfs:domain fqi:failure ;
+                  rdfs:range fqi:failure-mechanism .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-symptom
+fqi:has-symptom rdf:type owl:ObjectProperty ;
+                rdfs:domain fqi:failure ;
+                rdfs:range fqi:fault-symptom .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/is-manifestation-of
+fqi:is-manifestation-of rdf:type owl:ObjectProperty ;
+                        owl:inverseOf fqi:is-manifested-by ;
+                        rdfs:domain fqi:event ;
+                        rdfs:range fqi:failure-mode .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/is-manifested-by
+fqi:is-manifested-by rdf:type owl:ObjectProperty ;
+                     rdfs:domain fqi:failure-mode ;
+                     rdfs:range fqi:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/next
+fqi:next rdf:type owl:ObjectProperty ;
+         owl:inverseOf fqi:previous ;
+         rdfs:domain fqi:event ;
+         rdfs:range fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-event
+fqi:part-of-event rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain fqi:event ;
+                  rdfs:range fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-failure
+fqi:part-of-failure rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf fqi:part-of-event ;
+                    rdfs:range fqi:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-object
+fqi:part-of-object rdf:type owl:ObjectProperty ;
+                   rdfs:domain fqi:object ;
+                   rdfs:range fqi:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-operation
+fqi:part-of-operation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf fqi:part-of-event ;
+                      rdfs:domain fqi:event ;
+                      rdfs:range fqi:operation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/participates-in
+fqi:participates-in rdf:type owl:ObjectProperty ;
+                    rdfs:domain fqi:object ;
+                    rdfs:range fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/participates-in-failure
+fqi:participates-in-failure rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf fqi:participates-in ;
+                            rdfs:domain fqi:event ;
+                            rdfs:range fqi:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/participates-in-operation
+fqi:participates-in-operation rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf fqi:participates-in .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/position-in-the-aircraft
+fqi:position-in-the-aircraft rdf:type owl:ObjectProperty ;
+                             rdfs:domain fqi:installation-position ;
+                             rdfs:range fqi:aircraft .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/previous
+fqi:previous rdf:type owl:ObjectProperty ;
+             rdfs:domain fqi:event ;
+             rdfs:range fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/produces
+fqi:produces rdf:type owl:ObjectProperty ;
+             rdfs:domain fqi:event ;
+             rdfs:range fqi:object .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/aircraft
+fqi:aircraft rdf:type owl:Class ;
+             rdfs:subClassOf fqi:product .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/aircraft-delivery
+fqi:aircraft-delivery rdf:type owl:Class ;
+                      rdfs:subClassOf fqi:delivery .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/aircraft-manufacturer
+fqi:aircraft-manufacturer rdf:type owl:Class ;
+                          rdfs:subClassOf fqi:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/aircraft-part
+fqi:aircraft-part rdf:type owl:Class ;
+                  rdfs:subClassOf fqi:product ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty fqi:part-of-object ;
+                                    owl:someValuesFrom fqi:aircraft
+                                  ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/aircraft-sub-system
+fqi:aircraft-sub-system rdf:type owl:Class ;
+                        rdfs:subClassOf fqi:product ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty fqi:part-of-object ;
+                                          owl:someValuesFrom fqi:aircraft
+                                        ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/corrective-action
+fqi:corrective-action rdf:type owl:Class ;
+                      rdfs:subClassOf fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/corrective-action-after-operation
+fqi:corrective-action-after-operation rdf:type owl:Class ;
+                                      rdfs:subClassOf fqi:corrective-action ;
+                                      owl:disjointWith fqi:corrective-action-during-operation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/corrective-action-during-operation
+fqi:corrective-action-during-operation rdf:type owl:Class ;
+                                       rdfs:subClassOf fqi:corrective-action ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty fqi:part-of-operation ;
+                                                         owl:someValuesFrom fqi:operation
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty fqi:previous ;
+                                                         owl:someValuesFrom fqi:fault-symptom
+                                                       ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/delivery
+fqi:delivery rdf:type owl:Class ;
+             rdfs:subClassOf fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/effect-of-failure
+fqi:effect-of-failure rdf:type owl:Class ;
+                      rdfs:subClassOf fqi:event ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty fqi:has-cause ;
+                                        owl:someValuesFrom fqi:failure
+                                      ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/engine
+fqi:engine rdf:type owl:Class ;
+           rdfs:subClassOf fqi:aircraft-sub-system .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/engine-delivery
+fqi:engine-delivery rdf:type owl:Class ;
+                    rdfs:subClassOf fqi:delivery .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/event
+fqi:event rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failire-report-event
+fqi:failire-report-event rdf:type owl:Class ;
+                         rdfs:subClassOf fqi:event ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty fqi:produces ;
+                                           owl:someValuesFrom fqi:failure-report
+                                         ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure
+fqi:failure rdf:type owl:Class ;
+            rdfs:subClassOf fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-cause
+fqi:failure-cause rdf:type owl:Class ;
+                  rdfs:subClassOf fqi:event ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty fqi:activates ;
+                                    owl:someValuesFrom fqi:failure-mode
+                                  ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-during-operation
+fqi:failure-during-operation rdf:type owl:Class ;
+                             rdfs:subClassOf fqi:failure ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty fqi:part-of-operation ;
+                                               owl:someValuesFrom fqi:operation
+                                             ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-mechanism
+fqi:failure-mechanism rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-mode
+fqi:failure-mode rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-report
+fqi:failure-report rdf:type owl:Class ;
+                   rdfs:subClassOf fqi:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/fault-symptom
+fqi:fault-symptom rdf:type owl:Class ;
+                  rdfs:subClassOf fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/faulty-part
+fqi:faulty-part rdf:type owl:Class ;
+                rdfs:subClassOf fqi:aircraft-part .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/function
+fqi:function rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/installation-position
+fqi:installation-position rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/locality
+fqi:locality rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/object
+fqi:object rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/operation
+fqi:operation rdf:type owl:Class ;
+              rdfs:subClassOf fqi:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/operator
+fqi:operator rdf:type owl:Class ;
+             rdfs:subClassOf fqi:object ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty fqi:participates-in-operation ;
+                               owl:someValuesFrom fqi:operation
+                             ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/product
+fqi:product rdf:type owl:Class ;
+            rdfs:subClassOf fqi:object .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
