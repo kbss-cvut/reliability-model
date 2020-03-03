@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='windows-1250'?>
+<GateDocument version="3">
+<!-- The document's features-->
+
+<GateDocumentFeatures>
+<Feature>
+  <Name className="java.lang.String">gate.SourceURL</Name>
+  <Value className="java.lang.String">file:/c:/Users/user/Documents/skola/projects/2019-msmt-inter-excelence/code/semantic-reliability/reliability-model/dev-c-domain-conceptual-models/002-presentations_avic_domain-model/failure-analysis-data.txt</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">MimeType</Name>
+  <Value className="java.lang.String">text/plain</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">docNewLineType</Name>
+  <Value className="java.lang.String">CRLF</Value>
+</Feature>
+</GateDocumentFeatures>
+<!-- The document content area with serialized nodes -->
+
+<TextWithNodes><Node id="0"/>Fault symptom:&#xd;
+On <Node id="19"/>December 18, 2019<Node id="36"/>,  <Node id="39"/>short circuit failure<Node id="60"/> of <Node id="64"/>380V internal power supply<Node id="90"/> occurred in <Node id="103"/>No. 1234 excavator controller<Node id="132"/> during <Node id="140"/>debugging<Node id="149"/>, resulting in <Node id="164"/>serious burning of the product&#x2019;s interior<Node id="205"/> and <Node id="210"/>damage to its shell<Node id="229"/>.  <Node id="232"/>The interior was found to be <Node id="261"/>severely burned<Node id="276"/> after <Node id="283"/>disassembly of the product<Node id="309"/>. Heavily damaged elements are as follows: <Node id="352"/>380 V power wire<Node id="368"/>, <Node id="370"/>380 V ground wire<Node id="387"/>, <Node id="389"/>380 V printed board 1<Node id="410"/>, <Node id="412"/>printed board 2<Node id="427"/>, <Node id="429"/>380 V filter capacitor<Node id="451"/>. The 380 V power wire, 380 V ground wire, <Node id="494"/>the motor&#x2019;s phase A power wire<Node id="524"/> and <Node id="529"/>the power pins mounted on <Node id="555"/>printed board 2<Node id="570"/> were <Node id="576"/>burned out<Node id="586"/>. Printed boards 1 and 2 were largely burned black. &#xd;
+<Node id="640"/>&#xd;
+<Node id="642"/>Failure cause:&#xd;
+A preliminary analysis suggests that the <Node id="699"/>excavator controller<Node id="719"/> was <Node id="724"/>burned out<Node id="734"/> primarily because of the <Node id="760"/>380V power-to-ground short<Node id="786"/> caused by the <Node id="801"/>short circuit<Node id="814"/> in the <Node id="822"/>inverter&#x2019;s ABCD power tube<Node id="848"/>.  As the <Node id="858"/>power supply<Node id="870"/>&#x2019;s current limit<Node id="886"/> is too high,  the <Node id="905"/>380V power was not  cut off immediately after the short circuit occurred and thus <Node id="987"/>wire<Node id="991"/> and <Node id="996"/>power tube<Node id="1006"/> become the only short circuit load<Node id="1041"/>. <Node id="1043"/>The high current then led to a sharp increase in wire temperature<Node id="1108"/>, causing <Node id="1118"/>the plastic coating on the wire to melt<Node id="1157"/>. Since <Node id="1165"/>high power connectors<Node id="1186"/> were installed on the <Node id="1209"/>cover plate<Node id="1220"/>, the <Node id="1226"/>wire inside the product<Node id="1249"/> was relatively long. The wire was attached to the <Node id="1300"/>internal shell<Node id="1314"/> due to tension. Therefore, once the <Node id="1351"/>plastic coating<Node id="1366"/>  melted<Node id="1374"/>, the <Node id="1380"/>copper wire inside<Node id="1398"/> was exposed to the <Node id="1418"/>shell<Node id="1423"/>, resulting in <Node id="1438"/>discharge and sparking<Node id="1460"/>. This would <Node id="1473"/>later burn and break the <Node id="1498"/>shell<Node id="1503"/>. &#xd;
+<Node id="1507"/></TextWithNodes>
+<!-- The default annotation set -->
+
+<AnnotationSet>
+</AnnotationSet>
+
+<!-- Named annotation set -->
+
+<AnnotationSet Name="Original markups">
+<Annotation Id="0" Type="paragraph" StartNode="0" EndNode="640">
+</Annotation>
+<Annotation Id="1" Type="paragraph" StartNode="642" EndNode="1507">
+</Annotation>
+<Annotation Id="2" Type="time of symptom" StartNode="19" EndNode="36">
+</Annotation>
+<Annotation Id="77" Type="component" StartNode="352" EndNode="368">
+</Annotation>
+<Annotation Id="78" Type="component" StartNode="370" EndNode="387">
+</Annotation>
+<Annotation Id="79" Type="component" StartNode="389" EndNode="410">
+</Annotation>
+<Annotation Id="80" Type="component" StartNode="412" EndNode="427">
+</Annotation>
+<Annotation Id="81" Type="component" StartNode="429" EndNode="451">
+</Annotation>
+<Annotation Id="82" Type="component" StartNode="494" EndNode="524">
+</Annotation>
+<Annotation Id="83" Type="component" StartNode="529" EndNode="570">
+</Annotation>
+<Annotation Id="84" Type="component" StartNode="555" EndNode="570">
+</Annotation>
+<Annotation Id="85" Type="failure" StartNode="576" EndNode="586">
+</Annotation>
+<Annotation Id="86" Type="component" StartNode="699" EndNode="719">
+</Annotation>
+<Annotation Id="87" Type="failure" StartNode="724" EndNode="734">
+</Annotation>
+<Annotation Id="88" Type="failure" StartNode="760" EndNode="786">
+</Annotation>
+<Annotation Id="89" Type="failure" StartNode="261" EndNode="276">
+</Annotation>
+<Annotation Id="90" Type="failure" StartNode="801" EndNode="814">
+</Annotation>
+<Annotation Id="91" Type="component" StartNode="822" EndNode="848">
+</Annotation>
+<Annotation Id="92" Type="component" StartNode="858" EndNode="870">
+</Annotation>
+<Annotation Id="93" Type="component limitation" StartNode="858" EndNode="886">
+</Annotation>
+<Annotation Id="95" Type="event" StartNode="905" EndNode="1041">
+</Annotation>
+<Annotation Id="96" Type="event" StartNode="1043" EndNode="1108">
+</Annotation>
+<Annotation Id="97" Type="event" StartNode="1118" EndNode="1157">
+</Annotation>
+<Annotation Id="34" Type="failure" StartNode="39" EndNode="60">
+</Annotation>
+<Annotation Id="98" Type="component" StartNode="1165" EndNode="1186">
+</Annotation>
+<Annotation Id="35" Type="component" StartNode="64" EndNode="90">
+</Annotation>
+<Annotation Id="99" Type="component" StartNode="1209" EndNode="1220">
+</Annotation>
+<Annotation Id="36" Type="component" StartNode="103" EndNode="132">
+</Annotation>
+<Annotation Id="100" Type="component" StartNode="1226" EndNode="1249">
+</Annotation>
+<Annotation Id="37" Type="event" StartNode="140" EndNode="149">
+</Annotation>
+<Annotation Id="101" Type="component" StartNode="1300" EndNode="1314">
+</Annotation>
+<Annotation Id="38" Type="failure effect" StartNode="164" EndNode="205">
+</Annotation>
+<Annotation Id="102" Type="component" StartNode="1351" EndNode="1366">
+</Annotation>
+<Annotation Id="39" Type="failure effect" StartNode="210" EndNode="229">
+</Annotation>
+<Annotation Id="103" Type="failure" StartNode="1351" EndNode="1374">
+</Annotation>
+<Annotation Id="40" Type="event" StartNode="283" EndNode="309">
+</Annotation>
+<Annotation Id="104" Type="component" StartNode="1380" EndNode="1398">
+</Annotation>
+<Annotation Id="41" Type="finding" StartNode="232" EndNode="276">
+</Annotation>
+<Annotation Id="105" Type="event" StartNode="1380" EndNode="1423">
+</Annotation>
+<Annotation Id="106" Type="component" StartNode="1418" EndNode="1423">
+</Annotation>
+<Annotation Id="107" Type="failure effect" StartNode="1438" EndNode="1460">
+</Annotation>
+<Annotation Id="108" Type="failure" StartNode="1473" EndNode="1503">
+</Annotation>
+<Annotation Id="109" Type="component" StartNode="1498" EndNode="1503">
+</Annotation>
+<Annotation Id="110" Type="component" StartNode="987" EndNode="991">
+</Annotation>
+<Annotation Id="111" Type="component" StartNode="996" EndNode="1006">
+</Annotation>
+</AnnotationSet>
+
+</GateDocument>

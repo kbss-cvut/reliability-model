@@ -1,0 +1,83 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/brings-about
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/brings-about> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> ;
+                                                                                      rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/causes
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/causes> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> ;
+                                                                                rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-part
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-part> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> ;
+                                                                                        rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> ;
+                                                                                         rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-situation-part
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-situation-part> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> ;
+                                                                                            rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-snapshot
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-snapshot> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> ;
+                                                                                      rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/pre-situation
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/pre-situation> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> ;
+                                                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/failure
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/failure> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,133 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pext: <http://proton.semanticweb.org/protonext#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix psys: <http://proton.semanticweb.org/protonsys#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-part> a owl:ObjectProperty .
+
+:object_0002F a owl:NamedIndividual .
+
+:object_0002D a owl:NamedIndividual .
+
+:object_00028 a owl:NamedIndividual .
+
+:object-snapshot_00029 a owl:NamedIndividual .
+
+:object-snapshot_00027 a owl:NamedIndividual .
+
+:failure_00030 a owl:NamedIndividual .
+
+:event_00031 a owl:NamedIndividual .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-type> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures-example> a owl:Ontology .
+
+:event_00031 a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+:failure_00030 a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/failure> .
+
+:object_0002F a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+:object_0002D a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+:object-snapshot_00029 a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> .
+
+:object_00028 a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+:object-snapshot_00027 a <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> a owl:Class .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> a owl:Class .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> a owl:Class .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/failure> a owl:Class .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> a owl:Class .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/pre-situation> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-snapshot> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-situation-part> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/causes> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/brings-about> a owl:ObjectProperty .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures> a owl:Ontology .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-part> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-type> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/pre-situation> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-snapshot> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-situation-part> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/causes> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/brings-about> rdfs:domain <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-part> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-type> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/pre-situation> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-snapshot> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-situation-part> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/causes> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/brings-about> rdfs:range <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/situation> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/failure> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/event> .
+
+:event_00031 rdfs:label "debugging" .
+
+:failure_00030 rdfs:label "short circuit failure" .
+
+:object_0002F rdfs:label "No. 1234 excavator controller" .
+
+:object_0002D rdfs:label "380V internal power supply" .
+
+:object-snapshot_00029 rdfs:label "burning of the product’s interior" .
+
+:object_00028 rdfs:label "product" .
+
+:object-snapshot_00027 rdfs:label "damage to its shell" .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object-snapshot> rdfs:label "burning of the product’s interior" .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/object> rdfs:label "No. 1234 excavator controller" , "380V internal power supply" .
+
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/failure> rdfs:label "short circuit failure" .
+
+:object_00028 <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-snapshot> :object-snapshot_00027 , :object-snapshot_00029 .
+
+:object_0002F <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part> :object_0002D .
+
+:object_00028 <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-object-part> :object_0002F .
+
+:failure_00030 <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/brings-about> :object-snapshot_00029 , :object-snapshot_00027 .
+
+:event_00031 <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data-failures/has-event-part> :failure_00030 .
