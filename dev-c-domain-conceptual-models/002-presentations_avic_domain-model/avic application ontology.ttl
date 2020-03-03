@@ -12,11 +12,11 @@
 #    Object Properties
 #################################################################
 
-###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-acntion-is
-:corrective-acntion-is rdf:type owl:ObjectProperty ;
-                       rdfs:domain :failure-cause ;
-                       rdfs:range :corrective-action ;
-                       rdfs:label "corrective acntion is" .
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-action-is
+:corrective-action-is rdf:type owl:ObjectProperty ;
+                      rdfs:domain :failure-cause ;
+                      rdfs:range :corrective-action ;
+                      rdfs:label "corrective acntion is" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause-is
@@ -113,7 +113,7 @@
 ###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause
 :failure-cause rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :corrective-acntion-is ;
+                                 owl:onProperty :corrective-action-is ;
                                  owl:someValuesFrom :corrective-action
                                ] ;
                rdfs:label "failure cause" .

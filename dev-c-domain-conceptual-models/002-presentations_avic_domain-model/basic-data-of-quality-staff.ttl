@@ -19,8 +19,8 @@ bdoqs:constitutes rdf:type owl:ObjectProperty ;
                   rdfs:range bdoqs:organization .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-cretifiacte
-bdoqs:has-cretifiacte rdf:type owl:ObjectProperty ;
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-certificate
+bdoqs:has-certificate rdf:type owl:ObjectProperty ;
                       rdfs:domain bdoqs:person ;
                       rdfs:range bdoqs:certificate .
 
@@ -43,11 +43,11 @@ bdoqs:has-measure rdf:type owl:ObjectProperty ;
                   rdfs:range bdoqs:staff-measure .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-mesuer-part
-bdoqs:has-mesuer-part rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty ;
-                      rdfs:domain bdoqs:staff-measure-set ;
-                      rdfs:range bdoqs:staff-measure .
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure-part
+bdoqs:has-measure-part rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain bdoqs:staff-measure-set ;
+                       rdfs:range bdoqs:staff-measure .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-person-member
@@ -82,8 +82,8 @@ bdoqs:higher-than-degree rdf:type owl:ObjectProperty ;
                          rdfs:range bdoqs:degree .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/manifactures
-bdoqs:manifactures rdf:type owl:ObjectProperty ;
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/manufactures
+bdoqs:manufactures rdf:type owl:ObjectProperty ;
                    rdfs:domain bdoqs:organization ;
                    rdfs:range bdoqs:product .
 

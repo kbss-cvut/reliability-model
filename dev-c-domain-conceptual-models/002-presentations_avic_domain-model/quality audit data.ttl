@@ -1,4 +1,4 @@
-@prefix : <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data#> .
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -13,83 +13,83 @@
 #################################################################
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/applicable
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/applicable> rdf:type owl:ObjectProperty ;
-                                                                        rdfs:label "applicable" .
+:applicable rdf:type owl:ObjectProperty ;
+            rdfs:label "applicable" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/assess
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/assess> rdf:type owl:ObjectProperty ;
-                                                                    rdfs:label "assess" .
+:assess rdf:type owl:ObjectProperty ;
+        rdfs:label "assess" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/destroyed
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/destroyed> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:label "destroyed" .
+:destroyed rdf:type owl:ObjectProperty ;
+           rdfs:label "destroyed" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/discussed_in
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/discussed_in> rdf:type owl:ObjectProperty ;
-                                                                          rdfs:label "discussed in" .
+:discussed_in rdf:type owl:ObjectProperty ;
+              rdfs:label "discussed in" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/fails_to_find
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/fails_to_find> rdf:type owl:ObjectProperty ;
-                                                                           rdfs:label "fails to find" .
+:fails_to_find rdf:type owl:ObjectProperty ;
+               rdfs:label "fails to find" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/feasible_in
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/feasible_in> rdf:type owl:ObjectProperty ;
-                                                                         rdfs:label "feasible in" .
+:feasible_in rdf:type owl:ObjectProperty ;
+             rdfs:label "feasible in" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/not_put_into
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/not_put_into> rdf:type owl:ObjectProperty ;
-                                                                          rdfs:label "not put into" .
+:not_put_into rdf:type owl:ObjectProperty ;
+              rdfs:label "not put into" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/presented
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/presented> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:label "presented" .
+:presented rdf:type owl:ObjectProperty ;
+           rdfs:label "presented" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/prevents
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/prevents> rdf:type owl:ObjectProperty ;
-                                                                      rdfs:label "prevents" .
+:prevents rdf:type owl:ObjectProperty ;
+          rdfs:label "prevents" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/properly_controlled
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/properly_controlled> rdf:type owl:ObjectProperty ;
-                                                                                 rdfs:label "properly controlled" .
+:properly_controlled rdf:type owl:ObjectProperty ;
+                     rdfs:label "properly controlled" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/properly_identified
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/properly_identified> rdf:type owl:ObjectProperty ;
-                                                                                 rdfs:label "properly identified" .
+:properly_identified rdf:type owl:ObjectProperty ;
+                     rdfs:label "properly identified" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/recovered
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/recovered> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:label "recovered" .
+:recovered rdf:type owl:ObjectProperty ;
+           rdfs:label "recovered" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/related_to
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/related_to> rdf:type owl:ObjectProperty ;
-                                                                        rdfs:label "related to" .
+:related_to rdf:type owl:ObjectProperty ;
+            rdfs:label "related to" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/required_by
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/required_by> rdf:type owl:ObjectProperty ;
-                                                                         rdfs:label "required by" .
+:required_by rdf:type owl:ObjectProperty ;
+             rdfs:label "required by" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/responsible
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/responsible> rdf:type owl:ObjectProperty ;
-                                                                         rdfs:label "responsible" .
+:responsible rdf:type owl:ObjectProperty ;
+             rdfs:label "responsible" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/specified_in
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/specified_in> rdf:type owl:ObjectProperty ;
-                                                                          rdfs:label "specified in" .
+:specified_in rdf:type owl:ObjectProperty ;
+              rdfs:label "specified in" .
 
 
 #################################################################
@@ -97,358 +97,358 @@
 #################################################################
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/academic_background
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/academic_background> rdf:type owl:Class ;
-                                                                                 rdfs:label "academic background" .
+:academic_background rdf:type owl:Class ;
+                     rdfs:label "academic background" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/analysis
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/analysis> rdf:type owl:Class .
+:analysis rdf:type owl:Class .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/related_to> ;
-                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/human_factors>
-                                                                                   ] ;
-                                                                   rdfs:label "cause" .
+:cause rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :related_to ;
+                         owl:someValuesFrom :human_factors
+                       ] ;
+       rdfs:label "cause" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause_analysis
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause_analysis> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/fails_to_find> ;
-                                                                                              owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/root_cause>
-                                                                                            ] ,
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/presented> ;
-                                                                                              owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejected_audit_form>
-                                                                                            ] ;
-                                                                            rdfs:label "cause analysis" .
+:cause_analysis rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :fails_to_find ;
+                                  owl:someValuesFrom :root_cause
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :presented ;
+                                  owl:someValuesFrom :rejected_audit_form
+                                ] ;
+                rdfs:label "cause analysis" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause_of_rejection
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause_of_rejection> rdf:type owl:Class ;
-                                                                                rdfs:label "cause of rejection" .
+:cause_of_rejection rdf:type owl:Class ;
+                    rdfs:label "cause of rejection" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/competence_requirements
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/competence_requirements> rdf:type owl:Class ;
-                                                                                     rdfs:label "competence requirements" .
+:competence_requirements rdf:type owl:Class ;
+                         rdfs:label "competence requirements" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/control
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/control> rdf:type owl:Class ;
-                                                                     rdfs:label "control" .
+:control rdf:type owl:Class ;
+         rdfs:label "control" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/corrective_action
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/corrective_action> rdf:type owl:Class ;
-                                                                               rdfs:label "corrective action" .
+:corrective_action rdf:type owl:Class ;
+                   rdfs:label "corrective action" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/degree_requirements
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/degree_requirements> rdf:type owl:Class ;
-                                                                                 rdfs:label "degree requirements" .
+:degree_requirements rdf:type owl:Class ;
+                     rdfs:label "degree requirements" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/delivery_of_drawings_took
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/delivery_of_drawings_took> rdf:type owl:Class ;
-                                                                                       rdfs:label "delivery of drawings took" .
+:delivery_of_drawings_took rdf:type owl:Class ;
+                           rdfs:label "delivery of drawings took" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/distribution
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/distribution> rdf:type owl:Class ;
-                                                                          rdfs:label "distribution" .
+:distribution rdf:type owl:Class ;
+              rdfs:label "distribution" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/effectiveness
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/effectiveness> rdf:type owl:Class ;
-                                                                           rdfs:label "effectiveness" .
+:effectiveness rdf:type owl:Class ;
+               rdfs:label "effectiveness" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/evidence
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/evidence> rdf:type owl:Class ;
-                                                                      rdfs:label "evidence" .
+:evidence rdf:type owl:Class ;
+          rdfs:label "evidence" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/evidence_of_competence
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/evidence_of_competence> rdf:type owl:Class ;
-                                                                                    rdfs:label "evidence of competence" .
+:evidence_of_competence rdf:type owl:Class ;
+                        rdfs:label "evidence of competence" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/external_documents
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/external_documents> rdf:type owl:Class ;
-                                                                                rdfs:label "external documents" .
+:external_documents rdf:type owl:Class ;
+                    rdfs:label "external documents" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/failure_to_consult_relevant_document_for_specifications
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/failure_to_consult_relevant_document_for_specifications> rdf:type owl:Class ;
-                                                                                                                     rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/root_cause> ;
-                                                                                                                     rdfs:label "failure to consult relevant document for specifications" .
+:failure_to_consult_relevant_document_for_specifications rdf:type owl:Class ;
+                                                         rdfs:subClassOf :root_cause ;
+                                                         rdfs:label "failure to consult relevant document for specifications" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/human_factors
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/human_factors> rdf:type owl:Class ;
-                                                                           rdfs:label "human factors" .
+:human_factors rdf:type owl:Class ;
+               rdfs:label "human factors" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/job_description
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/job_description> rdf:type owl:Class ;
-                                                                             rdfs:label "job description" .
+:job_description rdf:type owl:Class ;
+                 rdfs:label "job description" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_proofreading
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_proofreading> rdf:type owl:Class ;
-                                                                                  rdfs:label "lack of proofreading" .
+:lack_of_proofreading rdf:type owl:Class ;
+                      rdfs:label "lack of proofreading" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_qualifications_requirements
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_qualifications_requirements> rdf:type owl:Class ;
-                                                                                                 rdfs:label "lack of qualifications requirements" .
+:lack_of_qualifications_requirements rdf:type owl:Class ;
+                                     rdfs:label "lack of qualifications requirements" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_review
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_review> rdf:type owl:Class ;
-                                                                            rdfs:label "lack of review" .
+:lack_of_review rdf:type owl:Class ;
+                rdfs:label "lack of review" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_training_requirements
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack_of_training_requirements> rdf:type owl:Class ;
-                                                                                           rdfs:label "lack of training requirements" .
+:lack_of_training_requirements rdf:type owl:Class ;
+                               rdfs:label "lack of training requirements" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/measures
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/measures> rdf:type owl:Class ;
-                                                                      rdfs:label "measures" .
+:measures rdf:type owl:Class ;
+          rdfs:label "measures" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/merging_of_several_organizations
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/merging_of_several_organizations> rdf:type owl:Class ;
-                                                                                              rdfs:label "merging of several organizations" .
+:merging_of_several_organizations rdf:type owl:Class ;
+                                  rdfs:label "merging of several organizations" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessary_abilities
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessary_abilities> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/required_by> ;
-                                                                                                   owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/job_description>
-                                                                                                 ] ;
-                                                                                 rdfs:label "necessary abilities" .
+:necessary_abilities rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :required_by ;
+                                       owl:someValuesFrom :job_description
+                                     ] ;
+                     rdfs:label "necessary abilities" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessity
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessity> rdf:type owl:Class ;
-                                                                       rdfs:label "necessity" .
+:necessity rdf:type owl:Class ;
+           rdfs:label "necessity" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/nondestructive_testing
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/nondestructive_testing> rdf:type owl:Class ;
-                                                                                    rdfs:label "nondestructive testing" .
+:nondestructive_testing rdf:type owl:Class ;
+                        rdfs:label "nondestructive testing" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/occasions
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/occasions> rdf:type owl:Class ;
-                                                                       rdfs:label "occasions" .
+:occasions rdf:type owl:Class ;
+           rdfs:label "occasions" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/occurring
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/occurring> rdf:type owl:Class ;
-                                                                       rdfs:label "occurring" .
+:occurring rdf:type owl:Class ;
+           rdfs:label "occurring" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old_version_drawings_have_been_destroyed
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old_version_drawings_have_been_destroyed> rdf:type owl:Class ;
-                                                                                                      rdfs:label "old version drawings have been destroyed" .
+:old_version_drawings_have_been_destroyed rdf:type owl:Class ;
+                                          rdfs:label "old version drawings have been destroyed" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old_version_drawings_have_been_recoverd
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old_version_drawings_have_been_recoverd> rdf:type owl:Class ;
-                                                                                                     rdfs:label "old version drawings have been recoverd" .
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old_version_drawings_have_been_recovered
+:old_version_drawings_have_been_recovered rdf:type owl:Class ;
+                                          rdfs:label "old version drawings have been recoverd" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/one_pass_milling
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/one_pass_milling> rdf:type owl:Class ;
-                                                                              rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/root_cause> ;
-                                                                              rdfs:label "one pass milling" .
+:one_pass_milling rdf:type owl:Class ;
+                  rdfs:subClassOf :root_cause ;
+                  rdfs:label "one pass milling" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operational_quality_management_system
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operational_quality_management_system> rdf:type owl:Class ;
-                                                                                                   rdfs:label "operational quality management system" .
+:operational_quality_management_system rdf:type owl:Class ;
+                                       rdfs:label "operational quality management system" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operators
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operators> rdf:type owl:Class ;
-                                                                       rdfs:label "operators" .
+:operators rdf:type owl:Class ;
+           rdfs:label "operators" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/organization
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/organization> rdf:type owl:Class ;
-                                                                          rdfs:label "organization" .
+:organization rdf:type owl:Class ;
+              rdfs:label "organization" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/personnel
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/personnel> rdf:type owl:Class ;
-                                                                       rdfs:label "personnel" .
+:personnel rdf:type owl:Class ;
+           rdfs:label "personnel" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/planning
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/planning> rdf:type owl:Class ;
-                                                                      rdfs:label "planning" .
+:planning rdf:type owl:Class ;
+          rdfs:label "planning" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/poorly_managed
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/poorly_managed> rdf:type owl:Class ;
-                                                                            rdfs:label "poorly managed" .
+:poorly_managed rdf:type owl:Class ;
+                rdfs:label "poorly managed" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/proper
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/proper> rdf:type owl:Class ;
-                                                                    rdfs:label "proper" .
+:proper rdf:type owl:Class ;
+        rdfs:label "proper" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/specified_in> ;
-                                                                                              owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/job_description>
-                                                                                            ] ;
-                                                                            rdfs:label "qualifications" .
+:qualifications rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :specified_in ;
+                                  owl:someValuesFrom :job_description
+                                ] ;
+                rdfs:label "qualifications" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications_requirements
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications_requirements> rdf:type owl:Class ;
-                                                                                         rdfs:label "qualifications requirements" .
+:qualifications_requirements rdf:type owl:Class ;
+                             rdfs:label "qualifications requirements" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/quality_performance
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/quality_performance> rdf:type owl:Class ;
-                                                                                 rdfs:label "quality performance" .
+:quality_performance rdf:type owl:Class ;
+                     rdfs:label "quality performance" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/quality_seminar
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/quality_seminar> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejected_audit_form> ;
-                                                                             rdfs:label "quality seminar" .
+:quality_seminar rdf:type owl:Class ;
+                 rdfs:subClassOf :rejected_audit_form ;
+                 rdfs:label "quality seminar" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/regular_review
+:regular_review rdf:type owl:Class ;
+                rdfs:label "reqular review" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejected_audit_form
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejected_audit_form> rdf:type owl:Class ;
-                                                                                 rdfs:label "rejected audit form" .
+:rejected_audit_form rdf:type owl:Class ;
+                     rdfs:label "rejected audit form" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection> rdf:type owl:Class ;
-                                                                       rdfs:label "rejection" .
+:rejection rdf:type owl:Class ;
+           rdfs:label "rejection" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection_from_complaints
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection_from_complaints> rdf:type owl:Class ;
-                                                                                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection> ;
-                                                                                       rdfs:label "rejection from complaints" .
+:rejection_from_complaints rdf:type owl:Class ;
+                           rdfs:subClassOf :rejection ;
+                           rdfs:label "rejection from complaints" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection_review
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection_review> rdf:type owl:Class ;
-                                                                              rdfs:label "rejection review" .
+:rejection_review rdf:type owl:Class ;
+                  rdfs:label "rejection review" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/relevant_records
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/relevant_records> rdf:type owl:Class ;
-                                                                              rdfs:label "relevant records" .
+:relevant_records rdf:type owl:Class ;
+                  rdfs:label "relevant records" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/reoccurring
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/reoccurring> rdf:type owl:Class ;
-                                                                         rdfs:label "reoccurring" .
+:reoccurring rdf:type owl:Class ;
+             rdfs:label "reoccurring" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/requirements_for_regular_review
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/requirements_for_regular_review> rdf:type owl:Class ;
-                                                                                             rdfs:label "requirements for regular review" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/reqular_review
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/reqular_review> rdf:type owl:Class ;
-                                                                            rdfs:label "reqular review" .
+:requirements_for_regular_review rdf:type owl:Class ;
+                                 rdfs:label "requirements for regular review" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/root_cause
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/root_cause> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause> ;
-                                                                        rdfs:label "root cause" .
+:root_cause rdf:type owl:Class ;
+            rdfs:subClassOf :cause ;
+            rdfs:label "root cause" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/similar_rejection
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/similar_rejection> rdf:type owl:Class ;
-                                                                               rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/rejection> ;
-                                                                               rdfs:label "similar rejection" .
+:similar_rejection rdf:type owl:Class ;
+                   rdfs:subClassOf :rejection ;
+                   rdfs:label "similar rejection" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/steps_are_taken
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/steps_are_taken> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                               owl:onProperty <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/prevents> ;
-                                                                                               owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause_of_rejection>
-                                                                                             ] ;
-                                                                             rdfs:label "steps are taken" .
+:steps_are_taken rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :prevents ;
+                                   owl:someValuesFrom :cause_of_rejection
+                                 ] ;
+                 rdfs:label "steps are taken" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/subject_requirements
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/subject_requirements> rdf:type owl:Class ;
-                                                                                  rdfs:label "subject requirements" .
+:subject_requirements rdf:type owl:Class ;
+                      rdfs:label "subject requirements" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technical_procedures
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technical_procedures> rdf:type owl:Class ;
-                                                                                  rdfs:label "technical procedures" .
+:technical_procedures rdf:type owl:Class ;
+                      rdfs:label "technical procedures" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technicians
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technicians> rdf:type owl:Class ;
-                                                                         rdfs:label "technicians" .
+:technicians rdf:type owl:Class ;
+             rdfs:label "technicians" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the_personnel_has_recieved_necessary_training_or_not
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the_personnel_has_recieved_necessary_training_or_not> rdf:type owl:Class ;
-                                                                                                                  rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/root_cause> ;
-                                                                                                                  rdfs:label "the personnel has recieved necessary training or not" .
+:the_personnel_has_recieved_necessary_training_or_not rdf:type owl:Class ;
+                                                      rdfs:subClassOf :root_cause ;
+                                                      rdfs:label "the personnel has recieved necessary training or not" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the_requirements_for_multi_pass_milling_does_not_include_the_amount_of_feed_per_pass
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the_requirements_for_multi_pass_milling_does_not_include_the_amount_of_feed_per_pass> rdf:type owl:Class ;
-                                                                                                                                                  rdfs:label "the requirements for multi pass milling does not include the amount of feed per pass" .
+:the_requirements_for_multi_pass_milling_does_not_include_the_amount_of_feed_per_pass rdf:type owl:Class ;
+                                                                                      rdfs:label "the requirements for multi pass milling does not include the amount of feed per pass" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the_requirements_for_multi_pass_milling_does_not_include_the_proper_number_of_passes
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the_requirements_for_multi_pass_milling_does_not_include_the_proper_number_of_passes> rdf:type owl:Class ;
-                                                                                                                                                  rdfs:label "the requirements for multi pass milling does not include the proper number of passes" .
+:the_requirements_for_multi_pass_milling_does_not_include_the_proper_number_of_passes rdf:type owl:Class ;
+                                                                                      rdfs:label "the requirements for multi pass milling does not include the proper number of passes" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/training
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/training> rdf:type owl:Class ;
-                                                                      rdfs:label "training" .
+:training rdf:type owl:Class ;
+          rdfs:label "training" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/welding
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/welding> rdf:type owl:Class ;
-                                                                     rdfs:label "welding" .
+:welding rdf:type owl:Class ;
+         rdfs:label "welding" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/work
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/work> rdf:type owl:Class ;
-                                                                  rdfs:label "work" .
+:work rdf:type owl:Class ;
+      rdfs:label "work" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/work_experience
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/work_experience> rdf:type owl:Class ;
-                                                                             rdfs:label "work experience" .
+:work_experience rdf:type owl:Class ;
+                 rdfs:label "work experience" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/wrong_document
-<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/wrong_document> rdf:type owl:Class ;
-                                                                            rdfs:label "wrong document" .
+:wrong_document rdf:type owl:Class ;
+                rdfs:label "wrong document" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

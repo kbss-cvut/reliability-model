@@ -238,15 +238,6 @@ fqi:engine-delivery rdf:type owl:Class ;
 fqi:event rdf:type owl:Class .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failire-report-event
-fqi:failire-report-event rdf:type owl:Class ;
-                         rdfs:subClassOf fqi:event ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty fqi:produces ;
-                                           owl:someValuesFrom fqi:failure-report
-                                         ] .
-
-
 ###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure
 fqi:failure rdf:type owl:Class ;
             rdfs:subClassOf fqi:event .
@@ -281,6 +272,15 @@ fqi:failure-mode rdf:type owl:Class .
 ###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-report
 fqi:failure-report rdf:type owl:Class ;
                    rdfs:subClassOf fqi:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-report-event
+fqi:failure-report-event rdf:type owl:Class ;
+                         rdfs:subClassOf fqi:event ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty fqi:produces ;
+                                           owl:someValuesFrom fqi:failure-report
+                                         ] .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/fault-symptom
