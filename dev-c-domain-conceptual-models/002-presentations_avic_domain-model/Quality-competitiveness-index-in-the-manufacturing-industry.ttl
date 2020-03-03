@@ -12,8 +12,8 @@
 #    Object Properties
 #################################################################
 
-###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has_quality_measure
-:has_quality_measure rdf:type owl:ObjectProperty ;
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has-quality-measure
+:has-quality-measure rdf:type owl:ObjectProperty ;
                      rdfs:range :product ;
                      rdfs:label "has quality measure" .
 
@@ -27,8 +27,8 @@
 #    Classes
 #################################################################
 
-###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality_Measure
-:Quality_Measure rdf:type owl:Class ;
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality-Measure
+:Quality-Measure rdf:type owl:Class ;
                  rdfs:label "quality Measure" .
 
 
@@ -44,14 +44,14 @@
 ###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product
 :product rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :has_quality_measure ;
-                           owl:someValuesFrom :Quality_Measure
+                           owl:onProperty :has-quality-measure ;
+                           owl:someValuesFrom :Quality-Measure
                          ] ;
          rdfs:label "Product" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/quality_competitiveness_index_in_the_manufacturing_industry
-:quality_competitiveness_index_in_the_manufacturing_industry rdf:type owl:Class ;
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/quality-competitiveness-index-in-the-manufacturing-industry
+:quality-competitiveness-index-in-the-manufacturing-industry rdf:type owl:Class ;
                                                              rdfs:label "quality competitiveness index in the manufacturing industry" .
 
 
