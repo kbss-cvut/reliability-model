@@ -45,7 +45,6 @@ bdoqs:has-measure rdf:type owl:ObjectProperty ;
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure-part
 bdoqs:has-measure-part rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain bdoqs:staff-measure-set ;
                        rdfs:range bdoqs:staff-measure .
 

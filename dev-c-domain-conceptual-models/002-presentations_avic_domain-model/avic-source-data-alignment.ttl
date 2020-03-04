@@ -1,0 +1,779 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix asda: <http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment> .
+
+<http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment> rdf:type owl:Ontology ;
+                                                                      owl:imports <http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/field-quality-information> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry> ,
+                                                                                  <http://onto.fel.cvut.cz/ontologies/avic/test-data> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/component-part-of
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/component-part-of> rdfs:subPropertyOf asda:part-of-object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/has-configuration-data
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/has-configuration-data> rdfs:subPropertyOf asda:described-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/item-part-of
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/item-part-of> rdfs:subPropertyOf asda:part-of-object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-action-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-action-is> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause-is> rdfs:subPropertyOf asda:caused-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-location-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-location-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-mode-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-mode-is> rdfs:subPropertyOf asda:caused-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/installation-position-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/installation-position-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer-is> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-model-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-model-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-name-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-name-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-type-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-type-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user-type-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user-type-is> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working-time-is
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working-time-is> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/activates
+asda:activates rdf:type owl:ObjectProperty ;
+               rdfs:domain asda:event ;
+               rdfs:range asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/caused-by
+asda:caused-by rdf:type owl:ObjectProperty ;
+               owl:inverseOf asda:causes ;
+               rdfs:domain asda:event ;
+               rdfs:range asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/causes
+asda:causes rdf:type owl:ObjectProperty ;
+            rdfs:domain asda:event ;
+            rdfs:range asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/constitutes
+asda:constitutes rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/described-by
+asda:described-by rdf:type owl:ObjectProperty ;
+                  owl:inverseOf asda:describes ;
+                  rdfs:range asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/describes
+asda:describes rdf:type owl:ObjectProperty ;
+               rdfs:domain asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/has-event-part
+asda:has-event-part rdf:type owl:ObjectProperty ;
+                    owl:inverseOf asda:part-of-event ;
+                    rdfs:domain asda:event ;
+                    rdfs:range asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/has-moment
+asda:has-moment rdf:type owl:ObjectProperty ;
+                owl:inverseOf asda:moment-of ;
+                rdfs:range asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/has-object-part
+asda:has-object-part rdf:type owl:ObjectProperty ;
+                     owl:inverseOf asda:part-of-object ;
+                     rdfs:domain asda:object ;
+                     rdfs:range asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/has-participant
+asda:has-participant rdf:type owl:ObjectProperty ;
+                     owl:inverseOf asda:participates-in ;
+                     rdfs:domain asda:event ;
+                     rdfs:range asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/manifestation-of
+asda:manifestation-of rdf:type owl:ObjectProperty ;
+                      owl:inverseOf asda:manifested-by ;
+                      rdfs:domain asda:moment ;
+                      rdfs:range asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/manifested-by
+asda:manifested-by rdf:type owl:ObjectProperty ;
+                   rdfs:domain asda:event ;
+                   rdfs:range asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/moment-of
+asda:moment-of rdf:type owl:ObjectProperty ;
+               rdfs:range asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/part-of-event
+asda:part-of-event rdf:type owl:ObjectProperty ;
+                   rdfs:domain asda:event ;
+                   rdfs:range asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/part-of-object
+asda:part-of-object rdf:type owl:ObjectProperty ;
+                    rdfs:domain asda:object ;
+                    rdfs:range asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/participates-in
+asda:participates-in rdf:type owl:ObjectProperty ;
+                     rdfs:domain asda:object ;
+                     rdfs:range asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/relates
+asda:relates rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/constitutes
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/constitutes> rdfs:subPropertyOf asda:constitutes .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-certificate
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-certificate> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-degree
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-degree> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure-part
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-measure-part> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-person-member
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-person-member> rdfs:subPropertyOf asda:has-object-part .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-staff-member
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/has-staff-member> rdfs:subPropertyOf asda:has-object-part .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/higher-than-degree
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/higher-than-degree> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/manufactures
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/manufactures> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/caused-by-event
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/caused-by-event> rdfs:subPropertyOf asda:caused-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/causes-event
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/causes-event> rdfs:subPropertyOf asda:causes .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/activates
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/activates> rdfs:subPropertyOf asda:activates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/causes
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/causes> rdfs:subPropertyOf asda:causes .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-cause
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-cause> rdfs:subPropertyOf asda:caused-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-failure-mode
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-failure-mode> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-function
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-function> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-installation-position
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-installation-position> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-location
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-location> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-mechanism
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-mechanism> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-symptom
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/has-symptom> rdfs:subPropertyOf asda:causes .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/is-manifestation-of
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/is-manifestation-of> rdfs:subPropertyOf asda:manifestation-of .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/is-manifested-by
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/is-manifested-by> rdfs:subPropertyOf asda:manifested-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/next
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/next> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-event
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-event> rdfs:subPropertyOf asda:part-of-event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-object
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/part-of-object> rdfs:subPropertyOf asda:part-of-object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/participates-in
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/participates-in> rdfs:subPropertyOf asda:participates-in .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/position-in-the-aircraft
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/position-in-the-aircraft> rdfs:subPropertyOf asda:part-of-object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/previous
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/previous> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/produces
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/produces> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has-date
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has-date> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has-quality-measure
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/has-quality-measure> rdfs:subPropertyOf asda:has-moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/manifactures
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/manifactures> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/measure-of-organization
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/measure-of-organization> rdfs:subPropertyOf asda:moment-of .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/causes
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/causes> rdfs:subPropertyOf asda:causes .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/conclusion-of-the-test-report
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/conclusion-of-the-test-report> rdfs:subPropertyOf asda:has-object-part .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/has-cause
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/has-cause> rdfs:subPropertyOf asda:caused-by .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/has-symptom
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/has-symptom> rdfs:subPropertyOf asda:causes .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/next
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/next> rdfs:subPropertyOf asda:relates .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/product-name
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/product-name> rdfs:subPropertyOf asda:has-moment .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/aircraft
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/aircraft> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/aircraft-configuration-data
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/aircraft-configuration-data> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/component
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/component> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/component-type
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/component-type> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/item
+<http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/item> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-action
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/corrective-action> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-cause> rdfs:subClassOf asda:cause .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-location
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-location> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-mode
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/failure-mode> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/fault-symptom
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/fault-symptom> rdfs:subClassOf asda:effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/geography> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/manufacturer> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-model
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-model> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-name
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-name> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-position
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-position> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-serial-number
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-serial-number> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-type
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/product-type> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user-type
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/user-type> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working-time
+<http://onto.fel.cvut.cz/ontologies/avic/avic-application-ontology/working-time> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/cause
+asda:cause rdf:type owl:Class ;
+           rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/description
+asda:description rdf:type owl:Class ;
+                 rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/effect
+asda:effect rdf:type owl:Class ;
+            rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/event
+asda:event rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/failure
+asda:failure rdf:type owl:Class ;
+             rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/moment
+asda:moment rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/object
+asda:object rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/object-snapshot
+asda:object-snapshot rdf:type owl:Class ;
+                     rdfs:subClassOf asda:situation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/avic-source-data-alignment/situation
+asda:situation rdf:type owl:Class ;
+               rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/certificate
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/certificate> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/degree
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/degree> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/measure
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/measure> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/organization
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/organization> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/person
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/person> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/product
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/product> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/staff
+<http://onto.fel.cvut.cz/ontologies/avic/basic-data-of-quality-staff/staff> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/event
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/event> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/failure
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/failure> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/failure-cause
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/failure-cause> rdfs:subClassOf asda:cause .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/failure-symptom
+<http://onto.fel.cvut.cz/ontologies/avic/failure-analysis-data/failure-symptom> rdfs:subClassOf asda:effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/event
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/event> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-cause
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-cause> rdfs:subClassOf asda:cause .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-mechanism
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-mechanism> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-mode
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/failure-mode> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/fault-symptom
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/fault-symptom> rdfs:subClassOf asda:effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/function
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/function> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/installation-position
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/installation-position> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/locality
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/locality> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/object
+<http://onto.fel.cvut.cz/ontologies/avic/field-quality-information/object> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/analysis
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/analysis> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause> rdfs:subClassOf asda:cause .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause-analysis
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause-analysis> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause-of-rejection
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/cause-of-rejection> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/competence-requirements
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/competence-requirements> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/corrective-action
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/corrective-action> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/degree-requirements
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/degree-requirements> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/delivery-of-drawings-took
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/delivery-of-drawings-took> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/effectiveness
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/effectiveness> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/evidence-of-competence
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/evidence-of-competence> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/external-documents
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/external-documents> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/human-factors
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/human-factors> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/job-description
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/job-description> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-proofreading
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-proofreading> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-qualifications-requirements
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-qualifications-requirements> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-review
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-review> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-training-requirements
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/lack-of-training-requirements> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/merging-of-several-organizations
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/merging-of-several-organizations> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessary-abilities
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessary-abilities> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessity
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/necessity> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/nondestructive-testing
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/nondestructive-testing> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old-version-drawings-have-been-destroyed
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old-version-drawings-have-been-destroyed> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old-version-drawings-have-been-recovered
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/old-version-drawings-have-been-recovered> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operational-quality-management-system
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operational-quality-management-system> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operators
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/operators> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/organization
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/organization> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/personnel
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/personnel> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/planning
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/planning> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/poorly-managed
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/poorly-managed> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications-requirements
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/qualifications-requirements> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/quality-performance
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/quality-performance> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/regular-review
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/regular-review> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/relevant-records
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/relevant-records> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/requirements-for-regular-review
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/requirements-for-regular-review> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/subject-requirements
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/subject-requirements> rdfs:subClassOf asda:description .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technical-procedures
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technical-procedures> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technicians
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/technicians> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the-requirements-for-multi-pass-milling-does-not-include-the-amount-of-feed-per-pass
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the-requirements-for-multi-pass-milling-does-not-include-the-amount-of-feed-per-pass> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the-requirements-for-multi-pass-milling-does-not-include-the-proper-number-of-passes
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/the-requirements-for-multi-pass-milling-does-not-include-the-proper-number-of-passes> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/training
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/training> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/welding
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/welding> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/work
+<http://onto.fel.cvut.cz/ontologies/avic/quality-audit-data/work> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality-Measure
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/Quality-Measure> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/organization
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/organization> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/product> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/quality-competitiveness-index-in-the-manufacturing-industry
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/quality-competitiveness-index-in-the-manufacturing-industry> rdfs:subClassOf asda:moment .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/year
+<http://onto.fel.cvut.cz/ontologies/avic/quality-competitiveness-index-in-the-manufacturing-industry/year> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/corrective-action
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/corrective-action> rdfs:subClassOf asda:event .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/failure-cause
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/failure-cause> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/failure-during-the-test
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/failure-during-the-test> rdfs:subClassOf asda:failure .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/fault-symptoms
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/fault-symptoms> rdfs:subClassOf asda:effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/product
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/product> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/recommendation> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test-conclusion
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test-conclusion> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test-condition
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test-condition> rdfs:subClassOf asda:situation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test-report
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test-report> rdfs:subClassOf asda:object .
+
+
+###  http://onto.fel.cvut.cz/ontologies/avic/test-data/test-type
+<http://onto.fel.cvut.cz/ontologies/avic/test-data/test-type> rdfs:subClassOf asda:object .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

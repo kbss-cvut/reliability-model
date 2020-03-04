@@ -20,7 +20,9 @@ acd:component-part-of rdf:type owl:ObjectProperty ;
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/has-configuration-data
-acd:has-configuration-data rdf:type owl:ObjectProperty .
+acd:has-configuration-data rdf:type owl:ObjectProperty ;
+                           rdfs:domain acd:aircraft ;
+                           rdfs:range acd:aircraft-configuration-data .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/avic/aircraft-configuration-data/item-part-of
