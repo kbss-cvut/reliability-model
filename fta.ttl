@@ -1,0 +1,193 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/fta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/fta> .
+
+<http://onto.fel.cvut.cz/ontologies/fta> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fta/associatedWith
+<http://onto.fel.cvut.cz/ontologies/fta/associatedWith> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/risk_event> ;
+                                                        rdfs:range <http://onto.fel.cvut.cz/ontologies/fta/component> ;
+                                                        rdfs:label "associatedWith" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/hasFunctionalityCondition
+<http://onto.fel.cvut.cz/ontologies/fta/hasFunctionalityCondition> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/tableItem> ;
+                                                                   rdfs:range <http://onto.fel.cvut.cz/ontologies/fta/funcionalityCondition> ;
+                                                                   rdfs:label "hasFunctionalityCondition" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/hasInputTable
+<http://onto.fel.cvut.cz/ontologies/fta/hasInputTable> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/tableItem> ;
+                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/fta/inputTableItem> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/hasOutputTable
+<http://onto.fel.cvut.cz/ontologies/fta/hasOutputTable> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/tableItem> ;
+                                                        rdfs:range <http://onto.fel.cvut.cz/ontologies/fta/outputTableItem> ;
+                                                        rdfs:label "hasOutputTable" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/hasStateTableItem
+<http://onto.fel.cvut.cz/ontologies/fta/hasStateTableItem> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/funcionTableItem> ;
+                                                           rdfs:range <http://onto.fel.cvut.cz/ontologies/fta/componentState> ;
+                                                           rdfs:label "hasStateTableItem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/mappedIn
+<http://onto.fel.cvut.cz/ontologies/fta/mappedIn> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/element> ;
+                                                  rdfs:range <http://onto.fel.cvut.cz/ontologies/fta/confiabilityTable> ;
+                                                  rdfs:label "mappedIn" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fta/hasState
+<http://onto.fel.cvut.cz/ontologies/fta/hasState> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/component> ;
+                                                  rdfs:range xsd:boolean ;
+                                                  rdfs:comment "hasState" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/isFault
+<http://onto.fel.cvut.cz/ontologies/fta/isFault> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://onto.fel.cvut.cz/ontologies/fta/funcionalityCondition> ;
+                                                 rdfs:range xsd:boolean ;
+                                                 rdfs:label "isFault" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fta/basic_event
+<http://onto.fel.cvut.cz/ontologies/fta/basic_event> rdf:type owl:Class ;
+                                                     rdfs:comment "an event that cannot be developed anymore," ;
+                                                     rdfs:label "basic event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/component
+<http://onto.fel.cvut.cz/ontologies/fta/component> rdf:type owl:Class ;
+                                                   rdfs:comment """it is any elements of a system. This can include
+all the electrical, mechanical devices, human
+operators, etc.""" ;
+                                                   rdfs:label "component" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/componentState
+<http://onto.fel.cvut.cz/ontologies/fta/componentState> rdf:type owl:Class ;
+                                                        rdfs:comment "represents the state of components" ;
+                                                        rdfs:label "componentState" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/confiabilityTable
+<http://onto.fel.cvut.cz/ontologies/fta/confiabilityTable> rdf:type owl:Class ;
+                                                           rdfs:label "confiabilityTable" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/element
+<http://onto.fel.cvut.cz/ontologies/fta/element> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fta/component> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://onto.fel.cvut.cz/ontologies/fta/mappedIn> ;
+                                                                   owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fta/confiabilityTable>
+                                                                 ] ;
+                                                 rdfs:label "element" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/funcionTableItem
+<http://onto.fel.cvut.cz/ontologies/fta/funcionTableItem> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fta/tableItem> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://onto.fel.cvut.cz/ontologies/fta/hasStateTableItem> ;
+                                                                            owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fta/componentState>
+                                                                          ] ;
+                                                          rdfs:label "funcionTableItem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/funcionalityCondition
+<http://onto.fel.cvut.cz/ontologies/fta/funcionalityCondition> rdf:type owl:Class ;
+                                                               rdfs:comment "represents the funcionality condition of the omponents" ;
+                                                               rdfs:label "funcionalityCondition" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/function_tables
+<http://onto.fel.cvut.cz/ontologies/fta/function_tables> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fta/confiabilityTable> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://onto.fel.cvut.cz/ontologies/fta/hasFunctionalityCondition> ;
+                                                                           owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fta/funcionalityCondition>
+                                                                         ] ;
+                                                         rdfs:comment """describes the relationship between
+the inputs and outputs of the components and may
+involve a working condition or status of a particular
+component.""" ;
+                                                         rdfs:label "function tables" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/inputTableItem
+<http://onto.fel.cvut.cz/ontologies/fta/inputTableItem> rdf:type owl:Class ;
+                                                        rdfs:label "inputTableItem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/outputTableItem
+<http://onto.fel.cvut.cz/ontologies/fta/outputTableItem> rdf:type owl:Class ;
+                                                         rdfs:label "outputTableItem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/risk_event
+<http://onto.fel.cvut.cz/ontologies/fta/risk_event> rdf:type owl:Class ;
+                                                    rdfs:label "risk event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/sensorFunctionCondition
+<http://onto.fel.cvut.cz/ontologies/fta/sensorFunctionCondition> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fta/funcionalityCondition> ;
+                                                                 rdfs:label "sensorFunctionCondition" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/stateTableItem
+<http://onto.fel.cvut.cz/ontologies/fta/stateTableItem> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fta/tableItem> ;
+                                                        rdfs:label "stateTableItem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/state_transition_tables
+<http://onto.fel.cvut.cz/ontologies/fta/state_transition_tables> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fta/confiabilityTable> ;
+                                                                 rdfs:comment """used for some components for
+which it is necessary to map state transitions. They are
+used in conjunction with the Function tables to map
+the state changes according to inputs.""" ;
+                                                                 rdfs:label "state transition tables" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fta/tableItem
+<http://onto.fel.cvut.cz/ontologies/fta/tableItem> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/fta/hasInputTable> ;
+                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fta/inputTableItem>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/fta/hasOutputTable> ;
+                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fta/outputTableItem>
+                                                                   ] ;
+                                                   rdfs:label "tableItem" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
