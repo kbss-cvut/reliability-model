@@ -1,0 +1,330 @@
+@prefix : <http://IBCNServices.github.io/Folio-Ontology/Folio.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://IBCNServices.github.io/Folio-Ontology/Folio.owl> .
+
+<http://IBCNServices.github.io/Folio-Ontology/Folio.owl> rdf:type owl:Ontology ;
+                                                          owl:imports <http://www.w3.org/ns/ssn/> ;
+                                                          <http://purl.org/dc/terms/creator> "Bram Steenwinckel"@en ;
+                                                          <http://purl.org/dc/terms/title> "Failure mode and effect analysis combined with anomaly ontology"@en ;
+                                                          owl:versionInfo "1.0.0"@en ;
+                                                          <http://xmlns.com/foaf/0.1/name> "Folio"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#happenedAt
+:happenedAt rdf:type owl:ObjectProperty ;
+            rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+            rdfs:label "happenedAt"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Relation between the failure cause and the corresponding device/system."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCategory
+:hasCategory rdf:type owl:ObjectProperty ;
+             rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+             rdfs:label "hasCategory"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relation between the observed element and its category"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCause
+:hasCause rdf:type owl:ObjectProperty ;
+          rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+          rdfs:label "hasCause"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relation between a failure and it corresponding cause."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasCriticality
+:hasCriticality rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                rdfs:label "hasCriticality"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Relation between the observed element and the criticality"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDetection
+:hasDetection rdf:type owl:ObjectProperty ;
+              rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+              rdfs:label "hasDetection"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Relation between the observed element and the detection method"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasDomain
+:hasDomain rdf:type owl:ObjectProperty ;
+           rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+           rdfs:label "hasDomain"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relation between the observed element and its domain"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasEffect
+:hasEffect rdf:type owl:ObjectProperty ;
+           rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+           rdfs:label "hasEffect"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relation between a failure and it corresponding effect."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasFailureMode
+:hasFailureMode rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                rdfs:label "hasFailureMode"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Relation between the failure effect and the corresponding failure mode."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasLowerFailureEffect
+:hasLowerFailureEffect rdf:type owl:ObjectProperty ;
+                       rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                       rdfs:label "hasLowerFailureEffect"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "Relation between a failure effect and a previously occurring effect."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#hasNextFailureEffect
+:hasNextFailureEffect rdf:type owl:ObjectProperty ;
+                      rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                      rdfs:label "hasNextFailureEffect"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Relation between a failure effect and a next effect."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isEndEffect
+:isEndEffect rdf:type owl:ObjectProperty ;
+             rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+             rdfs:label "isEndEffect"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relation defining an failure effect as end effect."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isIntermediateEffect
+:isIntermediateEffect rdf:type owl:ObjectProperty ;
+                      rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                      rdfs:label "isIntermediateEffect"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Relation defining an failure effect as intermediate effect."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#isLocalEffect
+:isLocalEffect rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+               rdfs:label "isLocalEffect"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relation defining an failure effect as the first mentioned effect."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedBy
+:observedBy rdf:type owl:ObjectProperty ;
+            rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+            rdfs:label "observedBy"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Anomaly
+:Anomaly rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> ;
+                               owl:someValuesFrom <http://www.w3.org/ns/sosa/Procedure>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/ns/ssn/wasOriginatedBy> ;
+                               owl:someValuesFrom :fromObservation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/ns/ssn/wasOriginatedBy> ;
+                               owl:someValuesFrom :observedProperty
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/ns/ssn/wasOriginatedBy> ;
+                               owl:someValuesFrom :toObservation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/ns/ssn/wasOriginatedBy> ;
+                               owl:someValuesFrom <http://www.w3.org/ns/ssn/Stimulus>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass <http://www.w3.org/ns/sosa/resultTime>
+                             ] ;
+         rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+         rdfs:label "Anomaly"@en ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Description of possible unwanted behaviour"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Category
+:Category rdf:type owl:Class ;
+          rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+          rdfs:label "Category"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "An ConfirmedAnomaly can happen once (transient), periodically (recurrent) or definitively (permanent)."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Cause
+:Cause rdf:type owl:Class ;
+       rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+       rdfs:label "Cause"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "The cause refers to the description suspected to be the source of the ConfirmedAnomaly"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConfirmedAnomaly
+:ConfirmedAnomaly rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasCategory ;
+                                        owl:someValuesFrom :Category
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasCause ;
+                                        owl:someValuesFrom :Cause
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasCriticality ;
+                                        owl:someValuesFrom :Criticality
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasDetection ;
+                                        owl:someValuesFrom :DetectionMethod
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasDomain ;
+                                        owl:someValuesFrom :ConsequenceDomain
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasEffect ;
+                                        owl:someValuesFrom :Effect
+                                      ] ;
+                  rdfs:subClassOf :Anomaly ;
+                  rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                  rdfs:label "ConfirmedAnomaly"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "ConfirmedAnomaly’s description. Should then express, at least, which part of the system is affected, by what. Ideally, this should be completed with additional information, such as which components observe the ConfirmedAnomaly, or the worth of its management."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#ConsequenceDomain
+:ConsequenceDomain rdf:type owl:Class ;
+                   rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                   rdfs:label "ConsequenceDomain"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Each domain relates to a specific kind of consequence of the ConfirmedAnomaly."@en ;
+                   <http://www.w3.org/2004/02/skos/core#example> "Malfunctioning of device or dangerous situation for end user."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Criticality
+:Criticality rdf:type owl:Class ;
+             rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+             rdfs:label "Criticality"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "It is a time dependent worth attributed to the ConfirmedAnomaly management."@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "non-critic ConfirmedAnomaly"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#DetectionMethod
+:DetectionMethod rdf:type owl:Class ;
+                 rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                 rdfs:label "DetectionMethod"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "This relies on components’ survey to trigger a warning about abnormalities."@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "value > x."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#Effect
+:Effect rdf:type owl:Class ;
+        rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+        rdfs:label "Effect"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The effect describes one aspect of the observed phenomenon."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureCause
+:FailureCause rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isEndEffect ;
+                                    owl:someValuesFrom :FailureMode
+                                  ] ;
+              rdfs:subClassOf :Cause ,
+                              :FailureMode ;
+              rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+              rdfs:label "FailureCause"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Failure causes are defects in design, process, quality, or part application, which are the underlying cause of a failure or which initiate a process which leads to failure. Also, the failure effect at the highest indenture level or total system. A failure mode may have more causes."@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "(abnormal) vibration input from another (possibly failed) system."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureEffect
+:FailureEffect rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasFailureMode ;
+                                     owl:someValuesFrom :FailureMode
+                                   ] ;
+               rdfs:subClassOf :Effect ,
+                               :FailureMode ;
+               rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+               rdfs:label "FailureEffect"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Immediate consequences of a failure on operation, function or functionality, or status of some item."@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "Increased range of input data."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#FailureMode
+:FailureMode rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :happenedAt ;
+                                   owl:someValuesFrom <http://www.w3.org/ns/ssn/System>
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasCause ;
+                                   owl:someValuesFrom :FailureCause
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasEffect ;
+                                   owl:someValuesFrom :FailureEffect
+                                 ] ;
+             rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+             rdfs:label "FailureMode"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The specific manner or way by which a failure occurs in terms of failure of the item (being a part or (sub) system) function under investigation; it may generally describe the way the failure occurs. It shall at least clearly describe a (end) failure state of the item (or function in case of a Functional FMEA) under consideration. It is the result of the failure mechanism (cause of the failure mode).."@en ;
+             <http://www.w3.org/2004/02/skos/core#example> " Too high values."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#IntermediateEffect
+:IntermediateEffect rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :isIntermediateEffect ;
+                                          owl:someValuesFrom :FailureMode
+                                        ] ;
+                    rdfs:subClassOf :FailureEffect ;
+                    rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                    rdfs:label "IntermediateEffect"@en ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "The failure effect as it applies at the next higher indenture level."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#LocalEffect
+:LocalEffect rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isLocalEffect ;
+                                   owl:someValuesFrom :FailureMode
+                                 ] ;
+             rdfs:subClassOf :FailureEffect ,
+                             <http://www.w3.org/ns/sosa/Observation> ;
+             rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+             rdfs:label "LocalEffect"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The visible failure effect as it applies to the item under analysis."@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#fromObservation
+:fromObservation rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
+                 rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                 rdfs:label "fromObservation"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "First observation describing the underfined behaviour"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#observedProperty
+:observedProperty rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                  rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+                  rdfs:label "observedProperty"@en .
+
+
+###  http://IBCNServices.github.io/Folio-Ontology/Folio.owl#toObservation
+:toObservation rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
+               rdfs:isDefinedBy "http://IBCNServices.github.io/Folio-Ontology/Folio.owl"^^xsd:string ;
+               rdfs:label "toObservation"@en .
+
+
+###  http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
