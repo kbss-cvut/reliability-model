@@ -27,7 +27,7 @@ year = {2014}
 :associatedWith rdf:type owl:ObjectProperty ;
                 rdfs:domain :risk_event ;
                 rdfs:range :component ;
-                rdfs:comment "BK: I could not find the term \"risk\" or \"risk event\" in the referenced paper."@en ;
+                rdfs:comment "BK: I could not find the term 'risk' or 'risk event' in the referenced paper."@en ;
                 rdfs:label "associatedWith" .
 
 
@@ -143,13 +143,13 @@ operators, etc.""" ;
          rdfs:label "element" ;
          owl:deprecated """BK: I think this is just a synonym. This is based on the text page 3 > paragraph 3 of the grounding paper:
 
-\"
+'
 The first step for the automatic fault tree construction is to
 create an instance of the ontology, modeling each <>component<>
 of the system. The behavior of each <>element<> was mapped in
 their Function Tables and State Transition Tables. An example
 of these tables are shown in tables II and III.
-\""""@en .
+'"""@en .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fta/funcionTableItem
