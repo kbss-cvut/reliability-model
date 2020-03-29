@@ -36825,201 +36825,281 @@
 <Annotation Id="10927" Type="Mention" StartNode="313905" EndNode="313918">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00001</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10928" Type="Mention" StartNode="313862" EndNode="313879">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00002</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10929" Type="Mention" StartNode="313838" EndNode="313843">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00003</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10930" Type="Mention" StartNode="313948" EndNode="313954">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00004</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10931" Type="Mention" StartNode="314130" EndNode="314144">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00005</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10932" Type="Mention" StartNode="314161" EndNode="314172">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00006</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10933" Type="Mention" StartNode="314237" EndNode="314257">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00007</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10934" Type="Mention" StartNode="314208" EndNode="314229">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00008</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10935" Type="Mention" StartNode="314270" EndNode="314340">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00009</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10936" Type="Mention" StartNode="314347" EndNode="314367">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_0000A</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10937" Type="Mention" StartNode="314369" EndNode="314406">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0000B</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10938" Type="Mention" StartNode="314436" EndNode="314481">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/failure-mode</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/FailureMode</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#FailureMode_0000C</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10939" Type="Mention" StartNode="314412" EndNode="314434">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/failure-mode-activator</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-activator</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#failure-mode-activator_0000D</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10940" Type="Mention" StartNode="314486" EndNode="314497">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_0000E</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10941" Type="Mention" StartNode="314546" EndNode="314581">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0000F</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10942" Type="Mention" StartNode="314513" EndNode="314541">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00010</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10943" Type="Mention" StartNode="314583" EndNode="314636">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00011</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10944" Type="Mention" StartNode="313931" EndNode="313937">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00012</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10945" Type="Mention" StartNode="314858" EndNode="314870">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00013</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10946" Type="Mention" StartNode="314825" EndNode="314843">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00014</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10948" Type="Mention" StartNode="314946" EndNode="314957">
@@ -37029,47 +37109,67 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_00015</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10949" Type="Mention" StartNode="314965" EndNode="314976">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00016</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10950" Type="Mention" StartNode="315022" EndNode="315047">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00017</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10951" Type="Mention" StartNode="314995" EndNode="315006">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00018</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10952" Type="Mention" StartNode="314757" EndNode="314770">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00019</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10953" Type="Mention" StartNode="321935" EndNode="321953">
@@ -37079,7 +37179,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_0001A</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10954" Type="Mention" StartNode="322009" EndNode="322036">
@@ -37089,57 +37193,81 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_0001B</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10955" Type="Mention" StartNode="322061" EndNode="322075">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_0001C</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10956" Type="Mention" StartNode="322049" EndNode="322058">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0001D</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10957" Type="Mention" StartNode="322110" EndNode="322119">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_0001E</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10958" Type="Mention" StartNode="322123" EndNode="322156">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0001F</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10959" Type="Mention" StartNode="322219" EndNode="322249">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00020</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10960" Type="Mention" StartNode="322324" EndNode="322361">
@@ -37149,57 +37277,81 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_00021</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10961" Type="Mention" StartNode="322385" EndNode="322407">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00022</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10962" Type="Mention" StartNode="322412" EndNode="322437">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00023</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10963" Type="Mention" StartNode="322443" EndNode="322474">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00024</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10964" Type="Mention" StartNode="322535" EndNode="322551">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00025</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10965" Type="Mention" StartNode="322479" EndNode="322514">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00026</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10966" Type="Mention" StartNode="323017" EndNode="323037">
@@ -37209,7 +37361,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_00027</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10967" Type="Mention" StartNode="322076" EndNode="322106">
@@ -37219,7 +37375,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_00028</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10968" Type="Mention" StartNode="322166" EndNode="322204">
@@ -37229,7 +37389,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_00029</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10969" Type="Mention" StartNode="322582" EndNode="322637">
@@ -37239,7 +37403,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002A</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10971" Type="Mention" StartNode="314055" EndNode="314083">
@@ -37249,17 +37417,25 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002B</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10972" Type="Mention" StartNode="314642" EndNode="314656">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_0002C</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10973" Type="Mention" StartNode="314657" EndNode="314697">
@@ -37269,7 +37445,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002D</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10974" Type="Mention" StartNode="314787" EndNode="314814">
@@ -37279,7 +37459,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002E</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10975" Type="Mention" StartNode="314874" EndNode="314890">
@@ -37289,7 +37473,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002F</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10976" Type="Mention" StartNode="314892" EndNode="314943">
@@ -37299,7 +37487,11 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_00030</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10977" Type="Mention" StartNode="315104" EndNode="315150">
@@ -37309,17 +37501,25 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_00031</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10978" Type="Mention" StartNode="315091" EndNode="315103">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00032</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10979" Type="Mention" StartNode="323042" EndNode="323065">
@@ -37329,47 +37529,67 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_00033</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10980" Type="Mention" StartNode="323068" EndNode="323076">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00034</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10981" Type="Mention" StartNode="323083" EndNode="323139">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00035</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10982" Type="Mention" StartNode="323143" EndNode="323189">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00036</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10983" Type="Mention" StartNode="323341" EndNode="323347">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00037</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10984" Type="Mention" StartNode="323348" EndNode="323400">
@@ -37379,17 +37599,25 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_00038</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10985" Type="Mention" StartNode="323402" EndNode="323428">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00039</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10986" Type="Mention" StartNode="323429" EndNode="323450">
@@ -37399,47 +37627,67 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0003A</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10987" Type="Mention" StartNode="323451" EndNode="323523">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0003B</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10988" Type="Mention" StartNode="323529" EndNode="323590">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0003C</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10989" Type="Mention" StartNode="323628" EndNode="323638">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_0003D</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10990" Type="Mention" StartNode="323603" EndNode="323620">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0003E</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10991" Type="Mention" StartNode="323647" EndNode="323668">
@@ -37449,27 +37697,39 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0003F</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10992" Type="Mention" StartNode="323690" EndNode="323701">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00040</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10993" Type="Mention" StartNode="323708" EndNode="323721">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00041</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10994" Type="Mention" StartNode="323932" EndNode="323957">
@@ -37479,17 +37739,25 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#object_00042</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10995" Type="Mention" StartNode="323986" EndNode="324003">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00043</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10996" Type="Mention" StartNode="324004" EndNode="324033">
@@ -37499,57 +37767,81 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_00044</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10997" Type="Mention" StartNode="324121" EndNode="324138">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00045</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10998" Type="Mention" StartNode="324139" EndNode="324195">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00046</Value>
 </Feature>
 </Annotation>
 <Annotation Id="10999" Type="Mention" StartNode="324048" EndNode="324107">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/failure-mode-activator</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-activator</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#failure-mode-activator_00047</Value>
 </Feature>
 </Annotation>
 <Annotation Id="11000" Type="Mention" StartNode="324322" EndNode="324336">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/component</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Component</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Component_00048</Value>
 </Feature>
 </Annotation>
 <Annotation Id="11001" Type="Mention" StartNode="324241" EndNode="324266">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_00049</Value>
 </Feature>
 </Annotation>
 <Annotation Id="11002" Type="Mention" StartNode="324337" EndNode="324376">
@@ -37559,29 +37851,42 @@
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#disposition_0004A</Value>
 </Feature>
 </Annotation>
 <Annotation Id="11003" Type="Mention" StartNode="324388" EndNode="324487">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/function</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/Function</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#Function_0004B</Value>
 </Feature>
 </Annotation>
 <Annotation Id="11004" Type="Mention" StartNode="324519" EndNode="324561">
 <Feature>
   <Name className="java.lang.String">class</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability/final-level-effect-type</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea/final-level-effect-type</Value>
 </Feature>
 <Feature>
   <Name className="java.lang.String">ontology</Name>
-  <Value className="java.lang.String">http://onto.fe.cvut.cz/ontologies/riliability</Value>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea</Value>
+</Feature>
+<Feature>
+  <Name className="java.lang.String">inst</Name>
+  <Value className="java.lang.String">http://onto.fel.cvut.cz/ontologies/fmea#final-level-effect-type_0004C</Value>
 </Feature>
 </Annotation>
 </AnnotationSet>
 
 </GateDocument>
+
