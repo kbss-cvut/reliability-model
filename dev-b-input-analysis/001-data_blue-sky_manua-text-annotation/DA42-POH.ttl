@@ -2,8 +2,12 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rel: <http://onto.fel.cvut.cz/ontology/reliability/> .
+@prefix ufo: <http://onto.fel.cvut.cz/ontologies/ufo/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fmea: <http://onto.fel.cvut.cz/ontologies/fmea/> .
+@prefix pext: <http://proton.semanticweb.org/protonext#> .
+@prefix psys: <http://proton.semanticweb.org/protonsys#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://onto.fel.cvut.cz/ontologies/fmea> .
 
@@ -14,138 +18,144 @@
 #################################################################
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/examines
-<http://onto.fel.cvut.cz/ontologies/fmea/examines> rdf:type owl:ObjectProperty ;
-                                                   owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isExaminedBy> ;
-                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FMEA> ;
-                                                   rdfs:range <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+fmea:examines rdf:type owl:ObjectProperty ;
+              owl:inverseOf fmea:isExaminedBy ;
+              rdfs:domain fmea:FMEA ;
+              rdfs:range ufo:object .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasCause
-<http://onto.fel.cvut.cz/ontologies/fmea/hasCause> rdf:type owl:ObjectProperty ;
-                                                   owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isCauseOf> ;
-                                                   rdf:type owl:TransitiveProperty ;
-                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                   rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/Cause> .
+fmea:hasCause rdf:type owl:ObjectProperty ;
+              owl:inverseOf fmea:isCauseOf ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:domain fmea:FailureMode ;
+              rdfs:range fmea:Cause .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasCompensatingProvision
-<http://onto.fel.cvut.cz/ontologies/fmea/hasCompensatingProvision> rdf:type owl:ObjectProperty ;
-                                                                   owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isCompensatingProvisionOf> ;
-                                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                                   rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/CompensatingProvision> .
+fmea:hasCompensatingProvision rdf:type owl:ObjectProperty ;
+                              owl:inverseOf fmea:isCompensatingProvisionOf ;
+                              rdfs:domain fmea:FailureMode ;
+                              rdfs:range fmea:CompensatingProvision .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasComponent
-<http://onto.fel.cvut.cz/ontologies/fmea/hasComponent> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
-                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+fmea:hasComponent rdf:type owl:ObjectProperty ;
+                  rdfs:domain ufo:object ;
+                  rdfs:range ufo:object .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasEngineLevelEffect
-<http://onto.fel.cvut.cz/ontologies/fmea/hasEngineLevelEffect> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isEngineLevelEffectOf> ;
-                                                               rdf:type owl:TransitiveProperty ;
-                                                               rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> ,
-                                                                           <http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect> ;
-                                                               rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/EngineLevelEffect> .
+fmea:hasEngineLevelEffect rdf:type owl:ObjectProperty ;
+                          owl:inverseOf fmea:isEngineLevelEffectOf ;
+                          rdf:type owl:TransitiveProperty ;
+                          rdfs:domain fmea:LocalEffect ,
+                                      fmea:NextLevelEffect ;
+                          rdfs:range fmea:EngineLevelEffect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasFailureMode
-<http://onto.fel.cvut.cz/ontologies/fmea/hasFailureMode> rdf:type owl:ObjectProperty ;
-                                                         owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isFailureModeOf> ;
-                                                         rdf:type owl:TransitiveProperty ;
-                                                         rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
-                                                         rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:hasFailureMode rdf:type owl:ObjectProperty ;
+                    owl:inverseOf fmea:isFailureModeOf ;
+                    rdf:type owl:TransitiveProperty ;
+                    rdfs:domain fmea:Function ;
+                    rdfs:range fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasFunction
-<http://onto.fel.cvut.cz/ontologies/fmea/hasFunction> rdf:type owl:ObjectProperty ;
-                                                      owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isFunctionOf> ;
-                                                      rdfs:domain <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
-                                                      rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/Function> .
+fmea:hasFunction rdf:type owl:ObjectProperty ;
+                 owl:inverseOf fmea:isFunctionOf ;
+                 rdfs:domain ufo:object ;
+                 rdfs:range fmea:Function .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasLocalEffect
-<http://onto.fel.cvut.cz/ontologies/fmea/hasLocalEffect> rdf:type owl:ObjectProperty ;
-                                                         owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isLocalEffectOf> ;
-                                                         rdf:type owl:TransitiveProperty ;
-                                                         rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                         rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> .
+fmea:hasLocalEffect rdf:type owl:ObjectProperty ;
+                    owl:inverseOf fmea:isLocalEffectOf ;
+                    rdf:type owl:TransitiveProperty ;
+                    rdfs:domain fmea:FailureMode ;
+                    rdfs:range fmea:LocalEffect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/hasLocation
+fmea:hasLocation rdf:type owl:ObjectProperty ;
+                 rdfs:domain ufo:object ;
+                 rdfs:range fmea:location .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/hasNextLevelEffect
-<http://onto.fel.cvut.cz/ontologies/fmea/hasNextLevelEffect> rdf:type owl:ObjectProperty ;
-                                                             owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/isNextLevelEffectOf> ;
-                                                             rdf:type owl:TransitiveProperty ;
-                                                             rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> ;
-                                                             rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect> .
+fmea:hasNextLevelEffect rdf:type owl:ObjectProperty ;
+                        owl:inverseOf fmea:isNextLevelEffectOf ;
+                        rdf:type owl:TransitiveProperty ;
+                        rdfs:domain fmea:LocalEffect ;
+                        rdfs:range fmea:NextLevelEffect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isCauseOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isCauseOf> rdf:type owl:ObjectProperty ,
-                                                             owl:TransitiveProperty ;
-                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Cause> ;
-                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:isCauseOf rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
+               rdfs:domain fmea:Cause ;
+               rdfs:range fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isCompensatingProvisionOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isCompensatingProvisionOf> rdf:type owl:ObjectProperty ;
-                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/CompensatingProvision> ;
-                                                                    rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:isCompensatingProvisionOf rdf:type owl:ObjectProperty ;
+                               rdfs:domain fmea:CompensatingProvision ;
+                               rdfs:range fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isEngineLevelEffectOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isEngineLevelEffectOf> rdf:type owl:ObjectProperty ,
-                                                                         owl:TransitiveProperty ;
-                                                                rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/EngineLevelEffect> ;
-                                                                rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> ,
-                                                                           <http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect> .
+fmea:isEngineLevelEffectOf rdf:type owl:ObjectProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain fmea:EngineLevelEffect ;
+                           rdfs:range fmea:LocalEffect ,
+                                      fmea:NextLevelEffect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isExaminedBy
-<http://onto.fel.cvut.cz/ontologies/fmea/isExaminedBy> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
-                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/FMEA> .
+fmea:isExaminedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain ufo:object ;
+                  rdfs:range fmea:FMEA .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isFailureModeOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isFailureModeOf> rdf:type owl:ObjectProperty ,
-                                                                   owl:TransitiveProperty ;
-                                                          rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                          rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/Function> .
+fmea:isFailureModeOf rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty ;
+                     rdfs:domain fmea:FailureMode ;
+                     rdfs:range fmea:Function .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isFunctionOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isFunctionOf> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
-                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+fmea:isFunctionOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain fmea:Function ;
+                  rdfs:range ufo:object .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isLocalEffectOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isLocalEffectOf> rdf:type owl:ObjectProperty ,
-                                                                   owl:TransitiveProperty ;
-                                                          rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> ;
-                                                          rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:isLocalEffectOf rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty ;
+                     rdfs:domain fmea:LocalEffect ;
+                     rdfs:range fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isNextLevelEffectOf
-<http://onto.fel.cvut.cz/ontologies/fmea/isNextLevelEffectOf> rdf:type owl:ObjectProperty ,
-                                                                       owl:TransitiveProperty ;
-                                                              rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect> ;
-                                                              rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> .
+fmea:isNextLevelEffectOf rdf:type owl:ObjectProperty ,
+                                  owl:TransitiveProperty ;
+                         rdfs:domain fmea:NextLevelEffect ;
+                         rdfs:range fmea:LocalEffect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/isViolatedBy
-<http://onto.fel.cvut.cz/ontologies/fmea/isViolatedBy> rdf:type owl:ObjectProperty ;
-                                                       owl:inverseOf <http://onto.fel.cvut.cz/ontologies/fmea/violates> ;
-                                                       rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
-                                                       rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:isViolatedBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf fmea:violates ;
+                  rdfs:domain fmea:Function ;
+                  rdfs:range fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/violates
-<http://onto.fel.cvut.cz/ontologies/fmea/violates> rdf:type owl:ObjectProperty ;
-                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                   rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/Function> .
+fmea:violates rdf:type owl:ObjectProperty ;
+              rdfs:domain fmea:FailureMode ;
+              rdfs:range fmea:Function .
 
 
 #################################################################
@@ -153,99 +163,99 @@
 #################################################################
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/FMEA_description
-<http://onto.fel.cvut.cz/ontologies/fmea/FMEA_description> rdf:type owl:DatatypeProperty ;
-                                                           rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FMEA> ;
-                                                           rdfs:range xsd:string .
+fmea:FMEA_description rdf:type owl:DatatypeProperty ;
+                      rdfs:domain fmea:FMEA ;
+                      rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/FMEA_leader
-<http://onto.fel.cvut.cz/ontologies/fmea/FMEA_leader> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FMEA> ;
-                                                      rdfs:range xsd:string .
+fmea:FMEA_leader rdf:type owl:DatatypeProperty ;
+                 rdfs:domain fmea:FMEA ;
+                 rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/FMEA_nr
-<http://onto.fel.cvut.cz/ontologies/fmea/FMEA_nr> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FMEA> ;
-                                                  rdfs:range xsd:integer .
+fmea:FMEA_nr rdf:type owl:DatatypeProperty ;
+             rdfs:domain fmea:FMEA ;
+             rdfs:range xsd:integer .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/cause_description
-<http://onto.fel.cvut.cz/ontologies/fmea/cause_description> rdf:type owl:DatatypeProperty ;
-                                                            rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Cause> ;
-                                                            rdfs:range xsd:string .
+fmea:cause_description rdf:type owl:DatatypeProperty ;
+                       rdfs:domain fmea:Cause ;
+                       rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/compensating_provision_description
-<http://onto.fel.cvut.cz/ontologies/fmea/compensating_provision_description> rdf:type owl:DatatypeProperty ;
-                                                                             rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/CompensatingProvision> ;
-                                                                             rdfs:range xsd:string .
+fmea:compensating_provision_description rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain fmea:CompensatingProvision ;
+                                        rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/component_name
-<http://onto.fel.cvut.cz/ontologies/fmea/component_name> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
-                                                         rdfs:range xsd:string .
+fmea:component_name rdf:type owl:DatatypeProperty ;
+                    rdfs:domain fmea:Component ;
+                    rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/component_reference_nr
-<http://onto.fel.cvut.cz/ontologies/fmea/component_reference_nr> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
-                                                                 rdfs:range xsd:integer .
+fmea:component_reference_nr rdf:type owl:DatatypeProperty ;
+                            rdfs:domain fmea:Component ;
+                            rdfs:range xsd:integer .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/engine_level_effect_description
-<http://onto.fel.cvut.cz/ontologies/fmea/engine_level_effect_description> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/EngineLevelEffect> ;
-                                                                          rdfs:range xsd:string .
+fmea:engine_level_effect_description rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain fmea:EngineLevelEffect ;
+                                     rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/failure_mode_description
-<http://onto.fel.cvut.cz/ontologies/fmea/failure_mode_description> rdf:type owl:DatatypeProperty ;
-                                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                                   rdfs:range xsd:string .
+fmea:failure_mode_description rdf:type owl:DatatypeProperty ;
+                              rdfs:domain fmea:FailureMode ;
+                              rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/failure_mode_reference_nr
-<http://onto.fel.cvut.cz/ontologies/fmea/failure_mode_reference_nr> rdf:type owl:DatatypeProperty ;
-                                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                                    rdfs:range xsd:integer .
+fmea:failure_mode_reference_nr rdf:type owl:DatatypeProperty ;
+                               rdfs:domain fmea:FailureMode ;
+                               rdfs:range xsd:integer .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/function_description
-<http://onto.fel.cvut.cz/ontologies/fmea/function_description> rdf:type owl:DatatypeProperty ;
-                                                               rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
-                                                               rdfs:range xsd:string .
+fmea:function_description rdf:type owl:DatatypeProperty ;
+                          rdfs:domain fmea:Function ;
+                          rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/function_reference_nr
-<http://onto.fel.cvut.cz/ontologies/fmea/function_reference_nr> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
-                                                                rdfs:range xsd:integer .
+fmea:function_reference_nr rdf:type owl:DatatypeProperty ;
+                           rdfs:domain fmea:Function ;
+                           rdfs:range xsd:integer .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/local_effect_description
-<http://onto.fel.cvut.cz/ontologies/fmea/local_effect_description> rdf:type owl:DatatypeProperty ;
-                                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> ;
-                                                                   rdfs:range xsd:string .
+fmea:local_effect_description rdf:type owl:DatatypeProperty ;
+                              rdfs:domain fmea:LocalEffect ;
+                              rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/next_level_effect_description
-<http://onto.fel.cvut.cz/ontologies/fmea/next_level_effect_description> rdf:type owl:DatatypeProperty ;
-                                                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect> ;
-                                                                        rdfs:range xsd:string .
+fmea:next_level_effect_description rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain fmea:NextLevelEffect ;
+                                   rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/occurence
-<http://onto.fel.cvut.cz/ontologies/fmea/occurence> rdf:type owl:DatatypeProperty ;
-                                                    rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
-                                                    rdfs:range xsd:string .
+fmea:occurence rdf:type owl:DatatypeProperty ;
+               rdfs:domain fmea:FailureMode ;
+               rdfs:range xsd:string .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/severity
-<http://onto.fel.cvut.cz/ontologies/fmea/severity> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> ;
-                                                   rdfs:range xsd:string .
+fmea:severity rdf:type owl:DatatypeProperty ;
+              rdfs:domain fmea:LocalEffect ;
+              rdfs:range xsd:string .
 
 
 #################################################################
@@ -253,68 +263,74 @@
 #################################################################
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/Cause
-<http://onto.fel.cvut.cz/ontologies/fmea/Cause> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:Cause rdf:type owl:Class ;
+           rdfs:subClassOf fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/CompensatingProvision
-<http://onto.fel.cvut.cz/ontologies/fmea/CompensatingProvision> rdf:type owl:Class .
+fmea:CompensatingProvision rdf:type owl:Class .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/Component
-<http://onto.fel.cvut.cz/ontologies/fmea/Component> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/object> .
+fmea:Component rdf:type owl:Class ;
+               rdfs:subClassOf ufo:object ;
+               owl:versionInfo "" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/Effect
-<http://onto.fel.cvut.cz/ontologies/fmea/Effect> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> .
+fmea:Effect rdf:type owl:Class ;
+            rdfs:subClassOf fmea:FailureMode .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/EngineLevelEffect
-<http://onto.fel.cvut.cz/ontologies/fmea/EngineLevelEffect> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/Effect> .
+fmea:EngineLevelEffect rdf:type owl:Class ;
+                       rdfs:subClassOf fmea:Effect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/FMEA
-<http://onto.fel.cvut.cz/ontologies/fmea/FMEA> rdf:type owl:Class .
+fmea:FMEA rdf:type owl:Class .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/FailureMode
-<http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> rdf:type owl:Class .
+fmea:FailureMode rdf:type owl:Class .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/Function
-<http://onto.fel.cvut.cz/ontologies/fmea/Function> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+fmea:Function rdf:type owl:Class ;
+              rdfs:subClassOf ufo:disposition .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect
-<http://onto.fel.cvut.cz/ontologies/fmea/LocalEffect> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/Effect> .
+fmea:LocalEffect rdf:type owl:Class ;
+                 rdfs:subClassOf fmea:Effect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect
-<http://onto.fel.cvut.cz/ontologies/fmea/NextLevelEffect> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/Effect> .
+fmea:NextLevelEffect rdf:type owl:Class ;
+                     rdfs:subClassOf fmea:Effect .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-activator
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-activator> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/Cause> .
+fmea:failure-mode-activator rdf:type owl:Class ;
+                            rdfs:subClassOf fmea:Cause .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea/final-level-effect-type
-<http://onto.fel.cvut.cz/ontologies/fmea/final-level-effect-type> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/Effect> .
+fmea:final-level-effect-type rdf:type owl:Class ;
+                             rdfs:subClassOf fmea:Effect .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/location
+fmea:location rdf:type owl:Class ;
+              rdfs:subClassOf ufo:disposition .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/ufo/disposition
-<http://onto.fel.cvut.cz/ontologies/ufo/disposition> rdf:type owl:Class .
+ufo:disposition rdf:type owl:Class .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/ufo/object
-<http://onto.fel.cvut.cz/ontologies/ufo/object> rdf:type owl:Class .
+ufo:object rdf:type owl:Class .
 
 
 #################################################################
@@ -323,457 +339,490 @@
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00001
 :Component_00001 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "flexible hose" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00002
 :Component_00002 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "aluminum chambers" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00003
 :Component_00003 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasComponent :Component_00002 ;
+                 fmea:hasFunction :Function_00007 ,
+                                  :Function_00012 ;
                  rdfs:label " tank" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00004
 :Component_00004 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "filler" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00005
 :Component_00005 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasComponent :Component_00006 ;
                  rdfs:label "two tank vents" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00006
 :Component_00006 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasComponent :Component_00008 ;
+                 fmea:hasFunction :Function_00007 ,
+                                  :Function_0000F ,
+                                  :Function_00010 ;
                  rdfs:label "check valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00008
 :Component_00008 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00009 ,
+                                  :Function_0000B ;
                  rdfs:label "relief pressure valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_0000A
 :Component_0000A rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00007 ;
                  rdfs:label "relief pressure valv" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_0000E
 :Component_0000E rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "check valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00013
 :Component_00013 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00014 ;
                  rdfs:label "outlet valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00016
 :Component_00016 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "drain valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00018
 :Component_00018 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasComponent :object_00015 ;
+                 fmea:hasFunction :Function_00017 ;
                  rdfs:label "drain valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00019
 :Component_00019 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "coarse filter" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_0001C
 :Component_0001C rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_0001D ;
                  rdfs:label "separatecooler" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_0001E
 :Component_0001E rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_0001F ;
                  rdfs:label "dip-stick" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00025
 :Component_00025 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00026 ;
                  rdfs:label "inspection glass" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_0002C
 :Component_0002C rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00011 ;
                  rdfs:label "hose terminals" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00032
 :Component_00032 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "drain valves" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00034
 :Component_00034 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00035 ,
+                                  :Function_00036 ;
                  rdfs:label "manifold" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00037
 :Component_00037 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "bypass" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00039
 :Component_00039 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00009 ;
                  rdfs:label "A manifold pressure sensor" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_0003D
 :Component_0003D rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_0003E ;
                  rdfs:label "compressor" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00041
 :Component_00041 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00040 ;
                  rdfs:label " intercooler " .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00043
 :Component_00043 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00046 ;
                  rdfs:label "overheat detector" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00045
 :Component_00045 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
                  rdfs:label "overheat detector" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Component_00048
 :Component_00048 rdf:type owl:NamedIndividual ,
-                          <http://onto.fel.cvut.cz/ontologies/fmea/Component> ;
+                          fmea:Component ;
+                 fmea:hasFunction :Function_00049 ,
+                                  :Function_0004B ;
                  rdfs:label "thetest button" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#FailureMode_0000C
 :FailureMode_0000C rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/fmea/FailureMode> ;
+                            fmea:FailureMode ;
                    rdfs:label "in case of an auxiliary fuel transfer failure" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00007
 :Function_00007 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "operates at 150 mbar" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00009
 :Function_00009 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "allows fuel and air to flowto the outside with higher internal pressur" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0000B
 :Function_0000B rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
+                fmea:hasFailureMode :FailureMode_0000C ;
                 rdfs:label "protects the tankagainst high pressur" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0000F
 :Function_0000F rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "prevents flow of fuel to theoutside" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00010
 :Function_00010 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "allows air to enter the tank" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00011
 :Function_00011 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "The capillary equalizes the air pressure during climb" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00012
 :Function_00012 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "filled" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00014
 :Function_00014 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "draining ofthe tan" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00017
 :Function_00017 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "remove water and sediment" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0001D
 :Function_0001D rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "cooled by" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0001F
 :Function_0001F rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "provided to check the oil quantit" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00020
 :Function_00020 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
+                fmea:isFunctionOf :Component_0001E ;
                 rdfs:label "oil can also be filled in ther" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00022
 :Function_00022 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "lubricates the gearbox" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00023
 :Function_00023 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "serves the governor syste" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00024
 :Function_00024 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "theregulation of the propeller." .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00026
 :Function_00026 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "gearbox oil quantity can be checked" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00035
 :Function_00035 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "collects exhaust gases from the outletsof the cylinders " .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00036
 :Function_00036 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "feeds them to the turbine of the turbo charger" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0003B
 :Function_0003B rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "allows the ECUto calculate the correct position of the waste gate valve." .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0003C
 :Function_0003C rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
+                fmea:isFunctionOf :Component_00039 ;
                 rdfs:label "prevents excessive manifoldpressures at low density altitudes" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0003E
 :Function_0003E rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "air is compressed" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00040
 :Function_00040 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "cooled down" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00046
 :Function_00046 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "closes the electric circuit and a warning messageappears" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_00049
 :Function_00049 rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "To test the fire detector" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#Function_0004B
 :Function_0004B rdf:type owl:NamedIndividual ,
-                         <http://onto.fel.cvut.cz/ontologies/fmea/Function> ;
+                         fmea:Function ;
                 rdfs:label "alert and the fire warningmessage for the LH and RH engine should appear in the annunciation window" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_00028
 :disposition_00028 rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "on the underside of the engine" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_00029
 :disposition_00029 rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "an inspection hole in the uppercowling" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002A
 :disposition_0002A rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label " inspection hole on the front side of the lower cowling" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002B
 :disposition_0002B rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            ufo:disposition ;
                    rdfs:label " total quantity of 94.6 lite" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002D
 :disposition_0002D rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "arelocated on the underside of the wing," .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002E
 :disposition_0002E rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "is fitted before the outlet" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0002F
 :disposition_0002F rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "its lowest point" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_00030
 :disposition_00030 rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "At the lowest point in each side of the fuel system" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_00031
 :disposition_00031 rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "are fitted in each nacelle behind the firewall" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_00038
 :disposition_00038 rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "is controlled by the ECU throughthe waste gate valve" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0003A
 :disposition_0003A rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "behind the compressor" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0003F
 :disposition_0003F rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "driven by the turbine" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_00044
 :disposition_00044 rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "in the hot areaof each engine" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#disposition_0004A
 :disposition_0004A rdf:type owl:NamedIndividual ,
-                            <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
+                            fmea:location ;
                    rdfs:label "located next to the gear selector switc" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#failure-mode-activator_0000D
 :failure-mode-activator_0000D rdf:type owl:NamedIndividual ,
-                                       <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-activator> ;
+                                       fmea:failure-mode-activator ;
                               rdfs:label "the tank was overfille" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#failure-mode-activator_00047
 :failure-mode-activator_00047 rdf:type owl:NamedIndividual ,
-                                       <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-activator> ;
+                                       fmea:failure-mode-activator ;
                               rdfs:label " increase of the engine compartment temperature above250 °C" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#final-level-effect-type_0004C
 :final-level-effect-type_0004C rdf:type owl:NamedIndividual ,
-                                        <http://onto.fel.cvut.cz/ontologies/fmea/final-level-effect-type> ;
+                                        fmea:final-level-effect-type ;
                                rdfs:label "aural alert or the warning does not appear" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_00015
 :object_00015 rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
               rdfs:label "fuel filter" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_0001A
 :object_0001A rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
               rdfs:label "Lubrication System" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_0001B
 :object_0001B rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
               rdfs:label "wet sump lubrication system" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_00021
 :object_00021 rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
+              fmea:hasFunction :Function_00022 ,
+                               :Function_00023 ,
+                               :Function_00024 ;
               rdfs:label "Gearbox and Propeller Governor System" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_00027
 :object_00027 rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
               rdfs:label "TURBO-CHARGER SYSTEM" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_00033
 :object_00033 rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
+              fmea:hasComponent :Component_00034 ;
               rdfs:label "exhaust system contains" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/fmea#object_00042
 :object_00042 rdf:type owl:NamedIndividual ,
-                       <http://onto.fel.cvut.cz/ontologies/ufo/object> ;
+                       ufo:object ;
               rdfs:label "The fire detection system" .
 
 
