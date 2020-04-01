@@ -1,0 +1,9 @@
+BASE <http://onto.fel.cvut.cz/voc/ata-100/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT{
+ ?g rdfs:label ?chapter_label;
+	rdfs:comment ?chapter_description.
+}WHERE {
+  BIND(IRI(concat("http://onto.fel.cvut.cz/voc/ata-100/ata-", ?chapter_id)) as ?g)
+}

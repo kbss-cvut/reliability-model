@@ -1,0 +1,6 @@
+group_label,group_id,group_description 
+GROUP DEFINITION - AIRCRAFT,group-aircraft,"The complete operational unit. Includes dimensions and areas, lifting and shoring, leveling and weighing, towing and taxiing, parking and mooring, required placards, servicing."
+GROUP DEFINITION - AIRFRAME SYSTEMS,group-airframe-systems,All airframe systems except the Power Plant package.
+GROUP DEFINITION - STRUCTURES,group-structures,
+GROUP DEFINITION PROPELLER / ROTOR,group-propeller-rotor,Complete propeller / rotor system excluding propeller / rotor anti-icing system.
+GROUP DEFINITION - POWER PLANT,group-power-plant,

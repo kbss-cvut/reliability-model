@@ -1,0 +1,12 @@
+BASE <http://onto.fel.cvut.cz/voc/ata-100/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT{
+ ?g rdfs:label ?group_label;
+	rdfs:comment ?group_description.
+}
+#SELECT ?g
+#FROM <file:ata-groups.csv>
+WHERE {
+  BIND(IRI(concat("http://onto.fel.cvut.cz/voc/ata-100/", ?group_id)) as ?g)
+}

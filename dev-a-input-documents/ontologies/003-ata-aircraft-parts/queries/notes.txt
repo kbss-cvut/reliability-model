@@ -1,0 +1,48 @@
+ns = http://onto.fel.cvut.cz/voc/ata-100/
+
+Group local name 
+	definition manually, create a HashMap or switch case
+	group-aircraft
+
+Chapters
+	group local name = group-id + "/" + chapter-id
+		chapter-id = chapter-{chpater-code padded with zeros} 
+		use zero padded codes for uris
+		chapter-04 or chapter-46
+	
+
+Sections
+	section local name = ata "-" chapter-id + section-id
+	section-id = chapter-{chpater-code padded with zeros} 
+	Combine chapter and section codes
+	section-39-00
+	
+
+	
+group-airframe-systems
+group-structures
+group-propeller-rotor
+group-power-plant
+
+
+group
+	uri
+	id
+	label
+	description
+	sections[]
+	
+
+Chapter
+	uri
+	id
+	label
+	description
+	sections[]
+	
+Section
+	uri
+	id
+	label
+	description
+	
