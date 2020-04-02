@@ -1,0 +1,1419 @@
+@prefix :  <http://onto.fel.cvut.cz/lexicons/ata-100-aircraft-parts/single-terms/> .
+@prefix rdfs:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nlp:  <http://onto.fel.cvut.cz/ontologies/nlp/> .
+
+:absorber  rdfs:label           "absorber" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "1" .
+
+:ac     rdfs:label              "ac" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:accelerometers  rdfs:label     "accelerometers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "1" .
+
+:accumulator  rdfs:label        "accumulator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:accumulators  rdfs:label       "accumulators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:actuator  rdfs:label           "actuator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "60" .
+
+:actuators  rdfs:label          "actuators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "23" .
+
+:adapter  rdfs:label            "adapter" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:adapters  rdfs:label           "adapters" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "3" .
+
+:adaptor  rdfs:label            "adaptor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "1" .
+
+:aerofoil  rdfs:label           "aerofoil" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:aerofoils  rdfs:label          "aerofoils" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "2" .
+
+:aeroplane  rdfs:label          "aeroplane" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "3" .
+
+:aileron  rdfs:label            "aileron" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "17" .
+
+:ailerons  rdfs:label           "ailerons" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:airbrakes  rdfs:label          "airbrakes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "2" .
+
+:aircraft  rdfs:label           "aircraft" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "251" .
+
+:airfoil  rdfs:label            "airfoil" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:airframe  rdfs:label           "airframe" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "28" .
+
+:airship  rdfs:label            "airship" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "2" .
+
+:alternator  rdfs:label         "alternator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:alternators  rdfs:label        "alternators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:altimeter  rdfs:label          "altimeter" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:altitude  rdfs:label           "altitude" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:amplifier  rdfs:label          "amplifier" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:annunciator  rdfs:label        "annunciator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:antenna  rdfs:label            "antenna" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "21" .
+
+:apu    rdfs:label              "apu" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:arm    rdfs:label              "arm" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:armature  rdfs:label           "armature" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "2" .
+
+:arrestors  rdfs:label          "arrestors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "2" .
+
+:astrodomes  rdfs:label         "astrodomes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "1" .
+
+:autopilot  rdfs:label          "autopilot" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "15" .
+
+:axle   rdfs:label              "axle" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:axles  rdfs:label              "axles" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:baffle  rdfs:label             "baffle" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:baffles  rdfs:label            "baffles" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:bars   rdfs:label              "bars" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:basins  rdfs:label             "basins" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:battery  rdfs:label            "battery" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:beacon  rdfs:label             "beacon" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:bearings  rdfs:label           "bearings" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "15" .
+
+:bellcrank  rdfs:label          "bellcrank" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:belt   rdfs:label              "belt" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:belts  rdfs:label              "belts" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:bladder  rdfs:label            "bladder" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:blankets  rdfs:label           "blankets" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:blowers  rdfs:label            "blowers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:bolt   rdfs:label              "bolt" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:bonding  rdfs:label            "bonding" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:boosters  rdfs:label           "boosters" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:boot   rdfs:label              "boot" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:bottle  rdfs:label             "bottle" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "10" .
+
+:bottles  rdfs:label            "bottles" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:box    rdfs:label              "box" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "15" .
+
+:brakes  rdfs:label             "brakes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:breaker  rdfs:label            "breaker" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:breakers  rdfs:label           "breakers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:brush  rdfs:label              "brush" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:bulb   rdfs:label              "bulb" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:bulkhead  rdfs:label           "bulkhead" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:burner  rdfs:label             "burner" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:busses  rdfs:label             "busses" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:cabin  rdfs:label              "cabin" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "72" .
+
+:canard  rdfs:label             "canard" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:cap    rdfs:label              "cap" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:carburetor  rdfs:label         "carburetor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:cell   rdfs:label              "cell" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:cells  rdfs:label              "cells" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:channels  rdfs:label           "channels" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:circuit  rdfs:label            "circuit" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "20" .
+
+:clutch  rdfs:label             "clutch" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:coaxial  rdfs:label            "coaxial" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:coil   rdfs:label              "coil" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:collector  rdfs:label          "collector" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:column  rdfs:label             "column" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:compartment  rdfs:label        "compartment" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "55" .
+
+:compartments  rdfs:label       "compartments" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "42" .
+
+:compass  rdfs:label            "compass" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:cone   rdfs:label              "cone" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:connector  rdfs:label          "connector" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:coolers  rdfs:label            "coolers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:coordinator  rdfs:label        "coordinator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:core   rdfs:label              "core" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:cowl   rdfs:label              "cowl" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:cowls  rdfs:label              "cowls" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:crankshaft  rdfs:label         "crankshaft" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:cylinder  rdfs:label           "cylinder" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "20" .
+
+:damper  rdfs:label             "damper" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:deck   rdfs:label              "deck" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:detector  rdfs:label           "detector" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:detectors  rdfs:label          "detectors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:devices  rdfs:label            "devices" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "53" .
+
+:dial   rdfs:label              "dial" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:disc   rdfs:label              "disc" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:dome   rdfs:label              "dome" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:door   rdfs:label              "door" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "42" .
+
+:doors  rdfs:label              "doors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "85" .
+
+:doppler  rdfs:label            "doppler" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:drain  rdfs:label              "drain" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:duct   rdfs:label              "duct" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "18" .
+
+:ducts  rdfs:label              "ducts" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:dump   rdfs:label              "dump" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:edge   rdfs:label              "edge" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "43" .
+
+:elevators  rdfs:label          "elevators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:elevons  rdfs:label            "elevons" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:elt    rdfs:label              "elt" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:empennage  rdfs:label          "empennage" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:engine  rdfs:label             "engine" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "391" .
+
+:engines  rdfs:label            "engines" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "63" .
+
+:exhaust  rdfs:label            "exhaust" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "49" .
+
+:extension  rdfs:label          "extension" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:fairings  rdfs:label           "fairings" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "19" .
+
+:fan    rdfs:label              "fan" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:filler  rdfs:label             "filler" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:fillets  rdfs:label            "fillets" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:filters  rdfs:label            "filters" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:firewall  rdfs:label           "firewall" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:fittings  rdfs:label           "fittings" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "75" .
+
+:flap   rdfs:label              "flap" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "20" .
+
+:flaps  rdfs:label              "flaps" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "16" .
+
+:floor  rdfs:label              "floor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:fluid  rdfs:label              "fluid" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:frame  rdfs:label              "frame" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "18" .
+
+:frames  rdfs:label             "frames" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:fuel   rdfs:label              "fuel" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "174" .
+
+:furnishings  rdfs:label        "furnishings" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "10" .
+
+:fuselage  rdfs:label           "fuselage" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "86" .
+
+:fuses  rdfs:label              "fuses" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:gasket  rdfs:label             "gasket" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:gauge  rdfs:label              "gauge" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:gear   rdfs:label              "gear" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "134" .
+
+:gearboxes  rdfs:label          "gearboxes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:generator  rdfs:label          "generator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:generators  rdfs:label         "generators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:governor  rdfs:label           "governor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "20" .
+
+:gyro   rdfs:label              "gyro" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:handrails  rdfs:label          "handrails" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:harness  rdfs:label            "harness" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:headphones  rdfs:label         "headphones" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:heater  rdfs:label             "heater" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:heaters  rdfs:label            "heaters" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:helicopter  rdfs:label         "helicopter" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:horn   rdfs:label              "horn" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:hose   rdfs:label              "hose" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "15" .
+
+:hub    rdfs:label              "hub" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:igniter  rdfs:label            "igniter" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:impeller  rdfs:label           "impeller" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:indicator  rdfs:label          "indicator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "81" .
+
+:indicators  rdfs:label         "indicators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "51" .
+
+:inlet  rdfs:label              "inlet" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "16" .
+
+:instruments  rdfs:label        "instruments" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "19" .
+
+:insulation  rdfs:label         "insulation" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "18" .
+
+:interphone  rdfs:label         "interphone" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:jackscrew  rdfs:label          "jackscrew" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:lamps  rdfs:label              "lamps" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:lever  rdfs:label              "lever" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:levers  rdfs:label             "levers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:lights  rdfs:label             "lights" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "19" .
+
+:link   rdfs:label              "link" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:linkage  rdfs:label            "linkage" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:localizer  rdfs:label          "localizer" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:locator  rdfs:label            "locator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:locks  rdfs:label              "locks" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:longeron  rdfs:label           "longeron" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:magneto  rdfs:label            "magneto" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:manifold  rdfs:label           "manifold" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:marker  rdfs:label             "marker" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:markings  rdfs:label           "markings" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:mast   rdfs:label              "mast" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:materials  rdfs:label          "materials" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "16" .
+
+:mats   rdfs:label              "mats" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:motors  rdfs:label             "motors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:nacelles  rdfs:label           "nacelles" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:needle  rdfs:label             "needle" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:network  rdfs:label            "network" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:nozzle  rdfs:label             "nozzle" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "16" .
+
+:nozzles  rdfs:label            "nozzles" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:oil    rdfs:label              "oil" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "71" .
+
+:outlet  rdfs:label             "outlet" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:outlets  rdfs:label            "outlets" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:package  rdfs:label            "package" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:pedals  rdfs:label             "pedals" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:pipes  rdfs:label              "pipes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:piston  rdfs:label             "piston" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:placards  rdfs:label           "placards" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:plate  rdfs:label              "plate" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:plates  rdfs:label             "plates" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:plug   rdfs:label              "plug" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:plugs  rdfs:label              "plugs" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:power  rdfs:label              "power" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "173" .
+
+:pressure  rdfs:label           "pressure" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "143" .
+
+:propeller  rdfs:label          "propeller" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "68" .
+
+:propellers  rdfs:label         "propellers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:propulsor  rdfs:label          "propulsor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "15" .
+
+:protection  rdfs:label         "protection" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "14" .
+
+:pulley  rdfs:label             "pulley" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:pulleys  rdfs:label            "pulleys" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:pylons  rdfs:label             "pylons" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:rack   rdfs:label              "rack" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:racks  rdfs:label              "racks" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:radar  rdfs:label              "radar" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:radio  rdfs:label              "radio" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "19" .
+
+:radomes  rdfs:label            "radomes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:receiver  rdfs:label           "receiver" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:receivers  rdfs:label          "receivers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:recorder  rdfs:label           "recorder" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:recorders  rdfs:label          "recorders" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:reduction  rdfs:label          "reduction" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:relays  rdfs:label             "relays" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:reservoir  rdfs:label          "reservoir" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:resistors  rdfs:label          "resistors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:reverser  rdfs:label           "reverser" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:rib    rdfs:label              "rib" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:ribs   rdfs:label              "ribs" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "15" .
+
+:ring   rdfs:label              "ring" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:rods   rdfs:label              "rods" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:rotor  rdfs:label              "rotor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "137" .
+
+:rotors  rdfs:label             "rotors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:ruddervator  rdfs:label        "ruddervator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:satcom  rdfs:label             "satcom" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:screen  rdfs:label             "screen" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:seal   rdfs:label              "seal" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "41" .
+
+:seat   rdfs:label              "seat" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:seats  rdfs:label              "seats" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:selcal  rdfs:label             "selcal" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:sensor  rdfs:label             "sensor" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "43" .
+
+:sensors  rdfs:label            "sensors" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:servo  rdfs:label              "servo" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:servos  rdfs:label             "servos" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:shaft  rdfs:label              "shaft" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "51" .
+
+:shafts  rdfs:label             "shafts" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:shaker  rdfs:label             "shaker" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:shroud  rdfs:label             "shroud" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:signs  rdfs:label              "signs" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:skids  rdfs:label              "skids" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:skin   rdfs:label              "skin" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "18" .
+
+:solenoid  rdfs:label           "solenoid" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:spar   rdfs:label              "spar" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:spars  rdfs:label              "spars" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "13" .
+
+:speakers  rdfs:label           "speakers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:spinner  rdfs:label            "spinner" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:spoiler  rdfs:label            "spoiler" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:spoilers  rdfs:label           "spoilers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:spring  rdfs:label             "spring" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:stabilator  rdfs:label         "stabilator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:stabilizer  rdfs:label         "stabilizer" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "49" .
+
+:stabilizers  rdfs:label        "stabilizers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:stairs  rdfs:label             "stairs" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "9" .
+
+:stator  rdfs:label             "stator" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:stators  rdfs:label            "stators" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:storage  rdfs:label            "storage" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "45" .
+
+:strainer  rdfs:label           "strainer" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:stringers  rdfs:label          "stringers" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:supercharger  rdfs:label       "supercharger" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:swashplate  rdfs:label         "swashplate" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:synchronizer  rdfs:label       "synchronizer" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:tabs   rdfs:label              "tabs" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:tachometer  rdfs:label         "tachometer" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:tail   rdfs:label              "tail" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "74" .
+
+:tailpipe  rdfs:label           "tailpipe" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:tailpipes  rdfs:label          "tailpipes" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:throttle  rdfs:label           "throttle" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:transducer  rdfs:label         "transducer" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:transmitters  rdfs:label       "transmitters" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "18" .
+
+:transponder  rdfs:label        "transponder" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "4" .
+
+:tube   rdfs:label              "tube" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:turbine  rdfs:label            "turbine" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "91" .
+
+:turbines  rdfs:label           "turbines" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "7" .
+
+:turbocharger  rdfs:label       "turbocharger" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:turboprop  rdfs:label          "turboprop" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:vacuum  rdfs:label             "vacuum" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "11" .
+
+:valve  rdfs:label              "valve" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "84" .
+
+:valves  rdfs:label             "valves" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "75" .
+
+:vane   rdfs:label              "vane" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:water  rdfs:label              "water" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "82" .
+
+:wheels  rdfs:label             "wheels" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "12" .
+
+:window  rdfs:label             "window" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "5" .
+
+:windshield  rdfs:label         "windshield" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "19" .
+
+:windshields  rdfs:label        "windshields" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "8" .
+
+:wing   rdfs:label              "wing" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "81" .
+
+:wings  rdfs:label              "wings" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "6" .
+
+:wiring  rdfs:label             "wiring" ;
+        rdfs:type               skos:Concept ;
+        rdfs:type               rdfs:Class ;
+        nlp:has-term-frequency  "169" .
