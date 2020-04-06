@@ -1,0 +1,16 @@
+PREFIX msmt-fta: <http://onto.fel.cvut.cz/ontologies/msmt-fta/>
+SELECT * {
+  ?ga msmt-fta:has_output ?gb.
+  ?ga a ?gat.
+  ?gb a ?gbt.
+  FILTER(?gat in (msmt-fta:or_gate, msmt-fta:and_gate, 
+      msmt-fta:intermidiate-derived_event, 
+      msmt-fta:primary-risk_event,
+      msmt-fta:undeveloped-initial_event
+    ))
+	FILTER(?gbt in (msmt-fta:or_gate, msmt-fta:and_gate, 
+      msmt-fta:intermidiate-derived_event, 
+      msmt-fta:primary-risk_event,
+      msmt-fta:undeveloped-initial_event
+    ))
+}

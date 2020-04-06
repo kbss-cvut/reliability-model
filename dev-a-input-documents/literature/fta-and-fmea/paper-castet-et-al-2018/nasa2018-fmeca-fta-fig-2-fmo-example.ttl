@@ -1,0 +1,108 @@
+@prefix :  <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-nasa2018-fig-2-fmo/> .
+@prefix fmo:  <http://onto.fel.cvut.cz/ontologies/fmo/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:CE1    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE1" .
+
+:B1     rdf:type    fmo:Behavior ;
+        rdfs:label  "B1" .
+
+:C1     rdf:type    fmo:Component ;
+        rdfs:label  "C1" .
+
+:VE1    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE1" .
+
+:L1     rdf:type    fmo:Likelihood ;
+        rdfs:label  "L1" .
+
+:CE2    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE2" .
+
+:M1     rdf:type    fmo:Mitigation ;
+        rdfs:label  "M1" .
+
+:DM1    rdf:type    fmo:DetectionMechanism ;
+        rdfs:label  "DM1" .
+
+:MI1    rdf:type    fmo:MissionImpact ;
+        rdfs:label  "MI1" .
+
+:B2     rdf:type    fmo:Behavior ;
+        rdfs:label  "B2" .
+
+:C2     rdf:type    fmo:Component ;
+        rdfs:label  "C2" .
+
+:VE2    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE2" .
+
+:CE3    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE3" .
+
+:B3     rdf:type    fmo:Behavior ;
+        rdfs:label  "B3" .
+
+:C3     rdf:type    fmo:Component ;
+        rdfs:label  "C3" .
+
+:VE3    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE3" .
+
+:CE4    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE4" .
+
+:B4     rdf:type    fmo:Behavior ;
+        rdfs:label  "B4" .
+
+:C4     rdf:type    fmo:Component ;
+        rdfs:label  "C4" .
+
+:VE4    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE4" .
+
+:CE1    fmo:analyze  :B1 .
+
+:C1     fmo:explains  :B1 .
+
+:VE1    fmo:explains  :B1 .
+
+:CE2    fmo:explains  :B1 .
+
+:L1     fmo:characterizes  :VE1 .
+
+:MI1    fmo:characterizes  :VE1 .
+
+:DM1    fmo:detects  :VE1 .
+
+:M1     fmo:mitigates  :VE1 .
+
+:CE2    fmo:analyze  :B2 .
+
+:C2     fmo:hasElementBehavior  :B2 .
+
+:VE2    fmo:explains  :B2 .
+
+:CE3    fmo:explains  :B2 .
+
+:C1     fmo:part-of  :C2 .
+
+:CE3    fmo:analyze  :B3 .
+
+:C3     fmo:hasElementBehavior  :B3 .
+
+:VE3    fmo:explains  :B3 .
+
+:CE4    fmo:explains  :B3 .
+
+:C2     fmo:part-of  :C3 .
+
+:CE4    fmo:analyze  :B4 .
+
+:C4     fmo:hasElementBehavior  :B4 .
+
+:VE4    fmo:explains  :B4 .
+
+:C3     fmo:part-of  :C4 .

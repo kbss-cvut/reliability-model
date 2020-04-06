@@ -1,0 +1,12 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fmo: <http://onto.fel.cvut.cz/ontologies/fmo/>
+PREFIX : <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-nasa2018-fig-2-fmo/>
+
+CONSTRUCT  {
+	?f ?p ?t.
+} FROM <file:nasa2018-fmeca-fta-fig-2-fmo-example-edges.csv>
+WHERE {
+	BIND(IRI(CONCAT(STR(:), ?from)) AS ?f)
+	BIND(IRI(CONCAT(STR(:), ?to)) AS ?t)
+	BIND(IRI(CONCAT(STR(fmo:), ?prop)) AS ?p)
+}

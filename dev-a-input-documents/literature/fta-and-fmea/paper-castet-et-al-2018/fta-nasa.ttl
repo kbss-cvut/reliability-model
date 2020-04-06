@@ -1,0 +1,400 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/nasa-fta/> .
+@prefix fta: <http://onto.fel.cvut.cz/ontologies/nasa-fta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/nasa-fta> .
+
+<http://onto.fel.cvut.cz/ontologies/nasa-fta> rdf:type owl:Ontology ;
+                                               rdfs:comment "BK: The \"fta-nasa\" this file and the ontology iri is confusing because nasa does not have a fta ontology but a \"fault management ontology\". If I understand correctly, the source paper on which this ontology based is presenting application of the NASA's Fault Management ontology and its usage in some modeling software."@en ;
+                                               rdfs:isDefinedBy "Castet, J. F., Bareh, M., Nunes, J., Okon, S., Garner, L., Chacko, E., & Izygon, M. (2018). Failure analysis and products in a model-based environment. In IEEE Aerospace Conference Proceedings. https://doi.org/10.1109/AERO.2018.8396736"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/analyzes
+:analyzes rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isAnalizedBy ;
+          rdfs:domain :Explanation ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :ElementBehavior
+                                     :Function
+                                     :PerformanceConstraint
+                                   )
+                     ] ;
+          rdfs:label "analyzes" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/causes
+:causes rdf:type owl:ObjectProperty ;
+        owl:inverseOf :effect_of ;
+        rdfs:domain :ElementBehavior ;
+        rdfs:range :ElementBehavior ;
+        rdfs:comment "derived"@en ;
+        rdfs:label "causes" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/characterizes
+:characterizes rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Likelihood
+                                           :MissinoImpact
+                                           :PerformanceConstraint
+                                         )
+                           ] ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :Performance
+                                          :ViolationExplanations
+                                        )
+                          ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/constrains
+:constrains rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :ElementBehavior
+                                        :PerformanceConstraint
+                                      )
+                        ] ;
+            rdfs:range :StateVariable .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/detects
+:detects rdf:type owl:ObjectProperty ;
+         rdfs:domain :DetectionMechanism ;
+         rdfs:range :ViolationExplanations .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/effect_of
+:effect_of rdf:type owl:ObjectProperty ;
+           rdfs:label "effect of" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/explains
+:explains rdf:type owl:ObjectProperty ;
+          rdfs:domain :Explanation ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :ElementBehavior
+                                     :PerformingElement
+                                   )
+                     ] ;
+          rdfs:label "explains" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/hasAttribute
+:hasAttribute rdf:type owl:ObjectProperty ;
+              rdfs:domain :BehavingElement ;
+              rdfs:range :StateVariable .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/hasComponentPart
+:hasComponentPart rdf:type owl:ObjectProperty ;
+                  rdfs:label "hasComponentPart" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/hasElementBehavior
+:hasElementBehavior rdf:type owl:ObjectProperty ;
+                    rdfs:domain :BehavingElement ;
+                    rdfs:range :ElementBehavior .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/hasStatePart
+:hasStatePart rdf:type owl:ObjectProperty ;
+              rdfs:label "hasStatePart" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/holds
+:holds rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/impairs
+:impairs rdf:type owl:ObjectProperty ;
+         rdfs:domain :BehavingElement ;
+         rdfs:range :Performance ;
+         rdfs:comment "derived"@en .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/isAnalizedBy
+:isAnalizedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ElementBehavior
+                                          :Function
+                                          :ModeContext
+                                          :PerformanceConstraint
+                                        )
+                          ] ;
+              rdfs:range :Explanation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/mitigates
+:mitigates rdf:type owl:ObjectProperty ;
+           rdfs:domain :Mitigation ;
+           rdfs:range :ViolationExplanations .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/organized_by
+:organized_by rdf:type owl:ObjectProperty ;
+              rdfs:label "organized by" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/performs
+:performs rdf:type owl:ObjectProperty ;
+          rdfs:domain :PerformingElement ;
+          rdfs:range :Function .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/violates
+:violates rdf:type owl:ObjectProperty ;
+          rdfs:domain :ElementBehavior ;
+          rdfs:range :PerformanceConstraint ;
+          rdfs:comment "derived"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/AND
+:AND rdf:type owl:Class ;
+     rdfs:subClassOf :logical_statements ;
+     rdfs:label "AND" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/BehavingElement
+:BehavingElement rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/CauseExplanations
+:CauseExplanations rdf:type owl:Class ;
+                   rdfs:subClassOf :Explanation ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :analyzes ;
+                                     owl:someValuesFrom :behavior
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :explains ;
+                                     owl:someValuesFrom :ViolationExplanations
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :holds ;
+                                     owl:someValuesFrom :logical_statements
+                                   ] ;
+                   rdfs:comment """If many CauseExplanations analyze the same
+behavior (B1), and each of CauseExplanations explains a single behavior (B2, B3,
+and B4). In that particular case, the fault tree will interpret
+this model as an OR gate with three immediate causes of the
+event of interest.""" ;
+                   rdfs:label "CauseExplanations" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/DetectionMechanism
+:DetectionMechanism rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/ElementBehavior
+:ElementBehavior rdf:type owl:Class ;
+                 rdfs:subClassOf :behavior .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Environment
+:Environment rdf:type owl:Class ;
+             rdfs:subClassOf :BehavingElement .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Explanation
+:Explanation rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Function
+:Function rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Likelihood
+:Likelihood rdf:type owl:Class ;
+            rdfs:subClassOf :Explanation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/MissinoImpact
+:MissinoImpact rdf:type owl:Class ;
+               rdfs:subClassOf :Explanation .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Mitigation
+:Mitigation rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/ModeContext
+:ModeContext rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/OR
+:OR rdf:type owl:Class ;
+    rdfs:subClassOf :logical_statements ;
+    rdfs:label "OR" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Performance
+:Performance rdf:type owl:Class ;
+             rdfs:comment "This is the reified relationship of the object property \"performs\""@en .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/PerformanceConstraint
+:PerformanceConstraint rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/PerformingElement
+:PerformingElement rdf:type owl:Class ;
+                   rdfs:subClassOf :BehavingElement .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/RedundancyExplanation
+:RedundancyExplanation rdf:type owl:Class ;
+                       rdfs:subClassOf :Explanation ;
+                       rdfs:comment "BK: Can we find more examples where this concept is used?"@en .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/StateVariable
+:StateVariable rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/ViolationExplanations
+:ViolationExplanations rdf:type owl:Class ;
+                       rdfs:subClassOf :Explanation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :explains ;
+                                         owl:someValuesFrom :behavior
+                                       ] ;
+                       rdfs:label "ViolationExplanations" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/basic_event
+:basic_event rdf:type owl:Class ;
+             rdfs:comment "BK : This concept is used in the FTA artifact produced by the software from a model in the Fault Management Ontology"@en ;
+             rdfs:label "basic event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/behavior
+:behavior rdf:type owl:Class ;
+          owl:equivalentClass :stateMachine ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :causes ;
+                            owl:someValuesFrom :behavior
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :organized_by ;
+                            owl:someValuesFrom :components
+                          ] ;
+          rdfs:label "behavior" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/components
+:components rdf:type owl:Class ;
+            rdfs:label "components" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/event
+:event rdf:type owl:Class ;
+       rdfs:comment "BK : This concept is used in the FTA artifact produced by the software from a model in the Fault Management Ontology"@en ;
+       rdfs:label "event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/immediate_causes
+:immediate_causes rdf:type owl:Class ;
+                  rdfs:label "immediate causes" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/logical_statements
+:logical_statements rdf:type owl:Class ;
+                    rdfs:comment """BK: these logical statements are used to describe how behaviors nad ViolationExplanations can composed to cause an effect.
+
+Example from the paper:
+Illustrated in Figure 3, three CauseExplanations analyze the same behavior (B1), and each explains a single behavior (B2, B3, and B4). In that particular case, the fault tree will interpret this model as an OR gate with three immediate causes of the event of interest. 
+
+If Behavior 2 (B2) and either Behavior 3 (B3) or 4 (B4) are needed for a given effect (B1), then the logical statement captured in the model will be of the form 'B2 AND (B3 OR B4)'."""@en ;
+                    rdfs:label "logical statements" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/stateMachine
+:stateMachine rdf:type owl:Class ;
+              rdfs:comment "BK: A \"state machine\", as referred in the paper, is a behavioral model in the formal language of state machines. This language consists of nodes representing state and directed edges which represent transitions between states."@en ;
+              owl:deprecated "Why do we need this concept if it is equivalent to behavior?"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Dead_Battery_state
+:Dead_Battery_state rdf:type owl:NamedIndividual ,
+                             :stateMachine ;
+                    :hasStatePart :Illumination_Device_state ;
+                    rdfs:label "Dead Battery state" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Illumination_Device
+:Illumination_Device rdf:type owl:NamedIndividual ,
+                              :components ;
+                     :hasComponentPart :rover ;
+                     rdfs:label "Illumination Device" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Illumination_Device_state
+:Illumination_Device_state rdf:type owl:NamedIndividual ,
+                                    :stateMachine ;
+                           :hasStatePart :Rover_state ;
+                           rdfs:label "Illumination Device state" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Loss_of_Nighttime_Driving_Illumination
+:Loss_of_Nighttime_Driving_Illumination rdf:type owl:NamedIndividual ,
+                                                 :CauseExplanations ;
+                                        :analyzes :Rover_state ;
+                                        :explains :Illumination_Device_state ;
+                                        rdfs:label "Loss of Nighttime Driving Illumination" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Nighttime_Driving_Unavailable
+:Nighttime_Driving_Unavailable rdf:type owl:NamedIndividual ,
+                                        :ViolationExplanations ;
+                               :explains :Rover_state ;
+                               rdfs:label "Nighttime Driving Unavailable" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Permanent_Insufficient_Illumination
+:Permanent_Insufficient_Illumination rdf:type owl:NamedIndividual ,
+                                              :ViolationExplanations ;
+                                     :explains :Illumination_Device_state ;
+                                     rdfs:label "Permanent Insufficient Illumination" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/Rover_state
+:Rover_state rdf:type owl:NamedIndividual ,
+                      :stateMachine ;
+             rdfs:label "rover state" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/battery
+:battery rdf:type owl:NamedIndividual ,
+                  :components ;
+         :hasComponentPart :Illumination_Device ;
+         rdfs:label "battery" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/rover
+:rover rdf:type owl:NamedIndividual ,
+                :components ;
+       rdfs:label "rover" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/nasa-fta/“Dead_Battery”
+<http://onto.fel.cvut.cz/ontologies/nasa-fta/“Dead_Battery”> rdf:type owl:NamedIndividual ,
+                                                                      :CauseExplanations ;
+                                                             :analyzes :Illumination_Device_state ;
+                                                             :explains :Dead_Battery_state ;
+                                                             rdfs:label "“Dead Battery”" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

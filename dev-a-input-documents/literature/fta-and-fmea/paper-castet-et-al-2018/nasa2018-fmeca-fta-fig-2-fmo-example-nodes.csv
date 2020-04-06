@@ -1,0 +1,21 @@
+order id,entity id,type id,type
+1,CE1,4,CauseExplanation
+2,B1,2,Behavior
+3,C1,1,Component
+4,VE1,3,ViolationExplanation
+5,L1,5,Likelihood
+6,CE2,4,CauseExplanation
+7,M1,8,Mitigation
+8,DM1,7,DetectionMechanism
+9,MI1,6,MissionImpact
+10,B2,2,Behavior
+11,C2,1,Component
+12,VE2,3,ViolationExplanation
+13,CE3,4,CauseExplanation
+14,B3,2,Behavior
+15,C3,1,Component
+16,VE3,3,ViolationExplanation
+17,CE4,4,CauseExplanation
+18,B4,2,Behavior
+19,C4,1,Component
+20,VE4,3,ViolationExplanation

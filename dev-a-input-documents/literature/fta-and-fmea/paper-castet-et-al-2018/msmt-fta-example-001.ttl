@@ -1,0 +1,238 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix msmt-fta: <http://onto.fel.cvut.cz/ontologies/msmt-fta/> .
+@base <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001> .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001> rdf:type owl:Ontology ;
+                                                           owl:imports <http://onto.fel.cvut.cz/ontologies/msmt-fta> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode
+msmt-fta:has_failur_mode rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input
+msmt-fta:has_input rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output
+msmt-fta:has_output rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of
+msmt-fta:occurenne_of rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/component
+msmt-fta:component rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode
+msmt-fta:failure_mode rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate-derived_event
+msmt-fta:intermidiate-derived_event rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate
+msmt-fta:or_gate rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/primary-risk_event
+msmt-fta:primary-risk_event rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped-initial_event
+msmt-fta:undeveloped-initial_event rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/Or_gate1
+:Or_gate1 rdf:type owl:NamedIndividual ,
+                   msmt-fta:or_gate ;
+          msmt-fta:has_input :engin_failure ;
+          msmt-fta:has_output :cooling ,
+                              :fuel ,
+                              :ignition ;
+          rdfs:label "Or gate1" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/Or_gate2
+:Or_gate2 rdf:type owl:NamedIndividual ,
+                   msmt-fta:or_gate ;
+          msmt-fta:has_input :cooling ;
+          rdfs:label "Or gate2" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/Or_gate3
+:Or_gate3 rdf:type owl:NamedIndividual ,
+                   msmt-fta:or_gate ;
+          msmt-fta:has_input :fuel ;
+          msmt-fta:has_output :carburator ,
+                              :filter ,
+                              :fuel_pump ,
+                              :no_fuel ;
+          rdfs:label "Or gate3" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/Or_gate4
+:Or_gate4 rdf:type owl:NamedIndividual ,
+                   msmt-fta:or_gate ;
+          msmt-fta:has_input :ignition ;
+          msmt-fta:has_output <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignit_sys#1> ,
+                              <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignit_sys#2> ;
+          rdfs:label "Or gate4" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/bearing
+:bearing rdf:type owl:NamedIndividual ,
+                  msmt-fta:undeveloped-initial_event ;
+         rdfs:label "bearing" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/carburator
+:carburator rdf:type owl:NamedIndividual ,
+                     msmt-fta:undeveloped-initial_event ;
+            rdfs:label "carburator" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/cooling
+:cooling rdf:type owl:NamedIndividual ,
+                  msmt-fta:intermidiate-derived_event ;
+         rdfs:label "cooling" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/engin_failure
+:engin_failure rdf:type owl:NamedIndividual ,
+                        msmt-fta:primary-risk_event ;
+               rdfs:label "engin failure" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/engine
+:engine rdf:type owl:NamedIndividual ,
+                 msmt-fta:component ;
+        msmt-fta:has_failur_mode :engine_failure_mode .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/engine_failure_mode
+:engine_failure_mode rdf:type owl:NamedIndividual ,
+                              msmt-fta:failure_mode ;
+                     msmt-fta:occurenne_of :engine_failure_mode ;
+                     rdfs:label "engine failure mode" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/fan
+:fan rdf:type owl:NamedIndividual ,
+              msmt-fta:undeveloped-initial_event ;
+     rdfs:label "fan" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/filter
+:filter rdf:type owl:NamedIndividual ,
+                 msmt-fta:undeveloped-initial_event ;
+        msmt-fta:has_output :fan ,
+                            :no_coolant ,
+                            :pump ;
+        rdfs:label "filter" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/friction
+:friction rdf:type owl:NamedIndividual ,
+                   msmt-fta:undeveloped-initial_event ;
+          rdfs:label "friction" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/frozen
+:frozen rdf:type owl:NamedIndividual ,
+                 msmt-fta:undeveloped-initial_event ;
+        rdfs:label "frozen" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/fuel
+:fuel rdf:type owl:NamedIndividual ,
+               msmt-fta:intermidiate-derived_event ;
+      rdfs:label "fuel" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/fuel_pump
+:fuel_pump rdf:type owl:NamedIndividual ,
+                    msmt-fta:undeveloped-initial_event ;
+           rdfs:label "fuel pump" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignition
+:ignition rdf:type owl:NamedIndividual ,
+                   msmt-fta:intermidiate-derived_event ;
+          rdfs:label "ignition" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/loose
+:loose rdf:type owl:NamedIndividual ,
+                msmt-fta:undeveloped-initial_event ;
+       rdfs:label "loose" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/no_coolant
+:no_coolant rdf:type owl:NamedIndividual ,
+                     msmt-fta:undeveloped-initial_event ;
+            rdfs:label "no coolant" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/no_fuel
+:no_fuel rdf:type owl:NamedIndividual ,
+                  msmt-fta:undeveloped-initial_event ;
+         rdfs:label "no fuel" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/or_gate5
+:or_gate5 rdf:type owl:NamedIndividual ,
+                   msmt-fta:or_gate ;
+          msmt-fta:has_input :pump ;
+          msmt-fta:has_output :bearing ,
+                              :friction ,
+                              :frozen ,
+                              :loose ,
+                              :seal ;
+          rdfs:label "or gate5" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/pump
+:pump rdf:type owl:NamedIndividual ,
+               msmt-fta:intermidiate-derived_event ;
+      rdfs:label "pump" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/seal
+:seal rdf:type owl:NamedIndividual ,
+               msmt-fta:undeveloped-initial_event ;
+      rdfs:label "seal" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignit_sys#1
+<http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignit_sys#1> rdf:type owl:NamedIndividual ,
+                                                                               msmt-fta:undeveloped-initial_event ;
+                                                                      rdfs:label "ignit sys#1" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignit_sys#2
+<http://onto.fel.cvut.cz/ontologies/msmt-fta-example-001/ignit_sys#2> rdf:type owl:NamedIndividual ,
+                                                                               msmt-fta:undeveloped-initial_event ;
+                                                                      rdfs:label "ignit sys#2" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

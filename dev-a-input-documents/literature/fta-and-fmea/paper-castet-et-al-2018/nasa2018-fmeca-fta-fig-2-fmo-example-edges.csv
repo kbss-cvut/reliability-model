@@ -1,0 +1,23 @@
+from,to,prop id,prop
+CE1,B1,1,analyze
+C1,B1,2,explains
+VE1,B1,2,explains
+CE2,B1,2,explains
+L1,VE1,7,characterizes
+MI1,VE1,7,characterizes
+DM1,VE1,6,detects
+M1,VE1,5,mitigates
+CE2,B2,1,analyze
+C2,B2,4,hasElementBehavior
+VE2,B2,2,explains
+CE3,B2,2,explains
+C1,C2,3,part-of
+CE3,B3,1,analyze
+C3,B3,4,hasElementBehavior
+VE3,B3,2,explains
+CE4,B3,2,explains
+C2,C3,3,part-of
+CE4,B4,1,analyze
+C4,B4,4,hasElementBehavior
+VE4,B4,2,explains
+C3,C4,3,part-of

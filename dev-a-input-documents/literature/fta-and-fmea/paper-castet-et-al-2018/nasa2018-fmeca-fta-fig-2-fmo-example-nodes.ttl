@@ -1,0 +1,64 @@
+@prefix :  <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-nasa2018-fig-2-fmo/> .
+@prefix fmo:  <http://onto.fel.cvut.cz/ontologies/fmo/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:CE1    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE1" .
+
+:B1     rdf:type    fmo:Behavior ;
+        rdfs:label  "B1" .
+
+:C1     rdf:type    fmo:Component ;
+        rdfs:label  "C1" .
+
+:VE1    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE1" .
+
+:L1     rdf:type    fmo:Likelihood ;
+        rdfs:label  "L1" .
+
+:CE2    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE2" .
+
+:M1     rdf:type    fmo:Mitigation ;
+        rdfs:label  "M1" .
+
+:DM1    rdf:type    fmo:DetectionMechanism ;
+        rdfs:label  "DM1" .
+
+:MI1    rdf:type    fmo:MissionImpact ;
+        rdfs:label  "MI1" .
+
+:B2     rdf:type    fmo:Behavior ;
+        rdfs:label  "B2" .
+
+:C2     rdf:type    fmo:Component ;
+        rdfs:label  "C2" .
+
+:VE2    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE2" .
+
+:CE3    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE3" .
+
+:B3     rdf:type    fmo:Behavior ;
+        rdfs:label  "B3" .
+
+:C3     rdf:type    fmo:Component ;
+        rdfs:label  "C3" .
+
+:VE3    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE3" .
+
+:CE4    rdf:type    fmo:CauseExplanation ;
+        rdfs:label  "CE4" .
+
+:B4     rdf:type    fmo:Behavior ;
+        rdfs:label  "B4" .
+
+:C4     rdf:type    fmo:Component ;
+        rdfs:label  "C4" .
+
+:VE4    rdf:type    fmo:ViolationExplanation ;
+        rdfs:label  "VE4" .

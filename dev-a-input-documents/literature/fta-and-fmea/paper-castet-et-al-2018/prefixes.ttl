@@ -1,0 +1,2 @@
+@PREFIX msmt-fta: <http://onto.fel.cvut.cz/ontologies/msmt-fta/> .
+@PREFIX : <http://onto.fel.cvut.cz/ontologies/msmt-fta-example-nasa2018-fig-2-fmo/> .
