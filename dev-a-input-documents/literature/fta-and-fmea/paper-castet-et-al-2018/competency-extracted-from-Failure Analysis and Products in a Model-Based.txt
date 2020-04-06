@@ -1,0 +1,437 @@
+model for FMECA methodology 
+usecase summary - 
+    The FMECA is a reliability design analysis technique used
+    to analyze systematically postulated failures in components
+    of the system to determine the resultant effects. It is
+    performed primarily to identify potential design deficiencies
+    and single-point failures (SPFs), so that appropriate risk management steps may be undertaken for the flight design
+    and mission operations (e.g., preventive measures to
+    decrease the likelihood of occurrence of the failure,
+    mitigation actions to lessen the consequences of a failure
+    when present in the system).
+
+key concepts
+    reliability - this concept is subject to the methodology and it is not being used directly. Rather the methodology model describes systems, their behavior and its potential failures.
+    
+    failure - failure is a category of behavior
+        [single-point failures]
+    components
+    system
+    resultant effects - effect is a category of behavior/state
+    potential design deficiency
+    single-point failures
+    risk management steps
+    preventive measures
+    likelihood of occurrence of the failure
+    mitigation actions
+    consequences of a failure
+    +Function/Behavior
+    
+Key relationships
+    failure causes effect (resultant effect)
+        Which failures cause an [effect]?
+        What are the effects of a [failure]?
+    failure occurs in component
+        What is the component in which the [failure] occurred?
+        What failures can occur-in the [component]?
+        
+    BK component can-fail-as failure
+        What is the component which can fails as [failure]?
+        What are the failures which a [component] can fails as?
+        
+    component-of - component of the system
+        What are the components of a [system]?
+        The [component] is a component of which system?
+        
+    preventive-measures decreases-likelihood-of-occurrence-of failure
+        What are the preventive measures in place to decrees the likelihood of occurrence of a [failure]?
+        What are the failures for which the [preventive measure] decreases the likelihood of their occurrence?
+    
+    failure causes consequences of a failure (cof, states)
+        What are the cof caused by a [failure]?
+        What are the failures that cause a [cof]?
+        
+    Mitigation action lessens the consequences of a failure (cof)
+        What are the mitigation actions that lessen the [cof]?
+        The [mitigation action] lessens the consequences of which cofs?
+        
+        
+
+
+Functional FMECAs are performed down to the functional
+level to evaluate the impact that lower-level failures have on
+system operation. Functional FMECAs can be done
+at different levels of the design hierarchy, where the scope
+of the FMECAs can be the entire system, or specific subsystems or assemblies. 
+
+    Terms
+        level
+        lower-level failure
+        system operation
+        system
+        subsystem
+        
+    Relations
+        lower-level failure have impact on system operation
+            What are the system level operations impacted by the [lower-level failure]?
+            What are the lower-level failures which impact the [system operation]?
+    
+        
+    
+Piece-part FMECAs are
+performed at interfaces to ensure that irreversible physical
+and/or functional damage does not propagate across Fault
+Containment Region boundaries. For support equipment,
+FMEAs are performed at the piece-part level on interfaces
+to verify that support equipment failures cannot propagate
+or cause damage to flight hardware.         
+    
+    Terms
+        interface
+        (irreversible) physical damage
+        (irreversible) functional damage
+        Fault Containment Region boundaries
+        Fault Containment Region
+        Fault
+        support equipment
+        piece-part level
+        support equipment failure
+        flight hardware (system)
+    Relations
+        support equipment failures (sef) propagates/causes-damage to system
+            What are the sef which propagate/cause-damage to the [system]?
+            What are the systems to which the [sef] propagates/causes-damage?
+            
+        equipment belongs to fault containment region boundary (fb)
+            What is the equipment which belongs to the [fb]?
+            What is the fb to which the [equipment] belongs?
+        
+            
+            
+The FTA is a top-down reliability design analysis technique
+to deduce faults (i.e., failure causes) systematically and to
+assess coverage of risk-reduction steps for those failure
+causes. It covers a broad scope of threats beyond hardware
+failures, such as environmental effects or operator errors.
+Contrary to the FMECA, it assesses the impact of
+combinations of threats, including common-cause failures
+
+    Terms
+        fault == failure cause
+        risk-reduction steps
+        combinations of threats
+        common-cause failures
+            
+            
+    Relations
+        fault causes failure
+            What are the faults which caused the [failure]?
+            Which failures are caused by the [fault]? - common-cause failures
+        
+        
+        
+Fault Management Ontology
+    a ViolationExplanation in the model
+    indicates the presence of a failure mode in a certain
+    context (functionality). Each ViolationExplanation
+    in the model will have a dedicated row in the
+    FMECA and the name of the ViolationExplanation
+    will be reported in the “failure mode” column.
+        
+        Term
+            ViolationExplanation -> fmeca:failure mode
+            failure mode
+            context (functionality) [functional context]
+            
+        Relationships
+            failure mode is-present-in context
+                What are the failure-modes present in the [context]?
+                What are the contexts in which the [failure mode] is present?
+                
+    a ViolationExplanation explains one or more behaviors
+    associated with a unique component.
+    
+        Term
+            behavior
+            component
+        
+        Relationships
+            ViolationExplanation explains behavior
+                What are the behaviors explained by the [ViloationExplanation]?
+                What are the ViloationWxplanations which explain the [behavior]?
+            behavior is associated with unique component
+                What are the behaviors associated with the [component]?
+                What is the component associated with the [behaviors]?
+                
+            
+    a ViolationExplanation analyzes at least one
+    PerformanceConstraint that characterizes a "performs"
+    relationship between a Component and a Function. 
+        Term
+            PerformanceConstraint
+            "performs" relationship
+            Component
+            Function
+        Relationship    
+            ViolationExplanation analyzes PerformanceConstraint
+                What are the PerformanceConstraints which are analyzed by the [ViolationExplanation]?
+                What are the ViolationExplanations which analyze the [PerformanceConstraint]?
+            
+            Component "performs" Function
+                What are the functions which a [component] can perform?
+                What are the components which perform the [function]?
+            PerformanceConstraint characterizes "performs" relationship
+                What are the PerformanceConstraints which characterize the ["performs" relationship]?
+                What are the "performs" relationships which are characterized by the [PerformanceConstraint]?
+                
+    Note that the
+    component hierarchy can be indicated in the
+    FMECA using the relationship between components 
+    (e.g., composite association, reference association).
+        Term
+            Component hierarchy
+        Relationships
+            composite associations - TODO
+                is this the part-of/is-component-of/ relationship?
+                    What are the components of the [system]?
+                    What is the system of the [components]?
+            reference association - TODO
+            
+            
+    Cause: Causes are captured in the model using
+    CauseExplanations. The name of all CauseExplanations 
+    that analyze the same behavior as the ViolationExplanation 
+    of interest explains are reported in the “cause” column.
+        Terms
+            CauseExplanations -> fmeca:cause
+            Behavior
+            ViolationExplanation
+                ViolationExplanation of interest
+        Relationship
+            CauseExplanations analyzes behavior
+                What are the behaviors which are analyzed by the [CauseExplanation]?
+                What are the CauseExplanations which analyze the [behavior]?
+            ViolationExplanation explains behavior
+                What are the behaviors explained by the [ViolationExplanation]?
+                What are the ViolationExplanations which explain the [behavior]?
+        Competency question
+            What are the CauseExplanations which the same behavior as the [ViolationExplanation of interest]?
+            
+    Phase of Criticality or Operational Mode of
+    Equipment: as part of the model, it is possible to
+    define some context in which some functionality is
+    required.             
+        Terms
+            Phase of Criticality - TODO
+            Operational Mode of Equipment
+            Operational Mode
+            Equipment
+            context
+            functionality (function)
+        Relationships
+            context requires function 
+                Definition - TODO - What exactly do we mean by requires? From the text I understand it refers as the function is going/planned to be executed in the context.
+                What are the contexts in which the [function] is required?
+                What are the functions required in the [context]?
+                
+            Equipment hasMode OperationalMode
+                Definition - TODO -  This does not seam the same relationship as "requires" between context and function. 
+                    Can the OperationalMode be a context or is it possible that an operational model requires certain function? 
+                What are the operationalModes of the [equipment]?
+                What are the equipments with the [OperationalMode]?
+            
+    Functions are related to Mission Phases through a composite
+    association. If there is no relationship, it is assumed
+    that the Function is needed in all phases. The Mission 
+    Phases found through the query are reported in the “phase” column.
+        Term
+            Function
+            Mission Phase
+                TODO - What is Mission phase - I understand it is something like phase of a process, e.g. specific sub-process or activity.
+        Relationship
+            Function is needed in Mission Phase
+                What are the MissionPhases in which the [function] is needed?
+                What are the functions needed for the [MissionPhase]?
+            
+            
+            
+    It is envisioned in the future to
+    extend this concept to other contextual information
+    by leveraging the ModeContext concept, such as
+    operational modes of the system, or to potentially
+    infer the context through other means rather than
+    direct relationships in the model
+        Term
+            ModeContext
+            operational modes of the system
+            operational modes
+            system
+        Relationships
+            System hasMode OperationalMode
+                What are the operationalModes of the [System]?
+                What are the Systems with the [OperationalMode]?
+                see also Equipment hasMode OperationalMode
+            
+    
+    failure propagation is captured in the
+    model using CauseExplanations. As indicated in [1], 
+    CauseExplanations indicate a causal relationship 
+    between behaviors: for example, if a
+    CauseExplanation analyzes Behavior 2 (B2) and
+    explains Behavior 1 (B1), it means that B1 is the
+    cause of B2, or conversely, B2 is the effect of B1.        
+        Terms
+            failure
+            CauseExplanations
+            behavior
+        Relationships
+            CauseExplanations explains behavior?
+                What are the CauseExplanations which explains the [behavior]?
+                What are the behaviors which are explained by the [CauseExplanations]?
+            CauseExplanations analyzes behavior - already defined above
+            Behavior causes Behavior
+                What are the behaviors caused by the [Behavior]?
+            Behavior is effect of Behavior
+                What are the behaviors which are effect of the [Behavior]?
+    
+        Model rules
+            if 
+                CauseExplanation analyzes Behavior 2 (B2) and explains Behavior 1 (B1)
+            then
+                B1 is the cause of B2 and
+                B2 is the effect of B1
+                
+    The end effect of a failure mode is determined through causal relationships using CauseExplanations.
+    Given that FMECAs can be performed at different levels (e.g., system, subsystem), it was decided to leave 
+    the determination of the level to the user. if there is a chain of CauseExplanations
+    that reaches the top component, then the behavior of the top component or its ViolationExplanation if
+    applicable will be reported in the “end effects” column.
+    Example
+        For example, the user can select the Rover as
+        the scope of the FMECA: in that case, given that a
+        broken lamp results in the inability for the Rover to
+        perform some science activities, that effect will be
+        listed in the row related to the broken lamp. 
+    Note
+        Note that in this example, the fact that there is a single
+        level “hop” between the local and the end effect is
+        coincidental; many levels can exist in general. 
+        
+        Terms
+            Behavior
+            Component
+        Relationship
+            Component hasBehavior Behavior
+                What are the behaviors of a the [component]?
+                What is the component which has the [behaviors]?
+        Competency question
+            What is the end effect of a [failure mode] for the [system]?
+            [failure mode] :causes+ ?endEffect.
+            [system] :hasBehavior ?endEffect.
+            NOT EXISTS (?endEffect :causes ?B2. [system] :hasBehavior ?B2.  )
+            OPTIONAL {?ViolationExplanation :explains ?endEffect }
+            
+    
+    Detection Method: in the ontology, there is a
+    relationship between a ViolationExplanation and
+    DetectionMechanism. Found Detection Mechanisms will be listed in the “detection method”
+    column.
+        Terms 
+            DetectionMechanism -> fmeca:Detection Method
+        Relationships
+            ViolationExplanation isDetectedBy DetectionMechanism
+                What are the ViolationExplanation which are dtected by the [DetectionMechanism]?
+            DetectionMechanism detects ViolationExplanation
+                What are the DetectionMechanisms which detect the [ViolationExplanation]?
+                
+    Compensating Provisions: using the ontology,
+    mitigating actions can be captured using the Mitigation concept, related to ViolationExplanation
+    through the "mitigates" relationships. Found Mitigations will be listed in the "compensating
+    provisions" column.
+        Terms
+            Mitigation -> fmeca:compensating provisions
+            
+        Relationships
+            Mitigation mitigates ViolationExplanation
+                What are the mitigations which mitigate the [ViolationExplanation]?
+                What are the ViolationExplanations which are mitigated by the [Mitigation]?
+                
+    Likelihood: the likelihood of a failure mode is
+    captured in the model using a Likelihood block that
+    characterizes the ViolationExplanation of interest.
+    Different standards and approaches are possible for
+    rating the likelihood. At JPL, we use a 1-3 rating to
+    indicate a low, medium, or high probability.    
+        Terms
+            likelihood
+        Relationships
+            likelihood characterizes ViolationExplanation
+                What is the likelihood which characterizes the [ViolationExplanation]?
+                What are the ViolationExplanations which are characterized by the [likelihood]?
+            
+
+    Severity/Mission Impact: as for the likelihood, the
+    severity of the failure mode is modeled using a
+    MissionImpact block that characterizes the ViolationExplanation. 
+    Example
+        JPL uses a 1-6
+        rating scheme, where 1 is a minor impact on the
+        mission and 6 is a catastrophic failure. If no rating
+        is provided, the tool will try to infer a rating, by
+        making use of the redundancy information captured using the RedundancyExplanation concept.
+        Terms
+            MissionImpact
+        Relationships
+            MissionImpact characterizes ViolationExplanation
+                What is the MissionImpact which characterizes the [ViolationExplanation]?
+                What are the ViolationExplanations which are characterized by the [MissionImpact]?    
+                    
+    The Fault Tree Analysis starts with determining the scope of
+    the analysis. To that effect, the analyst is presented with a
+    list of all ViolationExplanations in the system (organized by
+    components). The analyst then selects the ViolationExplanation 
+    that will constitute the top of the tree. [From there, the
+    tool will explore systematically the fault propagation paths
+    in the model by identifying CauseExplanations and parsing
+    the logical statements they may hold. The immediate causes
+    of an event are determined through various means, as
+    described in the next few paragraphs. ## this part is broken down further] 
+    Example
+        The simplest case occurs when “simple” CauseExplanations
+        are present, that is, CauseExplanations with single analyzes
+        and explains relationships. For example, as illustrated in
+        Figure 3, three CauseExplanations analyze the same
+        behavior (B1), and each explains a single behavior (B2, B3,
+        and B4). In that particular case, the fault tree will interpret
+        this model as an OR gate with three immediate causes of the
+        event of interest. If the behaviors are explained by
+        ViolationExplanations, the ViolationExplanations are
+        reported in the tree instead of the behaviors themselves.
+        
+        Competency questions:
+            Select ViolationExplanation organized by components
+                behavior is associated with system   # behavior is associated with  unique component
+                ViolationExplanation explains behavior # 
+                
+            Alternative with two steps (1. select component 2. show its ViolationExplanations)
+                1) Select system,component
+                    What are the systems, subsystems and components in the model?
+                2) Select ViolationExplanation(failure mode) of the selected System
+                    behavior is associated with [system] # substitute unique component for [system]
+                    ViolationExplanation explains behavior
+        
+        
+    
+    
+        
+    Problems
+    the effects reported in the “local effects” column must be related to a single ViolationExplanation. If several
+    ViolationExplanations need to be combined to obtain that effect (e.g., through an AND logical
+    statement in a CauseExplanation in the fault propagation path), then that effect will not be listed.
+        How is it possible in our ontology to distinguish that we need two or more necessary conditions?
+        How to distinguish that and do not include them in an FMECA (FMEA) table artifact?
+        Solution
+            1. The model will be based on a set of atomic failures. Composite failures will be composed of the atomic ones. FMECA tables will list only effects can be caused by a single atomic failure/fault. 
+            2. It is possible that the model might have different levels of detail/granularity. To use the ontology in such usecase it will require to distinguish weather a failure is atomic or composite cause in the given level of abstraction/detail/granularity.
+    
+    
