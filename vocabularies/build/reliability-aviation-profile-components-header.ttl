@@ -1,0 +1,9 @@
+@prefix rel-av:  <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rel:  <http://onto.fel.cvut.cz/ontologies/reliability/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ata:  <http://onto.fel.cvut.cz/voc/ata-100/> .
+
+rel-av: a owl:Ontology;
+	owl:versionIRI rel-av:v0.1.

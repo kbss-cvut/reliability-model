@@ -1,0 +1,14 @@
+BASE <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/v0.1>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rel: <http://onto.fel.cvut.cz/ontologies/reliability/>
+PREFIX rel-av: <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/>
+PREFIX ata: <http://onto.fel.cvut.cz/voc/ata-100/>
+
+CONSTRUCT{
+  ?whole rel:hasComponent ?part.
+} WHERE {
+	?whole ?hasPart ?part.
+	FILTER(?hasPart IN (ata:has-chapter, ata:has-section))
+}
