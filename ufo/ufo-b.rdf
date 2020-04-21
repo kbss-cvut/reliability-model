@@ -421,7 +421,6 @@
 
     <owl:ObjectProperty rdf:about="http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by">
         <rdfs:domain rdf:resource="http://onto.fel.cvut.cz/ontologies/ufo/disposition"/>
-        <rdfs:range rdf:resource="http://onto.fel.cvut.cz/ontologies/ufo/atomic-event"/>
         <rdfs:label xml:lang="en">is manifested by</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -432,12 +431,6 @@
         <ufo:axiom>a60-part2</ufo:axiom>
         <ufo:contributes-to-necessary-condition-for>D2</ufo:contributes-to-necessary-condition-for>
         <ufo:contributes-to-sufficient-condition-for>D2</ufo:contributes-to-sufficient-condition-for>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-        <owl:annotatedTarget rdf:resource="http://onto.fel.cvut.cz/ontologies/ufo/atomic-event"/>
-        <ufo:axiom>a35</ufo:axiom>
     </owl:Axiom>
     
 

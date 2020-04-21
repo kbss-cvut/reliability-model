@@ -4,343 +4,356 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://onto.fel.cvut.cz/ontologies/msmt-fta> .
 
-<http://onto.fel.cvut.cz/ontologies/msmt-fta> rdf:type owl:Ontology .
+<http://onto.fel.cvut.cz/ontologies/msmt-fta> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> a owl:ObjectProperty ;
+	rdfs:label "has failur mode" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate> a owl:ObjectProperty ;
+	rdfs:label "has gate" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> a owl:ObjectProperty ;
+	rdfs:label "has input" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood> a owl:ObjectProperty ;
+	rdfs:domain <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
+	rdfs:range <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> ;
+	rdfs:label "has liklihood" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> a owl:ObjectProperty ;
+	rdfs:label "has output" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/has_probability
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_probability> a owl:ObjectProperty ;
+	rdfs:label "has probability" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> a owl:ObjectProperty ;
+	rdfs:label "occurenne of" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value> a owl:DatatypeProperty ;
+	rdfs:domain <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> ;
+	rdfs:range owl:real .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> a owl:Class ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> ;
+	rdfs:label "and gate" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/component
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/component> a owl:Class ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/system> , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> a owl:Class ;
+	rdfs:label "failure mode" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> a owl:Class ;
+	rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:subClassOf _:genid3 .
 
-#################################################################
-#    Object Properties
-#################################################################
+_:genid3 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> .
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> rdf:type owl:ObjectProperty ;
-                                                              rdfs:label "has failur mode" .
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:subClassOf _:genid4 .
 
+_:genid4 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate> ;
+	owl:allValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> .
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate> rdf:type owl:ObjectProperty ;
-                                                       rdfs:label "has gate" .
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:label "fta event" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/gate
 
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> rdf:type owl:ObjectProperty ;
-                                                        rdfs:label "has input" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood> rdf:type owl:ObjectProperty ;
-                                                            rdfs:domain <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
-                                                            rdfs:range <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> ;
-                                                            rdfs:label "has liklihood" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> rdf:type owl:ObjectProperty ;
-                                                         rdfs:label "has output" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_probability
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_probability> rdf:type owl:ObjectProperty ;
-                                                              rdfs:label "has probability" .
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> a owl:Class ;
+	rdfs:subClassOf _:genid5 .
 
+_:genid5 a owl:Class ;
+	owl:unionOf _:genid8 .
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> rdf:type owl:ObjectProperty ;
-                                                           rdfs:label "occurenne of" .
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
 
+_:genid9 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> .
+
+_:genid8 rdf:rest _:genid6 .
 
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:domain <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> ;
-                                                                rdfs:range owl:real .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> ;
-                                                       rdfs:label "and gate" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/component
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/component> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/system> ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> ;
-                                                                          owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode>
-                                                                        ] .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> rdf:type owl:Class ;
-                                                           rdfs:label "failure mode" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdf:type owl:Class ;
-                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood> ;
-                                                                          owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> ;
-                                                                          owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate> ;
-                                                                          owl:allValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate>
-                                                                        ] ;
-                                                        rdfs:label "fta event" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/gate
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdf:type owl:Class ;
-                                                   rdfs:subClassOf [ rdf:type owl:Class ;
-                                                                     owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> ;
-                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event>
-                                                                                   ]
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> ;
-                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event>
-                                                                                   ]
-                                                                                 )
-                                                                   ] ,
-                                                                   [ rdf:type owl:Class ;
-                                                                     owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> ;
-                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event>
-                                                                                   ]
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> ;
-                                                                                     owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event>
-                                                                                   ]
-                                                                                 )
-                                                                   ] ;
-                                                   rdfs:label "gate" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> rdf:type owl:Class ;
-                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value> ;
-                                                                           owl:someValuesFrom owl:real
-                                                                         ] ;
-                                                         rdfs:label "likelihood" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> ;
-                                                      rdfs:label "or gate" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/system
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/system> rdf:type owl:Class ;
-                                                     rdfs:label "system" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
-                                                                         rdfs:label "intermidiate/derived event" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
-                                                                 rdfs:label "primary/risk event" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
-                                                                        rdfs:label "undeveloped/initial event" .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate1
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate1> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engin_failure> ;
-                                                       rdfs:label "Or gate1" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate2
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate2> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling> ;
-                                                       rdfs:label "Or gate2" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate3
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate3> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/carburator> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/filter> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel_pump> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/no_fuel> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel> ;
-                                                       rdfs:label "Or gate3" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate4
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate4> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#2> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition> ,
-                                                                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#1> ;
-                                                       rdfs:label "Or gate4" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/bearing
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/bearing> rdf:type owl:NamedIndividual ,
-                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                      rdfs:label "bearing" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/carburator
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/carburator> rdf:type owl:NamedIndividual ,
-                                                                  <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                         rdfs:label "carburator" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling> rdf:type owl:NamedIndividual ,
-                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
-                                                      rdfs:label "cooling" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/engin_failure
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/engin_failure> rdf:type owl:NamedIndividual ,
-                                                                     <http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> ;
-                                                            <http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> ;
-                                                            rdfs:label "engin failure" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/engine
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/engine> rdf:type owl:NamedIndividual ,
-                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/component> ;
-                                                     <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> rdf:type owl:NamedIndividual ,
-                                                                           <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> ;
-                                                                  <http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> ;
-                                                                  rdfs:label "engine failure mode" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/fan
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/fan> rdf:type owl:NamedIndividual ,
-                                                           <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                  rdfs:label "fan" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/filter
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/filter> rdf:type owl:NamedIndividual ,
-                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                     <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/fan> ,
-                                                                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/no_coolant> ,
-                                                                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/pump> ;
-                                                     rdfs:label "filter" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/friction
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/friction> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                       rdfs:label "friction" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/frozen
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/frozen> rdf:type owl:NamedIndividual ,
-                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                     rdfs:label "frozen" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel> rdf:type owl:NamedIndividual ,
-                                                            <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
-                                                   rdfs:label "fuel" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel_pump
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel_pump> rdf:type owl:NamedIndividual ,
-                                                                 <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                        rdfs:label "fuel pump" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
-                                                       rdfs:label "ignition" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/loose
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/loose> rdf:type owl:NamedIndividual ,
-                                                             <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                    rdfs:label "loose" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/no_coolant
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/no_coolant> rdf:type owl:NamedIndividual ,
-                                                                  <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                         rdfs:label "no coolant" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/no_fuel
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/no_fuel> rdf:type owl:NamedIndividual ,
-                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                      rdfs:label "no fuel" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate5
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate5> rdf:type owl:NamedIndividual ,
-                                                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/bearing> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/friction> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/frozen> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/loose> ,
-                                                                                                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/seal> ;
-                                                       <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/pump> ;
-                                                       rdfs:label "or gate5" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/pump
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/pump> rdf:type owl:NamedIndividual ,
-                                                            <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
-                                                   rdfs:label "pump" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/seal
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/seal> rdf:type owl:NamedIndividual ,
-                                                            <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                   rdfs:label "seal" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#1
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#1> rdf:type owl:NamedIndividual ,
-                                                                   <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                          rdfs:label "ignit sys#1" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#2
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#2> rdf:type owl:NamedIndividual ,
-                                                                   <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
-                                                          rdfs:label "ignit sys#2" .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+_:genid6 a rdf:List ;
+	rdf:first _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> .
+
+_:genid6 rdf:rest rdf:nil .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdfs:subClassOf _:genid10 .
+
+_:genid10 a owl:Class ;
+	owl:unionOf _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> .
+
+_:genid13 rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> .
+
+_:genid11 rdf:rest rdf:nil .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdfs:label "gate" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> a owl:Class ;
+	rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value> ;
+	owl:someValuesFrom owl:real .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> rdfs:label "likelihood" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> a owl:Class ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> ;
+	rdfs:label "or gate" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/system
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/system> a owl:Class ;
+	rdfs:label "system" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> a owl:Class ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
+	rdfs:label "intermidiate/derived event" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> a owl:Class ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
+	rdfs:label "primary/risk event" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> a owl:Class ;
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> ;
+	rdfs:label "undeveloped/initial event" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate1
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate1> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engin_failure> ;
+	rdfs:label "Or gate1" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate2
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate2> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling> ;
+	rdfs:label "Or gate2" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate3
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate3> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/carburator> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/filter> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel_pump> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/no_fuel> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel> ;
+	rdfs:label "Or gate3" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate4
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/Or_gate4> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#2> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#1> ;
+	rdfs:label "Or gate4" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/bearing
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/bearing> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "bearing" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/carburator
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/carburator> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "carburator" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/cooling> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+	rdfs:label "cooling" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/engin_failure
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/engin_failure> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> ;
+	rdfs:label "engin failure" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/engine
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/engine> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/component> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> ;
+	rdfs:label "engine failure mode" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/fan
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fan> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "fan" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/filter
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/filter> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/fan> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/no_coolant> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/pump> ;
+	rdfs:label "filter" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/friction
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/friction> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "friction" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/frozen
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/frozen> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "frozen" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+	rdfs:label "fuel" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel_pump
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fuel_pump> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "fuel pump" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/ignition> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+	rdfs:label "ignition" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/loose
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/loose> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "loose" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/no_coolant
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/no_coolant> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "no coolant" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/no_fuel
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/no_fuel> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "no fuel" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate5
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate5> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> <http://onto.fel.cvut.cz/ontologies/msmt-fta/bearing> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/friction> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/frozen> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/loose> , <http://onto.fel.cvut.cz/ontologies/msmt-fta/seal> ;
+	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> <http://onto.fel.cvut.cz/ontologies/msmt-fta/pump> ;
+	rdfs:label "or gate5" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/pump
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/pump> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+	rdfs:label "pump" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/seal
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/seal> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "seal" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#1
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#1> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "ignit sys#1" .
+# 
+# http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#2
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/ignit_sys#2> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+	rdfs:label "ignit sys#2" .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
