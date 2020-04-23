@@ -10,8 +10,9 @@ BASE <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/v0.1>
 CONSTRUCT{
   
   ?component a owl:Class;
-	owl:subClassOf rel:Component;
-	rdfs:label ?label, ?code;
+	rdfs:subClassOf rel:Component;
+	rdfs:label ?label;
+	ata:has-id ?code;
 	rdfs:comment ?comment;
 	rel:hasComponent ?part.
 	
