@@ -5,31 +5,43 @@ PREFIX rel: <http://onto.fel.cvut.cz/ontologies/reliability/>
 PREFIX rel-av: <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/>
 PREFIX ata: <http://onto.fel.cvut.cz/voc/ata-100/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-BASE <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/v0.1>
+BASE <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/v0.1/>
 
 CONSTRUCT{
   
   ?component a owl:Class;
-	owl:subClassOf rel:Component;
-	rdfs:label ?label, ?code;
-	rdfs:comment ?comment;
-	rel:hasComponent ?part.
+	rdfs:subClassOf rel:Component;
+	rdfs:label ?label;
+	ata:has-id ?code;
+	rdfs:comment ?comment.
+	
+  ?system rel:hasComponent ?component.
+  ?system rdfs:subClassOf [ 
+		a owl:Restriction;
+		owl:onProperty rel:hasComponent;
+		owl:someValuesFrom ?component
+  ].
+	
 	
 } WHERE {
   ?component rdfs:label ?l;
-	ata:has-id ?c;
-	rdfs:comment ?comment
-	
-	
+	ata:has-id ?c.
+  
+  # fix lables and codes
   BIND(replace(?l, "GROUP DEFINITION - ", "") as ?label)
   BIND(replace(?c, "^(\\d+.*)-(.+)$", "$1$2") as ?code)
   
   OPTIONAL{
-    ?component ?hasPart ?part.
+	?component rdfs:comment ?comment
+  }
+  
+  # find the system which has a part ?component
+  OPTIONAL{
+    ?system ?hasPart ?component.
 	FILTER(?hasPart IN (ata:has-chapter, ata:has-section))
   }
   
-  
+  # remove sections which do not refer to components
   FILTER ( 
 	!(
 		?label = "GENERAL"
