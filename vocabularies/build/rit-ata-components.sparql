@@ -1,0 +1,35 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rel: <http://onto.fel.cvut.cz/ontologies/reliability/>
+PREFIX rel-av: <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/>
+PREFIX rit: <http://onto.fel.cvut.cz/ontology/ECCAIRS5_dataBridge.xsd#>
+BASE <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/v0.1/>
+
+CONSTRUCT{
+  ?component a owl:Class;
+	rdfs:subClassOf rel:Component;
+	rdfs:label ?l;
+	rit:ataCode ?c.
+	
+  
+  ?system 
+	a owl:Class;
+	rdfs:subClassOf 
+		rel:Component, 
+		[ 
+			a owl:Restriction;
+			owl:onProperty rel:hasComponent;
+			owl:someValuesFrom ?component
+		];
+	rel:hasComponent ?component.
+	
+} WHERE {
+  ?component rit:description ?l;
+	rit:ataCode ?c.
+  
+  # find the system which has a part ?component
+  OPTIONAL{
+    ?system rit:hasChildValue ?component.
+  }
+}
