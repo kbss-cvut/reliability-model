@@ -1,79 +1,76 @@
-@prefix : <http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/> .
+@prefix : <http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples> .
+@base <http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples> .
 
-<http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples> rdf:type owl:Ontology ;
-                                                         owl:imports <http://onto.fel.cvut.cz/ontologies/msmt-fmea/> .
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples> rdf:type owl:Ontology ;
+                                                              owl:imports <http://onto.fel.cvut.cz/ontologies/msmt-fmea/> .
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/AC_power_supply_system_1
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/AC_power_supply_system_1
 :AC_power_supply_system_1 rdf:type owl:NamedIndividual ,
                                    <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/subsystem> ;
                           rdfs:label "AC power supply system 1" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/Aircraft_power_supply_redundancy_is_decreased
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/Aircraft_power_supply_redundancy_is_decreased
 :Aircraft_power_supply_redundancy_is_decreased rdf:type owl:NamedIndividual ,
                                                         <http://onto.fel.cvut.cz/ontologies/fmea/final-level-effect> ;
                                                rdfs:label "Aircraft power supply redundancy is decreased" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/Electric_power_system_PSF_replaces_faulty_PVGC_to_supply_power
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/Electric_power_system_PSF_replaces_faulty_PVGC_to_supply_power
 :Electric_power_system_PSF_replaces_faulty_PVGC_to_supply_power rdf:type owl:NamedIndividual ,
                                                                          <http://onto.fel.cvut.cz/ontologies/fmea/next-level-effect> ;
                                                                 rdfs:label "Electric power system PSF replaces faulty PVGC to supply power" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/PVGC
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/PVGC
 :PVGC rdf:type owl:NamedIndividual ,
                <http://onto.fel.cvut.cz/ontologies/fmea/component> ;
       rdfs:label "PVGC" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/PVGC_body_failure
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/PVGC_body_failure
 :PVGC_body_failure rdf:type owl:NamedIndividual ,
                             <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
-                   <http://onto.fel.cvut.cz/ontologies/msmt-fmea#possibility_of_occurrence> "1.62E-4"^^xsd:float ;
                    rdfs:label "PVGC body failure" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/PVGC_cannot_supply_AC_power
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/PVGC_cannot_supply_AC_power
 :PVGC_cannot_supply_AC_power rdf:type owl:NamedIndividual ,
                                       <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
-                             <http://onto.fel.cvut.cz/ontologies/msmt-fmea#severity> "4.0"^^xsd:float ;
-                             <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/failure_rate_of_failure_mode> "13.48"^^xsd:float ;
                              rdfs:label "PVGC cannot supply AC power" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/PVGC_cannot_supply_AC_power_local_effect
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/PVGC_cannot_supply_AC_power_local_effect
 :PVGC_cannot_supply_AC_power_local_effect rdf:type owl:NamedIndividual ,
                                                    <http://onto.fel.cvut.cz/ontologies/fmea/local-level-effect> ;
-                                          rdfs:label "PVGC cannot supply AC power" .
+                                          rdfs:label "PVGC cannot supply AC power local effect" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/Replace_the_PVGC
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/Replace_the_PVGC
 :Replace_the_PVGC rdf:type owl:NamedIndividual ,
                            <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
                   rdfs:label "Replace the PVGC" .
 
 
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/electric_power_system
-:electric_power_system rdf:type owl:NamedIndividual ,
-                                <http://onto.fel.cvut.cz/ontologies/fmea/system> ;
-                       rdfs:label "electric power system" .
-
-
-###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/examples/supply_AC_power
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/supply_AC_power
 :supply_AC_power rdf:type owl:NamedIndividual ,
                           <http://onto.fel.cvut.cz/ontologies/fmea/function> ;
                  rdfs:label "supply AC power" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/'electric_power_system'
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea/fmea-examples/'electric_power_system'> rdf:type owl:NamedIndividual ,
+                                                                                              <http://onto.fel.cvut.cz/ontologies/fmea/system> ;
+                                                                                     rdfs:label "'electric power system'" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
