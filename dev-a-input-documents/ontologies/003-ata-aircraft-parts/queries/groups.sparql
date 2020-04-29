@@ -1,8 +1,10 @@
 BASE <http://onto.fel.cvut.cz/voc/ata-100/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ata: <http://onto.fel.cvut.cz/voc/ata-100/>
 
 CONSTRUCT{
  ?g rdfs:label ?group_label;
+	ata:has-id ?group_id;
 	rdfs:comment ?group_description.
 }
 #SELECT ?g
