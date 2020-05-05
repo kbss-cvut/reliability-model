@@ -115,7 +115,11 @@
 
 ###  http://onto.fel.cvut.cz/ontologies/msmt-fmea#probability_of_occurrence
 <http://onto.fel.cvut.cz/ontologies/msmt-fmea#probability_of_occurrence> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                                                                         rdfs:domain [ owl:intersectionOf ( <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode>
+                                                                                                            <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause>
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ] ;
                                                                          rdfs:range xsd:integer ;
                                                                          rdfs:comment "Occurrence probability of failure mode\" = \"Failure rate of failure mode (1E-6/H)\" * \"Exposure time (H)\"" ;
                                                                          rdfs:label "probability of occurrence" .
@@ -123,7 +127,7 @@
 
 ###  http://onto.fel.cvut.cz/ontologies/msmt-fmea#severity
 <http://onto.fel.cvut.cz/ontologies/msmt-fmea#severity> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:domain :severity ;
+                                                        rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
                                                         rdfs:range xsd:integer ;
                                                         rdfs:label "severity" .
 
