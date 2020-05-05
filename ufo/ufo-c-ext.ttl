@@ -44,7 +44,6 @@
 # http://onto.fel.cvut.cz/ontologies/ufo-c-ext/satisfies
 
 <http://onto.fel.cvut.cz/ontologies/ufo-c-ext/satisfies> a owl:ObjectProperty ;
-	rdfs:domain <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
 	rdfs:range <http://onto.fel.cvut.cz/ontologies/ufo-c-ext/proposition> .
 # 
 # 

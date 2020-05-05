@@ -1,4 +1,5 @@
 BASE <http://onto.fel.cvut.cz/voc/ata-100/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ata: <http://onto.fel.cvut.cz/voc/ata-100/>
 
@@ -6,7 +7,9 @@ CONSTRUCT{
  ?g ata:has-chapter ?c.
  ?c ata:has-section ?s.
  ?s rdfs:label ?section_label;
+	ata:has-id ?section_id;
     rdfs:comment ?section_description.
+	
 }WHERE {
   BIND(IRI(concat("http://onto.fel.cvut.cz/voc/ata-100/", ?group_id)) as ?g)
   BIND(IRI(concat("http://onto.fel.cvut.cz/voc/ata-100/ata-", ?chapter_id)) as ?c)

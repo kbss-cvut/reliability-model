@@ -14,8 +14,7 @@
 @prefix annot: <http://onto.fel.cvut.cz/ontologies/ufo/annot/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 
-<http://onto.fel.cvut.cz/ontologies/fmea> a owl:Ontology ;
-	owl:imports <http://onto.fel.cvut.cz/ontologies/functions> .
+<http://onto.fel.cvut.cz/ontologies/fmea> a owl:Ontology .
 # 
 # 
 # #################################################################

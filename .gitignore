@@ -1,2 +1,4 @@
+target
 ufo/doc
 ufo/config
+*.iml

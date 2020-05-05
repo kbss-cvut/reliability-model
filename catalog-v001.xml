@@ -18,6 +18,7 @@
     <uri id="User Entered Import Resolution" name="http://onto.fel.cvut.cz/ontologies/ufo/ufo-b-extension/0.0.1" uri="ufo/ufo-b-extension.ttl"/>
     <uri id="User Entered Import Resolution" name="http://onto.fel.cvut.cz/ontologies/ufo-local-extension/0.0.1" uri="ufo/ufo-local-extension.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+	
         <uri id="Automatically generated entry, Timestamp=1587566459224" name="duplicate:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio.owl"/>
         <uri id="Automatically generated entry, Timestamp=1587566459224" name="duplicate:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://IBCNServices.github.io/dyversify/feedback" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/feedback_v1.owl"/>
