@@ -1,0 +1,2939 @@
+@prefix rel-ann:  <http://onto.fel.cvut.cz/ontologies/reliability-aviation-profile/ann/> .
+@prefix fmea:  <http://onto.fel.cvut.cz/ontologies/fmea/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rel:  <http://onto.fel.cvut.cz/ontologies/reliability/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ata:  <http://onto.fel.cvut.cz/voc/ata-100/> .
+
+rel-ann:  rdf:type      owl:Ontology ;
+        owl:versionIRI  rel-ann:v0.1 .
+@prefix rel-av:  <http://onto.fel.cvut.cz/ontologies/reliability/aviation-profile/> .
+@prefix :  <http://onto.fel.cvut.cz/ontologies/fmea/19msmt/BlueSky/DA42-POH-merge#> .
+@prefix fmea:  <http://onto.fel.cvut.cz/ontologies/fmea/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xml:  <http://www.w3.org/XML/1998/namespace> .
+@prefix rel:  <http://onto.fel.cvut.cz/ontologies/reliability/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rit:  <http://onto.fel.cvut.cz/ontology/ECCAIRS5_dataBridge.xsd#> .
+
+fmea:fuel-transfer-pumps-58
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel transfer pumps" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:main-fuel-tank-67
+        rdf:type         owl:Class ;
+        rdfs:label       "main fuel tank" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:closes-the-electric-circuit-176
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:aileron-26  rdf:type  owl:Class ;
+        rdfs:label       "aileron" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:outlet-valve-47  rdf:type  owl:Class ;
+        rdfs:label       "outlet valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:control-rods-4  rdf:type  owl:Class ;
+        rdfs:label       "control rods" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:turbine-151  rdf:type  owl:Class ;
+        rdfs:label       "turbine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:flat-belt--183  rdf:type  owl:Class ;
+        rdfs:label       "flat belt." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:amage--of--the--adjustment-mechanism-14
+        rdf:type         owl:Class ;
+        rdfs:label       "amage  of  the  adjustment mechanism" ;
+        rdfs:subClassOf  rel:FailureMode .
+
+fmea:AVIONICS-MASTER-relay-239
+        rdf:type         owl:Class ;
+        rdfs:label       "AVIONICS MASTER relay" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:low-pressure-pump-29
+        rdf:type         owl:Class ;
+        rdfs:label       "low pressure pump" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-powered-mechanically-by-the-engine-80 .
+
+fmea:pressurized-gas-container-12
+        rdf:type         owl:Class ;
+        rdfs:label       "pressurized gas container" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:prevents-a-permanent-starting-of-the-hydraulic-pump-in-flight-44 ;
+        rel:hasFunction  fmea:keeps-the-system-pressure-constant-43 .
+
+fmea:to-activate-the-fuel-transfer-pumps-and-to-open-the-solenoid-valves-109
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:current-flap-position-is-indicated-74
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Rudder-20  rdf:type  owl:Class ;
+        rdfs:label       "Rudder" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:rudder-5  rdf:type  owl:Class ;
+        rdfs:label       "rudder" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:aural-warning-101
+        rdf:type         owl:Class ;
+        rdfs:label       "aural warning" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:alerts-the-pilot-to-the-retracted-landing-gear-102 .
+
+fmea:RH-alternator-relay-190
+        rdf:type         owl:Class ;
+        rdfs:label       "RH alternator relay" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Engine-performance-controlled-97
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:BAGGAGE-COMPARTMENT-1
+        rdf:type         owl:Class ;
+        rdfs:label       "BAGGAGE COMPARTMENT" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:supports--load-balancing-209
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:is-protected-against-over-pressure-by-means-of-a-pressure-relief-valve--134
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:three-lights-43  rdf:type  owl:Class ;
+        rdfs:label       "three lights" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:current-flap-position-is-indicated-74 .
+
+fmea:Fuel-Quantity-Indication-102
+        rdf:type         owl:Class ;
+        rdfs:label       "Fuel Quantity Indication" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:measure-the-fuel-quantity-in-each-main-tank-103 .
+
+fmea:G1000-84  rdf:type  owl:Class ;
+        rdfs:label       "G1000" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:provided-to-inform-83 .
+
+fmea:electric-valve-77
+        rdf:type         owl:Class ;
+        rdfs:label       "electric valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:automatic-circuit-breaker-73
+        rdf:type         owl:Class ;
+        rdfs:label       "automatic circuit breaker" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:warning-horn-50  rdf:type  owl:Class ;
+        rdfs:label       "warning horn" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:warning-appears-if-the-flaps-move-into-position-LDG--fully-extended--while-the-gear-is-retracted--53 ;
+        rel:hasFunction  fmea:sounds-to-alert-the-pilot-that-the-gear-is-retracted-49 .
+
+fmea:spar-11  rdf:type   owl:Class ;
+        rdfs:label       "spar" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:fuel-tank-14  rdf:type  owl:Class ;
+        rdfs:label       "fuel tank" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:pedals-98  rdf:type  owl:Class ;
+        rdfs:label       "pedals" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:may-only-be-adjusted-99 .
+
+fmea:flap-selector-switch-42
+        rdf:type         owl:Class ;
+        rdfs:label       "flap selector switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:flaps-are-operated-by-means-of-a-3-position-69 .
+
+fmea:elevator-horn-76
+        rdf:type         owl:Class ;
+        rdfs:label       "elevator horn" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:70-Ampère-circuit-breaker-188
+        rdf:type         owl:Class ;
+        rdfs:label       "70 Ampère circuit breaker" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:camloc--52  rdf:type  owl:Class ;
+        rdfs:label       "camloc." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:CHECK-GEAR-caution-51
+        rdf:type         owl:Class ;
+        rdfs:label       "CHECK GEAR caution" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:indicated-on-the-PFD-additionally-52 .
+
+fmea:COOLING-SYSTEM-121
+        rdf:type          owl:Class ;
+        rdfs:label        "COOLING SYSTEM" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:bypass-125 ;
+        rel:hasComponent  fmea:radiator-124 .
+
+fmea:Auxiliary-Fuel-Tanks-51
+        rdf:type          owl:Class ;
+        rdfs:label        "Auxiliary Fuel Tanks" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:finger-filter-50 ;
+        rel:hasComponent  fmea:fuel-transfer-pump-53 ;
+        rel:hasComponent  fmea:filler-cap-52 ;
+        rel:hasFunction   fmea:additional-fuel-capacity-is-52-liter-105 .
+
+fmea:manifold-158  rdf:type  owl:Class ;
+        rdfs:label       "manifold" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:collects-exhaust-gases-from-the-outlets-of-the-cylinders-and-feeds-them-to-the-turbine-of-the-turbo-charger-160 .
+
+fmea:rudder-90  rdf:type  owl:Class ;
+        rdfs:label       "rudder" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:window-9  rdf:type  owl:Class ;
+        rdfs:label       "window" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:provides-power-to-the-consumers-directly-connected-to-the-RH-MAIN-BUS-and-the-AVIONIC-BUS-238
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:protect-against-dirt-and-condensation-278
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:front-spar-11  rdf:type  owl:Class ;
+        rdfs:label       "front spar" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Pitot-Heating-253
+        rdf:type          owl:Class ;
+        rdfs:label        "Pitot Heating" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:thermal-switch-259 ;
+        rel:hasComponent  fmea:thermal-fuse-260 ;
+        rel:hasFunction   fmea:is-electrically-heated-256 .
+
+fmea:90-Ampère-circuit-breaker-196
+        rdf:type         owl:Class ;
+        rdfs:label       "90 Ampère circuit breaker" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:LH-engine-21  rdf:type  owl:Class ;
+        rdfs:label       "LH engine" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:heat-is-used-to-defrost-the-canopy-45 .
+
+fmea:secured-in-position-65
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:spar-23  rdf:type   owl:Class ;
+        rdfs:label       "spar" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:displays-the-voltage-of-the--electrical-system-246
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:propeller-governor-16
+        rdf:type         owl:Class ;
+        rdfs:label       "propeller governor" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/is-controlled-by-the-ECU,-106> .
+
+fmea:are-operated-with-the-gear-selector-switc-39
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:engine-122  rdf:type  owl:Class ;
+        rdfs:label       "engine" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:s-liquid-cooled-123 .
+
+fmea:10-Ampère-fuse--204
+        rdf:type         owl:Class ;
+        rdfs:label       "10 Ampère fuse." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:prevents-the-hydraulic-valve-from-switching-55
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/monitors,-controls-and-regulates-all-important-parameters-for-engine-operation-270>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:waste-gate-156  rdf:type  owl:Class ;
+        rdfs:label       "waste gate" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:generators-182  rdf:type  owl:Class ;
+        rdfs:label       "generators" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:LH--RH--MAIN-BUS-222
+        rdf:type         owl:Class ;
+        rdfs:label       "LH (RH) MAIN BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Fuel-that-is-not-82
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:thermal-switch-259
+        rdf:type         owl:Class ;
+        rdfs:label       "thermal switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:will-open-electric-governor-valve-84
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:seat-3  rdf:type    owl:Class ;
+        rdfs:label       "seat" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Flood-Light-251  rdf:type  owl:Class ;
+        rdfs:label       "Flood Light" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:fuel-filter-with-a-drain-valve-100
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel filter with a drain valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:remove-water-and-sediment-101 .
+
+fmea:Covers-2  rdf:type  owl:Class ;
+        rdfs:label       "Covers" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:prevent-loose-objects-from-falling-into-the-area-of-the-controls-15 .
+
+fmea:wheels-30  rdf:type  owl:Class ;
+        rdfs:label       "wheels" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:screws-25  rdf:type  owl:Class ;
+        rdfs:label       "screws" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:jam-nut-19  rdf:type  owl:Class ;
+        rdfs:label        "jam nut" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:push-rod-18 ;
+        rel:hasComponent  fmea:locking-varnish-20 .
+
+fmea:pressure-relief-valve--133
+        rdf:type         owl:Class ;
+        rdfs:label       "pressure relief valve." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:fuel-drain-valve-57
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel drain valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:control-horn-21  rdf:type  owl:Class ;
+        rdfs:label       "control horn" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:LH--RH--ENGINE-MASTER-230
+        rdf:type         owl:Class ;
+        rdfs:label       "LH (RH) ENGINE MASTER" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:connect-the-ECU-A-and-ECU-B-to-the-ECU-BUS-231 .
+
+fmea:radio-243  rdf:type  owl:Class ;
+        rdfs:label       "radio" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:bracket-15  rdf:type  owl:Class ;
+        rdfs:label       "bracket" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:LH-MAIN-BUS-185  rdf:type  owl:Class ;
+        rdfs:label       "LH MAIN BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:PITOT-STATIC-SYSTEM-273
+        rdf:type          owl:Class ;
+        rdfs:label        "PITOT-STATIC SYSTEM" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:Pitot-probe-274 ;
+        rel:hasComponent  fmea:filters-276 .
+
+fmea:LH--RH--ECU-BUS-221
+        rdf:type         owl:Class ;
+        rdfs:label       "LH (RH) ECU BUS" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:provides-power-for-the-ECU-A-and-ECU-B-229 .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/If-this-thermal-fuse-is-activated,-the-Pitot-heating-can-no-longer-be-switched-on,-and-the-PITOT-HT-fail-will-be-displayed-261>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:uel-selector-valves-37
+        rdf:type         owl:Class ;
+        rdfs:label       "uel selector valves" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:valve-7  rdf:type   owl:Class ;
+        rdfs:label       "valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:BATTERY-BUS-195  rdf:type  owl:Class ;
+        rdfs:label       "BATTERY BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:main-landing-gear-31
+        rdf:type          owl:Class ;
+        rdfs:label        "main landing gear" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:wheels-30 .
+
+fmea:RH-engine-18  rdf:type  owl:Class ;
+        rdfs:label       "RH engine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:capillary-45  rdf:type  owl:Class ;
+        rdfs:label       "capillary" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:equalizes-the-air-pressure-during-climb-99 .
+
+fmea:allows-fuel-and-air-to-flow-95
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:bottom-shell-13  rdf:type  owl:Class ;
+        rdfs:label       "bottom shell" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:instrument-panel-30
+        rdf:type         owl:Class ;
+        rdfs:label       "instrument panel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:luid-flow-in-the-hydraulic-system-is-started-61
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:fuselage-1  rdf:type  owl:Class ;
+        rdfs:label       "fuselage" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:engine-146  rdf:type  owl:Class ;
+        rdfs:label       "engine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:STALL-WARNING-SYSTEM-281
+        rdf:type          owl:Class ;
+        rdfs:label        "STALL WARNING SYSTEM" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:lift-detector-282 .
+
+fmea:EMERGENCY-switch-217
+        rdf:type         owl:Class ;
+        rdfs:label       "EMERGENCY switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:supplied-with-power-218 .
+
+fmea:BATTERY-BUS-220  rdf:type  owl:Class ;
+        rdfs:label       "BATTERY BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:canopy--22  rdf:type  owl:Class ;
+        rdfs:label       "canopy." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:60-Ampère-alternators-181
+        rdf:type         owl:Class ;
+        rdfs:label       "60 Ampère alternators" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-driven-by-a-flat-belt-184 .
+
+fmea:propeller-blades-80
+        rdf:type         owl:Class ;
+        rdfs:label       "propeller blades" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:is-activated-by-a-thermostat-valve-130
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Crew-Alerting-System--CAS--271
+        rdf:type         owl:Class ;
+        rdfs:label       "Crew Alerting System (CAS)" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:provide-visual-and-aural-alerts-to-the-flight-crew--272 .
+
+fmea:vertical-ascending-pipe-73
+        rdf:type         owl:Class ;
+        rdfs:label       "vertical ascending pipe" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:amount-of-fuel-in-the-tank-can-be-read-off-114 .
+
+fmea:canopy-opening-lever-7
+        rdf:type         owl:Class ;
+        rdfs:label       "canopy opening lever" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:pitch-control-87
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:to-connect-the-RH-MAIN-BUS-to-the-AVIONIC-BUS-241
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:electric-motor-41
+        rdf:type         owl:Class ;
+        rdfs:label       "electric motor" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:bracket--93  rdf:type  owl:Class ;
+        rdfs:label       "bracket." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Garmin-G1000-68  rdf:type  owl:Class ;
+        rdfs:label       "Garmin G1000" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:provides-measurement-for-the-Pitot-static-system-255
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/trim-tab-on-the-rudder,-which-is-also-operated-by-56>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:flaps-16  rdf:type  owl:Class ;
+        rdfs:label       "flaps" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:bearing-77  rdf:type  owl:Class ;
+        rdfs:label       "bearing" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:top-shell-12  rdf:type  owl:Class ;
+        rdfs:label       "top shell" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:accumulator-91  rdf:type  owl:Class ;
+        rdfs:label       "accumulator" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:be-refilled-92 .
+
+fmea:RH-MAIN-BUS-237  rdf:type  owl:Class ;
+        rdfs:label       "RH MAIN BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:fuel-transfer-pump-110
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel transfer pump" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:pumps-the-fuel-from-the-auxiliary-fuel-tank-into-the-related-main-fuel-tank-111 .
+
+fmea:control-levers-36
+        rdf:type         owl:Class ;
+        rdfs:label       "control levers" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:pulling-back-91 .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/co-pilot’s-seat-36>
+        rdf:type         owl:Class ;
+        rdfs:label       "co-pilot’s seat" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:landing-gear-56  rdf:type  owl:Class ;
+        rdfs:label       "landing gear" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:to-be-manually-operated-57 .
+
+fmea:may-only-be-adjusted-99
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:ailerons-2  rdf:type  owl:Class ;
+        rdfs:label       "ailerons" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Forward-Adjustment-108
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:flaps-are-operated-by-means-of-a-3-position-69
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:pressure-switch-3
+        rdf:type         owl:Class ;
+        rdfs:label       "pressure switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/electrically-powered-hydraulic-pump,-which-is-activated-38> .
+
+fmea:be--twisted-90  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:are-heated-285  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:pedals-are-adjusted-105
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:push-rods-34  rdf:type  owl:Class ;
+        rdfs:label       "push rods" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:left-of-the-center-console-24
+        rdf:type          owl:Class ;
+        rdfs:label        "left of the center console" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:emergency-gear-extension-lever-23 .
+
+fmea:nut-24  rdf:type     owl:Class ;
+        rdfs:label        "nut" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:locking-varnish--23 ;
+        rel:hasFunction   fmea:is-likewise-sealed-64 .
+
+fmea:collects-exhaust-gases-from-the-outlets-of-the-cylinders-and-feeds-them-to-the-turbine-of-the-turbo-charger-160
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:acts-as-a-movable-stop-81
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Position-and-Strobe-Lights-249
+        rdf:type         owl:Class ;
+        rdfs:label       "Position and Strobe Lights" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Bowden-cable-9  rdf:type  owl:Class ;
+        rdfs:label       "Bowden cable" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/trim-tab-on-the-elevator,-which-is-operated-by-55> .
+
+fmea:diode-267  rdf:type  owl:Class ;
+        rdfs:label       "diode" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:protects-the-system-from-reverse-polarity--268 .
+
+fmea:fuel-selector-valve-35
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel selector valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:70-Ampère-circuit-breaker-189
+        rdf:type         owl:Class ;
+        rdfs:label       "70 Ampère circuit breaker" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:battery-relay-211
+        rdf:type         owl:Class ;
+        rdfs:label       "battery relay" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-controlled-with-the-ELECTRIC-MASTER-switch-213 .
+
+fmea:firewall-48  rdf:type  owl:Class ;
+        rdfs:label       "firewall" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:fuel-quantity-measuring-device-69
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel quantity measuring device" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:rod-end-bearing-39
+        rdf:type         owl:Class ;
+        rdfs:label       "rod end bearing" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:elevator-trim-wheel-65
+        rdf:type         owl:Class ;
+        rdfs:label       "elevator trim wheel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Operation-95  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:jam-nut-38  rdf:type  owl:Class ;
+        rdfs:label       "jam nut" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:OIL-SYSTEMS-135  rdf:type  owl:Class ;
+        rdfs:label        "OIL SYSTEMS" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:second-oil-circuit-144 ;
+        rel:hasComponent  fmea:Lubrication-System-136 .
+
+fmea:sounds-to-alert-the-pilot-that-the-gear-is-retracted-49
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:current-sensor-198
+        rdf:type         owl:Class ;
+        rdfs:label       "current sensor" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:provides-an-indication-of-the-power-being-supplied-to-the-electrical-system-by-an-alternator-including-the-current-for-battery-charging-on-the-G1000-199 .
+
+fmea:gear-is-in-neither-the-full-up-nor-the-full-down-position-18
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:allows-air-to-enter-the-tank-but-prevents-flow-of-fuel-to-the-outside-98
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:canopy-40  rdf:type  owl:Class ;
+        rdfs:label       "canopy" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:can-be-blocked-by-a-locking-devic-41 .
+
+fmea:engine-153  rdf:type  owl:Class ;
+        rdfs:label       "engine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:second-oil-circuit-144
+        rdf:type         owl:Class ;
+        rdfs:label       "second oil circuit" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:lubricates-the-gearbox-and-serves-the-governor-system-and-the-regulation-of-the-propeller-143 .
+
+fmea:loss-of-the-hinge-pin-58
+        rdfs:label               "loss of the hinge pin" ;
+        rdfs:subClassOf          rel:NextLevelEffect ;
+        rel:hasFinalLevelEffect  fmea:loss-of-flight-safety-60 .
+
+fmea:forces-can-be-balanced-53
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:large-negative-pin-264
+        rdf:type         owl:Class ;
+        rdfs:label       "large negative pin" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:air-filter-20  rdf:type  owl:Class ;
+        rdfs:label       "air filter" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:instrument-panel-18
+        rdf:type          owl:Class ;
+        rdfs:label        "instrument panel" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:ights-17 .
+
+fmea:measures-the-alternator-output-voltage-controls-the-current-through-the-alternator-field-coils-via-a-pulse-width-modulated-signal-207
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:three-switches-82
+        rdf:type         owl:Class ;
+        rdfs:label       "three switches" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:acts-as-a-movable-stop-81 .
+
+fmea:Bowden-cable--11
+        rdf:type         owl:Class ;
+        rdfs:label       "Bowden cable." ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/trim-tab-on-the-rudder,-which-is-also-operated-by-56> .
+
+fmea:floor-panel-38  rdf:type  owl:Class ;
+        rdfs:label       "floor panel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Forward-Adjustment-103
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:thermal-fuse-260
+        rdf:type         owl:Class ;
+        rdfs:label       "thermal fuse" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/If-this-thermal-fuse-is-activated,-the-Pitot-heating-can-no-longer-be-switched-on,-and-the-PITOT-HT-fail-will-be-displayed-261> .
+
+fmea:passenger-compartment-31
+        rdf:type         owl:Class ;
+        rdfs:label       "passenger compartment" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:the-tank-62  rdf:type  owl:Class ;
+        rdfs:label       "the tank" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:electric-valve-31
+        rdf:type         owl:Class ;
+        rdfs:label       "electric valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:guard-against-overrotating-48
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:center-wing-3  rdf:type  owl:Class ;
+        rdfs:label        "center wing" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:nacelle-6 ;
+        rel:hasComponent  fmea:main-spars-5 .
+
+fmea:levers-16  rdf:type  owl:Class ;
+        rdfs:label       "levers" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Heating-and-ventilation-are-operated-17 .
+
+fmea:G1000-49  rdf:type   owl:Class ;
+        rdfs:label        "G1000" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:Fuel-Quantity-Indication-102 ;
+        rel:hasFunction   fmea:indication-is-provided-104 .
+
+fmea:Crew-Alerting-System--CAS--290
+        rdf:type         owl:Class ;
+        rdfs:label       "Crew Alerting System (CAS)" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:engine-control-unit-115
+        rdf:type         owl:Class ;
+        rdfs:label       "engine control unit" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:seats-1  rdf:type    owl:Class ;
+        rdfs:label        "seats" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:energy-absorbing-foam-elements-4 ;
+        rel:hasComponent  fmea:safety-harnesses-5 .
+
+fmea:filler-cap-52  rdf:type  owl:Class ;
+        rdfs:label       "filler cap" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:oil-pressure-is-restored-86
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:bolts-92  rdf:type  owl:Class ;
+        rdfs:label       "bolts" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:power-lever-96  rdf:type  owl:Class ;
+        rdfs:label       "power lever" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Engine-performance-controlled-97 ;
+        rel:hasFunction  fmea:to-set-the-desired-engine-power-98 .
+
+fmea:accumulator-79  rdf:type  owl:Class ;
+        rdfs:label       "accumulator" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:oil-pressure-is-restored-86 .
+
+fmea:master-switch-22
+        rdf:type         owl:Class ;
+        rdfs:label       "master switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:edge-4  rdf:type    owl:Class ;
+        rdfs:label       "edge" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:filler-41  rdf:type  owl:Class ;
+        rdfs:label       "filler" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:feathering-of-the-propeller-blades-109
+        rdfs:label               "feathering of the propeller blades" ;
+        rdfs:subClassOf          rel:NextLevelEffect ;
+        rel:hasFinalLevelEffect  fmea:allowing-continuation-of-the-flight-110 .
+
+fmea:measure-the-fuel-quantity-in-each-main-tank-103
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:warn-the-operator-using-a-caution-message-208
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:To-unfeather-90  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:protected-against-unintentional-opening-43
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:MAIN-BUS-234  rdf:type  owl:Class ;
+        rdfs:label       "MAIN BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:supplied-with-power-218
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:bolts-4  rdf:type   owl:Class ;
+        rdfs:label       "bolts" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:auxiliary-fuel-tank-66
+        rdf:type         owl:Class ;
+        rdfs:label       "auxiliary fuel tank" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ECU--backup-battery-232
+        rdf:type         owl:Class ;
+        rdfs:label       "ECU  backup battery" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:To-support-the-alternator-electrical-power-supply-to-the-ECUs-in-case-of-a-malfunction-of-the-main-battery-233 .
+
+fmea:releases-the-hydraulic-pressure-and-allows-the-gear-to-fall-free-24
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:warning-message-appears-in-the-annunciation-window-of-the-G1000-PFD-178
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:air-inlet-23  rdf:type  owl:Class ;
+        rdfs:label       "air inlet" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:wings-23  rdf:type  owl:Class ;
+        rdfs:label       "wings" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:provided-to-inform-83
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:RH-wing-25  rdf:type  owl:Class ;
+        rdfs:label       "RH wing" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:s-liquid-cooled-123
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:hydraulic-valves-4
+        rdf:type         owl:Class ;
+        rdfs:label       "hydraulic valves" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-operated-with-the-gear-selector-switc-39 .
+
+fmea:power-lever-48  rdf:type  owl:Class ;
+        rdfs:label       "power lever" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Heating-and-ventilation-are-operated-17
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:solenoid-valve-54
+        rdf:type         owl:Class ;
+        rdfs:label       "solenoid valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:prevent-fuel-from-flowing-back-out-of-the-main-tank-into-the-auxiliary-tank-106 .
+
+fmea:provides-a-stall-warning-283
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:engine-86  rdf:type  owl:Class ;
+        rdfs:label       "engine" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:takes-the-fuel-from-the-tank-on-the-same-side-as-the-engine-87 ;
+        rel:hasFunction  fmea:draw-fuel-from-the-tank-on-the-opposite-side-88 .
+
+fmea:locking-the-gear-in-the-down-position--46
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:return-flow-59  rdf:type  owl:Class ;
+        rdfs:label       "return flow" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:reduce-the-amount-of-pumped-hydraulic-fluid-during-this-operation-60 .
+
+fmea:engine-nacelle-26
+        rdf:type         owl:Class ;
+        rdfs:label       "engine nacelle" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:LH-MAIN-BUS-235  rdf:type  owl:Class ;
+        rdfs:label       "LH MAIN BUS" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:provides-power-to-the-consumers-directly-connected-to-the-LH-MAIN-BUS-236 .
+
+fmea:Pressure-Accumulator-9
+        rdf:type         owl:Class ;
+        rdfs:label       "Pressure Accumulator" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:lever-36  rdf:type  owl:Class ;
+        rdfs:label       "lever" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:operate-the-parking-brake-35 ;
+        rel:hasFunction  fmea:Brake-pressure-65 .
+
+fmea:front-seats-19  rdf:type  owl:Class ;
+        rdfs:label       "front seats" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:electric-governor-valve-14
+        rdf:type         owl:Class ;
+        rdfs:label       "electric governor valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:To-feather-89 ;
+        rel:hasFunction  fmea:To-unfeather-90 .
+
+fmea:rear-web-89  rdf:type  owl:Class ;
+        rdfs:label       "rear web" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:RH-alternator-194
+        rdf:type          owl:Class ;
+        rdfs:label        "RH alternator" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:power-output-line-193 .
+
+fmea:ights-17  rdf:type  owl:Class ;
+        rdfs:label       "ights" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:gear-is-in-neither-the-full-up-nor-the-full-down-position-18 ;
+        rel:hasFunction  fmea:indicate-that-each-gear-is-in-the-correct-position-and-locked-48 .
+
+fmea:bellcrank-bearings-75
+        rdf:type         owl:Class ;
+        rdfs:label       "bellcrank bearings" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ventilation-system-24
+        rdf:type          owl:Class ;
+        rdfs:label        "ventilation system" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:cone-32 ;
+        rel:hasComponent  fmea:air-inlet-23 ;
+        rel:hasComponent  fmea:nozzles-27 .
+
+fmea:ailure-66  rdf:type  owl:Class ;
+        rdfs:label       "ailure" ;
+        rdfs:subClassOf  rel:FailureMode .
+
+fmea:center-wing-9  rdf:type  owl:Class ;
+        rdfs:label        "center wing" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:main-wheels-7 .
+
+fmea:blades-94  rdf:type  owl:Class ;
+        rdfs:label       "blades" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Operation-95 .
+
+fmea:ailerons-15  rdf:type  owl:Class ;
+        rdfs:label       "ailerons" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:winter-kit-51  rdf:type  owl:Class ;
+        rdfs:label        "winter kit" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:camloc--52 ;
+        rel:hasFunction   fmea:increase-cabin-temperatures-114 .
+
+fmea:metal-connector-72
+        rdf:type         owl:Class ;
+        rdfs:label       "metal connector" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:related-circuit-breaker-106
+        rdf:type         owl:Class ;
+        rdfs:label       "related circuit breaker" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:additional-fuel-capacity-is-52-liter-105
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:cylinders-26  rdf:type  owl:Class ;
+        rdfs:label       "cylinders" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:alternate-air-inlet-154
+        rdf:type         owl:Class ;
+        rdfs:label       "alternate air inlet" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:left-hand-alternator-192
+        rdf:type          owl:Class ;
+        rdfs:label        "left hand alternator" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:power-output-line-186 .
+
+fmea:fuel-system-84  rdf:type  owl:Class ;
+        rdfs:label        "fuel system" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:crossfeed-lines-32 ;
+        rel:hasFunction   fmea:injected-is-fed-back-into-the-appropriate-wing-tank-83 .
+
+fmea:ENGINE-MASTER-switch-83
+        rdf:type         owl:Class ;
+        rdfs:label       "ENGINE MASTER switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:will-open-electric-governor-valve-84 .
+
+fmea:rim-wheel-49  rdf:type  owl:Class ;
+        rdfs:label       "rim wheel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:prevent-loose-objects-from-falling-into-the-area-of-the-controls-15
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:pilot-map-reading-light-226
+        rdf:type         owl:Class ;
+        rdfs:label       "pilot map/reading light" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Emergency-Axe-34
+        rdf:type         owl:Class ;
+        rdfs:label       "Emergency Axe" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:use-the-emergency-axe-to-break-through-the-canopy--33 .
+
+fmea:crossfeed-lines-32
+        rdf:type         owl:Class ;
+        rdfs:label       "crossfeed lines" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:nterconnect-85 .
+
+fmea:air-is-distributed-46
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:center-wing-28  rdf:type  owl:Class ;
+        rdfs:label        "center wing" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:Flaps-27 .
+
+fmea:is-driven-by-the-turbine-171
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:measures-the-fuel-temperature-in-each-main-tank-116
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:roll-pin--16  rdf:type  owl:Class ;
+        rdfs:label       "roll pin." ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:secured-in-position-57 .
+
+fmea:electrically-operated-actuator-79
+        rdf:type         owl:Class ;
+        rdfs:label       "electrically operated actuator" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:overheat-detector-175
+        rdf:type         owl:Class ;
+        rdfs:label       "overheat detector" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:closes-the-electric-circuit-176 .
+
+fmea:blades-76  rdf:type  owl:Class ;
+        rdfs:label       "blades" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:door-can-be-blocked-44
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:is-likewise-sealed-64
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:helps-to-adjust-the-pressure-in-the-system-132
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Ammeter-247  rdf:type  owl:Class ;
+        rdfs:label       "Ammeter" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:displays-the-intensity-of-current-which-is-supplied-to-the-electrical-system-248 .
+
+fmea:provides-power-to-the-consumers-directly-connected-to-the-LH-MAIN-BUS-236
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:pumps-the-fuel-from-the-auxiliary-fuel-tank-into-the-related-main-fuel-tank-111
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Wheel-Brakes-28  rdf:type  owl:Class ;
+        rdfs:label       "Wheel Brakes" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ECU-99  rdf:type    owl:Class ;
+        rdfs:label       "ECU" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/controls-manifold-pressure,-injected-fuel-quantity-and-propeller-speed-100> .
+
+fmea:cables-6  rdf:type  owl:Class ;
+        rdfs:label       "cables" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:screws-87  rdf:type  owl:Class ;
+        rdfs:label       "screws" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Rearward-Adjustment-101
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:engine-81  rdf:type  owl:Class ;
+        rdfs:label       "engine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:electric-squat-switch-20
+        rdf:type         owl:Class ;
+        rdfs:label       "electric squat switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:prevents-the-hydraulic-valve-from-switching-55 ;
+        rel:hasFunction  fmea:prevent-inadvertent-gear-retraction-on-ground-54 .
+
+fmea:are-supplied-with-fuel-by-the-common-rail-76
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:To-feather-89  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:ECU-5  rdf:type     owl:Class ;
+        rdfs:label       "ECU" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:pitch-control-87 .
+
+fmea:injected-is-fed-back-into-the-appropriate-wing-tank-83
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:battery-210  rdf:type  owl:Class ;
+        rdfs:label        "battery" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:battery-relay-211 ;
+        rel:hasFunction   fmea:is-connected-to-the-HOT-BATTERY-BUS-and-to-the-BATTERY-BUS-212 .
+
+fmea:lift-detector-282
+        rdf:type          owl:Class ;
+        rdfs:label        "lift detector" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:housing-287 ;
+        rel:hasComponent  fmea:mounting-plate-286 ;
+        rel:hasComponent  fmea:lift-detector-vane-284 ;
+        rel:hasFunction   fmea:provides-a-stall-warning-283 .
+
+fmea:capillary-equalizes-the-air-pressure-during-climb-108
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:air-inlet-147  rdf:type  owl:Class ;
+        rdfs:label       "air inlet" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:landing-gear-8  rdf:type  owl:Class ;
+        rdfs:label        "landing gear" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:main-wheels-7 ;
+        rel:hasComponent  fmea:nose-wheel-11 ;
+        rel:hasFunction   fmea:retracted-40 .
+
+fmea:Emergency-Egress-Hammer-37
+        rdf:type         owl:Class ;
+        rdfs:label       "Emergency Egress Hammer" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:use-the-emergency-egress-hammer-to-break-through-the-canopy--35 .
+
+fmea:Static-pressure-is-measured-277
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:propeller-hub-75
+        rdf:type         owl:Class ;
+        rdfs:label       "propeller hub" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Damage-to-this--------------------varnish-118
+        rdf:type         owl:Class ;
+        rdfs:label       "Damage to this                    varnish" ;
+        rdfs:subClassOf  rel:FailureMode .
+
+fmea:operate-the-parking-brake-35
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:trim-tab-on-the-elevator-8
+        rdf:type         owl:Class ;
+        rdfs:label       "trim tab on the elevator" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:forces-can-be-balanced-53 .
+
+fmea:blocks-5  rdf:type  owl:Class ;
+        rdfs:label       "blocks" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:RH-MAIN-BUS-191  rdf:type  owl:Class ;
+        rdfs:label       "RH MAIN BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:overhead-panel-29
+        rdf:type         owl:Class ;
+        rdfs:label       "overhead panel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:fire-protection-22
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:indication-is-provided-by-118
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:nacelle-6  rdf:type  owl:Class ;
+        rdfs:label       "nacelle" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:non-rechargeable-dry-battery-215
+        rdf:type         owl:Class ;
+        rdfs:label       "non-rechargeable dry battery" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:power-for-the-attitude-gyro--artificial-horizon--and-the-flood-light-216 .
+
+fmea:is-connected-to-the-HOT-BATTERY-BUS-and-to-the-BATTERY-BUS-212
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:roll-over-bar-12
+        rdf:type         owl:Class ;
+        rdfs:label       "roll-over bar" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:nose-section-10  rdf:type  owl:Class ;
+        rdfs:label        "nose section" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:nose-wheel-11 .
+
+fmea:5-Ampère-fuse-201
+        rdf:type         owl:Class ;
+        rdfs:label       "5 Ampère fuse" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Empennage-17  rdf:type  owl:Class ;
+        rdfs:label        "Empennage" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:elevator-21 ;
+        rel:hasComponent  fmea:twin-spars-18 ;
+        rel:hasComponent  fmea:Rudder-20 ;
+        rel:hasComponent  fmea:stabilizer-19 .
+
+fmea:nose-section-2  rdf:type  owl:Class ;
+        rdfs:label        "nose section" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:BAGGAGE-COMPARTMENT-1 .
+
+fmea:prevent-fuel-from-flowing-back-out-of-the-main-tank-into-the-auxiliary-tank-106
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:rudder-stops-86  rdf:type  owl:Class ;
+        rdfs:label       "rudder stops" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:unlocking-handle-100
+        rdf:type         owl:Class ;
+        rdfs:label       "unlocking handle" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Rearward-Adjustment-101 .
+
+fmea:canopy-frame-2  rdf:type  owl:Class ;
+        rdfs:label        "canopy frame" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:handle-3 .
+
+fmea:fuel-filter-120  rdf:type  owl:Class ;
+        rdfs:label       "fuel filter" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:flexible-hose-40
+        rdf:type         owl:Class ;
+        rdfs:label       "flexible hose" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:TURBO-CHARGER-SYSTEM-145
+        rdf:type         owl:Class ;
+        rdfs:label       "TURBO-CHARGER SYSTEM" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:alerts-the-pilot-to-the-retracted-landing-gear-102
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:switch-110  rdf:type  owl:Class ;
+        rdfs:label       "switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Rearward-Adjustment-109 .
+
+fmea:air-heat-exchanger-127
+        rdf:type         owl:Class ;
+        rdfs:label       "air heat exchanger" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:allows-the-engine-to-warm-up-quickly-126
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:nose-wheel-11  rdf:type  owl:Class ;
+        rdfs:label       "nose wheel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:filters-276  rdf:type  owl:Class ;
+        rdfs:label       "filters" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:protect-against-dirt-and-condensation-278 .
+
+fmea:are-connected-by-a-flexible-hose-92
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:provides-power-for-the-ECU-A-and-ECU-B-229
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:alternate-air-valve-152
+        rdf:type         owl:Class ;
+        rdfs:label       "alternate air valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:twisting-62  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/is-a-fully-integrated-flight,-engine,-communication,-navigation-and-surveillance-instrumentation-system-289>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:actuators-42  rdf:type  owl:Class ;
+        rdfs:label       "actuators" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:keeps-the-landing-gear-in-the-retracted-position-41 .
+
+fmea:check-valve-43  rdf:type  owl:Class ;
+        rdfs:label       "check valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:allows-air-to-enter-the-tank-but-prevents-flow-of-fuel-to-the-outside-98 .
+
+fmea:are-individually-operated-by-64
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:engine-compartment-7
+        rdf:type         owl:Class ;
+        rdfs:label       "engine compartment" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:power-output-line-186
+        rdf:type         owl:Class ;
+        rdfs:label       "power output line" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:control-sticks-3
+        rdf:type          owl:Class ;
+        rdfs:label        "control sticks" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:Covers-2 .
+
+fmea:fuel-temperature-sensor-115
+        rdf:type         owl:Class ;
+        rdfs:label       "fuel temperature sensor" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:measures-the-fuel-temperature-in-each-main-tank-116 .
+
+fmea:belt-lock-7  rdf:type  owl:Class ;
+        rdfs:label       "belt lock" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:are-powered-mechanically-by-the-engine-80
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:AVIONIC-BUS-223  rdf:type  owl:Class ;
+        rdfs:label       "AVIONIC BUS" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:rod-end-bearing-17
+        rdf:type         owl:Class ;
+        rdfs:label       "rod end bearing" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:FLIGHT-CONTROLS-1
+        rdf:type          owl:Class ;
+        rdfs:label        "FLIGHT CONTROLS" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:elevator-3 ;
+        rel:hasComponent  fmea:wing-flaps-7 ;
+        rel:hasComponent  fmea:ailerons-2 .
+
+fmea:Pitot-probe-254  rdf:type  owl:Class ;
+        rdfs:label        "Pitot probe" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:thermal-switch-259 ;
+        rel:hasFunction   fmea:provides-measurement-for-the-Pitot-static-system-255 ;
+        rel:hasFunction   fmea:is-electrically-heated-256 .
+
+fmea:hydraulic-cylinders-25
+        rdf:type         owl:Class ;
+        rdfs:label       "hydraulic cylinders" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:locking-varnish--23
+        rdf:type         owl:Class ;
+        rdfs:label       "locking varnish." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:twin-spars-18  rdf:type  owl:Class ;
+        rdfs:label       "twin spars" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:landing-gear-cylinders-27
+        rdf:type         owl:Class ;
+        rdfs:label       "landing gear cylinders" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:friction-device-47
+        rdf:type         owl:Class ;
+        rdfs:label       "friction device" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:guard-against-overrotating-48 .
+
+fmea:governor-valve-8
+        rdf:type         owl:Class ;
+        rdfs:label       "governor valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:controlled-by-the-ECU-88 .
+
+fmea:check-valve-55  rdf:type  owl:Class ;
+        rdfs:label       "check valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:prevent-fuel-from-flowing-back-out-of-the-main-tank-into-the-auxiliary-tank-106 .
+
+fmea:Fuel-is-stored-75
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:nterconnect-85  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:handle-102  rdf:type  owl:Class ;
+        rdfs:label       "handle" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Forward-Adjustment-103 .
+
+fmea:flap-control-system-35
+        rdf:type          owl:Class ;
+        rdfs:label        "flap control system" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:push-rods-34 ;
+        rel:hasComponent  fmea:flap-control-horn-33 .
+
+fmea:GARMIN-G1000-INTEGRATED-AVIONICS-SYSTEM-288
+        rdf:type         owl:Class ;
+        rdfs:label       "GARMIN G1000 INTEGRATED AVIONICS SYSTEM" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/is-a-fully-integrated-flight,-engine,-communication,-navigation-and-surveillance-instrumentation-system-289> .
+
+fmea:test-button-179  rdf:type  owl:Class ;
+        rdfs:label       "test button" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:test-the-fire-detectors-180 .
+
+fmea:relieve-the-hydraulic-pressure-58
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:exhaust-157  rdf:type  owl:Class ;
+        rdfs:label       "exhaust" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:to-the-outside-with-higher-internal-pressure-96
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:POWER-Lever-15  rdf:type  owl:Class ;
+        rdfs:label       "POWER Lever" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:controlled-by-the-ECU-88
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:key-8  rdf:type     owl:Class ;
+        rdfs:label       "key" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ENGINE-MASTER-switch-12
+        rdf:type         owl:Class ;
+        rdfs:label       "ENGINE MASTER switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:engine-compartment-21
+        rdf:type         owl:Class ;
+        rdfs:label       "engine compartment" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/bolt,-22>
+        rdf:type         owl:Class ;
+        rdfs:label       "bolt," ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:shut-pump-112  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Rear-Door-10  rdf:type  owl:Class ;
+        rdfs:label        "Rear Door" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:lever-14 ;
+        rel:hasComponent  fmea:frame-11 ;
+        rel:hasComponent  fmea:locking-device-15 ;
+        rel:hasComponent  fmea:gas-pressure-damper-13 ;
+        rel:hasComponent  fmea:handle-12 .
+
+fmea:main-spars-5  rdf:type  owl:Class ;
+        rdfs:label       "main spars" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:locking-device-15
+        rdf:type         owl:Class ;
+        rdfs:label       "locking device" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:door-can-be-blocked-44 .
+
+fmea:power-for-the-attitude-gyro--artificial-horizon--and-the-flood-light-216
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:position-lights-244
+        rdf:type         owl:Class ;
+        rdfs:label       "position lights" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/is-controlled-by-the-ECU,-106>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:indication-is-provided-104
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:is-controlled-with-the-ELECTRIC-MASTER-switch-213
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:compressor-169  rdf:type  owl:Class ;
+        rdfs:label       "compressor" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-driven-by-the-turbine-171 ;
+        rel:hasFunction  fmea:intake-air-is-compressed-170 .
+
+fmea:locked-61  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:nozzle--33  rdf:type  owl:Class ;
+        rdfs:label       "nozzle." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Parking-Brake-34
+        rdf:type         owl:Class ;
+        rdfs:label       "Parking Brake" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Rudder-Trim-94  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:main-wheels-7  rdf:type  owl:Class ;
+        rdfs:label       "main wheels" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:exhaust-system-159
+        rdf:type          owl:Class ;
+        rdfs:label        "exhaust system" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:manifold-158 .
+
+fmea:oad-of-more-than-90-daN--202-lbf--16
+        rdfs:label       "oad of more than 90 daN (202 lbf)" ;
+        rdfs:subClassOf  rel:Cause .
+
+fmea:Unconditioned-ambient-air-is-supplied-115
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:remove-water-and-sediment-101
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:emergency-gear-extension-lever-23
+        rdf:type         owl:Class ;
+        rdfs:label       "emergency gear extension lever" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:relieve-the-hydraulic-pressure-58 ;
+        rel:hasFunction  fmea:releases-the-hydraulic-pressure-and-allows-the-gear-to-fall-free-24 .
+
+fmea:inspection-hole-141
+        rdf:type         owl:Class ;
+        rdfs:label       "inspection hole" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:oil-can-also-be-filled-in-142 .
+
+fmea:Flaps-27  rdf:type  owl:Class ;
+        rdfs:label       "Flaps" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:can-be-used-as-static-pressure-source-in-the-event-of-a-failure-of-the-Pitot-static-system-280
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:malfunction-of-the-engine-control-unit--294
+        rdf:type         owl:Class ;
+        rdfs:label       "malfunction of the engine control unit." ;
+        rdfs:subClassOf  rel:FailureMode .
+
+fmea:downlock-hooks-16
+        rdf:type         owl:Class ;
+        rdfs:label       "downlock hooks" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:pedals-107  rdf:type  owl:Class ;
+        rdfs:label       "pedals" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Forward-Adjustment-108 .
+
+fmea:check-valve-with-capillary--56
+        rdf:type         owl:Class ;
+        rdfs:label       "check valve with capillary." ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:capillary-equalizes-the-air-pressure-during-climb-108 ;
+        rel:hasFunction  fmea:allows-air-to-enter-the-tank-but-prevents-flow-of-fuel-to-the-outside-107 .
+
+fmea:provides-power-to-the-pilot-map-reading-light-and-ELT-RCPI-unit-224
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:alternate-static-valve-279
+        rdf:type         owl:Class ;
+        rdfs:label       "alternate static valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:can-be-used-as-static-pressure-source-in-the-event-of-a-failure-of-the-Pitot-static-system-280 .
+
+fmea:electrical-flap-drive-72
+        rdf:type         owl:Class ;
+        rdfs:label       "electrical flap drive" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:is-filled-through-a-filler-94
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:engine-82  rdf:type  owl:Class ;
+        rdfs:label       "engine" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:be-shut-down-85 .
+
+fmea:HOT-BATTERY-BUS-219
+        rdf:type         owl:Class ;
+        rdfs:label       "HOT BATTERY BUS" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:provides-power-to-the-pilot-map-reading-light-and-ELT-RCPI-unit-224 .
+
+fmea:radiator-124  rdf:type  owl:Class ;
+        rdfs:label       "radiator" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-activated-by-a-thermostat-valve-130 .
+
+fmea:small-positive-pin-266
+        rdf:type         owl:Class ;
+        rdfs:label       "small positive pin" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:instrument-panel-6
+        rdf:type          owl:Class ;
+        rdfs:label        "instrument panel" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:gear-selector-switch-5 .
+
+fmea:to-set-the-desired-engine-power-98
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:maintain-force-on-each-hook-to-keep-it-locked-47
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:waste-gate-valve-167
+        rdf:type         owl:Class ;
+        rdfs:label       "waste gate valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:protects-the-system-from-reverse-polarity--268
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:cone-32  rdf:type   owl:Class ;
+        rdfs:label       "cone" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:propeller-hub-6  rdf:type  owl:Class ;
+        rdfs:label       "propeller hub" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ELECTRIC-MASTER-switch-214
+        rdf:type         owl:Class ;
+        rdfs:label       "ELECTRIC MASTER switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:spherical-ventilation-nozzles-44
+        rdf:type         owl:Class ;
+        rdfs:label       "spherical ventilation nozzles" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Ventilation-in-the-front-111 .
+
+fmea:power-output-line-193
+        rdf:type         owl:Class ;
+        rdfs:label       "power output line" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:lift-detector-vane-284
+        rdf:type         owl:Class ;
+        rdfs:label       "lift detector vane" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-heated-285 .
+
+fmea:connect-the-excitation-battery-to-the-alternator-field-203
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:alternator-control-unit-205
+        rdf:type         owl:Class ;
+        rdfs:label       "alternator control unit" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:warn-the-operator-using-a-caution-message-208 ;
+        rel:hasFunction  fmea:supports--load-balancing-209 .
+
+fmea:is-controlled-by-the-ECU-through-the-waste-gate-valve-164
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:linear-actuato-80
+        rdf:type         owl:Class ;
+        rdfs:label       "linear actuato" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:acts-as-a-movable-stop-81 .
+
+fmea:CHECK-GEAR-caution-103
+        rdf:type         owl:Class ;
+        rdfs:label       "CHECK GEAR caution" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-indicated-on-the-PFD-105 .
+
+fmea:Ailerons-12  rdf:type  owl:Class ;
+        rdfs:label        "Ailerons" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:hinge-13 .
+
+fmea:hydraulic-system-15
+        rdf:type         owl:Class ;
+        rdfs:label       "hydraulic system" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:oil-can-also-be-filled-in-142
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:turbine-161  rdf:type  owl:Class ;
+        rdfs:label       "turbine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:wing-71  rdf:type   owl:Class ;
+        rdfs:label       "wing" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:intercooler-172  rdf:type  owl:Class ;
+        rdfs:label       "intercooler" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:air-cooled-down-173 .
+
+fmea:energy-absorbing-foam-elements-4
+        rdf:type         owl:Class ;
+        rdfs:label       "energy-absorbing foam elements" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:frame-11  rdf:type  owl:Class ;
+        rdfs:label       "frame" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:G1000-flight-display-117
+        rdf:type         owl:Class ;
+        rdfs:label       "G1000 flight display" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:indication-is-provided-by-118 .
+
+fmea:lever-14  rdf:type  owl:Class ;
+        rdfs:label       "lever" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:protected-against-unintentional-opening-43 .
+
+fmea:bypass-125  rdf:type  owl:Class ;
+        rdfs:label       "bypass" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:allows-the-engine-to-warm-up-quickly-126 .
+
+fmea:electric-circuit-177
+        rdf:type         owl:Class ;
+        rdfs:label       "electric circuit" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:warning-message-appears-in-the-annunciation-window-of-the-G1000-PFD-178 .
+
+fmea:FIRE-DETECTION-SYSTEM-174
+        rdf:type          owl:Class ;
+        rdfs:label        "FIRE DETECTION SYSTEM" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:overheat-detector-175 .
+
+fmea:rod-end-bearing-36
+        rdf:type         owl:Class ;
+        rdfs:label       "rod end bearing" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/fail-safe’-design-23>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:can-be-blocked-by-a-locking-devic-41
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:switches-64  rdf:type  owl:Class ;
+        rdfs:label       "switches" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:shut-pump-112 .
+
+fmea:connect-the-ECU-A-and-ECU-B-to-the-ECU-BUS-231
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:be-shut-down-85  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:to-be-manually-operated-57
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:capillary--56  rdf:type  owl:Class ;
+        rdfs:label       "capillary." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:rocker-switch-104
+        rdf:type         owl:Class ;
+        rdfs:label       "rocker switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:pedals-are-adjusted-105 .
+
+fmea:floor-20  rdf:type  owl:Class ;
+        rdfs:label       "floor" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:nacelle-33  rdf:type  owl:Class ;
+        rdfs:label       "nacelle" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:indicate-that-each-gear-is-in-the-correct-position-and-locked-48
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:flaps-19  rdf:type  owl:Class ;
+        rdfs:label       "flaps" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:flap-control-horn-37
+        rdf:type         owl:Class ;
+        rdfs:label       "flap control horn" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:protects-the-tank-against-high-pressure-97
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:sandwich-117  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:floor-panel-35  rdf:type  owl:Class ;
+        rdfs:label       "floor panel" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:G1000-291  rdf:type  owl:Class ;
+        rdfs:label        "G1000" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:Crew-Alerting-System--CAS--290 .
+
+fmea:Consumers-242  rdf:type  owl:Class ;
+        rdfs:label        "Consumers" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:radio-243 ;
+        rel:hasComponent  fmea:position-lights-244 .
+
+fmea:push-rod-18  rdf:type  owl:Class ;
+        rdfs:label        "push rod" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:rod-end-bearing-17 ;
+        rel:hasFunction   fmea:locked-61 .
+
+fmea:tank-62  rdf:type   owl:Class ;
+        rdfs:label       "tank" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/co-pilot’s-seat-39>
+        rdf:type         owl:Class ;
+        rdfs:label       "co-pilot’s seat" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:equalizes-the-air-pressure-during-climb-99
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:coating-3  rdf:type  owl:Class ;
+        rdfs:label       "coating" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:prevents-a-permanent-starting-of-the-hydraulic-pump-in-flight-44
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:opened-and-closed-by-twisting-113
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:LANDING-GEAR-1  rdf:type  owl:Class ;
+        rdfs:label       "LANDING GEAR" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:pilot-seat--74  rdf:type  owl:Class ;
+        rdfs:label       "pilot seat." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:wheel-brakes-33  rdf:type  owl:Class ;
+        rdfs:label       "wheel brakes" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-individually-operated-by-64 .
+
+fmea:is-indicated-on-the-PFD-105
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:tank-drain-70  rdf:type  owl:Class ;
+        rdfs:label       "tank drain" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:safety-harnesses-5
+        rdf:type          owl:Class ;
+        rdfs:label        "safety harnesses" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:belts-6 ;
+        rel:hasComponent  fmea:belt-lock-7 .
+
+fmea:center-console-47
+        rdf:type          owl:Class ;
+        rdfs:label        "center console" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:trim-control-46 .
+
+fmea:Springs-14  rdf:type  owl:Class ;
+        rdfs:label       "Springs" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:assist-the-hydraulic-system-in-gear-extension-45 ;
+        rel:hasFunction  fmea:locking-the-gear-in-the-down-position--46 ;
+        rel:hasFunction  fmea:maintain-force-on-each-hook-to-keep-it-locked-47 .
+
+fmea:are-driven-by-a-flat-belt-184
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:housing-287  rdf:type  owl:Class ;
+        rdfs:label       "housing" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-heated-285 .
+
+fmea:aluminum-bracket-30
+        rdf:type         owl:Class ;
+        rdfs:label       "aluminum bracket" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ECU-17  rdf:type    owl:Class ;
+        rdfs:label       "ECU" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:secured-in-position-57
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:alternator-206  rdf:type  owl:Class ;
+        rdfs:label        "alternator" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:alternator-control-unit-205 .
+
+fmea:heating-is-activated-258
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:LH-alternator-relay-187
+        rdf:type         owl:Class ;
+        rdfs:label       "LH alternator relay" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Total-pressure-is-measured-275
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:lead-acid-batteries-200
+        rdf:type         owl:Class ;
+        rdfs:label       "lead acid batteries" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:electric-valve-10
+        rdf:type         owl:Class ;
+        rdfs:label       "electric valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Bearing-bracket-85
+        rdf:type          owl:Class ;
+        rdfs:label        "Bearing bracket" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:screws-87 ;
+        rel:hasComponent  fmea:rudder-stops-86 .
+
+fmea:propellers-1  rdf:type  owl:Class ;
+        rdfs:label        "propellers" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:blades-2 .
+
+fmea:vent-line-60  rdf:type  owl:Class ;
+        rdfs:label        "vent line" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:capillary--56 ;
+        rel:hasComponent  fmea:check-valve-with-capillary--56 .
+
+fmea:air-cooled-down-173
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:trim-control-46  rdf:type  owl:Class ;
+        rdfs:label        "trim control" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:rim-wheel-49 ;
+        rel:hasComponent  fmea:friction-device-47 ;
+        rel:hasFunction   fmea:Elevator-Trim-96 .
+
+fmea:roll-pin-32  rdf:type  owl:Class ;
+        rdfs:label       "roll pin" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:secured-in-position-65 .
+
+fmea:large-positive-pin-265
+        rdf:type         owl:Class ;
+        rdfs:label       "large positive pin" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:draw-fuel-from-the-tank-on-the-opposite-side-88
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:inline-filter-59
+        rdf:type         owl:Class ;
+        rdfs:label       "inline filter" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:belts-6  rdf:type   owl:Class ;
+        rdfs:label       "belts" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:dip-stick-139  rdf:type  owl:Class ;
+        rdfs:label       "dip-stick" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-provided-to-check-the-oil-quantity-140 .
+
+fmea:displays-the-intensity-of-current-which-is-supplied-to-the-electrical-system-248
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:trim-control-is-a-black-wheel-95
+        rdf:type         owl:Class ;
+        rdfs:label       "trim control is a black wheel" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Rudder-Trim-94 .
+
+fmea:toe-pedals-32  rdf:type  owl:Class ;
+        rdfs:label       "toe pedals" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Brake-pressure-65 .
+
+fmea:electrically-powered-hydraulic-pump-2
+        rdf:type         owl:Class ;
+        rdfs:label       "electrically powered hydraulic pump" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:hydraulic-pressure-for-the-landing-gear-37 .
+
+fmea:common-rail-28  rdf:type  owl:Class ;
+        rdfs:label       "common rail" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:s-generated-by-a-high-pressure-pump-78 .
+
+fmea:aluminum-chambers-39
+        rdf:type         owl:Class ;
+        rdfs:label       "aluminum chambers" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-connected-by-a-flexible-hose-92 .
+
+fmea:wing-flaps-7  rdf:type  owl:Class ;
+        rdfs:label       "wing flaps" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:seat-pan--14  rdf:type  owl:Class ;
+        rdfs:label       "seat pan." ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:turbo-charger-162
+        rdf:type          owl:Class ;
+        rdfs:label        "turbo charger" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:turbine-161 .
+
+fmea:tanks-22  rdf:type  owl:Class ;
+        rdfs:label       "tanks" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Fuel-is-stored-75 .
+
+fmea:coarse-filter-46
+        rdf:type         owl:Class ;
+        rdfs:label       "coarse filter" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:vertical-stabilizer--88
+        rdf:type          owl:Class ;
+        rdfs:label        "vertical stabilizer." ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:rear-web-89 .
+
+fmea:ECU-30  rdf:type    owl:Class ;
+        rdfs:label       "ECU" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:ail-pressure-is-controlled-79 .
+
+fmea:expansion-tank-131
+        rdf:type         owl:Class ;
+        rdfs:label       "expansion tank" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:helps-to-adjust-the-pressure-in-the-system-132 .
+
+fmea:firewall-9  rdf:type  owl:Class ;
+        rdfs:label       "firewall" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:fire-protection-22 .
+
+fmea:External-Power-Socket-262
+        rdf:type          owl:Class ;
+        rdfs:label        "External Power Socket" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:large-negative-pin-264 ;
+        rel:hasComponent  fmea:diode-267 ;
+        rel:hasComponent  fmea:small-positive-pin-266 ;
+        rel:hasComponent  fmea:large-positive-pin-265 ;
+        rel:hasFunction   <http://onto.fel.cvut.cz/ontologies/fmea/When-external-power-is-connected,-the-control-relay-is-energized-and-the-external-power-comes-online-263> .
+
+fmea:PFD-104  rdf:type   owl:Class ;
+        rdfs:label       "PFD" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:prevent-inadvertent-gear-retraction-on-ground-54
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:intake-air-is-compressed-170
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:elevator-21  rdf:type  owl:Class ;
+        rdfs:label       "elevator" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:manifold-pressure-sensor-165
+        rdf:type         owl:Class ;
+        rdfs:label       "manifold pressure sensor" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:calculate-the-correct-position-of-the-waste-gate-valve--166 ;
+        rel:hasFunction  fmea:prevents-excessive-manifold-pressures-at-low-density-altitudes-168 .
+
+fmea:Front-Canopy-1  rdf:type  owl:Class ;
+        rdfs:label        "Front Canopy" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:bolts-4 ;
+        rel:hasComponent  fmea:canopy-frame-2 ;
+        rel:hasComponent  fmea:handle-3 ;
+        rel:hasComponent  fmea:blocks-5 .
+
+fmea:Lubrication-System-136
+        rdf:type         owl:Class ;
+        rdfs:label       "Lubrication System" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ENGINE-MASTER-LH--RH--switches-202
+        rdf:type         owl:Class ;
+        rdfs:label       "ENGINE MASTER LH (RH) switches" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:connect-the-excitation-battery-to-the-alternator-field-203 .
+
+fmea:rear-seats-15  rdf:type  owl:Class ;
+        rdfs:label       "rear seats" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:injection-nozzles-27
+        rdf:type         owl:Class ;
+        rdfs:label       "injection nozzles" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-supplied-with-fuel-by-the-common-rail-76 .
+
+fmea:stabilizer-19  rdf:type  owl:Class ;
+        rdfs:label       "stabilizer" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:cooler-137  rdf:type  owl:Class ;
+        rdfs:label       "cooler" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:oil-is-cooled-by-138 .
+
+fmea:ail-pressure-is-controlled-79
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:backrest-release-button-10
+        rdf:type         owl:Class ;
+        rdfs:label       "backrest release button" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:allows-air-to-enter-the-tank-but-prevents-flow-of-fuel-to-the-outside-107
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:solenoid-valves-63
+        rdf:type         owl:Class ;
+        rdfs:label       "solenoid valves" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/seat’s-side-frame-11>
+        rdf:type         owl:Class ;
+        rdfs:label       "seat’s side frame" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:propeller-81  rdf:type  owl:Class ;
+        rdfs:label       "propeller" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:To-support-the-alternator-electrical-power-supply-to-the-ECUs-in-case-of-a-malfunction-of-the-main-battery-233
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:is-electrically-heated-256
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:retracted-40  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:nacelle-8  rdf:type  owl:Class ;
+        rdfs:label        "nacelle" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:engine-compartment-7 ;
+        rel:hasComponent  fmea:firewall-9 .
+
+fmea:ELECTRIC-MASTER-switch-227
+        rdf:type         owl:Class ;
+        rdfs:label       "ELECTRIC MASTER switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:auxiliary-fuel-transfer-failure-300
+        rdf:type         owl:Class ;
+        rdfs:label       "auxiliary fuel transfer failure" ;
+        rdfs:subClassOf  rel:FailureMode .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/trim-tab-on-the-elevator,-which-is-operated-by-55>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:hydraulic-pressure-for-the-landing-gear-37
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:gearbox-oil-pump-18
+        rdf:type         owl:Class ;
+        rdfs:label       "gearbox oil pump" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Rudder-forces-can-be-balanced-54
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:accumulator-11  rdf:type  owl:Class ;
+        rdfs:label        "accumulator" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:electric-valve-10 .
+
+fmea:main-tank-25  rdf:type  owl:Class ;
+        rdfs:label       "main tank" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:thermostat-valve-129
+        rdf:type         owl:Class ;
+        rdfs:label       "thermostat valve" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/When-external-power-is-connected,-the-control-relay-is-energized-and-the-external-power-comes-online-263>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:fuel-transfer-pump-53
+        rdf:type          owl:Class ;
+        rdfs:label        "fuel transfer pump" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:check-valve-55 ;
+        rel:hasComponent  fmea:solenoid-valve-54 ;
+        rel:hasComponent  fmea:inline-filter-59 .
+
+fmea:keeps-the-system-pressure-constant-43
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:be-refilled-92  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:rear-spar-22  rdf:type  owl:Class ;
+        rdfs:label       "rear spar" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:backrest-control-lever-9
+        rdf:type         owl:Class ;
+        rdfs:label       "backrest control lever" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:prevents-the-door-from-dropping-42
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Pedal-Adjustment-97
+        rdf:type         owl:Class ;
+        rdfs:label       "Pedal Adjustment" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:lubricates-the-gearbox-and-serves-the-governor-system-and-the-regulation-of-the-propeller-143
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Pitot-probe-274  rdf:type  owl:Class ;
+        rdfs:label       "Pitot probe" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Total-pressure-is-measured-275 ;
+        rel:hasFunction  fmea:Static-pressure-is-measured-277 .
+
+fmea:pins-14  rdf:type   owl:Class ;
+        rdfs:label       "pins" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Main-Fuel-Tanks-38
+        rdf:type          owl:Class ;
+        rdfs:label        "Main Fuel Tanks" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:flexible-hose-40 ;
+        rel:hasComponent  fmea:aluminum-chambers-39 .
+
+fmea:AVIONIC-MASTER-switch-240
+        rdf:type         owl:Class ;
+        rdfs:label       "AVIONIC MASTER switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:energized-and-excessive-hydraulic-fluid-on-one-side-is-drained-into-the-tank-63
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:charger-155  rdf:type  owl:Class ;
+        rdfs:label       "charger" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:handle-12  rdf:type  owl:Class ;
+        rdfs:label       "handle" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:elevator-3  rdf:type  owl:Class ;
+        rdfs:label       "elevator" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:the-flap-40  rdf:type  owl:Class ;
+        rdfs:label        "the flap" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:flap-control-horn-37 ;
+        rel:hasFunction   fmea:flaps-are-operated-by-means-of-a-3-position-69 .
+
+fmea:safety--guard-89
+        rdf:type         owl:Class ;
+        rdfs:label       "safety  guard" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:amount-of-fuel-in-the-tank-can-be-read-off-114
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/electrically-powered-hydraulic-pump,-which-is-activated-38>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Ventilation-in-the-front-111
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:hydraulic-valve-21
+        rdf:type         owl:Class ;
+        rdfs:label       "hydraulic valve" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Elevator-Trim-96
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:pressure-accumulator-78
+        rdf:type          owl:Class ;
+        rdfs:label        "pressure accumulator" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:electric-valve-77 .
+
+fmea:composite-116  rdf:type  owl:Class ;
+        rdfs:label       "composite" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:sandwich-117 .
+
+fmea:ECU--297  rdf:type     owl:Class ;
+        rdfs:label          "ECU)" ;
+        rdfs:subClassOf     rel:Component ;
+        rel:hasFailureMode  fmea:failure-of-the-active-engine-control-unit-296 .
+
+fmea:Landing-and-Taxi-Lights-250
+        rdf:type         owl:Class ;
+        rdfs:label       "Landing and Taxi Lights" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:disk-brakes-29  rdf:type  owl:Class ;
+        rdfs:label       "disk brakes" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:FUEL-TRANSFER-switches-61
+        rdf:type         owl:Class ;
+        rdfs:label       "FUEL TRANSFER switches" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:to-activate-the-fuel-transfer-pumps-and-to-open-the-solenoid-valves-109 .
+
+fmea:indicated-on-the-PFD-additionally-52
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:locking-bolt-8  rdf:type  owl:Class ;
+        rdfs:label       "locking bolt" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:bypass-the-turbine-163
+        rdf:type         owl:Class ;
+        rdfs:label       "bypass the turbine" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-controlled-by-the-ECU-through-the-waste-gate-valve-164 .
+
+fmea:provide-visual-and-aural-alerts-to-the-flight-crew--272
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:oil-is-cooled-by-138
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:CFRP-fuselage-24
+        rdf:type         owl:Class ;
+        rdfs:label       "CFRP fuselage" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:gas-pressure-damper-13
+        rdf:type         owl:Class ;
+        rdfs:label       "gas pressure damper" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:prevents-the-door-from-dropping-42 .
+
+fmea:relief-pressure-valve-44
+        rdf:type         owl:Class ;
+        rdfs:label       "relief pressure valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:allows-fuel-and-air-to-flow-95 ;
+        rel:hasFunction  fmea:protects-the-tank-against-high-pressure-97 .
+
+fmea:gear-selector-switch-5
+        rdf:type         owl:Class ;
+        rdfs:label       "gear selector switch" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:locking-varnish-20
+        rdf:type         owl:Class ;
+        rdfs:label       "locking varnish" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:tank-93  rdf:type    owl:Class ;
+        rdfs:label        "tank" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:aluminum-chambers-39 .
+
+fmea:Rearward-Adjustment-109
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:inlet-50  rdf:type  owl:Class ;
+        rdfs:label       "inlet" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Unconditioned-ambient-air-is-supplied-115 .
+
+fmea:mounting-plate-286
+        rdf:type         owl:Class ;
+        rdfs:label       "mounting plate" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-heated-285 .
+
+fmea:use-the-emergency-axe-to-break-through-the-canopy--33
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:locking-device-6
+        rdf:type         owl:Class ;
+        rdfs:label       "locking device" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:hinge-pins-31  rdf:type  owl:Class ;
+        rdfs:label       "hinge pins" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:is-provided-to-check-the-oil-quantity-140
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:spherical-nozzles-112
+        rdf:type         owl:Class ;
+        rdfs:label       "spherical nozzles" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:opened-and-closed-by-twisting-113 .
+
+fmea:use-the-emergency-egress-hammer-to-break-through-the-canopy--35
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:test-the-fire-detectors-180
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:cabin-heat-system-128
+        rdf:type         owl:Class ;
+        rdfs:label       "cabin heat system" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:is-protected-against-over-pressure-by-means-of-a-pressure-relief-valve--134 .
+
+fmea:Hinges-29  rdf:type  owl:Class ;
+        rdfs:label        "Hinges" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:hinge-pins-31 .
+
+fmea:takes-the-fuel-from-the-tank-on-the-same-side-as-the-engine-87
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:limit-switch-70  rdf:type  owl:Class ;
+        rdfs:label       "limit switch" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:UP-and-LDG-positions-are-additionally-protected-by-71 .
+
+fmea:increase-cabin-temperatures-114
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:nozzles-27  rdf:type  owl:Class ;
+        rdfs:label       "nozzles" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:air-is-distributed-46 .
+
+fmea:high-pressure-pump-77
+        rdf:type         owl:Class ;
+        rdfs:label       "high pressure pump" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:are-powered-mechanically-by-the-engine-80 .
+
+fmea:cabin-28  rdf:type  owl:Class ;
+        rdfs:label       "cabin" ;
+        rdfs:subClassOf  rel:Component .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/Steel-cables,-91>
+        rdf:type         owl:Class ;
+        rdfs:label       "Steel cables," ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:pulling-back-91  rdf:type  owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:keeps-the-landing-gear-in-the-retracted-position-41
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:air-filter-149  rdf:type  owl:Class ;
+        rdfs:label       "air filter" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:propeller-governor-oil-circuit-107
+        rdf:type          owl:Class ;
+        rdfs:label        "propeller governor oil circuit" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:gearbox-oil-pump-18 .
+
+fmea:AIRFRAME-2  rdf:type  owl:Class ;
+        rdfs:label        "AIRFRAME" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:Wings-10 ;
+        rel:hasComponent  fmea:fuselage-1 ;
+        rel:hasComponent  fmea:Empennage-17 ;
+        rel:hasComponent  fmea:center-wing-3 .
+
+fmea:switch--PITOT-HEAT-257
+        rdf:type         owl:Class ;
+        rdfs:label       "switch (PITOT HEAT" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:heating-is-activated-258 .
+
+fmea:gearbox-oil-pump-13
+        rdf:type         owl:Class ;
+        rdfs:label       "gearbox oil pump" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:provides-power-to-he-LH--RH--MAIN-BUS-and-heavy-duty-power-to-both-starters-228
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:lumbar-13  rdf:type  owl:Class ;
+        rdfs:label       "lumbar" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:instrument--panel-45
+        rdf:type          owl:Class ;
+        rdfs:label        "instrument  panel" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:spherical-ventilation-nozzles-44 .
+
+fmea:provides-an-indication-of-the-power-being-supplied-to-the-electrical-system-by-an-alternator-including-the-current-for-battery-charging-on-the-G1000-199
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:filter-box-148  rdf:type  owl:Class ;
+        rdfs:label       "filter box" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:calculate-the-correct-position-of-the-waste-gate-valve--166
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:s-generated-by-a-high-pressure-pump-78
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:UP-and-LDG-positions-are-additionally-protected-by-71
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:tank-vents-42  rdf:type  owl:Class ;
+        rdfs:label        "tank vents" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:relief-pressure-valve-44 ;
+        rel:hasComponent  fmea:check-valve-43 .
+
+fmea:main-busses-197  rdf:type  owl:Class ;
+        rdfs:label       "main busses" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:small-center-console-35
+        rdf:type          owl:Class ;
+        rdfs:label        "small center console" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:lever-36 .
+
+fmea:trim-tab-on-the-rudder-10
+        rdf:type         owl:Class ;
+        rdfs:label       "trim tab on the rudder" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:Rudder-forces-can-be-balanced-54 .
+
+fmea:ight-hydraulic-valve-26
+        rdf:type         owl:Class ;
+        rdfs:label       "ight hydraulic valve" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:energized-and-excessive-hydraulic-fluid-on-one-side-is-drained-into-the-tank-63 ;
+        rel:hasFunction  fmea:luid-flow-in-the-hydraulic-system-is-started-61 .
+
+fmea:power-lever-111  rdf:type  owl:Class ;
+        rdfs:label       "power lever" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:hydraulic-pump-13
+        rdf:type         owl:Class ;
+        rdfs:label       "hydraulic pump" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Instrument-Lighting-252
+        rdf:type         owl:Class ;
+        rdfs:label       "Instrument Lighting" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:assist-the-hydraulic-system-in-gear-extension-45
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:failure-of-the-active-engine-control-unit-296
+        rdf:type         owl:Class ;
+        rdfs:label       "failure of the active engine control unit" ;
+        rdfs:subClassOf  rel:FailureMode .
+
+fmea:auxiliary-fuel-tank-34
+        rdf:type         owl:Class ;
+        rdfs:label       "auxiliary fuel tank" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:hinge-13  rdf:type  owl:Class ;
+        rdfs:label       "hinge" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:reduce-the-amount-of-pumped-hydraulic-fluid-during-this-operation-60
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+<http://onto.fel.cvut.cz/ontologies/fmea/controls-manifold-pressure,-injected-fuel-quantity-and-propeller-speed-100>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Wings-10  rdf:type   owl:Class ;
+        rdfs:label        "Wings" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:bottom-shell-13 ;
+        rel:hasComponent  fmea:flaps-16 ;
+        rel:hasComponent  fmea:fuel-tank-14 ;
+        rel:hasComponent  fmea:top-shell-12 ;
+        rel:hasComponent  fmea:ailerons-15 ;
+        rel:hasComponent  fmea:spar-23 ;
+        rel:hasFunction   <http://onto.fel.cvut.cz/ontologies/fmea/fail-safe’-design-23> .
+
+fmea:finger-filter-50
+        rdf:type         owl:Class ;
+        rdfs:label       "finger filter" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:pushrod-78  rdf:type  owl:Class ;
+        rdfs:label       "pushrod" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:intercooler-150  rdf:type  owl:Class ;
+        rdfs:label       "intercooler" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:Voltmeter-245  rdf:type  owl:Class ;
+        rdfs:label       "Voltmeter" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  fmea:displays-the-voltage-of-the--electrical-system-246 .
+
+fmea:Brake-pressure-65
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:blades-2  rdf:type   owl:Class ;
+        rdfs:label        "blades" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:coating-3 ;
+        rel:hasComponent  fmea:edge-4 .
+
+fmea:ENGINE-CONTROL-UNIT---ECU-269
+        rdf:type         owl:Class ;
+        rdfs:label       "ENGINE CONTROL UNIT / ECU" ;
+        rdfs:subClassOf  rel:Component ;
+        rel:hasFunction  <http://onto.fel.cvut.cz/ontologies/fmea/monitors,-controls-and-regulates-all-important-parameters-for-engine-operation-270> .
+
+fmea:handle-3  rdf:type  owl:Class ;
+        rdfs:label       "handle" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:flap-control-horn-33
+        rdf:type         owl:Class ;
+        rdfs:label       "flap control horn" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:heat-is-used-to-defrost-the-canopy-45
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:blades-19  rdf:type  owl:Class ;
+        rdfs:label       "blades" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:warning-appears-if-the-flaps-move-into-position-LDG--fully-extended--while-the-gear-is-retracted--53
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:Cold-Diesel-Fuel-tends-to-flocculate-119
+        rdfs:label       "Cold Diesel Fuel tends to flocculate" ;
+        rdfs:subClassOf  rel:Cause .
+
+fmea:right-engine-24  rdf:type  owl:Class ;
+        rdfs:label       "right engine" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:ELT-RCPI-unit-225
+        rdf:type         owl:Class ;
+        rdfs:label       "ELT RCPI unit" ;
+        rdfs:subClassOf  rel:Component .
+
+fmea:prevents-excessive-manifold-pressures-at-low-density-altitudes-168
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  rel:Function .
+
+fmea:small-center-console-17
+        rdf:type          owl:Class ;
+        rdfs:label        "small center console" ;
+        rdfs:subClassOf   rel:Component ;
+        rel:hasComponent  fmea:levers-16 .
