@@ -18,36 +18,22 @@
     <uri id="User Entered Import Resolution" name="http://onto.fel.cvut.cz/ontologies/ufo/ufo-b-extension/0.0.1" uri="ufo/ufo-b-extension.ttl"/>
     <uri id="User Entered Import Resolution" name="http://onto.fel.cvut.cz/ontologies/ufo-local-extension/0.0.1" uri="ufo/ufo-local-extension.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-	
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="duplicate:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="duplicate:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://IBCNServices.github.io/dyversify/feedback" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/feedback_v1.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/data/reliability/example-1" uri="examples/fmea-reliability-instance-example-1.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/example" uri="tmp.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/fta/" uri="fta.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/reliability/" uri="reliability-tmp.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo" uri="ufo/doc/ufo/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-a" uri="ufo/doc/ufo-a-tmp/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-a/" uri="ufo/ufo-a.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-b" uri="ufo/ufo-b-why.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions" uri="ufo/doc/ufo-b-dispositions/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions/" uri="ufo/ufo-b-dispositions.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-b-temporal" uri="ufo/doc/ufo-b-temporal/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-b-temporal/" uri="ufo/ufo-b-temporal.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-b/" uri="ufo/ufo-b.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-c" uri="ufo/doc/ufo-c/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-c/" uri="ufo/ufo-c.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-cs" uri="ufo/ufo-cs.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-ontouml" uri="ufo/doc/ufo-ontouml/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-ontouml/" uri="ufo/ufo-ontouml.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-powertypes" uri="ufo/doc/ufo-powertypes/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo-powertypes/" uri="ufo/ufo-powertypes.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://onto.fel.cvut.cz/ontologies/ufo/" uri="ufo/ufo.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="http://www.semanticweb.org/simona/ontologies/2019/0/untitled-ontology-35" uri="dev-a-input-documents/ontologies/001-ontology-fmea-fd/core%20GE%20FMEA%20ontology%20without%20instances-%20DETAILED%20APPROACH.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="duplicate:http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71" uri="dev-a-input-documents/ontologies/001-ontology-fmea-fd/FMEA%20%20with%20general%20class%20axioms%20without%20instances.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="duplicate:http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71" uri="dev-a-input-documents/ontologies/001-ontology-fmea-fd/FMEA%20torquemeter%20and%20scavenge%20oil%20line%20with%20general%20class%20axioms.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="shadowed:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio_docs/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="shadowed:http://onto.fel.cvut.cz/ontologies/ufo-a" uri="ufo/doc/ufo-a/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1587566459224" name="shadowed:http://onto.fel.cvut.cz/ontologies/ufo-b" uri="ufo/doc/ufo-b/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="duplicate:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="duplicate:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://IBCNServices.github.io/dyversify/feedback" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/feedback_v1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/data/reliability/example-1" uri="examples/fmea-reliability-instance-example-1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-a/" uri="ufo/ufo-a.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions/" uri="ufo/ufo-b-dispositions.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-b-temporal/" uri="ufo/ufo-b-temporal.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-b/" uri="ufo/ufo-b.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-c/" uri="ufo/ufo-c.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-cs" uri="ufo/ufo-cs.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-ontouml/" uri="ufo/ufo-ontouml.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo-powertypes/" uri="ufo/ufo-powertypes.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://onto.fel.cvut.cz/ontologies/ufo/" uri="ufo/ufo.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="http://www.semanticweb.org/simona/ontologies/2019/0/untitled-ontology-35" uri="dev-a-input-documents/ontologies/001-ontology-fmea-fd/core%20GE%20FMEA%20ontology%20without%20instances-%20DETAILED%20APPROACH.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="duplicate:http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71" uri="dev-a-input-documents/ontologies/001-ontology-fmea-fd/FMEA%20%20with%20general%20class%20axioms%20without%20instances.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="duplicate:http://www.semanticweb.org/simona/ontologies/2019/1/untitled-ontology-71" uri="dev-a-input-documents/ontologies/001-ontology-fmea-fd/FMEA%20torquemeter%20and%20scavenge%20oil%20line%20with%20general%20class%20axioms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1589185991355" name="shadowed:http://IBCNServices.github.io/Folio-Ontology/Folio.owl" uri="dev-a-input-documents/ontologies/Folio-Ontology-master/Folio_docs/ontology.xml"/>
     </group>
 </catalog>

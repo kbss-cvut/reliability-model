@@ -82,15 +82,6 @@
 	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> ;
 	rdfs:label "and gate" .
 # 
-# http://onto.fel.cvut.cz/ontologies/msmt-fta/component
-
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/component> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/system> , _:genid1 .
-
-_:genid1 a owl:Restriction ;
-	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> .
-# 
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> a owl:Class ;
@@ -99,21 +90,21 @@ _:genid1 a owl:Restriction ;
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> a owl:Class ;
-	rdfs:subClassOf _:genid2 .
+	rdfs:subClassOf _:genid1 .
 
-_:genid2 a owl:Restriction ;
+_:genid1 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_liklihood> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> ;
+	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> .
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:subClassOf _:genid3 .
 
 _:genid3 a owl:Restriction ;
-	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/occurenne_of> ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/failure_mode> .
-
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:subClassOf _:genid4 .
-
-_:genid4 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_gate> ;
 	owl:allValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> .
 
@@ -122,60 +113,60 @@ _:genid4 a owl:Restriction ;
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/gate
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> a owl:Class ;
-	rdfs:subClassOf _:genid5 .
+	rdfs:subClassOf _:genid4 .
 
-_:genid5 a owl:Class ;
-	owl:unionOf _:genid8 .
+_:genid4 a owl:Class ;
+	owl:unionOf _:genid7 .
 
-_:genid8 a rdf:List ;
-	rdf:first _:genid9 .
+_:genid7 a rdf:List ;
+	rdf:first _:genid8 .
 
-_:genid9 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> .
 
-_:genid8 rdf:rest _:genid6 .
+_:genid7 rdf:rest _:genid5 .
 
-_:genid6 a rdf:List ;
-	rdf:first _:genid7 .
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
 
-_:genid7 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> .
 
-_:genid6 rdf:rest rdf:nil .
+_:genid5 rdf:rest rdf:nil .
 
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdfs:subClassOf _:genid10 .
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdfs:subClassOf _:genid9 .
 
-_:genid10 a owl:Class ;
-	owl:unionOf _:genid13 .
+_:genid9 a owl:Class ;
+	owl:unionOf _:genid12 .
 
-_:genid13 a rdf:List ;
-	rdf:first _:genid14 .
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
 
-_:genid14 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> .
 
-_:genid13 rdf:rest _:genid11 .
+_:genid12 rdf:rest _:genid10 .
 
-_:genid11 a rdf:List ;
-	rdf:first _:genid12 .
+_:genid10 a rdf:List ;
+	rdf:first _:genid11 .
 
-_:genid12 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> .
 
-_:genid11 rdf:rest rdf:nil .
+_:genid10 rdf:rest rdf:nil .
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdfs:label "gate" .
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> a owl:Class ;
-	rdfs:subClassOf _:genid15 .
+	rdfs:subClassOf _:genid14 .
 
-_:genid15 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/msmt-fta/probability_value> ;
 	owl:someValuesFrom owl:real .
 
@@ -186,11 +177,6 @@ _:genid15 a owl:Restriction ;
 <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> a owl:Class ;
 	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> ;
 	rdfs:label "or gate" .
-# 
-# http://onto.fel.cvut.cz/ontologies/msmt-fta/system
-
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/system> a owl:Class ;
-	rdfs:label "system" .
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event
 
@@ -269,7 +255,7 @@ _:genid15 a owl:Restriction ;
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/engine
 
-<http://onto.fel.cvut.cz/ontologies/msmt-fta/engine> a owl:NamedIndividual , <http://onto.fel.cvut.cz/ontologies/msmt-fta/component> ;
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/engine> a owl:NamedIndividual ;
 	<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> <http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode> .
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fta/engine_failure_mode
