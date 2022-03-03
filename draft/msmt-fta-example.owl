@@ -1,0 +1,338 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/msmt-fta-example/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/msmt-fta-example> .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fta-example> rdf:type owl:Ontology ;
+                                                       owl:imports <http://onto.fel.cvut.cz/ontologies/msmt-fta> ,
+                                                                   <http://onto.fel.cvut.cz/ontologies/reliability> ,
+                                                                   <http://onto.fel.cvut.cz/ontologies/ufo-a/1.0.1> ,
+                                                                   <http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions/1.0.1> ,
+                                                                   <http://onto.fel.cvut.cz/ontologies/ufo-b/1.0.1> ,
+                                                                   <http://onto.fel.cvut.cz/ontologies/ufo-c/1.0.1> ,
+                                                                   <http://onto.fel.cvut.cz/ontologies/ufo/1.0.2> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> rdf:type owl:AnnotationProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/has-part
+<http://onto.fel.cvut.cz/ontologies/ufo/has-part> rdf:type owl:TransitiveProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/is-part-of
+<http://onto.fel.cvut.cz/ontologies/ufo/is-part-of> rdf:type owl:TransitiveProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/trope> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/trope> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure-mode
+<http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause
+<http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/function
+<http://onto.fel.cvut.cz/ontologies/reliability/function> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/subsystem
+<http://onto.fel.cvut.cz/ontologies/reliability/subsystem> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/has-part> ;
+                                                                             owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/component>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-part-of> ;
+                                                                             owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/system>
+                                                                           ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/system
+<http://onto.fel.cvut.cz/ontologies/reliability/system> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-part-of> ;
+                                                                          owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/reliability/subsystem>
+                                                                        ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Alarm_has_no_warning_when_fuel_quantity_is_abnormal
+:Alarm_has_no_warning_when_fuel_quantity_is_abnormal rdf:type owl:NamedIndividual ,
+                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+                                                     rdfs:label "Alarm has no warning when fuel quantity is abnormal" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Alarm_is_fail
+:Alarm_is_fail rdf:type owl:NamedIndividual ,
+                        <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+               rdfs:label "Alarm is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Back_fuselage_tank_is_fail
+:Back_fuselage_tank_is_fail rdf:type owl:NamedIndividual ,
+                                     <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                            rdfs:label "Back fuselage tank is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Connected_line_is_fail
+:Connected_line_is_fail rdf:type owl:NamedIndividual ,
+                                 <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                        rdfs:label "Connected line is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Controller_does_not_work
+:Controller_does_not_work rdf:type owl:NamedIndividual ,
+                                   <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+                          rdfs:label "Controller does not work" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Flow_sensor_is_fail
+:Flow_sensor_is_fail rdf:type owl:NamedIndividual ,
+                              <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                     rdfs:label "Flow sensor is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Front_fuselage_tank_is_fail
+:Front_fuselage_tank_is_fail rdf:type owl:NamedIndividual ,
+                                      <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                             rdfs:label "Front fuselage tank is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Fuel_supplying_line_is_fail
+:Fuel_supplying_line_is_fail rdf:type owl:NamedIndividual ,
+                                      <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                             rdfs:label "Fuel supplying line is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Fuel_supplying_subsystem_cannot_transport_fuel_to_the_engine
+:Fuel_supplying_subsystem_cannot_transport_fuel_to_the_engine rdf:type owl:NamedIndividual ,
+                                                                       <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> ;
+                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause> :fuel_suplying_tank_has_no_fuel_cause ;
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by> :function_of_the_fuel_system_is_abnormal ;
+                                                              rdfs:label "Fuel supplying subsystem cannot transport fuel to the engine" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Fuel_supplying_tank_has_no_fuel
+:Fuel_supplying_tank_has_no_fuel rdf:type owl:NamedIndividual ,
+                                          <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+                                 rdfs:label "Fuel supplying tank has no fuel" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Left_wing_tank_is_fail
+:Left_wing_tank_is_fail rdf:type owl:NamedIndividual ,
+                                 <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ,
+                                 <http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause> ;
+                        <http://onto.fel.cvut.cz/ontologies/reliability/causes> :Wing_Tanks_are_fail ;
+                        rdfs:label "Left wing tank is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Pump1_sensor_is_fail
+:Pump1_sensor_is_fail rdf:type owl:NamedIndividual ,
+                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                      rdfs:label "Pump1 sensor is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Pump2_sensor_is_fail
+:Pump2_sensor_is_fail rdf:type owl:NamedIndividual ,
+                               <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                      rdfs:label "Pump2 sensor is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Pump_sensors_are_fail
+:Pump_sensors_are_fail rdf:type owl:NamedIndividual ,
+                                <http://onto.fel.cvut.cz/ontologies/msmt-fta/intermidiate/derived_event> ;
+                       rdfs:label "Pump sensors are fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Right_wing_tank_is_fail
+:Right_wing_tank_is_fail rdf:type owl:NamedIndividual ,
+                                  <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ,
+                                  <http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause> ;
+                         <http://onto.fel.cvut.cz/ontologies/reliability/causes> :Wing_Tanks_are_fail ;
+                         rdfs:label "Right wing tank is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/Wing_Tanks_are_fail
+:Wing_Tanks_are_fail rdf:type owl:NamedIndividual ,
+                              <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> ;
+                     <http://onto.fel.cvut.cz/ontologies/reliability/has_effect> :Fuel_supplying_tank_has_no_fuel ;
+                     rdfs:label "Wing Tanks are fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/aircraft_fuel_system
+:aircraft_fuel_system rdf:type owl:NamedIndividual ,
+                               <http://onto.fel.cvut.cz/ontologies/reliability/system> ;
+                      <http://onto.fel.cvut.cz/ontologies/reliability/has_failure> :function_of_the_fuel_system_is_abnormal ;
+                      <http://onto.fel.cvut.cz/ontologies/reliability/has_function> :supplies_fuel_to_the_engine ;
+                      <http://onto.fel.cvut.cz/ontologies/ufo/has-part> :fuel_supplying_subsystem ;
+                      rdfs:label "aircraft fuel system" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/aircraft_fuel_system_component
+:aircraft_fuel_system_component rdf:type owl:NamedIndividual ,
+                                         <http://onto.fel.cvut.cz/ontologies/reliability/component> ;
+                                <http://onto.fel.cvut.cz/ontologies/ufo/is-part-of> :fuel_supplying_subsystem ;
+                                rdfs:label "aircraft fuel system component" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/and1_gate
+:and1_gate rdf:type owl:NamedIndividual ,
+                    <http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Back_fuselage_tank_is_fail ,
+                                                                   :Front_fuselage_tank_is_fail ,
+                                                                   :Wing_Tanks_are_fail ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :Fuel_supplying_tank_has_no_fuel ;
+           rdfs:label "and1 gate" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/and2_gate
+:and2_gate rdf:type owl:NamedIndividual ,
+                    <http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Flow_sensor_is_fail ,
+                                                                   :Pump_sensors_are_fail ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :Controller_does_not_work ;
+           rdfs:label "and2 gate" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/and3_gate
+:and3_gate rdf:type owl:NamedIndividual ,
+                    <http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Left_wing_tank_is_fail ,
+                                                                   :Right_wing_tank_is_fail ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :Wing_Tanks_are_fail ;
+           rdfs:label "and3 gate" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/and4_gate
+:and4_gate rdf:type owl:NamedIndividual ,
+                    <http://onto.fel.cvut.cz/ontologies/msmt-fta/and_gate> ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Pump1_sensor_is_fail ,
+                                                                   :Pump2_sensor_is_fail ;
+           <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :Pump_sensors_are_fail ;
+           rdfs:label "and4 gate" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/engine_is_fail
+:engine_is_fail rdf:type owl:NamedIndividual ,
+                         <http://onto.fel.cvut.cz/ontologies/msmt-fta/undeveloped/initial_event> ;
+                rdfs:label "engine is fail" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/fuel_suplying_tank_has_no_fuel_cause
+:fuel_suplying_tank_has_no_fuel_cause rdf:type owl:NamedIndividual ,
+                                               <http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause> ;
+                                      rdfs:label "fuel supluing tank has no fuel cause" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/fuel_supplying_subsystem
+:fuel_supplying_subsystem rdf:type owl:NamedIndividual ,
+                                   <http://onto.fel.cvut.cz/ontologies/reliability/subsystem> ;
+                          <http://onto.fel.cvut.cz/ontologies/reliability/has_failure_mode> :Fuel_supplying_subsystem_cannot_transport_fuel_to_the_engine ;
+                          <http://onto.fel.cvut.cz/ontologies/ufo/is-part-of> :aircraft_fuel_system ;
+                          rdfs:label "fuel supplying  subsystem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/fuel_supplying_system_commponent
+:fuel_supplying_system_commponent rdf:type owl:NamedIndividual ,
+                                           <http://onto.fel.cvut.cz/ontologies/reliability/component> ;
+                                  <http://onto.fel.cvut.cz/ontologies/reliability/has_function> :supplies_fuel_to_the_engine ;
+                                  <http://onto.fel.cvut.cz/ontologies/ufo/is-part-of> :fuel_supplying_subsystem ;
+                                  rdfs:label "fuel supplying system component" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/fuel_transportation_subsystem
+:fuel_transportation_subsystem rdf:type owl:NamedIndividual ,
+                                        <http://onto.fel.cvut.cz/ontologies/reliability/subsystem> ;
+                               rdfs:label "fuel transportation subsystem" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/function_of_the_fuel_system_is_abnormal
+:function_of_the_fuel_system_is_abnormal rdf:type owl:NamedIndividual ,
+                                                  <http://onto.fel.cvut.cz/ontologies/msmt-fta/primary/risk_event> ;
+                                         rdfs:label "function of the fuel system is abnormal" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/or1_gate
+:or1_gate rdf:type owl:NamedIndividual ,
+                   <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+          <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Alarm_has_no_warning_when_fuel_quantity_is_abnormal ,
+                                                                  :Fuel_supplying_subsystem_cannot_transport_fuel_to_the_engine ;
+          <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :function_of_the_fuel_system_is_abnormal .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/or2_gate
+:or2_gate rdf:type owl:NamedIndividual ,
+                   <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+          <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Connected_line_is_fail ,
+                                                                  :Fuel_supplying_line_is_fail ,
+                                                                  :Fuel_supplying_tank_has_no_fuel ,
+                                                                  :engine_is_fail ;
+          <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :Fuel_supplying_subsystem_cannot_transport_fuel_to_the_engine ;
+          rdfs:label "or2 gate" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/or3_gate
+:or3_gate rdf:type owl:NamedIndividual ,
+                   <http://onto.fel.cvut.cz/ontologies/msmt-fta/or_gate> ;
+          <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_input> :Alarm_is_fail ,
+                                                                  :Controller_does_not_work ;
+          <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_output> :Alarm_has_no_warning_when_fuel_quantity_is_abnormal ;
+          rdfs:label "or3 gate" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta-example/supplies_fuel_to_the_engine
+:supplies_fuel_to_the_engine rdf:type owl:NamedIndividual ,
+                                      <http://onto.fel.cvut.cz/ontologies/reliability/function> ;
+                             <http://onto.fel.cvut.cz/ontologies/msmt-fta/has_failur_mode> :Fuel_supplying_subsystem_cannot_transport_fuel_to_the_engine ;
+                             <http://onto.fel.cvut.cz/ontologies/reliability/has_function> :supplies_fuel_to_the_engine ;
+                             rdfs:label "supplies fuel to the engine" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

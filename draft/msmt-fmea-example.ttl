@@ -1,0 +1,277 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples> .
+
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples> rdf:type owl:Ontology ;
+                                                         owl:imports <http://onto.fel.cvut.cz/ontologies/reliability> ,
+                                                                     <http://onto.fel.cvut.cz/ontologies/msmt-fmea/> ,
+                                                                     <http://onto.fel.cvut.cz/ontologies/ufo-a/1.0.1> ,
+                                                                     <http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions/1.0.1> ,
+                                                                     <http://onto.fel.cvut.cz/ontologies/ufo-b/1.0.1> ,
+                                                                     <http://onto.fel.cvut.cz/ontologies/ufo-c/1.0.1> ,
+                                                                     <http://onto.fel.cvut.cz/ontologies/ufo/1.0.2> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/compensating-provision
+<http://onto.fel.cvut.cz/ontologies/fmea/compensating-provision> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event-type> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/failure
+<http://onto.fel.cvut.cz/ontologies/fmea/failure> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/failure-mode
+<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> owl:equivalentClass <http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> ;
+                                                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause
+<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect
+<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/fmea-observation
+<http://onto.fel.cvut.cz/ontologies/fmea/fmea-observation> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event-type> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/function
+<http://onto.fel.cvut.cz/ontologies/fmea/function> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/risk-reduced-to-acceptable-level
+<http://onto.fel.cvut.cz/ontologies/fmea/risk-reduced-to-acceptable-level> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/taking-action
+<http://onto.fel.cvut.cz/ontologies/fmea/taking-action> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea#/Identification_and_corrective_actions
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea#/Identification_and_corrective_actions> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event-type> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea#/severity
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea#/severity> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/trope> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure-mode
+<http://onto.fel.cvut.cz/ontologies/reliability/failure-mode> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause
+<http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/system
+<http://onto.fel.cvut.cz/ontologies/reliability/system> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/UAV_unable_to_follow_planned_path
+:UAV_unable_to_follow_planned_path rdf:type owl:NamedIndividual ,
+                                            <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
+                                   rdfs:label "UAV unable to follow planned path" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/UAV_unable_to_take_right_orientation
+:UAV_unable_to_take_right_orientation rdf:type owl:NamedIndividual ,
+                                               <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
+                                      rdfs:label "UAV unable to take right orientation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/broken_arm_control_unit
+:broken_arm_control_unit rdf:type owl:NamedIndividual ,
+                                  <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
+                         rdfs:label "broken arm control unit" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/calibration_of_moving_mass_is_not_possible
+:calibration_of_moving_mass_is_not_possible rdf:type owl:NamedIndividual ,
+                                                     <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
+                                            rdfs:label "calibration of moving mass is not possible" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/damaged_ARM_controller_for_mass_positioning
+:damaged_ARM_controller_for_mass_positioning rdf:type owl:NamedIndividual ,
+                                                      <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/encoder_wiring_damaged_or_encoder_itself
+:encoder_wiring_damaged_or_encoder_itself rdf:type owl:NamedIndividual ,
+                                                   <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
+                                          <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> :unable_to_get_desired_orientation ;
+                                          <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_recommended_action> <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/redudant_sensor_/_failure_detection> ;
+                                          rdfs:label "encoder wiring damaged or encoder itself" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/engine_moving_left_or_right_regardless_of_control_input
+:engine_moving_left_or_right_regardless_of_control_input rdf:type owl:NamedIndividual ,
+                                                                  <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
+                                                         rdfs:label "engine moving left or right regardless of control input" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/incorrect_control
+:incorrect_control rdf:type owl:NamedIndividual ,
+                            <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                   <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> :UAV_unable_to_follow_planned_path ;
+                   <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause> :broken_arm_control_unit ;
+                   <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_recommended_action> :visual_inspection_of_UAV_before_take-off ;
+                   <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/rpn> ""@20 ;
+                   rdfs:label "incorrect control" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/lose_connection_between_moving_mass_and_toothpicks
+:lose_connection_between_moving_mass_and_toothpicks rdf:type owl:NamedIndividual ,
+                                                             <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
+                                                    rdfs:label "lose connection between moving mass and toothpicks" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/mass_not_reaching_desired_position
+:mass_not_reaching_desired_position rdf:type owl:NamedIndividual ,
+                                             <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                                    <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> :UAV_unable_to_take_right_orientation ;
+                                    <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause> :lose_connection_between_moving_mass_and_toothpicks ,
+                                                                                               :one_or_more_toothpicks_broken ;
+                                    <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_recommended_action> <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off_/_safe_landing> ,
+                                                                                                           <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off_/_use_advanced_control_of_speed_of_motors> ;
+                                    <http://onto.fel.cvut.cz/ontologies/reliability/has_function> :pitch_and_roll_control_function ;
+                                    rdfs:label "mass not reaching desired position" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/mass_unable_to_move_and_stay_in_any_position
+:mass_unable_to_move_and_stay_in_any_position rdf:type owl:NamedIndividual ,
+                                                       <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                                              rdfs:label "mass unable to move and stay in any position" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/moving_mass_engine_stays_in_the_last_position
+:moving_mass_engine_stays_in_the_last_position rdf:type owl:NamedIndividual ,
+                                                        <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
+                                               rdfs:label "moving mass engine stays in the last position" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/moving_mass_system
+:moving_mass_system rdf:type owl:NamedIndividual ,
+                             <http://onto.fel.cvut.cz/ontologies/reliability/system> ;
+                    <http://onto.fel.cvut.cz/ontologies/reliability/has_function> :pitch_and_roll_control_function ;
+                    rdfs:label "moving mass system" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/moving_mass_system_component
+:moving_mass_system_component rdf:type owl:NamedIndividual ,
+                                       <http://onto.fel.cvut.cz/ontologies/reliability/component> ;
+                              rdfs:label "moving mass system component" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/no_information_about_mass_position
+:no_information_about_mass_position rdf:type owl:NamedIndividual ,
+                                             <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                                    <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> :unable_to_get_desired_orientation ;
+                                    <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause> :encoder_wiring_damaged_or_encoder_itself ;
+                                    rdfs:label "no information about mass position" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/one_of_the_cabling_wires_broken
+:one_of_the_cabling_wires_broken rdf:type owl:NamedIndividual ,
+                                          <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
+                                 rdfs:label "one of the cabling wires broken" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/one_or_both_limit_points_broken
+:one_or_both_limit_points_broken rdf:type owl:NamedIndividual ,
+                                          <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
+                                 rdfs:label "one or both limit points broken" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/one_or_more_toothpicks_broken
+:one_or_more_toothpicks_broken rdf:type owl:NamedIndividual ,
+                                        <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
+                               rdfs:label "one or more toothpicks broken" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/pitch_and_roll_control_function
+:pitch_and_roll_control_function rdf:type owl:NamedIndividual ,
+                                          <http://onto.fel.cvut.cz/ontologies/fmea/function> ;
+                                 <http://onto.fel.cvut.cz/ontologies/reliability/has_failure_mode> :incorrect_control ,
+                                                                                                   :mass_not_reaching_desired_position ,
+                                                                                                   :no_information_about_mass_position ,
+                                                                                                   :unable_to_move_mass ;
+                                 rdfs:label "pitch and roll control function" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/stochastic_position_of_mass
+:stochastic_position_of_mass rdf:type owl:NamedIndividual ,
+                                      <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                             <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> :engine_moving_left_or_right_regardless_of_control_input ;
+                             <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause> :one_or_more_toothpicks_broken ;
+                             <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_recommended_action> :visual_inspection_of_UAV_before_take-off ;
+                             rdfs:label "stochastic position of mass" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/unable_to_get_desired_orientation
+:unable_to_get_desired_orientation rdf:type owl:NamedIndividual ,
+                                            <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> ;
+                                   rdfs:label "unable to get desired orientation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/unable_to_move_mass
+:unable_to_move_mass rdf:type owl:NamedIndividual ,
+                              <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
+                     <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> :calibration_of_moving_mass_is_not_possible ,
+                                                                          :moving_mass_engine_stays_in_the_last_position ;
+                     <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause> :one_of_the_cabling_wires_broken ;
+                     <http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_recommended_action> <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/use_advanced_control_of_speed_of_rotors_/_safe_landing> ,
+                                                                                            <http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_/_reduntant_sensor_/_failure_detection> ;
+                     rdfs:label "unable to move mass" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off
+:visual_inspection_of_UAV_before_take-off rdf:type owl:NamedIndividual ,
+                                                   <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
+                                          rdfs:label "visual inspection of UAV before take-off" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/redudant_sensor_/_failure_detection
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/redudant_sensor_/_failure_detection> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
+                                                                                            rdfs:label "redudant sensor / failure detection" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/use_advanced_control_of_speed_of_rotors_/_safe_landing
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/use_advanced_control_of_speed_of_rotors_/_safe_landing> rdf:type owl:NamedIndividual ,
+                                                                                                                        <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
+                                                                                                               rdfs:label "use advanced control of speed of rotors / safe landing" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_/_reduntant_sensor_/_failure_detection
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_/_reduntant_sensor_/_failure_detection> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
+                                                                                                                        rdfs:label "visual inspection of UAV / reduntant sensor / failure detection" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off_/_safe_landing
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off_/_safe_landing> rdf:type owl:NamedIndividual ,
+                                                                                                                         <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
+                                                                                                                rdfs:label "visual inspection of UAV before take-off / safe landing" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off_/_use_advanced_control_of_speed_of_motors
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea-examples/visual_inspection_of_UAV_before_take-off_/_use_advanced_control_of_speed_of_motors> rdf:type owl:NamedIndividual ,
+                                                                                                                                                    <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> ;
+                                                                                                                                           rdfs:label "visual inspection of UAV before take-off / use advanced control of speed of motors" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

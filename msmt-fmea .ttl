@@ -50,9 +50,7 @@
 # http://onto.fel.cvut.cz/ontologies/fmea/has-failure-mode
 
 <http://onto.fel.cvut.cz/ontologies/fmea/has-failure-mode> a owl:ObjectProperty ;
-	rdfs:subPropertyOf owl:topObjectProperty ;
-	rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/function> ;
-	rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> .
+	rdfs:subPropertyOf owl:topObjectProperty .
 # 
 # http://onto.fel.cvut.cz/ontologies/fmea/has-final-level-effect
 
@@ -83,18 +81,11 @@
 
 <http://onto.fel.cvut.cz/ontologies/fmea/prevents> a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:topObjectProperty ;
-	rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/taking-action> ;
-	rdfs:range <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> .
-# 
-# http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has__cause
-
-:has__cause a owl:ObjectProperty ;
-	rdfs:label "has  cause" .
+	rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/taking-action> .
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_likelihood
 
 :has_likelihood a owl:ObjectProperty ;
-	rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
 	rdfs:label "has likelihood" .
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#/has_recommended_action
@@ -111,6 +102,11 @@
 
 :related_to a owl:ObjectProperty ;
 	rdfs:label "related to" .
+# 
+# http://onto.fel.cvut.cz/ontologies/reliability/has__cause
+
+<http://onto.fel.cvut.cz/ontologies/reliability/has__cause> a owl:ObjectProperty ;
+	rdfs:label "has  cause" .
 # 
 # http://onto.fel.cvut.cz/ontologies/ufo/causes
 
@@ -129,21 +125,7 @@
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#probability_of_occurrence
 
 <http://onto.fel.cvut.cz/ontologies/msmt-fmea#probability_of_occurrence> a owl:DatatypeProperty ;
-	rdfs:domain _:genid1 .
-
-_:genid1 owl:intersectionOf _:genid3 .
-
-_:genid3 a rdf:List ;
-	rdf:first <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
-	rdf:rest _:genid2 .
-
-_:genid2 a rdf:List ;
-	rdf:first <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> ;
-	rdf:rest rdf:nil .
-
-_:genid1 a owl:Class .
-
-<http://onto.fel.cvut.cz/ontologies/msmt-fmea#probability_of_occurrence> rdfs:range xsd:integer ;
+	rdfs:range xsd:integer ;
 	rdfs:comment "Occurrence probability of failure mode\" = \"Failure rate of failure mode (1E-6/H)\" * \"Exposure time (H)\"" ;
 	rdfs:label "probability of occurrence" .
 # 
@@ -162,7 +144,6 @@ _:genid1 a owl:Class .
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#/likelihood_of_failure_mode_value
 
 :likelihood_of_failure_mode_value a owl:DatatypeProperty ;
-	rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
 	rdfs:range xsd:string ;
 	rdfs:label "likelihood of failure mode value" .
 # 
@@ -180,7 +161,6 @@ _:genid1 a owl:Class .
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#/rpn
 
 :rpn a owl:DatatypeProperty ;
-	rdfs:domain <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> ;
 	<http://onto.fel.cvut.cz/ontologies/msmt-fmea#has_example> "Example: If the effect of a failure mode has a severity ranking of 10, and the cause of the failure mode has an occurrence ranking of 6 and detection ranking of 4, then the RPN will be 240 (severity 10 x occurrence 6 x detection 4)" ;
 	rdfs:comment "RPN = (severity  x probability of occurrence 6 x probability of detection)" ;
 	rdfs:label "rpn" .
@@ -206,51 +186,6 @@ _:genid1 a owl:Class .
 	owl:equivalentClass :Identification_and_corrective_actions ;
 	rdfs:label "compensating provision" .
 # 
-# http://onto.fel.cvut.cz/ontologies/fmea/failure
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure> a owl:Class ;
-	rdfs:label "failure" .
-# 
-# http://onto.fel.cvut.cz/ontologies/fmea/failure-mode
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> a owl:Class ;
-	rdfs:subClassOf _:genid4 .
-
-_:genid4 a owl:Restriction ;
-	owl:onProperty <http://onto.fel.cvut.cz/ontologies/fmea/has-effect> ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> rdfs:subClassOf _:genid5 .
-
-_:genid5 a owl:Restriction ;
-	owl:onProperty :has__cause ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> rdfs:subClassOf _:genid6 .
-
-_:genid6 a owl:Restriction ;
-	owl:onProperty :has_recommended_action ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/recommended-action> .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> rdfs:subClassOf _:genid7 .
-
-_:genid7 a owl:Restriction ;
-	owl:onProperty :rpn ;
-	owl:someValuesFrom owl:real .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> rdfs:label "failure mode" .
-# 
-# http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> a owl:Class ;
-	rdfs:subClassOf _:genid8 .
-
-_:genid8 a owl:Restriction ;
-	owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/causes> ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> rdfs:label "failure mode cause" .
-# 
 # http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect
 
 <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> a owl:Class ;
@@ -266,32 +201,21 @@ _:genid8 a owl:Restriction ;
 <http://onto.fel.cvut.cz/ontologies/fmea/fmea-observation> a owl:Class ;
 	rdfs:label "fmea observation" .
 # 
-# http://onto.fel.cvut.cz/ontologies/fmea/function
-
-<http://onto.fel.cvut.cz/ontologies/fmea/function> a owl:Class ;
-	rdfs:subClassOf _:genid9 .
-
-_:genid9 a owl:Restriction ;
-	owl:onProperty <http://onto.fel.cvut.cz/ontologies/fmea/has-failure-mode> ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode> .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/function> rdfs:label "function" .
-# 
 # http://onto.fel.cvut.cz/ontologies/fmea/local-level-effect
 
 <http://onto.fel.cvut.cz/ontologies/fmea/local-level-effect> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> , _:genid10 .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> , _:genid1 .
 
-_:genid10 a owl:Restriction ;
+_:genid1 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/causes> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/next-level-effect> .
 # 
 # http://onto.fel.cvut.cz/ontologies/fmea/next-level-effect
 
 <http://onto.fel.cvut.cz/ontologies/fmea/next-level-effect> a owl:Class ;
-	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> , _:genid11 .
+	rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> , _:genid2 .
 
-_:genid11 a owl:Restriction ;
+_:genid2 a owl:Restriction ;
 	owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/causes> ;
 	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/final-level-effect> .
 # 
@@ -315,13 +239,7 @@ _:genid11 a owl:Restriction ;
 # http://onto.fel.cvut.cz/ontologies/fmea/taking-action
 
 <http://onto.fel.cvut.cz/ontologies/fmea/taking-action> a owl:Class ;
-	rdfs:subClassOf _:genid12 .
-
-_:genid12 a owl:Restriction ;
-	owl:onProperty <http://onto.fel.cvut.cz/ontologies/fmea/prevents> ;
-	owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-cause> .
-
-<http://onto.fel.cvut.cz/ontologies/fmea/taking-action> rdfs:label "taking action" .
+	rdfs:label "taking action" .
 # 
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#/Identification_and_corrective_actions
 
@@ -331,7 +249,7 @@ _:genid12 a owl:Restriction ;
 # http://onto.fel.cvut.cz/ontologies/msmt-fmea#/severity
 
 :severity a owl:Class ;
-	rdfs:comment "Severity is a ranking number associated with the most serious effect for a given failure mode, based on the criteria from a severity scale" ;
+	rdfs:comment "" ;
 	rdfs:label "severity" .
 # 
 # Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -6,7 +6,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://onto.fel.cvut.cz/ontologies/reliability> .
 
-<http://onto.fel.cvut.cz/ontologies/reliability> rdf:type owl:Ontology .
+<http://onto.fel.cvut.cz/ontologies/reliability> rdf:type owl:Ontology ;
+                                                  owl:imports <http://onto.fel.cvut.cz/ontologies/msmt-fta> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/quality> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-c-ext> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/msmt-fmea/> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-a/1.0.1> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-b-dispositions/1.0.1> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-b-temporal/1.0.1> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-b/1.0.1> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-c/1.0.1> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo-powertypes/1.0.1> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo/1.0.2> ,
+                                                              <http://onto.fel.cvut.cz/ontologies/ufo/ufo-a-extension/0.0.1> .
 
 #################################################################
 #    Object Properties
@@ -15,6 +27,25 @@
 ###  http://onto.fel.cvut.cz/ontologies/reliability/causes
 :causes rdf:type owl:ObjectProperty ;
         rdfs:label "causes" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/contributes
+:contributes rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/derived_from
+:derived_from rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/has_effect
+:has_effect rdf:type owl:ObjectProperty ;
+            rdfs:label "has effect" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/has_failure
+:has_failure rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has failure" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/has_failure_mode
@@ -27,9 +58,74 @@
               rdfs:label "has function" .
 
 
+###  http://onto.fel.cvut.cz/ontologies/reliability/impairs
+:impairs rdf:type owl:ObjectProperty ;
+         rdfs:label "impairs" .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/compensating-provision
+<http://onto.fel.cvut.cz/ontologies/fmea/compensating-provision> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event-type> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect
+<http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/fmea-observation
+<http://onto.fel.cvut.cz/ontologies/fmea/fmea-observation> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event-type> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/risk-reduced-to-acceptable-level
+<http://onto.fel.cvut.cz/ontologies/fmea/risk-reduced-to-acceptable-level> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo-c-ext/goal> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/fmea/taking-action
+<http://onto.fel.cvut.cz/ontologies/fmea/taking-action> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/action> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea#/Identification_and_corrective_actions
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea#/Identification_and_corrective_actions> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event-type> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fmea#/severity
+<http://onto.fel.cvut.cz/ontologies/msmt-fmea#/severity> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo-a-ext/quality> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/fta_event> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/gate
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/gate> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/trope> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood
+<http://onto.fel.cvut.cz/ontologies/msmt-fta/likelihood> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo-a-ext/quality> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Actors
+<http://onto.fel.cvut.cz/ontologies/quality/Actors> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-agent> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/performs> ;
+                                                                      owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/quality/Functional_Service>
+                                                                    ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Functional_Service
+<http://onto.fel.cvut.cz/ontologies/quality/Functional_Service> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/action> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria
+<http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo-a-ext/quality> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Qulalty_Model
+<http://onto.fel.cvut.cz/ontologies/quality/Qulalty_Model> rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo-c-ext/proposition> .
+
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/component
 :component rdf:type owl:Class ;
@@ -37,18 +133,130 @@
            rdfs:comment "component" .
 
 
+###  http://onto.fel.cvut.cz/ontologies/reliability/effect_mode
+:effect_mode rdf:type owl:Class ;
+             rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by> ;
+                               owl:someValuesFrom :failure_effect_event
+                             ] ;
+             rdfs:label "effect mode" .
+
+
 ###  http://onto.fel.cvut.cz/ontologies/reliability/failure-mode
 :failure-mode rdf:type owl:Class ;
+              rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :contributes ;
+                                owl:someValuesFrom :effect_mode
+                              ] ;
               rdfs:label "failure mode" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_effect_event
+:failure_effect_event rdf:type owl:Class ;
+                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/brings-about> ;
+                                        owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/fmea/failure-mode-effect>
+                                      ] ;
+                      rdfs:label "failure effect event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_event
+:failure_event rdf:type owl:Class ;
+               rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :derived_from ;
+                                 owl:someValuesFrom :failure-mode
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/brings-about> ;
+                                 owl:someValuesFrom :failure_state
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by> ;
+                                 owl:someValuesFrom :failure-mode
+                               ] ;
+               rdfs:label "failure event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mechanism
+:failure_mechanism rdf:type owl:Class ;
+                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/brings-about> ;
+                                     owl:someValuesFrom :failure_mode_cause
+                                   ] ;
+                   rdfs:label "failure mechanism" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mechanism_cause_situation
+:failure_mechanism_cause_situation rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/triggers> ;
+                                                     owl:someValuesFrom :failure_mechanism
+                                                   ] ;
+                                   rdfs:label "failure mechanism cause situation" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_cause
 :failure_mode_cause rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :causes ;
                                       owl:someValuesFrom :failure-mode
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/activates> ;
+                                      owl:someValuesFrom :failure-mode
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/triggers> ;
+                                      owl:someValuesFrom :failure_event
                                     ] ;
-                    rdfs:comment "failure mode cause" .
+                    owl:disjointWith :safe_situation ;
+                    rdfs:comment "failure mode cause" ;
+                    rdfs:label "failure mode cause" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_mitigation
+:failure_mode_mitigation rdf:type owl:Class ;
+                         rdfs:subClassOf :function ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :impairs ;
+                                           owl:someValuesFrom :failure-mode
+                                         ] ;
+                         rdfs:label "failure mode mitigation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_mode_mitigation_event
+:failure_mode_mitigation_event rdf:type owl:Class ;
+                               rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/fmea/taking-action> ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/brings-about> ;
+                                                 owl:someValuesFrom :safe_situation
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by> ;
+                                                 owl:someValuesFrom :failure_mode_mitigation
+                                               ] ;
+                               rdfs:label "failure mode mitigation event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/failure_state
+:failure_state rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/activates> ;
+                                     owl:someValuesFrom :effect_mode
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/triggers> ;
+                                     owl:someValuesFrom :failure_effect_event
+                                   ] ;
+               rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
+               rdfs:label "failure state" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/fmea
@@ -65,16 +273,20 @@
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/function
 :function rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :has_failure_mode ;
-                            owl:someValuesFrom :failure-mode
-                          ] ;
+          rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ;
           rdfs:comment "function" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/relibility_method
 :relibility_method rdf:type owl:Class ;
+                   rdfs:subClassOf :fta ;
                    rdfs:label "relibility method" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/reliability/safe_situation
+:safe_situation rdf:type owl:Class ;
+                rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
+                rdfs:label "safe situation" .
 
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/subsystem
@@ -85,7 +297,8 @@
 
 ###  http://onto.fel.cvut.cz/ontologies/reliability/system
 :system rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
+        rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :has_function ;
                           owl:someValuesFrom :function
                         ] ;

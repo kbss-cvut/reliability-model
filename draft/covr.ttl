@@ -1,0 +1,224 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/common-value-and-risk#> .
+@prefix aso: <http://onto.fel.cvut.cz/ontologies/aviation-safety/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cvro: <http://onto.fel.cvut.cz/ontologies/common-value-and-risk/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/common-value-and-risk> .
+
+<http://onto.fel.cvut.cz/ontologies/common-value-and-risk> rdf:type owl:Ontology ;
+                                                            owl:versionIRI <http://onto.fel.cvut.cz/ontologies/common-value-and-risk/0.0.1> ;
+                                                            owl:imports <http://onto.fel.cvut.cz/ontologies/ufo-local-extension/0.0.1> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/hurts
+cvro:hurts rdf:type owl:ObjectProperty ;
+           rdfs:comment "loss situation or loss event hurts the risk subject's intention"@en ;
+           rdfs:label "hurts"@en .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/has-inherent-moment
+<http://onto.fel.cvut.cz/ontologies/ufo/has-inherent-moment> rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/has-part
+<http://onto.fel.cvut.cz/ontologies/ufo/has-part> rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/inheres-in
+<http://onto.fel.cvut.cz/ontologies/ufo/inheres-in> rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by
+<http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by> rdf:type owl:ObjectProperty .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/is-participant-of
+<http://onto.fel.cvut.cz/ontologies/ufo/is-participant-of> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Capability
+cvro:Capability rdf:type owl:Class ;
+                rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/stamp/Function> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Impact-Event
+cvro:Impact-Event rdf:type owl:Class ;
+                  rdfs:subClassOf cvro:Value-Event ;
+                  rdfs:label "Impact Event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Impactful-Outcome
+cvro:Impactful-Outcome rdf:type owl:Class ;
+                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
+                       rdfs:label "Impactful Outcome" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Loss-Situation
+cvro:Loss-Situation rdf:type owl:Class ;
+                    rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
+                    rdfs:label "Loss Situation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Object-at-Risk
+cvro:Object-at-Risk rdf:type owl:Class ;
+                    rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/has-inherent-moment> ;
+                                      owl:someValuesFrom cvro:Vulnerability
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-participant-of> ;
+                                      owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/stamp/Occurrence>
+                                    ] ;
+                    rdfs:label "Object at Risk" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Risk-Enabler
+cvro:Risk-Enabler rdf:type owl:Class ;
+                  rdfs:subClassOf cvro:Object-at-Risk ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/has-inherent-moment> ;
+                                    owl:someValuesFrom cvro:Vulnerability
+                                  ] .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Risk-Experience
+cvro:Risk-Experience rdf:type owl:Class ;
+                     rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> ;
+                     rdfs:label "Risk Experience" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Risk-Subject
+cvro:Risk-Subject rdf:type owl:Class ;
+                  rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Risk_Event
+cvro:Risk_Event rdf:type owl:Class ;
+                rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/stamp/Occurrence> ;
+                rdfs:label "Risk Event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Threat-Capability
+cvro:Threat-Capability rdf:type owl:Class ;
+                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/is-manifested-by> ;
+                                         owl:someValuesFrom cvro:Threat-Event
+                                       ] ;
+                       rdfs:label "Threat Capability" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Threat-Event
+cvro:Threat-Event rdf:type owl:Class ;
+                  rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/stamp/Occurrence> ;
+                  rdfs:label "Threat Event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Threat-Object
+cvro:Threat-Object rdf:type owl:Class ;
+                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/has-inherent-moment> ;
+                                     owl:someValuesFrom cvro:Threat-Capability
+                                   ] ;
+                   rdfs:label "Threat Object" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Threating-Situation
+cvro:Threating-Situation rdf:type owl:Class ;
+                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
+                         rdfs:label "Threating Situation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Trigger_Event
+cvro:Trigger_Event rdf:type owl:Class ;
+                   rdfs:subClassOf cvro:Value-Event ;
+                   rdfs:label "Trigger Event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Value-Enabler
+cvro:Value-Enabler rdf:type owl:Class ;
+                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ;
+                   rdfs:label "Value Enabler" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Value-Event
+cvro:Value-Event rdf:type owl:Class ;
+                 rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> ;
+                 rdfs:label "Value Event" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Value-Experience
+cvro:Value-Experience rdf:type owl:Class ;
+                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://onto.fel.cvut.cz/ontologies/ufo/has-part> ;
+                                        owl:someValuesFrom cvro:Value-Event
+                                      ] ;
+                      rdfs:label "Value-Experience" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Value-Object
+cvro:Value-Object rdf:type owl:Class ;
+                  rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ;
+                  rdfs:label "Value Object" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Value_Subject
+cvro:Value_Subject rdf:type owl:Class ;
+                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/physical-object> ;
+                   rdfs:label "Value Subject" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/common-value-and-risk/Vulnerability
+cvro:Vulnerability rdf:type owl:Class ;
+                   rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/disposition> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/stamp/Function
+<http://onto.fel.cvut.cz/ontologies/stamp/Function> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/stamp/Occurrence
+<http://onto.fel.cvut.cz/ontologies/stamp/Occurrence> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/event> .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/Resulting-Situation
+<http://onto.fel.cvut.cz/ontologies/ufo/Resulting-Situation> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/ufo/situation> ;
+                                                             rdfs:label "Resulting Situation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/disposition
+<http://onto.fel.cvut.cz/ontologies/ufo/disposition> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/event
+<http://onto.fel.cvut.cz/ontologies/ufo/event> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/object
+<http://onto.fel.cvut.cz/ontologies/ufo/object> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/physical-object
+<http://onto.fel.cvut.cz/ontologies/ufo/physical-object> rdf:type owl:Class .
+
+
+###  http://onto.fel.cvut.cz/ontologies/ufo/situation
+<http://onto.fel.cvut.cz/ontologies/ufo/situation> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

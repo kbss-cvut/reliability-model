@@ -1,0 +1,135 @@
+@prefix : <http://onto.fel.cvut.cz/ontologies/quality#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.fel.cvut.cz/ontologies/quality> .
+
+<http://onto.fel.cvut.cz/ontologies/quality> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/quality/idintifies
+<http://onto.fel.cvut.cz/ontologies/quality/idintifies> rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "idintifies" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/integrates
+<http://onto.fel.cvut.cz/ontologies/quality/integrates> rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "integrates" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Actors
+<http://onto.fel.cvut.cz/ontologies/quality/Actors> rdf:type owl:Class ;
+                                                    rdfs:label "Actors" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Functional_Service
+<http://onto.fel.cvut.cz/ontologies/quality/Functional_Service> rdf:type owl:Class ;
+                                                                rdfs:label "Functional Service" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Performance
+<http://onto.fel.cvut.cz/ontologies/quality/Performance> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> ;
+                                                         rdfs:label "Performance" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria
+<http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> rdf:type owl:Class ;
+                                                              rdfs:label "Quality Criteria" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Quality_Staff
+<http://onto.fel.cvut.cz/ontologies/quality/Quality_Staff> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> ;
+                                                           rdfs:label "Quality Staff" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Qulalty_Model
+<http://onto.fel.cvut.cz/ontologies/quality/Qulalty_Model> rdf:type owl:Class ;
+                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://onto.fel.cvut.cz/ontologies/quality/idintifies> ;
+                                                                             owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://onto.fel.cvut.cz/ontologies/quality/integrates> ;
+                                                                             owl:someValuesFrom <http://onto.fel.cvut.cz/ontologies/quality/Functional_Service>
+                                                                           ] ;
+                                                           rdfs:label "Qulalty Model" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Reliability
+<http://onto.fel.cvut.cz/ontologies/quality/Reliability> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> ;
+                                                         rdfs:label "Reliability" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Safety
+<http://onto.fel.cvut.cz/ontologies/quality/Safety> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> ;
+                                                    rdfs:label "Safety" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/Usability
+<http://onto.fel.cvut.cz/ontologies/quality/Usability> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/Quality_Criteria> ;
+                                                       rdfs:label "Usability" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/atomic_quality
+<http://onto.fel.cvut.cz/ontologies/quality/atomic_quality> rdf:type owl:Class ;
+                                                            rdfs:label "atomic quality" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/complex_quality
+<http://onto.fel.cvut.cz/ontologies/quality/complex_quality> rdf:type owl:Class ;
+                                                             rdfs:label "complex quality" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/environment
+<http://onto.fel.cvut.cz/ontologies/quality/environment> rdf:type owl:Class ;
+                                                         rdfs:label "environment" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/environment_quality_change_factor
+<http://onto.fel.cvut.cz/ontologies/quality/environment_quality_change_factor> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/quality_change_factor> ;
+                                                                               rdfs:label "environment quality change factor" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/general_quality_change_factor
+<http://onto.fel.cvut.cz/ontologies/quality/general_quality_change_factor> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/quality_change_factor> ;
+                                                                           rdfs:label "general quality change factor" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/quality_change
+<http://onto.fel.cvut.cz/ontologies/quality/quality_change> rdf:type owl:Class ;
+                                                            rdfs:label "quality change" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/quality_change_factor
+<http://onto.fel.cvut.cz/ontologies/quality/quality_change_factor> rdf:type owl:Class ;
+                                                                   rdfs:label "quality change factor" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/quality_valuation
+<http://onto.fel.cvut.cz/ontologies/quality/quality_valuation> rdf:type owl:Class ;
+                                                               rdfs:label "quality valuation" .
+
+
+###  http://onto.fel.cvut.cz/ontologies/quality/system_quality_change_factor
+<http://onto.fel.cvut.cz/ontologies/quality/system_quality_change_factor> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://onto.fel.cvut.cz/ontologies/quality/quality_change_factor> ;
+                                                                          rdfs:label "system quality change factor" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
